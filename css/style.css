@@ -2543,13 +2543,11 @@ div.notice-bar .notice-contents {
 }
 
 .kakejiku_outer {
-  background-image: url('../images/washi_outer_s.jpg');
   width: 135px;
   height: 324px;
   padding: 10px 10px 40px;
 }
 .kakejiku_inner {
-  background-image: url('../images/washi_inner_s.jpg');
   width: 100%;
   height: 100%;
   font-family: STKaiti, "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;

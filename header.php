@@ -53,6 +53,12 @@
     background-position: 50%;
   }
 }
+.kakejiku_outer {
+  background-image: url('<?= get_template_directory_uri(); ?>/images/washi_outer_s.jpg');
+}
+.kakejiku_inner {
+  background-image: url('<?= get_template_directory_uri(); ?>/images/washi_inner_s.jpg');
+}
     </style>
     <?php wp_head();?>
   </head>
@@ -105,3 +111,12 @@
         </div>
       </div>
     </div>
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
