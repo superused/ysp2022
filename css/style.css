@@ -670,14 +670,10 @@ a:hover {
 .site-blocks-cover.overlay {
   position: relative;
 }
-.site-blocks-cover.overlay.top {
-  background-image: url('../images/peacedesigner_kameoka_sp1.jpg');
-}
 .site-blocks-cover.overlay.top.top2 {
   display: none;
   position: absolute;
   width: 100%;
-  background-image: url('../images/moyou_top.png');
   background-size: cover;
   background-position: 50%;
 }
@@ -685,37 +681,8 @@ a:hover {
   display: none;
   position: absolute;
   width: 100%;
-  background-image: url('../images/moyou_bottom.png');
   background-size: cover;
   background-position: 50%;
-}
-@media (min-width: 767.98px) {
-  .site-blocks-cover.overlay.top {
-    background-image: url('../images/peacedesigner_kameoka_tb1.jpg');
-  }
-  .site-blocks-cover.overlay.top.top2 {
-    background-image: url('../images/moyou_pc_top.png');
-  }
-  .site-blocks-cover.overlay.top.top3 {
-    background-image: url('../images/moyou_pc_bottom.png');
-  }
-}
-@media (min-width: 1199.98px) {
-  .site-blocks-cover.overlay.top {
-    background-image: url('../images/peacedesigner_kameoka_pc1.jpg');
-    background-size: cover;
-    background-position: 50%;
-  }
-  .site-blocks-cover.overlay.top.top2 {
-    background-image: url('../images/moyou_pc_top.png');
-    background-size: cover;
-    background-position: 50%;
-  }
-  .site-blocks-cover.overlay.top.top3 {
-    background-image: url('../images/moyou_pc_bottom.png');
-    background-size: cover;
-    background-position: 50%;
-  }
 }
 .site-blocks-cover.overlay.top .moyou {
   max-width:100%;
