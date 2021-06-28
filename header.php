@@ -68,14 +68,14 @@
       <div class="site-navbar">
         <div class="container py-1">
           <div class="row align-items-center">
-            <div class="col-8 col-md-8 col-lg-4 col-xl-4">
+            <div class="col-8 col-md-8 col-lg-3 col-xl-3">
               <h1 class="logo-header mb-0">
                 <a href="index.php" class="text-white h2 mb-0">
                   <img src="<?= get_template_directory_uri(); ?>/images/logo1.png" alt="Image" class="mx-auto">
                 </a>
               </h1>
             </div>
-            <div class="col-4 col-md-4 col-lg-8 col-xl-8">
+            <div class="col-4 col-md-4 col-lg-9 col-xl-9">
               <nav class="site-navigation text-right text-md-right" role="navigation">
 
                 <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h2"></span></a></div>
@@ -84,26 +84,26 @@
                   <li class="active">
                     <a href="index.html">Home</a>
                   </li>
-                  <li><a href="dj.html">DJs</a></li>
                   <li class="has-children">
-                    <a href="shows.html">Shows</a>
+                    <a href="live.html">LIVE</a>
                     <ul class="dropdown arrow-top">
-                      <li><a href="#">Top 20 of The Week</a></li>
-                      <li><a href="#">Featured Artist</a></li>
-                      <li><a href="#">Interviews</a></li>
+                      <li><a href="#">LIVE1</a></li>
+                      <li><a href="#">LIVE2</a></li>
+                      <li><a href="#">LIVE3</a></li>
                       <li class="has-children">
-                        <a href="#">Sub Menu</a>
+                        <a href="#">サブメニュー</a>
                         <ul class="dropdown">
-                          <li><a href="#">Menu One</a></li>
-                          <li><a href="#">Menu Two</a></li>
-                          <li><a href="#">Menu Three</a></li>
+                          <li><a href="#">サブ1</a></li>
+                          <li><a href="#">サブ2</a></li>
+                          <li><a href="#">サブ3</a></li>
                         </ul>
                       </li>
                     </ul>
                   </li>
-                  <li><a href="events.html">Events</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="union.html">連合会一覧</a></li>
+                  <li><a href="video_contest.html">ビデオコンテスト</a></li>
+                  <li><a href="photo_contest.html">フォトコンテスト</a></li>
+                  <li><a href="senryu.html">川柳</a></li>
                 </ul>
               </nav>
             </div>
@@ -120,3 +120,5 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
+
+    <!-- ヘッダー共通処理 end -->
