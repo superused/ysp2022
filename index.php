@@ -1,15 +1,4 @@
 <?php get_header(); ?>
-    <div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
-
-    <!-- ヘッダー共通処理 end -->
-
     <div class="site-blocks-cover overlay top">
       <div class="site-blocks-cover overlay top top2"></div>
       <div class="site-blocks-cover overlay top top3"></div>
@@ -104,7 +93,7 @@
         <h2 class="event-bg-word-1">EVENT</h2>
         <h2 class="event-bg-word-2">イベント</h2>
       </div>
-      <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
           <div class="col-md-6 col-lg-6 col-xl-6 col-xl-6 mb-lg-6 image">
             <div class="team-member event">
@@ -123,7 +112,7 @@
           </div>
         </div>
       </div>
-      <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
           <div class="col-md-6 col-lg-6 col-xl-6 mb-lg-6 image">
             <div class="team-member event">
@@ -142,7 +131,7 @@
           </div>
         </div>
       </div>
-      <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
           <div class="col-md-6 col-lg-6 col-xl-6 mb-lg-6 image">
             <div class="team-member event">
@@ -180,7 +169,7 @@
                     <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid"></a>
                   </div>
                 </div>
-                <a href="#"><button class="btn btn-show mx-auto">詳しく見る</button></a>
+                <a href="photo_contest.html"><button class="btn btn-show mx-auto">詳しく見る</button></a>
               </div>
 
               <div class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
@@ -192,7 +181,7 @@
                     <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/senryu3.png" alt="Image" class="img-fluid"></a>
                   </div>
                 </div>
-                <a href="#"><button class="btn btn-show mx-auto">詳しく見る</button></a>
+                <a href="senryu.html"><button class="btn btn-show mx-auto">詳しく見る</button></a>
               </div>
             </div>
           </div>
@@ -200,10 +189,10 @@
       </div>
     </div>
 
-    <div class="site-section top-footer">
+    <div class="site-section top-footer" data-aos="fade-up" data-aos-delay="100">
       <div class="container">
         <div class="row questionnaire">
-          <div class="text-center mt-2 mb-2 w-border col-md-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-center mt-2 mb-2 w-border col-md-6 mx-auto">
             <div><img src="<?= get_template_directory_uri(); ?>/images/questionnaire.png" style="width:200px"></div>
             <p class="text-center font-weight-bold">アンケート募集中</p>
             <div class="term">実施期間：<span class="font-weight-bold">8</span>月<span class="font-weight-bold">7</span>日(土)～<span class="font-weight-bold">8</span>月<span class="font-weight-bold">9</span>日(月)</div>
