@@ -78,7 +78,7 @@
           <div class="row align-items-center">
             <div class="col-8 col-md-8 col-lg-3 col-xl-3">
               <h1 class="logo-header mb-0">
-                <a href="index.php" class="text-white h2 mb-0">
+              <a href="<?= home_url();?>" class="text-white h2 mb-0">
                   <img src="<?= get_template_directory_uri(); ?>/images/logo1.png" alt="Image" class="mx-auto">
                 </a>
               </h1>
@@ -90,12 +90,12 @@
 
                 <ul class="site-menu js-clone-nav d-none d-lg-block">
                   <li class="active">
-                    <a href="index.html">Home</a>
+                    <a href="">Home</a>
                   </li>
                   <li class="has-children">
-                    <a href="live.html">LIVE</a>
+                    <a href="<?= esc_url(home_url('/live/'));?>">LIVE</a>
                     <ul class="dropdown arrow-top">
-                      <li><a href="#">LIVE1</a></li>
+                      <li><a href="<?= esc_url(home_url('/live2/'));?>">LIVE2</a></li>
                       <li><a href="#">LIVE2</a></li>
                       <li><a href="#">LIVE3</a></li>
                       <li class="has-children">
@@ -108,10 +108,10 @@
                       </li>
                     </ul>
                   </li>
-                  <li><a href="union.html">連合会一覧</a></li>
-                  <li><a href="video_contest.html">ビデオコンテスト</a></li>
-                  <li><a href="photo_contest.html">フォトコンテスト</a></li>
-                  <li><a href="senryu.html">川柳</a></li>
+                  <li><a href="<?= esc_url(home_url('/union/'));?>">連合会一覧</a></li>
+                  <li><a href="<?= esc_url(home_url('/video-contest/'));?>">ビデオコンテスト</a></li>
+                  <li><a href="<?= esc_url(home_url('/photo-contest/'));?>">フォトコンテスト</a></li>
+                  <li><a href="<?= esc_url(home_url('/senryu/'));?>">川柳</a></li>
                 </ul>
               </nav>
             </div>
