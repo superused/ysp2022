@@ -713,14 +713,10 @@ a:hover {
 .site-blocks-cover.overlay {
   position: relative;
 }
-.site-blocks-cover.overlay.top {
-  background-image: url('../images/peacedesigner_kameoka_sp1.jpg');
-}
 .site-blocks-cover.overlay.top.top2 {
   display: none;
   position: absolute;
   width: 100%;
-  background-image: url('../images/moyou_top.png');
   background-size: cover;
   background-position: 50%;
 }
@@ -728,23 +724,19 @@ a:hover {
   display: none;
   position: absolute;
   width: 100%;
-  background-image: url('../images/moyou_bottom.png');
   background-size: cover;
   background-position: 50%;
 }
 @media (min-width: 1199.98px) {
   .site-blocks-cover.overlay.top {
-    background-image: url('../images/peacedesigner_kameoka_pc1.jpg');
     background-size: cover;
     background-position: 50%;
   }
   .site-blocks-cover.overlay.top.top2 {
-    background-image: url('../images/moyou_pc_top.png');
     background-size: cover;
     background-position: 50%;
   }
   .site-blocks-cover.overlay.top.top3 {
-    background-image: url('../images/moyou_pc_bottom.png');
     background-size: cover;
     background-position: 50%;
   }
@@ -2616,17 +2608,11 @@ div.notice-bar .notice-contents {
   background-size: cover;
   object-fit: cover;
 }
-.top-full-image.photo_contest {
-  background-image: url('../images/photo_contest_full.jpg');
-}
 @media (min-width: 767.98px) {
   .site-section.top-image.full .top-full-image {
     width: 100%;
     max-width: 800px;
     height: 245px;
-  }
-  .top-full-image.photo_contest {
-    background-image: url('../images/photo_contest_full_pc.jpg');
   }
 }
 .beige {
@@ -2634,13 +2620,11 @@ div.notice-bar .notice-contents {
 }
 
 .kakejiku_outer {
-  background-image: url('../images/washi_outer_s.jpg');
   width: 135px;
   height: 324px;
   padding: 10px 10px 40px;
 }
 .kakejiku_inner {
-  background-image: url('../images/washi_inner_s.jpg');
   width: 100%;
   height: 100%;
   font-family: STKaiti, "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;

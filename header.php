@@ -59,6 +59,14 @@
 .kakejiku_inner {
   background-image: url('<?= get_template_directory_uri(); ?>/images/washi_inner_s.jpg');
 }
+.top-full-image.photo_contest {
+  background-image: url('<?= get_template_directory_uri(); ?>/images/photo_contest_full.jpg');
+}
+@media (min-width: 767.98px) {
+  .top-full-image.photo_contest {
+    background-image: url('<?= get_template_directory_uri(); ?>/images/photo_contest_full_pc.jpg');
+  }
+}
     </style>
     <?php wp_head();?>
   </head>
