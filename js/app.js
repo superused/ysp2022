@@ -215,6 +215,7 @@ $(function() {
 
   // TOPのアニメーション表示
   var initTopView = function() {
+    // TOP画面の場合
     if ($('.site-blocks-cover.overlay.top')[0]) {
       // ロゴ真ん中表示の高さを初期設定（アニメーション時に位置ずれを防ぐため）
       $('.logo_bg').each(function() {
@@ -262,11 +263,11 @@ $(function() {
             $('#logo_2').hide("fade", {}, speed * 2);
           }, allViewTime);
         }, delay);
-    }
-    // TOP以外のページの画像の表示でヘッダーのバーの高さに画像のpaddingをあわせる
-    if ($('.site-section.top-image')[0]) {
+    } else {
+      // TOP以外のページの画像の表示でヘッダーのバーの高さに画像のpaddingをあわせる
+      var topTarget = $('.site-mobile-menu').next();
       var height = $('.site-navbar').height();
-      $('.site-section.top-image').css('padding-top', height + 'px').show();
+      topTarget.css('padding-top', height + 'px').show();
     }
   };
   initTopView();
@@ -275,15 +276,62 @@ $(function() {
   var senryuView = function() {
     // 詳細ボタンを押した際に表示項目を切り替える
     $('.kakejiku_button .detail[data-toggle=modal]').click(function() {
-      var kakejiku = $(this).parents('.kakejiku');
-      var inner = kakejiku.find('.kakejiku_inner').html();
-      var episode = kakejiku.find('.kakejiku_episode').html();
-      var name = kakejiku.find('.kakejiku_name').html();
+      var content = $(this).parents('[data-type=content-block]');
       var modal = $('#modal');
-      modal.find('.kakejiku_inner').html(inner);
-      modal.find('.kakejiku_episode').html(episode);
-      modal.find('.kakejiku_name').html(name);
+      var selectors = [
+        '.kakejiku_inner',
+        '.kakejiku_episode',
+        '.kakejiku_name',
+      ];
+      for (var i in selectors) {
+        var selector = selectors[i];
+        modal.find(selector).html(content.find(selector).html());
+      }
     });
   };
   senryuView();
+
+  // フォトコンテストのモーダル表示
+  var photoView = function() {
+    // 詳細ボタンを押した際に表示項目を切り替える
+    $('.photo_button .detail[data-toggle=modal]').click(function() {
+      var content = $(this).parents('[data-type=content-block]');
+      var modal = $('#modal');
+      var selectors = [
+        '.photo_title',
+        '.photo_name',
+        '.photo_image',
+        '.photo_region',
+        '.photo_comment',
+        '.photo_episode',
+      ];
+      for (var i in selectors) {
+        var selector = selectors[i];
+        if (selector != '.photo_image') {
+          modal.find(selector).html(content.find(selector).html());
+        } else {
+          modal.find(selector).attr('src', content.find(selector).attr('src'));
+        }
+      }
+    });
+  };
+  photoView();
+
+  var imageFull = function() {
+    var sn = $('.site-navbar');
+    var tif = $('.top-image.full .top-full-image');
+    if (!tif[0]) return;
+    var resize = function() {
+      var w = $(window);
+      if (w.outerWidth() < 768) {
+        tif.outerWidth(w.outerWidth());
+        tif.height(w.height() - sn.height());
+      } else {
+        tif.css({width: '', height: ''});
+      }
+    };
+    $(window).resize(resize);
+    resize();
+  };
+  imageFull();
 });
