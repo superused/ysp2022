@@ -16,37 +16,33 @@
         </div>
       </div>
     </div>
-    <div class="notice-bar" data-aos="fade-up" data-aos-delay="100">
-      <div class="notice-title">
-        <h4>NEWS</h4>
-      </div>
-      <div class="notice-contents">
-        2021.7.25<br>
-        PHOTOコンテスト投票開始！
-      </div>
-    </div>
 
-    <div class="site-section site-section-top bg-light block-13">
-      <div class="container" data-aos="fade-up">
-        <div class="nonloop-block-2 owl-carousel">
-          <div class="text-center p-3 p-md-5 bg-white">
-            <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
+    <div class="site-section site-section-top bg-light block-13 mt-5">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="news-area m-4">
+          <h4 class="news-title">NEWS</h4>
+          <div class="owl-carousel">
+            <div class="text-center p-3 p-md-5 bg-white">
+              <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
+            </div>
+            <div class="text-center p-3 p-md-5 bg-white">
+              <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
+            </div>
+            <div class="text-center p-3 p-md-5 bg-white">
+              <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
+            </div>
+            <div class="text-center p-3 p-md-5 bg-white">
+              <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
+            </div>
+            <div class="text-center p-3 p-md-5 bg-white">
+              <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
+            </div>
+            <div class="text-center p-3 p-md-5 bg-white">
+              <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
+            </div>
           </div>
-          <div class="text-center p-3 p-md-5 bg-white">
-            <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
-          </div>
-          <div class="text-center p-3 p-md-5 bg-white">
-            <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
-          </div>
-          <div class="text-center p-3 p-md-5 bg-white">
-            <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
-          </div>
-          <div class="text-center p-3 p-md-5 bg-white">
-            <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
-          </div>
-          <div class="text-center p-3 p-md-5 bg-white">
-            <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
-          </div>
+          <button class="custom-btn prev"></button>
+          <button class="custom-btn next"></button>
         </div>
       </div>
     </div>
@@ -184,6 +180,47 @@
                 <a href="senryu.html"><button class="btn btn-show mx-auto">詳しく見る</button></a>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section fixed-menu zindex-tooltip w-100 m-0 p-0">
+      <div class="container m-0">
+        <div class="row">
+          <div class="col-11 row">
+            <div class="col-4 text-center p-0">
+              <div class="pl-1 pr-1">
+                <a href="#">
+                  <div class="contents">
+                    <img src="<?= get_template_directory_uri(); ?>/images/fixed_live_button.png" alt="Image" class="img-fluid w-100">
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-4 text-center p-0">
+              <div class="pl-1 pr-1">
+                <a href="#">
+                  <div class="contents">
+                    <img src="<?= get_template_directory_uri(); ?>/images/fixed_union_button.png" alt="Image" class="img-fluid w-100">
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-4 text-center p-0">
+              <div class="pl-1 pr-1">
+                <a href="#">
+                  <div class="contents">
+                    <img src="<?= get_template_directory_uri(); ?>/images/fixed_contest_button.png" alt="Image" class="img-fluid w-100">
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-1 text-center present m-0 p-0">
+            <a href="#" class="mr-3">
+              <img src="<?= get_template_directory_uri(); ?>/images/fixed_present.png" alt="Image" class="img-fluid">
+            </a>
           </div>
         </div>
       </div>
