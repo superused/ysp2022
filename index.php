@@ -62,12 +62,15 @@
     <div class="site-section">
       <div class="container-fluid">
         <div class="row">
-          <div class="site-section-heading text-center mb-5 w-border mx-auto" data-aos="fade-up" data-aos-delay="100">
+          <div class="site-section-heading text-center mb-3 w-border mx-auto" data-aos="fade-up" data-aos-delay="100">
             <h2>CONTENTS LIST</h2>
             <div class="contents-border mt-1 mb-2"></div>
             <p class="text-center">楽しむコンテンツをクリック！</p>
-            <div class="text-center">
+          </div>
+          <div class="site-section-heading text-center mb-5 w-border mx-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="contents-list-img text-center">
               <img src="<?= get_template_directory_uri(); ?>/images/contents_list.png" alt="Image" class="img-fluid">
+              <div class="contents-list-link link1"><a href="#"></a></div>
             </div>
           </div>
         </div>

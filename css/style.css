@@ -2966,3 +2966,14 @@ div.news-area .owl-carousel {
   display: flex;
   justify-content: center;
 }
+.contents-list-img {
+}
+.contents-list-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contents-list-link.link1 {
+}
+.contents-list-link a {
+}
