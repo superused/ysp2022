@@ -277,8 +277,18 @@ $(function() {
         tif.css({width: '', height: ''});
       }
     };
-    $(window).resize(resize);
+    $(window).on('resize', resize);
     resize();
   };
   imageFull();
+
+  var footerBanner = function() {
+    var btn = $('.footer-banner .close-btn');
+    if (btn[0]) {
+      btn.on('click', function() {
+        $('.footer-banner').hide();
+      });
+    }
+  }
+  footerBanner();
 });

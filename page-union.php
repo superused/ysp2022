@@ -143,4 +143,12 @@
         </div>
       </div>
     </div>
+    <div class="site-section footer-banner zindex-tooltip m-0 p-0">
+      <div class="container-fluid">
+        <div class="footer-banner-contents text-center p-3">
+          <img src="<?= get_template_directory_uri(); ?>/images/logo.jpg">
+        </div>
+        <button class="close-btn"></button>
+      </div>
+    </div>
 <?php get_footer(); ?>

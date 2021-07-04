@@ -2977,3 +2977,39 @@ div.news-area .owl-carousel {
 }
 .contents-list-link a {
 }
+
+.footer-banner {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  bottom: 0;
+  z-index: 10000;
+  margin: 0 auto;
+}
+.footer-banner .close-btn {
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #6f6f6f;
+  background-color: #6f6f6f;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.footer-banner .close-btn::before,
+.footer-banner .close-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.15rem;
+  height: 1rem;
+  background: #fff;
+}
+.footer-banner .close-btn::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+.footer-banner .close-btn::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
