@@ -186,10 +186,10 @@
     </div>
 
     <div class="site-section fixed-menu zindex-tooltip w-100 m-0 p-0">
-      <div class="container m-0">
-        <div class="row">
-          <div class="col-11 row">
-            <div class="col-4 text-center p-0">
+      <div class="container-fluid m-0 p-0">
+        <div class="row m-0 p-0">
+          <div class="fixed-button col-11 row">
+            <div class="fixed-button-content col-4 text-center p-0">
               <div class="pl-1 pr-1">
                 <a href="#">
                   <div class="contents">
@@ -198,7 +198,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-4 text-center p-0">
+            <div class="fixed-button-content col-4 text-center p-0">
               <div class="pl-1 pr-1">
                 <a href="#">
                   <div class="contents">
@@ -207,7 +207,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-4 text-center p-0">
+            <div class="fixed-button-content col-4 text-center p-0">
               <div class="pl-1 pr-1">
                 <a href="#">
                   <div class="contents">
@@ -217,7 +217,7 @@
               </div>
             </div>
           </div>
-          <div class="col-1 text-center present m-0 p-0">
+          <div class="fixed-button-content col-1 text-center present m-0 p-0">
             <a href="#" class="mr-3">
               <img src="<?= get_template_directory_uri(); ?>/images/fixed_present.png" alt="Image" class="img-fluid">
             </a>

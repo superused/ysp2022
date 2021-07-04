@@ -2934,16 +2934,22 @@ div.news-area .owl-carousel {
 }
 .fixed-menu {
   position: fixed;
+  display: flex;
   width: 100%;
   bottom: 0;
   z-index: 9999;
+  justify-content: space-between;
+}
+.fixed-menu .fixed-button-content {
+  display: flex;
+  flex-direction: column;
 }
 .fixed-menu .row .contents {
   background-color: #00b9f2;
   border-radius: 1rem 1rem 0 0;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem;
 }
-.fixed-menu .row .present {
-  right: 0;
+.fixed-present {
   bottom: 0;
+  right: 0;
 }
