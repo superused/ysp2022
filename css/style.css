@@ -2494,9 +2494,6 @@ h2.largeh2 {
   z-index: 99;
   position: relative;
 }
-.site-section.contents-list .row .site-section-heading .team-member.image {
-  width: auto;
-}
 
 .site-section.top-footer {
   padding-bottom: 0;

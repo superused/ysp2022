@@ -59,24 +59,15 @@
       </div>
     </div>
 
-    <div class="site-section contents-list">
-      <div class="container">
+    <div class="site-section">
+      <div class="container-fluid">
         <div class="row">
-          <div class="site-section-heading text-center mb-5 w-border mx-auto col-sm-12 col-md-12 col-lg-12 col-xl-12" data-aos="fade-up" data-aos-delay="100">
+          <div class="site-section-heading text-center mb-5 w-border mx-auto" data-aos="fade-up" data-aos-delay="100">
             <h2>CONTENTS LIST</h2>
             <div class="contents-border mt-1 mb-2"></div>
             <p class="text-center">楽しむコンテンツをクリック！</p>
-            <div class="team-member text-center image col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-3 mb-3">
-              <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/senryu3.png" alt="Image" class="img-fluid"></a>
-            </div>
-            <div class="team-member text-center image col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-3 mb-3">
-              <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/senryu3.png" alt="Image" class="img-fluid"></a>
-            </div>
-            <div class="team-member text-center image col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-3 mb-3">
-              <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/senryu3.png" alt="Image" class="img-fluid"></a>
-            </div>
-            <div class="team-member text-center image col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-3 mb-3">
-              <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/senryu3.png" alt="Image" class="img-fluid"></a>
+            <div class="text-center">
+              <img src="<?= get_template_directory_uri(); ?>/images/contents_list.png" alt="Image" class="img-fluid">
             </div>
           </div>
         </div>
