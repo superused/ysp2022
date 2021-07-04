@@ -2934,22 +2934,31 @@ div.news-area .owl-carousel {
 }
 .fixed-menu {
   position: fixed;
-  display: flex;
   width: 100%;
   bottom: 0;
   z-index: 9999;
+}
+.fixed-button {
+  width: 80%;
+  display: flex;
   justify-content: space-between;
 }
 .fixed-menu .fixed-button-content {
   display: flex;
-  flex-direction: column;
+  align-content: flex-end;
 }
-.fixed-menu .row .contents {
+.fixed-menu .fixed-button-content .contents {
+  margin: 0.3rem;
+  margin-bottom: 0;
   background-color: #00b9f2;
-  border-radius: 1rem 1rem 0 0;
-  padding: 0.2rem;
+  border: 5px solid #00b9f2;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
-.fixed-present {
+.fixed-button-present {
+  position: absolute;
   bottom: 0;
   right: 0;
+  width: 20%;
+  display: flex;
+  justify-content: center;
 }
