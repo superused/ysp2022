@@ -27,28 +27,14 @@
 }
 @media (min-width: 767.98px) {
   .site-blocks-cover.overlay.top {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/peacedesigner_kameoka_tb1.jpg');
-  }
-  .site-blocks-cover.overlay.top.top2 {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/moyou_top.png');
-  }
-  .site-blocks-cover.overlay.top.top3 {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/moyou_bottom.png');
-  }
-}
-@media (min-width: 1199.98px) {
-  .site-blocks-cover.overlay.top {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/peacedesigner_kameoka_pc1.jpg');
     background-size: cover;
     background-position: 50%;
   }
   .site-blocks-cover.overlay.top.top2 {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/moyou_pc_top.png');
     background-size: cover;
     background-position: 50%;
   }
   .site-blocks-cover.overlay.top.top3 {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/moyou_pc_bottom.png');
     background-size: cover;
     background-position: 50%;
   }

@@ -164,11 +164,53 @@ $(function() {
   var initTopView = function() {
     // TOP画面の場合
     if ($('.site-blocks-cover.overlay.top')[0]) {
+      // ロゴの表示位置
+      $('.site-blocks-cover.overlay.top .container .row').css('margin-top', ($(window).height() * 0.35 ) + 'px');
+
       // ロゴ真ん中表示の高さを初期設定（アニメーション時に位置ずれを防ぐため）
       $('.logo_bg').each(function() {
         var this_obj = $(this);
         this_obj.css('height', this_obj.find('img').height());
       });
+      const portrait = [
+        'peacedesigner_kameoka_sp1.jpg',
+        'moyou_top.png',
+        'moyou_bottom.png',
+      ];
+      const landscape = [
+        'peacedesigner_kameoka_pc1.jpg',
+        'moyou_pc_top.png',
+        'moyou_pc_bottom.png',
+      ];
+      const topAnimeElem = [
+        $('.site-blocks-cover.overlay.top'),
+        $('.site-blocks-cover.overlay.top2'),
+        $('.site-blocks-cover.overlay.top3'),
+      ];
+      let topAnime = [];
+      let isPortrait = true;
+      const resize = function() {
+        const w =  $(window);
+        let changed = false;
+        if (w.width() < w.height()) {
+          if (!topAnime.length || !isPortrait) changed = true;
+          isPortrait = true;
+        } else {
+          if (!topAnime.length || isPortrait) changed = true;
+          isPortrait = false;
+        }
+        if (changed) {
+          topAnime = isPortrait ? portrait : landscape;
+          for (const i in topAnime) {
+            let bi = topAnimeElem[i].css('background-image');
+            let split = bi.split('"');
+            split[1] = split[1].split('/').slice(0, -1).concat(topAnime[i]).join('/');
+            topAnimeElem[i].css('background-image', split.join('"'));
+          }
+        }
+      };
+      $(window).on('resize', resize);
+      resize();
 
       // TOP画像の高さを再指定
       var actualImage = new Image();
@@ -180,7 +222,7 @@ $(function() {
 
         var speed = 500; // 1動作の時間(ms) （少ないほうが速い）
         var delay = speed * 3; // アニメーション開始までの待ち時間(ms)
-        var allViewTime = speed * 5; // アニメーション全表示の時間(ms)
+        var allViewTime = speed * 6; // アニメーション全表示の時間(ms)
 
         // アニメーション開始
         setTimeout(function() {
@@ -191,7 +233,7 @@ $(function() {
                 $('.top2').hide('fade', {}, speed, function() {
                   $('.top3').hide('fade', {}, speed);
                 });
-              }, speed * 3);
+              }, allViewTime);
             });
           });
 
@@ -208,7 +250,7 @@ $(function() {
             });
             // 真ん中消去処理
             $('#logo_2').hide("fade", {}, speed * 2);
-          }, allViewTime);
+          }, allViewTime + speed * 2);
         }, delay);
     } else {
       // TOP以外のページの画像の表示でヘッダーのバーの高さに画像のpaddingをあわせる
