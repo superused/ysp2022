@@ -3098,3 +3098,17 @@ div.news-area .owl-carousel {
     0% { transform:translateY(-5px); }
   100% { transform:translateY(5px); }
 }
+.contact-form {
+  background-color: #e5f8fe;
+}
+.contact-form label {
+  width: 100%;
+}
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form textarea {
+  margin-top: 0.4rem;
+  width: 100%;
+  background-color: #ededed;
+  border: none;
+}
