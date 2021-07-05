@@ -67,10 +67,16 @@
             <div class="contents-border mt-1 mb-2"></div>
             <p class="text-center">楽しむコンテンツをクリック！</p>
           </div>
-          <div class="site-section-heading text-center mb-5 w-border mx-auto" data-aos="fade-up" data-aos-delay="100">
+          <div class="site-section-heading text-center mb-5 w-border mx-auto overflow-hidden" data-aos="fade-up" data-aos-delay="100">
             <div class="contents-list-img text-center">
               <img src="<?= get_template_directory_uri(); ?>/images/contents_list.png" alt="Image" class="img-fluid">
-              <div class="contents-list-link link1"><a href="#"></a></div>
+              <ul class="contents-list-link">
+                <li><a href="<?= esc_url(home_url('/peace-project/'));?>"><img src="<?= get_template_directory_uri(); ?>/images/contents_list-peace_project.png" alt="Image" class="img-fluid"></a></li>
+                <li><a href="<?= esc_url(home_url('/senryu/'));?>"><img src="<?= get_template_directory_uri(); ?>/images/contents_list-tsunagari_senryu.png" alt="Image" class="img-fluid"></a></li>
+                <li><a href="<?= esc_url(home_url('/live/'));?>"><img src="<?= get_template_directory_uri(); ?>/images/contents_list-live.png" alt="Image" class="img-fluid"></a></li>
+                <li><a href="<?= esc_url(home_url('/short-movie/'));?>"><img src="<?= get_template_directory_uri(); ?>/images/contents_list-short_movie.png" alt="Image" class="img-fluid"></a></li>
+                <li><a href="<?= esc_url(home_url('/photo-contest/'));?>"><img src="<?= get_template_directory_uri(); ?>/images/contents_list-photo_contest.png" alt="Image" class="img-fluid"></a></li>
+              </ul>
             </div>
           </div>
         </div>

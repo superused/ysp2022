@@ -2966,18 +2966,6 @@ div.news-area .owl-carousel {
   display: flex;
   justify-content: center;
 }
-.contents-list-img {
-}
-.contents-list-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.contents-list-link.link1 {
-}
-.contents-list-link a {
-}
-
 .footer-banner {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.2);
@@ -3012,4 +3000,101 @@ div.news-area .owl-carousel {
 }
 .footer-banner .close-btn::after {
   transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+
+.contents-list-link {
+  top: 0;
+  left: 0;
+}
+.contents-list-link li {
+  width: 100%;
+}
+.contents-list-link li:nth-child(1) {
+  position: absolute;
+  top: 54.16vw;
+  left: 17.85vw;
+  width: 47vw;
+}
+.contents-list-link li:nth-child(2) {
+  position: absolute;
+  top: 42.2vw;
+  left: 65.6vw;
+  width: 31.49vw;
+}
+.contents-list-link li:nth-child(3) {
+  position: absolute;
+  top: 14.4vw;
+  left: 59.6vw;
+  width: 32.38vw;
+}
+.contents-list-link li:nth-child(4) {
+  position: absolute;
+  top: 2vw;
+  left: 3.2vw;
+  width: 32.46vw;
+}
+.contents-list-link li:nth-child(5) {
+  position: absolute;
+  top: 36vw;
+  left: 0.6vw;
+  width: 32.38vw;
+}
+.contents-list-link img {
+  width: 100%;
+}
+.contents-list-link.link1 a {
+  animation: vertical 1s ease-in-out infinite alternate;
+}
+.contents-list-link.link1 img {
+  animation: horizontal 1s ease-in-out infinite alternate;
+}
+
+.contents-list-link li {
+    display: inline-block;
+}
+.contents-list-link li:nth-child(odd) {
+    animation: horizontal1 1s ease-in-out infinite alternate;
+}
+.contents-list-link li:nth-child(even) {
+    animation: horizontal2 1s ease-in-out infinite alternate;
+}
+.contents-list-link a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    animation: vertical 1s ease-in-out infinite alternate;
+}
+
+.contents-list-link li:nth-child(1) a {
+    animation-duration: 1.7s;
+}
+.contents-list-link li:nth-child(2) a {
+    animation-duration: 2.1s;
+}
+.contents-list-link li:nth-child(3) a {
+    animation-duration: 1.9s;
+}
+.contents-list-link li:nth-child(4) a {
+    animation-duration: 2s;
+}
+.contents-list-link li:nth-child(5) a {
+    animation-duration: 2.3s;
+}
+
+@keyframes horizontal1 {
+    0% { transform:translateX(-3px); }
+  100% { transform:translateX(3px); }
+}
+
+@keyframes horizontal2 {
+    0% { transform:translateX(3px); }
+  100% { transform:translateX(-3px); }
+}
+
+@keyframes vertical {
+    0% { transform:translateY(-5px); }
+  100% { transform:translateY(5px); }
 }
