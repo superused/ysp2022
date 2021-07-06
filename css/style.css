@@ -2649,6 +2649,13 @@ button.vote {
   font-weight: 600;
   color: #fff;
 }
+button.vote:disabled {
+  background-color: #c0c0c0;
+  border: 3px solid #c0c0c0;
+  font-weight: 600;
+  color: #fff;
+  cursor: initial;
+}
 .arrow{
   position: relative;
   display: inline-block;

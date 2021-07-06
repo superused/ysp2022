@@ -286,33 +286,28 @@ $(function() {
   var senryuVote = function() {
     const tohyo = $('#tohyo');
     if (tohyo[0] && $('button.vote')[0]) {
-      $(document).on('click', 'button.vote', function(e) {
-        const thisObj = $(this),
-          index = thisObj.closest('#modal')[0] ? parseInt($('#index').val()) : thisObj.closest('.kakejiku').index('.kakejiku'),
-          elem = $('.kakejiku').eq(index),
-          senryu = elem.find('.kakejiku_inner').text().trim(),
-          name = elem.find('.kakejiku_name').html().trim();
-
-        if (confirm('「' + senryu + '」' + "\n" + name + "\n\n" + 'こちらに投票しますか？')) {
-          const radios = tohyo.find('input[type=radio]');
+      if (!tohyo.find('input[type=radio]')[0]) {
+        $('button.vote').each(function() {
+          $(this).prop('disabled', true).text('投票済');
+        });
+      } else {
+        $(document).on('click', 'button.vote', function(e) {
+          const thisObj = $(this),
+            index = thisObj.closest('#modal')[0] ? parseInt($('#index').val()) : thisObj.closest('.kakejiku').index('.kakejiku'),
+            radios = tohyo.find('input[type=radio]');
           if (radios[0]) {
             radios.eq(index).prop('checked', true);
             tohyo.find('input[type=button][name=vote]').click();
             $('button.vote').each(function() {
-              $(this).prop('disabled', true);
+              $(this).prop('disabled', true).text('投票済');
             });
-            setTimeout(function() {
-              alert('投票が完了しました');
-              $('button.vote').each(function() {
-                $(this).prop('disabled', false);
-              });
-            }, 1000);
-          } else {
-            alert('既に投票済です');
+            const voteNumElem = $('.kakejiku').eq(index).find('.vote_num span'),
+              voteNum = parseInt(voteNumElem.html());
+            voteNumElem.html(voteNum + 1);
           }
-        }
-        return false;
-      });
+          return false;
+        });
+      }
     }
   }
   senryuVote();
