@@ -264,7 +264,7 @@ $(function() {
   // 川柳のモーダル表示
   var senryuView = function() {
     // 詳細ボタンを押した際に表示項目を切り替える
-    $('.kakejiku_button .detail[data-toggle=modal]').click(function() {
+    $('.kakejiku .detail').click(function() {
       var content = $(this).parents('[data-type=content-block]');
       var modal = $('#modal');
       var selectors = [
@@ -276,9 +276,46 @@ $(function() {
         var selector = selectors[i];
         modal.find(selector).html(content.find(selector).html());
       }
+      modal.find(selector).html(content.find(selector).html());
+      modal.find('#index').val($('.kakejiku button.detail').index(content.find('button.detail')));
     });
   };
   senryuView();
+
+  // 川柳の投票
+  var senryuVote = function() {
+    const tohyo = $('#tohyo');
+    if (tohyo[0] && $('button.vote')[0]) {
+      $(document).on('click', 'button.vote', function(e) {
+        const thisObj = $(this),
+          index = thisObj.closest('#modal')[0] ? parseInt($('#index').val()) : thisObj.closest('.kakejiku').index('.kakejiku'),
+          elem = $('.kakejiku').eq(index),
+          senryu = elem.find('.kakejiku_inner').text().trim(),
+          name = elem.find('.kakejiku_name').html().trim();
+
+        if (confirm('「' + senryu + '」' + "\n" + name + "\n\n" + 'こちらに投票しますか？')) {
+          const radios = tohyo.find('input[type=radio]');
+          if (radios[0]) {
+            radios.eq(index).prop('checked', true);
+            tohyo.find('input[type=button][name=vote]').click();
+            $('button.vote').each(function() {
+              $(this).prop('disabled', true);
+            });
+            setTimeout(function() {
+              alert('投票が完了しました');
+              $('button.vote').each(function() {
+                $(this).prop('disabled', false);
+              });
+            }, 1000);
+          } else {
+            alert('既に投票済です');
+          }
+        }
+        return false;
+      });
+    }
+  }
+  senryuVote();
 
   // フォトコンテストのモーダル表示
   var photoView = function() {
@@ -331,6 +368,6 @@ $(function() {
         $('.footer-banner').hide();
       });
     }
-  }
+  };
   footerBanner();
 });

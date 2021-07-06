@@ -46,6 +46,66 @@
               </div>
             </div>
 
+<?php
+$datas = [
+  [
+    'senryu' => 'この場所に|あなたの俳句を|表示します',
+    'episode' => '1エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。',
+    'name' => '山田 花子',
+    'age' => 20,
+    'gender' => 2,
+  ],
+  [
+    'senryu' => 'この場所に|あなたの俳句を|表示します',
+    'episode' => '2エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。',
+    'name' => '山田 花子',
+    'age' => 30,
+    'gender' => 2,
+  ],
+  [
+    'senryu' => 'この場所に|あなたの俳句を|表示します',
+    'episode' => '3エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。',
+    'name' => '山田 花子',
+    'age' => 40,
+    'gender' => 2,
+  ],
+  [
+    'senryu' => 'この場所に|あなたの俳句を|表示します',
+    'episode' => '4エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。',
+    'name' => '山田 花子',
+    'age' => 50,
+    'gender' => 2,
+  ],
+  [
+    'senryu' => 'この場所に|あなたの俳句を|表示します',
+    'episode' => '5エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。',
+    'name' => '山田 花子',
+    'age' => 60,
+    'gender' => 2,
+  ],
+  [
+    'senryu' => 'この場所に|あなたの俳句を|表示します',
+    'episode' => '6エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。',
+    'name' => '山田 花子',
+    'age' => 70,
+    'gender' => 2,
+  ],
+  [
+    'senryu' => 'この場所に|あなたの俳句を|表示します',
+    'episode' => '7エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。',
+    'name' => '山田 花子',
+    'age' => 80,
+    'gender' => 2,
+  ],
+  [
+    'senryu' => 'この場所に|わたしの俳句を|表示する',
+    'episode' => '8エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。',
+    'name' => '山田 太郎',
+    'age' => 30,
+    'gender' => 1,
+  ],
+];
+?>
             <div class="site-section">
               <div class="container">
                 <div class="row">
@@ -53,182 +113,29 @@
                     <h4 class="font-weight-bold mb-2">応募作品</h4>
                     <div class="contents-border short mt-1 mb-1"></div>
                   </div>
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="kakejiku_outer m-0 mt-4 mb-3 mx-auto">
+<?php foreach ($datas as $data): ?>
+                  <div class="kakejiku col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
+                    <div class="kakejiku_outer m-0 mt-4 mb-3 mx-auto detail c-pointer" data-toggle="modal" data-target="#modal">
                       <div class="kakejiku_inner">
-                        この場所に<br>あなたの俳句を<br>表示します
+                        <?= str_replace('|', '<br>',$data['senryu']); ?>
                       </div>
                     </div>
                     <div class="kakejiku_episode d-none">
-                      1エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
+                      <?= esc_html($data['episode']); ?>
                     </div>
                     <div class="kakejiku_name col-10 mx-auto mt-3 mb-2 text-white font-weight-bold d-none">
-                      山田 花子 (20代 女性)
+                      <?= $data['name'] . '(' . ((int)($data['age'] / 10) * 10) . '代' . ($data['gender'] == 1 ? ' 男性' : ($data['gender'] == 2 ? '女性' :  '')) . ')'; ?>
                     </div>
                     <div class="row kakejiku_button mx-auto text-center">
                       <div class="col-6 pl-1 pr-1">
-                        <button class="detail mx-auto w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
+                        <button class="detail mx-auto w-100 text-nowrap c-pointer" data-toggle="modal" data-target="#modal">詳細</button>
                       </div>
                       <div class="col-6 pl-1 pr-1">
-                        <button class="vote mx-auto w-100 text-nowrap">投票</button>
+                        <button class="vote mx-auto w-100 text-nowrap c-pointer">投票</button>
                       </div>
                     </div>
                   </div>
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="kakejiku_outer m-0 mt-4 mb-3 mx-auto">
-                      <div class="kakejiku_inner">
-                        この場所に<br>あなたの俳句を<br>表示します
-                      </div>
-                    </div>
-                    <div class="kakejiku_episode d-none">
-                      2エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                    </div>
-                    <div class="kakejiku_name d-none">
-                      山田 花子 (30代 女性)
-                    </div>
-                    <div class="row kakejiku_button mx-auto text-center">
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="detail mx-auto w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
-                      </div>
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="vote mx-auto w-100 text-nowrap">投票</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="kakejiku_outer m-0 mt-4 mb-3 mx-auto">
-                      <div class="kakejiku_inner">
-                        この場所に<br>あなたの俳句を<br>表示します
-                      </div>
-                    </div>
-                    <div class="kakejiku_episode d-none">
-                      3エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                    </div>
-                    <div class="kakejiku_name d-none">
-                      山田 花子 (40代 女性)
-                    </div>
-                    <div class="row kakejiku_button mx-auto text-center">
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="detail mx-auto w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
-                      </div>
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="vote mx-auto w-100 text-nowrap">投票</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="kakejiku_outer m-0 mt-4 mb-3 mx-auto">
-                      <div class="kakejiku_inner">
-                        この場所に<br>あなたの俳句を<br>表示します
-                      </div>
-                    </div>
-                    <div class="kakejiku_episode d-none">
-                      4エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                    </div>
-                    <div class="kakejiku_name d-none">
-                      山田 花子 (50代 女性)
-                    </div>
-                    <div class="row kakejiku_button mx-auto text-center">
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="detail mx-auto w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
-                      </div>
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="vote mx-auto w-100 text-nowrap">投票</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="kakejiku_outer m-0 mt-4 mb-3 mx-auto">
-                      <div class="kakejiku_inner">
-                        この場所に<br>あなたの俳句を<br>表示します
-                      </div>
-                    </div>
-                    <div class="kakejiku_episode d-none">
-                      5エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                    </div>
-                    <div class="kakejiku_name d-none">
-                      山田 花子 (60代 女性)
-                    </div>
-                    <div class="row kakejiku_button mx-auto text-center">
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="detail mx-auto w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
-                      </div>
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="vote mx-auto w-100 text-nowrap">投票</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="kakejiku_outer m-0 mt-4 mb-3 mx-auto">
-                      <div class="kakejiku_inner">
-                        この場所に<br>あなたの俳句を<br>表示します
-                      </div>
-                    </div>
-                    <div class="kakejiku_episode d-none">
-                      6エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                    </div>
-                    <div class="kakejiku_name d-none">
-                      山田 花子 (70代 女性)
-                    </div>
-                    <div class="row kakejiku_button mx-auto text-center">
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="detail mx-auto w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
-                      </div>
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="vote mx-auto w-100 text-nowrap">投票</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="kakejiku_outer m-0 mt-4 mb-3 mx-auto">
-                      <div class="kakejiku_inner">
-                        この場所に<br>あなたの俳句を<br>表示します
-                      </div>
-                    </div>
-                    <div class="kakejiku_episode d-none">
-                      7エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                    </div>
-                    <div class="kakejiku_name d-none">
-                      山田 花子 (80代 女性)
-                    </div>
-                    <div class="row kakejiku_button mx-auto text-center">
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="detail mx-auto w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
-                      </div>
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="vote mx-auto w-100 text-nowrap">投票</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="kakejiku_outer m-0 mt-4 mb-3 mx-auto">
-                      <div class="kakejiku_inner">
-                        この場所に<br>あなたの俳句を<br>表示します
-                      </div>
-                    </div>
-                    <div class="kakejiku_episode d-none">
-                      8エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                    </div>
-                    <div class="kakejiku_name d-none">
-                      山田 花子 (90代 女性)
-                    </div>
-                    <div class="row kakejiku_button mx-auto text-center">
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="detail mx-auto w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
-                      </div>
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="vote mx-auto w-100 text-nowrap">投票</button>
-                      </div>
-                    </div>
-                  </div>
+<?php endforeach; ?>
                   <div class="text-center col-12 mt-5 mb-5" data-aos="fade-up" data-aos-delay="100">
                     <div href="#" class="arrow down circle"></div>
                   </div>
@@ -324,9 +231,13 @@
         </div>
         <div class="kakejiku_name col-10 mx-auto mt-3 mb-2 text-white font-weight-bold">
         </div>
-        <div class="kakejiku_button mx-auto text-center">
-          <button class="vote mx-auto pl-4 pr-4" data-dismiss="modal">投票</button>
+        <input type="hidden" id="index" value="">
+        <div class="mx-auto text-center modal-content bg-transparent border-0">
+          <button class="vote mx-auto pl-4 pr-4 c-pointer">投票</button>
         </div>
       </div>
+    </div>
+    <div id="tohyo" class="d-none">
+      <?php the_content(); ?>
     </div>
 <?php get_footer(); ?>

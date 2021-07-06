@@ -3112,3 +3112,6 @@ div.news-area .owl-carousel {
   background-color: #ededed;
   border: none;
 }
+.c-pointer {
+  cursor: pointer;
+}
