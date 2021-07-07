@@ -3049,6 +3049,10 @@ div.news-area .owl-carousel {
 }
 .contents-list-link img {
   width: 100%;
+  transition: 0.5s all;
+}
+.contents-list-link li img:hover{
+  transform: scale(1.2);
 }
 .contents-list-link.link1 a {
   animation: vertical 1s ease-in-out infinite alternate;
