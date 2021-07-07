@@ -1,9 +1,6 @@
 <?php
 require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php';
 
-// 川柳のアンケートID
-define('SENRYU_QID', 1);
-
 class Util {
   public $wpdb;
 
