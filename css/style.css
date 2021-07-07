@@ -412,6 +412,7 @@ a:hover {
   margin-bottom: 0;
   margin-left: 0;
   padding-left: 0;
+  font-size: 0.5rem;
 }
 .site-navbar .site-navigation .site-menu .active > a {
   color: #000000;
@@ -420,9 +421,12 @@ a:hover {
   text-decoration: none !important;
   display: inline-block;
 }
+.site-navbar .site-navigation .site-menu a img {
+  display: none;
+}
 .site-navbar .site-navigation .site-menu > li {
   display: inline-block;
-  padding: 10px 5px;
+  padding: 10px 1px;
 }
 .site-navbar .site-navigation .site-menu > li > a {
   padding: 10px 10px;
@@ -546,12 +550,13 @@ a:hover {
 }
 
 .site-mobile-menu {
-  width: 300px;
+  width: 100%;
   position: fixed;
   right: 0;
-  z-index: 2000;
+  z-index: 10001;
   padding-top: 20px;
   background: #fff;
+  color: #6f6f6f;
   height: calc(100vh);
   -webkit-transform: translateX(110%);
   -ms-transform: translateX(110%);
@@ -578,7 +583,7 @@ a:hover {
   margin-top: 8px;
 }
 .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-close span {
-  font-size: 30px;
+  font-size: 2rem;
   display: inline-block;
   padding-left: 10px;
   padding-right: 0px;
@@ -610,9 +615,11 @@ a:hover {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   position: relative;
-  padding: 20px;
+  padding: 0.1px;
   height: calc(100vh - 52px);
   padding-bottom: 150px;
+  color: #6f6f6f;
+  background-color: #f6f1e2;
 }
 .site-mobile-menu .site-nav-wrap {
   padding: 0;
@@ -624,7 +631,8 @@ a:hover {
   padding: 10px 20px;
   display: block;
   position: relative;
-  color: #212529;
+  color: #6f6f6f;
+  font-weight: bold;
 }
 .site-mobile-menu .site-nav-wrap a:hover {
   color: #00b9f2;
@@ -632,9 +640,13 @@ a:hover {
 .site-mobile-menu .site-nav-wrap li {
   position: relative;
   display: block;
+  border-top: solid 3px #dcdcdc;
 }
-.site-mobile-menu .site-nav-wrap li.active > a {
-  color: #00b9f2;
+.site-mobile-menu .site-nav-wrap li a span {
+  margin-left: 5px;
+}
+.site-mobile-menu .site-nav-wrap img {
+  height: 2rem;
 }
 .site-mobile-menu .site-nav-wrap .arrow-collapse {
   position: absolute;
@@ -675,10 +687,18 @@ a:hover {
   position: relative;
   float: left;
   width: 100%;
+  background-color: #fff;
+}
+.site-mobile-menu .site-nav-wrap > li.menu-sns {
+  background-color: #f6f1e2;
+  width: 100%;
+  height: 100%;
 }
 .site-mobile-menu .site-nav-wrap > li > a {
   padding-left: 20px;
-  font-size: 20px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
 }
 .site-mobile-menu .site-nav-wrap > li > ul {
   padding: 0;
@@ -690,7 +710,7 @@ a:hover {
 }
 .site-mobile-menu .site-nav-wrap > li > ul > li > a {
   padding-left: 40px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .site-mobile-menu .site-nav-wrap > li > ul > li > ul {
   padding: 0;
@@ -3125,4 +3145,7 @@ div.news-area .owl-carousel {
 }
 .c-pointer {
   cursor: pointer;
+}
+.text-cyan {
+  color: #00b9f2;
 }
