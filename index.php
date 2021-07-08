@@ -18,7 +18,7 @@
     </div>
 
     <div class="site-section site-section-top bg-light block-13 mt-5">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
         <div class="news-area m-4">
           <h4 class="news-title">NEWS</h4>
           <div class="owl-carousel">
@@ -86,8 +86,10 @@
     <div class="site-section events-section">
       <div data-aos="fade-up" data-aos-delay="100">
         <div class="event-bg-left"></div>
-        <h2 class="event-bg-word-1">EVENT</h2>
-        <h2 class="event-bg-word-2">イベント</h2>
+        <div class="event-bg-right">
+          <h2 class="event-bg-word-1">EVENT</h2>
+          <h2 class="event-bg-word-2">イベント</h2>
+        </div>
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">

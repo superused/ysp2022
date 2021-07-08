@@ -1,4 +1,7 @@
 /* Base */
+html {
+  touch-action: manipulation;
+}
 body {
   line-height: 1.7;
   color: rgba(0, 0, 0, 1);
@@ -2361,10 +2364,14 @@ div.event-bg-left {
   width: 10px;
   height: 150px;
   float: left;
-  margin-top: 26px;
+  margin-top: -43px;
+}
+div.event-bg-right {
+  position: relative;
+  height: 4rem;
 }
 .events-section h2.event-bg-word-1 {
-  position: relative;
+  position: absolute;
   font-size: 8rem;
   font-weight: bold;
   text-align: left;
@@ -2381,11 +2388,11 @@ div.event-bg-left {
 }
 .events-section h2.event-bg-word-2 {
   position: absolute;
-  left: 125px;
+  left: 140px;
   white-space: nowrap;
   font-size: 3rem;
   font-weight: bold;
-  margin-top: -82px;
+  margin-top: -22px;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -2396,11 +2403,8 @@ div.event-bg-left {
 }
 
 @media (min-width: 767.98px) {
-  div.event-bg-left {
-    margin-top: 30px;
-  }
-  .events-section h2.event-bg-word-1 {
-    margin: -130px 0 -20px 10px;
+  div.event-bg-right {
+    margin-top: -58px;
   }
   .events-section .container .image {
     padding-left: 0;
@@ -2917,6 +2921,7 @@ div.news-area .owl-carousel {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 0.6;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -2984,10 +2989,12 @@ div.news-area .owl-carousel {
   align-content: flex-end;
 }
 .fixed-menu .fixed-button-content .contents {
-  margin: 0.3rem;
+  margin: 0.1rem;
   margin-bottom: 0;
+  padding: 0.1rem 0.2rem;
   background-color: #00b9f2;
-  border: 5px solid #00b9f2;
+  border: 1px solid #fff;
+  border-bottom: 0;
   border-radius: 0.5rem 0.5rem 0 0;
 }
 .fixed-button-present {
