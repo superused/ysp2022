@@ -2421,6 +2421,9 @@ div.event-bg-right {
   .events-section .container .row {
     background-color: #fff;
   }
+  .events-section .container .pickup-list .row {
+    background-color: #f7f2e3;
+  }
   .events-section .container .site-section-heading {
     padding-left: 0;
   }
@@ -3195,7 +3198,7 @@ div.news-area .owl-carousel {
 @media (max-width: 336px) {
   .pickup-contents h2 {
     font-size: 77px;
-    top: -16px;
+    top: -15px;
     left: -6px;
   }
 }
@@ -3208,22 +3211,25 @@ div.news-area .owl-carousel {
 }
 @media (min-width: 767.98px) {
   .pickup-contents h2 {
-    font-size: 202px;
-    top: -35px;
-    left: -12px;
+    font-size: 203px;
+    top: -36px;
+    left: -13px;
   }
 }
 @media (min-width: 991.98px) {
   .pickup-contents h2 {
     font-size: 275px;
-    top: -46px;
+    top: -47px;
     left: -18px;
   }
 }
 @media (min-width: 1199.98px) {
   .pickup-contents h2 {
     font-size: 329px;
-    top: -55px;
+    top: -56px;
     left: -20px;
   }
 }
+/*.pickup-list {
+  background-color: #f6f1e2;
+} */

@@ -92,13 +92,13 @@
         </div>
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row">
+        <div class="row events-row">
           <div class="col-md-6 col-lg-6 col-xl-6 col-xl-6 mb-lg-6 image">
             <div class="team-member event">
               <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/event1.jpg" alt="Image" class="img-fluid"></a>
             </div>
           </div>
-          <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-lg-12 col-xl-6 mx-auto t">
+          <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-lg-6 col-xl-6 mx-auto t" data-aos="fade-up" data-aos-delay="100">
             <div class="message-under-image">
               <h2 class="mb-3 largeh2">LIVE</h2>
               <span class="live-message-under">ライブ</span>
