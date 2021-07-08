@@ -413,7 +413,7 @@ a:hover {
   margin-bottom: 0px;
   width: 100%;
   border-bottom: none;
-  position: absolute;
+  position: fixed;
   background: rgba(255, 255, 255, 0.4);
   z-index: 99;
 }
