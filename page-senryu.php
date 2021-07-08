@@ -73,10 +73,10 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                     </div>
                     <div class="row kakejiku_button mx-auto text-center">
                       <div class="col-6 pl-1 pr-1">
-                        <button class="detail mx-auto w-100 text-nowrap c-pointer" data-toggle="modal" data-target="#modal">詳細</button>
+                        <button class="detail mx-auto w-100 text-nowrap c-pointer" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
                       </div>
                       <div class="col-6 pl-1 pr-1">
-                        <button class="vote mx-auto w-100 text-nowrap c-pointer">投票</button>
+                        <button class="vote mx-auto w-100 text-nowrap c-pointer" ontouchstart="">投票</button>
                         <p class="vote_num text-danger font-weight-bold mb-0"><span><?= $senryu[$key]['polla_votes']; ?></span>票</p>
                       </div>
                     </div>
@@ -179,7 +179,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
         </div>
         <input type="hidden" id="index" value="">
         <div class="mx-auto text-center modal-content bg-transparent border-0">
-          <button class="vote mx-auto pl-4 pr-4 c-pointer">投票</button>
+          <button class="vote mx-auto pl-4 pr-4 c-pointer" ontouchstart="">投票</button>
         </div>
       </div>
     </div>

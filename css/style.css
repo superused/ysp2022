@@ -124,7 +124,9 @@ a:hover {
 .btn.btn-show {
   background-color: #00b9f2;
   color: #fff;
-  padding: 1rem 5rem;
+  max-width: 300px;
+  width: 100%;
+  padding: 1rem 0;
   border-radius: 0.7rem;
   border-bottom: 5px solid #048bb6;
 }
@@ -136,6 +138,7 @@ a:hover {
   -moz-transform: translate(0, 5px);
   transform: translate(0, 5px);
   border-bottom: none;
+  border-top: 6px solid transparent;
 }
 .btn.btn-show.type1 {
   padding: 1rem 5rem;
@@ -182,6 +185,11 @@ a:hover {
     border-radius: 1rem;
     font-size: 2rem;
   }
+}
+.btn.btn-show:after {
+  position: absolute;
+  content: "\025b6";
+  margin-left: 0.2rem;
 }
 
 .form-control {
@@ -2361,21 +2369,21 @@ div.event-bg-left {
   position: absolute;
   background-color: #00b9f2;
   left: 0;
-  width: 10px;
-  height: 150px;
+  width: 0.5rem;
+  height: 10rem;
   float: left;
-  margin-top: -43px;
 }
 div.event-bg-right {
   position: relative;
-  height: 4rem;
+  height: 7rem;
+  overflow: hidden;
 }
 .events-section h2.event-bg-word-1 {
   position: absolute;
   font-size: 8rem;
   font-weight: bold;
   text-align: left;
-  margin: -70px 0 -20px 10px;
+  margin: -28px 0 -20px 10px;
   top: 0px;
   color: #fff;
   -webkit-transform: scale(0.9, 1.1);
@@ -2392,7 +2400,7 @@ div.event-bg-right {
   white-space: nowrap;
   font-size: 3rem;
   font-weight: bold;
-  margin-top: -22px;
+  margin-top: 1.5rem;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -2420,6 +2428,7 @@ div.event-bg-right {
 .site-section.events-section {
   background-color: #f7f2e3;
   width: 100%;
+  padding: 0 0 3rem;
 }
 .events-section .container {
   margin-top: 3em;
@@ -2528,26 +2537,26 @@ h2.largeh2 {
   padding-bottom: 0;
 }
 
-.site-section.top-footer .container .row.questionnaire {
+.site-section.top-footer .row.questionnaire {
   margin: 0 10px;
   background-color: #fbfcc4;
   border-radius: 10px;
 }
-.site-section.top-footer .container .row.questionnaire p {
+.site-section.top-footer .row.questionnaire p {
   font-size: 1.8rem;
   color: #000;
   margin-bottom: 0;
 }
-.site-section.top-footer .container .row.questionnaire .term {
+.site-section.top-footer .row.questionnaire .term {
   font-size: 0.7rem;
   color: #000;
 }
-.site-section.top-footer .container .row.organizer .organizer-title {
+.site-section.top-footer .row.organizer .organizer-title {
   font-size: 1.2rem;
   font-weight: 500;
   padding-bottom: 0.7rem;
 }
-.site-section.top-footer .container .row.organizer .organizer-text {
+.site-section.top-footer .row.organizer .organizer-text {
   font-size: 1rem;
   font-weight: 500;
   padding-bottom: 0.7rem;

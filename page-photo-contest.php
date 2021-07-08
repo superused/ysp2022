@@ -61,10 +61,10 @@
                         </div>
                         <div class="photo_button col-5 row m-0">
                           <div class="col-12 p-0">
-                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
+                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
                           </div>
                           <div class="col-12 p-0">
-                            <button class="vote mx-auto m-1 w-100 text-nowrap">投票</button>
+                            <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
                           </div>
                         </div>
                       </div>
@@ -88,10 +88,10 @@
                         </div>
                         <div class="photo_button col-5 row m-0">
                           <div class="col-12 p-0">
-                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
+                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
                           </div>
                           <div class="col-12 p-0">
-                            <button class="vote mx-auto m-1 w-100 text-nowrap">投票</button>
+                            <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
                           </div>
                         </div>
                       </div>
@@ -115,10 +115,10 @@
                         </div>
                         <div class="photo_button col-5 row m-0">
                           <div class="col-12 p-0">
-                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
+                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
                           </div>
                           <div class="col-12 p-0">
-                            <button class="vote mx-auto m-1 w-100 text-nowrap">投票</button>
+                            <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
                           </div>
                         </div>
                       </div>
@@ -142,10 +142,10 @@
                         </div>
                         <div class="photo_button col-5 row m-0">
                           <div class="col-12 p-0">
-                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
+                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
                           </div>
                           <div class="col-12 p-0">
-                            <button class="vote mx-auto m-1 w-100 text-nowrap">投票</button>
+                            <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
                           </div>
                         </div>
                       </div>
@@ -169,10 +169,10 @@
                         </div>
                         <div class="photo_button col-5 row m-0">
                           <div class="col-12 p-0">
-                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
+                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
                           </div>
                           <div class="col-12 p-0">
-                            <button class="vote mx-auto m-1 w-100 text-nowrap">投票</button>
+                            <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
                           </div>
                         </div>
                       </div>
@@ -196,10 +196,10 @@
                         </div>
                         <div class="photo_button col-5 row m-0">
                           <div class="col-12 p-0">
-                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
+                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
                           </div>
                           <div class="col-12 p-0">
-                            <button class="vote mx-auto m-1 w-100 text-nowrap">投票</button>
+                            <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
                           </div>
                         </div>
                       </div>
@@ -223,10 +223,10 @@
                         </div>
                         <div class="photo_button col-5 row m-0">
                           <div class="col-12 p-0">
-                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal">詳細</button>
+                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
                           </div>
                           <div class="col-12 p-0">
-                            <button class="vote mx-auto m-1 w-100 text-nowrap">投票</button>
+                            <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
                           </div>
                         </div>
                       </div>
@@ -334,7 +334,7 @@
         <div class="text-left mb-1"><span class="mr-3">撮影場所</span><span class="photo_region"></span></div>
         <div class="photo_comment text-left mb-3"></div>
         <div class="col-12">
-          <button class="vote mx-auto m-1 pt-2 pb-2 pl-4 pr-4 text-nowrap">投票</button>
+          <button class="vote mx-auto m-1 pt-2 pb-2 pl-4 pr-4 text-nowrap" ontouchstart="">投票</button>
         </div>
       </div>
     </div>

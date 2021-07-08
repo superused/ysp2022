@@ -39,7 +39,7 @@
                         テキスト入ります。テキスト入ります。
                       </div>
                       <div class="union-box">
-                        <a href="#"><button class="btn btn-show type1 mx-auto">詳しく見る</button></a>
+                        <a href="#"><button class="btn btn-show type1 mx-auto" ontouchstart="">詳しく見る</button></a>
                       </div>
                     </div>
                   </div>
@@ -57,7 +57,7 @@
                         テキスト入ります。テキスト入ります。
                       </div>
                       <div class="union-box">
-                        <a href="#"><button class="btn btn-show type1 mx-auto">詳しく見る</button></a>
+                        <a href="#"><button class="btn btn-show type1 mx-auto" ontouchstart="">詳しく見る</button></a>
                       </div>
                     </div>
                   </div>
@@ -75,7 +75,7 @@
                         テキスト入ります。テキスト入ります。
                       </div>
                       <div class="union-box">
-                        <a href="#"><button class="btn btn-show type1 mx-auto">詳しく見る</button></a>
+                        <a href="#"><button class="btn btn-show type1 mx-auto" ontouchstart="">詳しく見る</button></a>
                       </div>
                     </div>
                   </div>
@@ -93,7 +93,7 @@
                         テキスト入ります。テキスト入ります。
                       </div>
                       <div class="union-box">
-                        <a href="#"><button class="btn btn-show type1 mx-auto">詳しく見る</button></a>
+                        <a href="#"><button class="btn btn-show type1 mx-auto" ontouchstart="">詳しく見る</button></a>
                       </div>
                     </div>
                   </div>
@@ -111,7 +111,7 @@
                         テキスト入ります。テキスト入ります。
                       </div>
                       <div class="union-box">
-                        <a href="#"><button class="btn btn-show type1 mx-auto">詳しく見る</button></a>
+                        <a href="#"><button class="btn btn-show type1 mx-auto" ontouchstart="">詳しく見る</button></a>
                       </div>
                     </div>
                   </div>
@@ -129,7 +129,7 @@
                         テキスト入ります。テキスト入ります。
                       </div>
                       <div class="union-box">
-                        <a href="#"><button class="btn btn-show type1 mx-auto">詳しく見る</button></a>
+                        <a href="#"><button class="btn btn-show type1 mx-auto" ontouchstart="">詳しく見る</button></a>
                       </div>
                     </div>
                   </div>
@@ -148,7 +148,7 @@
         <div class="footer-banner-contents text-center p-3">
           <img src="<?= get_template_directory_uri(); ?>/images/logo.jpg">
         </div>
-        <button class="close-btn"></button>
+        <button class="close-btn" ontouchstart=""></button>
       </div>
     </div>
 <?php get_footer(); ?>

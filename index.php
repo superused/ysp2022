@@ -41,8 +41,8 @@
               <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
             </div>
           </div>
-          <button class="custom-btn prev"></button>
-          <button class="custom-btn next"></button>
+          <button class="custom-btn prev" ontouchstart=""></button>
+          <button class="custom-btn next" ontouchstart=""></button>
         </div>
       </div>
     </div>
@@ -52,8 +52,8 @@
         <div class="row">
           <div class="site-section-heading text-center mb-2 w-border col-md-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
             <h2 class="mb-4">PEACE DESIGNER FES</h2>
-            <p class="text-left">テキストはいります。テキストはいります。テキストはいります。テキストはいります。</p>
-            <a href="#"><button class="btn btn-show mx-auto">詳しく見る</button></a>
+            <p class="text-left">「つながりが描く私たちの未来」をテーマに、日本の魅力を楽しく再発見できるオンラインフェス！</p>
+            <a href="#"><button class="btn btn-show mx-auto" ontouchstart="">もっと詳しく</button></a>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@
     </div>
 
     <div class="site-section events-section">
-      <div data-aos="fade-up" data-aos-delay="100">
+      <div data-aos="fade-up event-bg" data-aos-delay="100">
         <div class="event-bg-left"></div>
         <div class="event-bg-right">
           <h2 class="event-bg-word-1">EVENT</h2>
@@ -104,7 +104,7 @@
               <span class="live-message-under">ライブ</span>
               <p>ウェビナーやクイズなどの生配信企画！地域活性化で活躍する若手リーダーが語ります！見るだけでも、チャットで質問してもOK！</p>
               <div class="text-center">
-                <a href="#"><button class="btn btn-show mx-auto">詳しく見る</button></a>
+                <a href="#"><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@
               <span class="live-message-under">連合会</span>
               <p>全国で活躍しているピースデザイナーたちの活動を紹介します！あなたの地域のピースデザイナー達の活躍を覗いてみませんか？</p>
               <div class="text-center">
-                <a href="#"><button class="btn btn-show mx-auto">詳しく見る</button></a>
+                <a href="#"><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@
                     <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/movie2.png" alt="Image" class="img-fluid"></a>
                   </div>
                 </div>
-                <a href="#"><button class="btn btn-show mx-auto">詳しく見る</button></a>
+                <a href="#"><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
               </div>
 
               <div class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
@@ -167,7 +167,7 @@
                     <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid"></a>
                   </div>
                 </div>
-                <a href="photo_contest.html"><button class="btn btn-show mx-auto">詳しく見る</button></a>
+                <a href="photo_contest.html"><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
               </div>
 
               <div class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
@@ -179,7 +179,7 @@
                     <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/senryu3.png" alt="Image" class="img-fluid"></a>
                   </div>
                 </div>
-                <a href="senryu.html"><button class="btn btn-show mx-auto">詳しく見る</button></a>
+                <a href="senryu.html"><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
               </div>
             </div>
           </div>
@@ -231,11 +231,36 @@
             <div class="term">実施期間：<span class="font-weight-bold">8</span>月<span class="font-weight-bold">7</span>日(土)～<span class="font-weight-bold">8</span>月<span class="font-weight-bold">9</span>日(月)</div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="site-section top-footer" data-aos="fade-up" data-aos-delay="100">
+      <div class="container-fluid">
+        <div class="row organizer contact-form">
+          <div class="text-center my-4 w-border mx-auto w-100" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-3">
+              <span class="organizer-title font-weight-bold">CONTACT</span>
+              <div class="contents-border short mt-2 mb-2"></div>
+              <span class="organizer-text mt-4">Peace Designer Fes に関する<br>お問い合わせはこちら</span>
+            </div>
+            <a href="<?= esc_url(home_url('/contact-form/'));?>"><button class="btn btn-show mx-auto" ontouchstart="">お問い合わせ</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="site-section top-footer" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
         <div class="row organizer">
-          <div class="text-center mt-5 mb-5 w-border col-md-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
-            <span class="organizer-title">主催</span>
-            <div class="contents-border short mt-2 mb-2"></div>
-            <span class="organizer-text mt-4">IAYSP-Japan<br>世界平和青年学生連合</span>
+          <div class="text-center w-border mx-auto" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <span class="organizer-title">主催</span>
+              <div class="contents-border short mt-2 mb-2"></div>
+              <span class="organizer-text mt-4">Peace Designer Fes 実行委員会</span>
+            </div>
+            <div class="mt-5">
+              <span class="organizer-title">協力</span>
+              <div class="contents-border short mt-2 mb-2"></div>
+              <span class="organizer-text mt-4">IAYSP-Japan</span>
+            </div>
           </div>
         </div>
       </div>
