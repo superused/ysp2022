@@ -2455,6 +2455,7 @@ h2.largeh2 {
   margin-top: -10px;
   font-size: 3rem;
   font-weight: 500;
+  white-space: nowrap;
   -webkit-transform: scale(1, 1.2);
   -ms-transform: scale(1, 1.2);
   transform: scale(1, 1.2);
@@ -2811,6 +2812,9 @@ button.vote:disabled {
 }
 .border-gray {
   border-color: #c0c0c0 !important;
+}
+.border-pickup {
+  border-color: #daceaa !important;
 }
 
 .heading-bar {
@@ -3169,4 +3173,57 @@ div.news-area .owl-carousel {
 }
 .text-cyan {
   color: #00b9f2;
+}
+.pickup-contents {
+  border: 3px solid #daceaa;
+  background-color: #f6f1e2;
+}
+.pickup-contents h2 {
+  position: absolute;
+  width: 100%;
+  white-space: nowrap;
+  font-size: calc(29.4vw - 16px);
+  top: -4.7vw;
+  left: -9px;
+  color: #daceaa;
+  min-width: 252px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (max-width: 336px) {
+  .pickup-contents h2 {
+    font-size: 77px;
+    top: -16px;
+    left: -6px;
+  }
+}
+@media (min-width: 575.98px) {
+  .pickup-contents h2 {
+    font-size: 144px;
+    top: -26px;
+    left: -10px;
+  }
+}
+@media (min-width: 767.98px) {
+  .pickup-contents h2 {
+    font-size: 202px;
+    top: -35px;
+    left: -12px;
+  }
+}
+@media (min-width: 991.98px) {
+  .pickup-contents h2 {
+    font-size: 275px;
+    top: -46px;
+    left: -18px;
+  }
+}
+@media (min-width: 1199.98px) {
+  .pickup-contents h2 {
+    font-size: 329px;
+    top: -55px;
+    left: -20px;
+  }
 }
