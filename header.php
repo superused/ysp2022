@@ -61,11 +61,11 @@
     <!-- ヘッダー共通処理 start -->
     <div class="site-wrap">
       <div class="site-navbar">
-        <div class="container py-1">
+        <div class="container-fluid px-4 py-0">
           <div class="row align-items-center">
             <div class="col-8 col-md-8 col-lg-2 col-xl-2">
               <h1 class="logo-header mb-0">
-              <a href="<?= home_url();?>" class="text-white h2 mb-0">
+                <a href="<?= home_url();?>" class="text-white h2 mb-0">
                   <img src="<?= get_template_directory_uri(); ?>/images/logo1.png" alt="Image" class="mx-auto">
                 </a>
               </h1>
@@ -75,7 +75,7 @@
 
                 <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h2"></span></a></div>
 
-                <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <ul class="site-menu js-clone-nav d-none d-lg-block text-nowrap">
                   <li class="has-children">
                     <a href="javascript:void(0);"><img src="<?= get_template_directory_uri(); ?>/images/icon_contents.png"><span>コンテンツ</span></a>
                     <ul class="dropdown">
@@ -157,12 +157,31 @@
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mb-3">
-          <span class="icon-close2 js-menu-toggle text-cyan"></span>
+        <div class="container-fluid px-4 py-1">
+          <div class="row align-items-center">
+            <div class="col-8">
+              <h1 class="logo-header mb-0">
+                <a href="<?= home_url();?>" class="text-white h2 mb-0">
+                  <img src="<?= get_template_directory_uri(); ?>/images/logo1.png" alt="Image" class="mx-auto">
+                </a>
+              </h1>
+            </div>
+            <div class="col-4 site-mobile-menu-close text-right">
+              <span class="icon-close2 js-menu-toggle text-cyan"></span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="site-mobile-menu-body">
-        <div class="font-weight-bold">OFFICIAL SNS</div>
+        <div class="site-mobile-menu-sns text-center font-weight-bold container-fluid">
+          <div class="row justify-content-center align-items-center text-nowrap flex-nowrap">
+              <span class="m-4">OFFICIAL SNS</span>
+              <span class="m-2"><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/icon_instagram.png" alt="Image"></a></span>
+              <span class="m-2"><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/icon_line.png" alt="Image"></a></span>
+              <span class="m-2"><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/icon_youtube.png" alt="Image"></a></span>
+            </div>
+          </div>
+        </div>
       </div>
     </div> <!-- .site-mobile-menu -->
 
