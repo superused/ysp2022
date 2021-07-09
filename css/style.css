@@ -60,7 +60,7 @@ a:hover {
   transition: .3s all ease-in-out;
   background: rgba(0, 0, 0, 0.6);
   content: '';
-  position: absolute;
+  position: fixed;
   z-index: 2000;
   top: 0;
   left: 0;
@@ -71,7 +71,7 @@ a:hover {
 }
 
 .offcanvas-menu .site-wrap {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   z-index: 2;
