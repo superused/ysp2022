@@ -13,10 +13,12 @@ class Util {
    */
   public function getSenryuDatas() {
     $wpdb = $this->wpdb;
+    $senryuData = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $wpdb->pollsa WHERE polla_type = 'senryu' order by polla_aid desc limit 1;"));
+    $poll_id = $senryuData[0]->polla_qid;
     // SQL文
     $query = "SELECT * FROM wp_pollsa where polla_qid = %s";
     // 結果を連想配列で取得
-    $results = $wpdb->get_results($wpdb->prepare($query, SENRYU_QID), "ARRAY_A");
+    $results = $wpdb->get_results($wpdb->prepare($query, $poll_id), "ARRAY_A");
     foreach ($results as $key => $result) {
       if (isset($result['polla_datas']) && $datas = json_decode($result['polla_datas'], true)) {
         $results[$key]['polla_datas'] = $datas;
