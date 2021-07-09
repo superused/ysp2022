@@ -12,15 +12,32 @@ $(function() {
       var $this = $(this);
       $this.clone().attr('class', 'site-nav-wrap').prependTo('.site-mobile-menu-body');
     });
+    setTimeout(function() {
+      var counter = 0;
+      $('.site-mobile-menu .has-children').each(function(){
+        var $this = $(this);
+        $this.prepend('<span class="arrow-collapse collapsed">');
 
-    $('body').on('click', '.arrow-collapse', function(e) {
+        $this.find('.arrow-collapse').attr({
+          'data-toggle' : 'collapse',
+          'data-target' : '#collapseItem' + counter,
+        }).css({
+          display: 'none',
+        });
+
+        $this.find('> ul').attr({
+          'class' : 'collapse show',
+          'id' : 'collapseItem' + counter,
+        });
+
+        counter++;
+
+      });
+    }, 1000);
+
+    $('body').on('click', 'li.has-children a', function() {
       var $this = $(this);
-      if ( $this.closest('li').find('.collapse').hasClass('show') ) {
-        $this.removeClass('active');
-      } else {
-        $this.addClass('active');
-      }
-      e.preventDefault();
+      $this.closest('li').find('.arrow-collapse').click();
     });
 
     $(window).resize(function() {
