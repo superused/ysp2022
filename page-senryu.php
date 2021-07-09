@@ -68,7 +68,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                       </div>
                     </div>
                     <div class="kakejiku_episode d-none">
-                      <?= esc_html($data['episode']); ?>
+                      <?= nl2br(esc_html($data['episode'])); ?>
                     </div>
                     <div class="kakejiku_name col-10 mx-auto mt-3 mb-2 text-white font-weight-bold d-none">
                       <?= $data['name'] . '(' . ((int)($data['age'] / 10) * 10) . '代' . ($data['gender'] == 1 ? ' 男性' : ($data['gender'] == 2 ? '女性' :  '')) . ')'; ?>
