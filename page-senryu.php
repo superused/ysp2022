@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 <?php
 // $datas = [['senryu' => '', 'episode' => '', 'name' => '', 'age' => '', 'gender' => '']];
+// アンケートの終了フラグを確認
+// var_dump($util->isSenryuOpen());
 $senryu = $util->getSenryuDatas();
 $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
 ?>
