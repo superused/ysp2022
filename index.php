@@ -303,7 +303,7 @@
               <div class="contents-border short mt-2 mb-2"></div>
               <span class="organizer-text mt-4">Peace Designer Fes に関する<br>お問い合わせはこちら</span>
             </div>
-            <a href="<?= esc_url(home_url('/contact-form/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">お問い合わせ</button></a>
+            <a href="<?= esc_url(home_url('/contact/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">お問い合わせ</button></a>
           </div>
         </div>
       </div>
