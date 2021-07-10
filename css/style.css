@@ -746,8 +746,14 @@ a:hover {
   background-repeat: no-repeat;
   background-position: top;
 }
-.site-blocks-cover.overlay {
+.site-blocks-cover.overlay.top {
   position: relative;
+  visibility: hidden;
+}
+.site-blocks-cover.overlay.top.show {
+  transition: 1s;
+  opacity: 1;
+  visibility: visible;
 }
 .site-blocks-cover.overlay.top.top2 {
   display: none;
@@ -2364,6 +2370,7 @@ figure figcaption {
 .logo_bg {
   width: 100%;
   height: 1px;
+  position: relative;
 }
 div.event-bg-left {
   position: absolute;

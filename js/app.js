@@ -208,18 +208,14 @@ $(function() {
       $(window).on('resize', resize);
       resize();
 
-      // TOP画像の高さを再指定
-      var actualImage = new Image();
-      actualImage.src = $('.top2').css('background-image').replace(/"/g,"").replace(/url\(|\)$/ig, "");
-        actualImage.onload = function() {
-          var topImage = $('.site-blocks-cover.overlay.top');
-          topImage.height(topImage.width() * this.height / this.width);
+      var speed = 500; // 1動作の時間(ms) （少ないほうが速い）
+      var delay = speed * 5; // アニメーション開始までの待ち時間(ms)
+      var allViewTime = speed * 6; // アニメーション全表示の時間(ms)
+
+      var animation = function() {
+        for (const i in topAnimeElem) {
+          topAnimeElem[i].addClass('show');
         }
-
-        var speed = 500; // 1動作の時間(ms) （少ないほうが速い）
-        var delay = speed * 3; // アニメーション開始までの待ち時間(ms)
-        var allViewTime = speed * 6; // アニメーション全表示の時間(ms)
-
         // アニメーション開始
         setTimeout(function() {
           // 背景表示処理
@@ -248,6 +244,18 @@ $(function() {
             $('#logo_2').hide("fade", {}, speed * 2);
           }, allViewTime + speed * 2);
         }, delay);
+      };
+
+      // TOP画像の高さを再指定
+      var actualImage = new Image();
+      actualImage.src = $('.top2').css('background-image').replace(/"/g,"").replace(/url\(|\)$/ig, "");
+      console.log(actualImage.src);
+      actualImage.onload = function() {
+        var topImage = $('.site-blocks-cover.overlay.top');
+        console.log(this.width, this.height);
+        topImage.height(topImage.width() * this.height / this.width);
+        animation();
+      }
     } else {
       // TOP以外のページの画像の表示でヘッダーのバーの高さに画像のpaddingをあわせる
       var topTarget = $('.site-mobile-menu').next();
