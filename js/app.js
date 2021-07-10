@@ -163,11 +163,6 @@ $(function() {
       // ロゴの表示位置
       $('.site-blocks-cover.overlay.top .container .row').css('margin-top', ($(window).height() * 0.35 ) + 'px');
 
-      // ロゴ真ん中表示の高さを初期設定（アニメーション時に位置ずれを防ぐため）
-      $('.logo_bg').each(function() {
-        var this_obj = $(this);
-        this_obj.css('height', this_obj.find('img').height());
-      });
       const portrait = [
         'peacedesigner_kameoka_sp1.jpg',
         'moyou_top.png',
@@ -212,35 +207,31 @@ $(function() {
       var delay = speed * 5; // アニメーション開始までの待ち時間(ms)
       var allViewTime = speed * 6; // アニメーション全表示の時間(ms)
 
+      var setHeight = function() {
+        const target = $(this);
+        target.closest('.logo_bg').css('height', target.height());
+      };
       var animation = function() {
         for (const i in topAnimeElem) {
           topAnimeElem[i].addClass('show');
         }
         // アニメーション開始
         setTimeout(function() {
-          // 背景表示処理
-          $('.top2').show("fade", {}, speed, function() {
-            $('.top3').show('fade', {}, speed, function() {
-              setTimeout(function() {
-                $('.top2').hide('fade', {}, speed, function() {
-                  $('.top3').hide('fade', {}, speed);
-                });
-              }, allViewTime);
-            });
-          });
-
-          // 真ん中消去処理
-          $('#logo_1').show("blind", {direction: 'horizontal'}, speed, function() {
-            $('#logo_3').show("blind", {direction: 'horizontal'}, speed);
-          });
-          $('#logo_2').show("fade", {}, speed * 2);
+          $('.top2').show("fade", {}, speed);
+          $('#logo_1').show("blind", {direction: 'horizontal'}, speed, setHeight);
+          setTimeout(function() {
+            $('.top3').show('fade', {}, speed);
+            $('#logo_3').show("blind", {direction: 'horizontal'}, speed, setHeight);
+          }, speed);
+          $('#logo_2').show("fade", {}, speed * 2, setHeight);
 
           setTimeout(function() {
-            // 背景消去処理
-            $('#logo_1').hide("blind", {direction: 'right'}, speed, function() {
+            $('.top2').hide('fade', {}, speed);
+            $('#logo_1').hide("blind", {direction: 'right'}, speed);
+            setTimeout(function() {
+              $('.top3').hide('fade', {}, speed);
               $('#logo_3').hide("blind", {direction: 'right'}, speed);
-            });
-            // 真ん中消去処理
+            }, speed);
             $('#logo_2').hide("fade", {}, speed * 2);
           }, allViewTime + speed * 2);
         }, delay);
