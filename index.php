@@ -23,22 +23,22 @@
           <h4 class="news-title">NEWS</h4>
           <div class="owl-carousel">
             <div class="text-center p-3 p-md-5 bg-white">
-              <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
+              <a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
             </div>
             <div class="text-center p-3 p-md-5 bg-white">
-              <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
+              <a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
             </div>
             <div class="text-center p-3 p-md-5 bg-white">
-              <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
+              <a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
             </div>
             <div class="text-center p-3 p-md-5 bg-white">
-              <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
+              <a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
             </div>
             <div class="text-center p-3 p-md-5 bg-white">
-              <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
+              <a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
             </div>
             <div class="text-center p-3 p-md-5 bg-white">
-              <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
+              <a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
             </div>
           </div>
           <button class="custom-btn prev" ontouchstart=""></button>
@@ -95,7 +95,7 @@
         <div class="row events-row">
           <div class="col-md-6 col-lg-6 col-xl-6 col-xl-6 mb-lg-6 image">
             <div class="team-member event">
-              <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/event1.jpg" alt="Image" class="img-fluid"></a>
+              <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/event1.jpg" alt="Image" class="img-fluid"></a>
             </div>
           </div>
           <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-lg-6 col-xl-6 mx-auto t" data-aos="fade-up" data-aos-delay="100">
@@ -104,7 +104,7 @@
               <span class="live-message-under">ライブ</span>
               <p>ウェビナーやクイズなどの生配信企画！地域活性化で活躍する若手リーダーが語ります！見るだけでも、チャットで質問してもOK！</p>
               <div class="text-center">
-                <a href="#" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
+                <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
               </div>
             </div>
           </div>
@@ -119,7 +119,7 @@
                 <div class="pickup-list px-3 pb-3">
                   <div class="row w-100 p-0 m-0">
                     <div class="team-member text-center image mb-4">
-                      <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
+                      <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
                     </div>
                   </div>
                   <div class="text-left mx-auto mb-3">
@@ -129,14 +129,14 @@
                     </div>
                   </div>
                   <div class="text-center mb-3">
-                    <a href="#" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
+                    <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
                   </div>
                   <div class="contents-border w-100 border-pickup my-2 pb-2"></div>
                 </div>
                 <div class="pickup-list px-3 pb-3">
                   <div class="row w-100 p-0 m-0">
                     <div class="team-member text-center image mb-4">
-                      <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
+                      <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
                     </div>
                   </div>
                   <div class="text-left mx-auto mb-3">
@@ -146,14 +146,14 @@
                     </div>
                   </div>
                   <div class="text-center mb-3">
-                    <a href="#" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
+                    <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
                   </div>
                   <div class="contents-border w-100 border-pickup my-2 pb-2"></div>
                 </div>
                 <div class="pickup-list px-3 pb-3">
                   <div class="row w-100 p-0 m-0">
                     <div class="team-member text-center image mb-4">
-                      <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
+                      <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
                     </div>
                   </div>
                   <div class="text-left mx-auto mb-3">
@@ -163,7 +163,7 @@
                     </div>
                   </div>
                   <div class="text-center mb-3">
-                    <a href="#" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
+                    <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
                   </div>
                 </div>
               </div>
@@ -175,7 +175,7 @@
         <div class="row">
           <div class="col-md-6 col-lg-6 col-xl-6 mb-lg-6 image">
             <div class="team-member event">
-              <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/event1.jpg" alt="Image" class="img-fluid"></a>
+              <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/event1.jpg" alt="Image" class="img-fluid"></a>
             </div>
           </div>
           <div class="site-section-heading nopadding mb-5 w-border col-md-6 col-lg-6 col-xl-6 mx-auto t">
@@ -184,7 +184,7 @@
               <span class="live-message-under">連合会</span>
               <p>全国で活躍しているピースデザイナーたちの活動を紹介します！あなたの地域のピースデザイナー達の活躍を覗いてみませんか？</p>
               <div class="text-center">
-                <a href="#" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
               </div>
             </div>
           </div>

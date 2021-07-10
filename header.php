@@ -87,7 +87,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="<?= esc_url(home_url('/union/'));?>">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_project.png">
                           <span>プロジェクト</span>
                         </a>
@@ -113,7 +113,7 @@
                     </ul>
                   </li>
                   <li>
-                    <a href="<?= esc_url(home_url('/union/'));?>">
+                    <a href="<?= esc_url(home_url('/union2/'));?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_present.png">
                       <span>プレゼントアンケート</span>
                     </a>
@@ -143,7 +143,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="https://www.yahoo.co.jp">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_goods.png">
                       <span>グッズショップ（外部リンク）</span>
                     </a>
