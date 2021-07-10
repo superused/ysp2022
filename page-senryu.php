@@ -2,8 +2,8 @@
 <?php
 // $datas = [['senryu' => '', 'episode' => '', 'name' => '', 'age' => '', 'gender' => '']];
 // アンケートの終了フラグを確認
-// var_dump($util->isSenryuOpen());
-$senryu = $util->getSenryuDatas();
+// var_dump($util->isContestOpen('senryu'));
+$senryu = $util->getContestDatas('senryu');
 $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
 ?>
     <div class="site-section top-image pb-0" data-aos="fade-up" data-aos-delay="100">
@@ -67,9 +67,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                         <?= str_replace('|', '<br>',$data['senryu']); ?>
                       </div>
                     </div>
-                    <div class="kakejiku_episode d-none">
-                      <?= nl2br(esc_html($data['episode'])); ?>
-                    </div>
+                    <div class="kakejiku_episode d-none"><?= nl2br(esc_html($data['episode'])); ?></div>
                     <div class="kakejiku_name col-10 mx-auto mt-3 mb-2 text-white font-weight-bold d-none">
                       <?= $data['name'] . '(' . ((int)($data['age'] / 10) * 10) . '代' . ($data['gender'] == 1 ? ' 男性' : ($data['gender'] == 2 ? '女性' :  '')) . ')'; ?>
                     </div>

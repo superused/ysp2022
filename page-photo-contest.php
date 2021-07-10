@@ -1,4 +1,11 @@
 <?php get_header(); ?>
+<?php
+// $datas = [['photo' => '', 'episode' => '', 'name' => '', 'age' => '', 'gender' => '']];
+// アンケートの終了フラグを確認
+// var_dump($util->isContestOpen('photo'));
+$photo = $util->getContestDatas('photo');
+$datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
+?>
     <div class="site-section top-image full pb-0" data-aos="fade-up" data-aos-delay="100">
       <div class="top-full-image photo_contest"></div>
     </div>
@@ -49,15 +56,16 @@
                     <h4 class="font-weight-bold mb-2">応募作品</h4>
                     <div class="contents-border short mt-1 mb-1"></div>
                   </div>
+<?php foreach ($datas as $key => $data): ?>
                   <div class="col-12 col-md-6 col-lg-6 col-xl-4 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
                     <div class="shadow w-100 p-0 mb-2 mr-2">
                       <div class="m-0">
-                        <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="photo_image w-100">
+                        <img src="<?= $data['photo'];?>" class="photo_image w-100">
                       </div>
                       <div class="row p-2">
                         <div class="col-7 pr-0">
-                          <h6 class="photo_name">山田太郎さん</h6>
-                          <p class="photo_address text-secondary mb-1">東京都在住</p>
+                        <h6 class="photo_name"><?=$data['name']; ?> さん</h6>
+                          <p class="photo_address text-secondary mb-1"><?=$data['address']; ?>在住</p>
                         </div>
                         <div class="photo_button col-5 row m-0">
                           <div class="col-12 p-0">
@@ -65,179 +73,17 @@
                           </div>
                           <div class="col-12 p-0">
                             <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
+                            <p class="vote_num text-danger text-center font-weight-bold mb-0"><span><?= $photo[$key]['polla_votes']; ?></span>票</p>
                           </div>
                         </div>
                       </div>
-                      <div class="photo_episode small pl-2 pr-2 pb-2">
-                        1エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      </div>
-                      <div class="photo_title d-none">1線路</div>
-                      <div class="photo_region d-none">1千葉県千葉市</div>
-                      <div class="photo_comment d-none">1テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                      <div class="photo_episode small pl-2 pr-2 pb-2"><?= nl2br(esc_html($data['episode'])); ?></div>
+                      <div class="photo_title d-none"><?= esc_html($data['title']); ?></div>
+                      <div class="photo_region d-none"><?= esc_html($data['location']); ?></div>
+                      <div class="photo_comment d-none"><?= esc_html($data['comment']); ?></div>
                     </div>
                   </div>
-                  <div class="col-12 col-md-6 col-lg-6 col-xl-4 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="shadow w-100 p-0 mb-2 mr-2">
-                      <div class="m-0">
-                        <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="w-100">
-                      </div>
-                      <div class="row p-2">
-                        <div class="col-7 pr-0">
-                          <h6 class="photo_name">山田太郎さん</h6>
-                          <p class="photo_address text-secondary mb-1">東京都在住</p>
-                        </div>
-                        <div class="photo_button col-5 row m-0">
-                          <div class="col-12 p-0">
-                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
-                          </div>
-                          <div class="col-12 p-0">
-                            <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="photo_episode small pl-2 pr-2 pb-2">
-                        2エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      </div>
-                      <div class="photo_title d-none">2線路</div>
-                      <div class="photo_region d-none">2千葉県千葉市</div>
-                      <div class="photo_comment d-none">2テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-6 col-xl-4 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="shadow w-100 p-0 mb-2 mr-2">
-                      <div class="m-0">
-                        <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="w-100">
-                      </div>
-                      <div class="row p-2">
-                        <div class="col-7 pr-0">
-                          <h6 class="photo_name">山田太郎さん</h6>
-                          <p class="photo_address text-secondary mb-1">東京都在住</p>
-                        </div>
-                        <div class="photo_button col-5 row m-0">
-                          <div class="col-12 p-0">
-                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
-                          </div>
-                          <div class="col-12 p-0">
-                            <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="photo_episode small pl-2 pr-2 pb-2">
-                        3エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      </div>
-                      <div class="photo_title d-none">3線路</div>
-                      <div class="photo_region d-none">3千葉県千葉市</div>
-                      <div class="photo_comment d-none">3テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-6 col-xl-4 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="shadow w-100 p-0 mb-2 mr-2">
-                      <div class="m-0">
-                        <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="w-100">
-                      </div>
-                      <div class="row p-2">
-                        <div class="col-7 pr-0">
-                          <h6 class="photo_name">山田太郎さん</h6>
-                          <p class="photo_address text-secondary mb-1">東京都在住</p>
-                        </div>
-                        <div class="photo_button col-5 row m-0">
-                          <div class="col-12 p-0">
-                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
-                          </div>
-                          <div class="col-12 p-0">
-                            <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="photo_episode small pl-2 pr-2 pb-2">
-                        4エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      </div>
-                      <div class="photo_title d-none">4線路</div>
-                      <div class="photo_region d-none">4千葉県千葉市</div>
-                      <div class="photo_comment d-none">4テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-6 col-xl-4 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="shadow w-100 p-0 mb-2 mr-2">
-                      <div class="m-0">
-                        <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="w-100">
-                      </div>
-                      <div class="row p-2">
-                        <div class="col-7 pr-0">
-                          <h6 class="photo_name">山田太郎さん</h6>
-                          <p class="photo_address text-secondary mb-1">東京都在住</p>
-                        </div>
-                        <div class="photo_button col-5 row m-0">
-                          <div class="col-12 p-0">
-                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
-                          </div>
-                          <div class="col-12 p-0">
-                            <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="photo_episode small pl-2 pr-2 pb-2">
-                        5エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      </div>
-                      <div class="photo_title d-none">5線路</div>
-                      <div class="photo_region d-none">5千葉県千葉市</div>
-                      <div class="photo_comment d-none">5テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-6 col-xl-4 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="shadow w-100 p-0 mb-2 mr-2">
-                      <div class="m-0">
-                        <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="w-100">
-                      </div>
-                      <div class="row p-2">
-                        <div class="col-7 pr-0">
-                          <h6 class="photo_name">山田太郎さん</h6>
-                          <p class="photo_address text-secondary mb-1">東京都在住</p>
-                        </div>
-                        <div class="photo_button col-5 row m-0">
-                          <div class="col-12 p-0">
-                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
-                          </div>
-                          <div class="col-12 p-0">
-                            <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="photo_episode small pl-2 pr-2 pb-2">
-                        6エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      </div>
-                      <div class="photo_title d-none">6線路</div>
-                      <div class="photo_region d-none">6千葉県千葉市</div>
-                      <div class="photo_comment d-none">6テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-6 col-xl-4 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="shadow w-100 p-0 mb-2 mr-2">
-                      <div class="m-0">
-                        <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="w-100">
-                      </div>
-                      <div class="row p-2">
-                        <div class="col-7 pr-0">
-                          <h6 class="photo_name">山田太郎さん</h6>
-                          <p class="photo_address text-secondary mb-1">東京都在住</p>
-                        </div>
-                        <div class="photo_button col-5 row m-0">
-                          <div class="col-12 p-0">
-                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
-                          </div>
-                          <div class="col-12 p-0">
-                            <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="photo_episode small pl-2 pr-2 pb-2">
-                        7エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。エピソード入ります。
-                      </div>
-                      <div class="photo_title d-none">7線路</div>
-                      <div class="photo_region d-none">7千葉県千葉市</div>
-                      <div class="photo_comment d-none">7テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
-                    </div>
-                  </div>
+<?php endforeach; ?>
                   <div class="text-center col-12 mt-5 mb-5" data-aos="fade-up" data-aos-delay="100">
                     <div href="#" class="arrow down circle"></div>
                   </div>
@@ -328,7 +174,7 @@
         <h4 class="photo_title font-weight-bold mb-2"></h4>
         <h6 class="photo_name mb-4"></h6>
         <div class="m-0 mb-4">
-          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="photo_image w-100">
+          <img src="" class="photo_image w-100">
         </div>
         <div class="text-left mb-1"><span class="mr-3">タイトル</span><span class="photo_title"></span></div>
         <div class="text-left mb-1"><span class="mr-3">撮影場所</span><span class="photo_region"></span></div>
@@ -337,5 +183,8 @@
           <button class="vote mx-auto m-1 pt-2 pb-2 pl-4 pr-4 text-nowrap" ontouchstart="">投票</button>
         </div>
       </div>
+    </div>
+    <div id="tohyo" class="d-none">
+      <?php the_content(); ?>
     </div>
 <?php get_footer(); ?>

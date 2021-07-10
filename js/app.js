@@ -286,36 +286,6 @@ $(function() {
   };
   senryuView();
 
-  // 川柳の投票
-  var senryuVote = function() {
-    const tohyo = $('#tohyo');
-    if (tohyo[0] && $('button.vote')[0]) {
-      if (!tohyo.find('input[type=radio]')[0]) {
-        $('button.vote').each(function() {
-          $(this).prop('disabled', true).text('投票済');
-        });
-      } else {
-        $(document).on('click', 'button.vote', function(e) {
-          const thisObj = $(this),
-            index = thisObj.closest('#modal')[0] ? parseInt($('#index').val()) : thisObj.closest('.kakejiku').index('.kakejiku'),
-            radios = tohyo.find('input[type=radio]');
-          if (radios[0]) {
-            radios.eq(index).prop('checked', true);
-            tohyo.find('input[type=button][name=vote]').click();
-            $('button.vote').each(function() {
-              $(this).prop('disabled', true).text('投票済');
-            });
-            const voteNumElem = $('.kakejiku').eq(index).find('.vote_num span'),
-              voteNum = parseInt(voteNumElem.html());
-            voteNumElem.html(voteNum + 1);
-          }
-          return false;
-        });
-      }
-    }
-  }
-  senryuVote();
-
   // フォトコンテストのモーダル表示
   var photoView = function() {
     // 詳細ボタンを押した際に表示項目を切り替える
@@ -341,6 +311,36 @@ $(function() {
     });
   };
   photoView();
+
+  // コンテストの投票
+  var contestVote = function() {
+    const tohyo = $('#tohyo');
+    if (tohyo[0] && $('button.vote')[0]) {
+      if (!tohyo.find('input[type=radio]')[0]) {
+        $('button.vote').each(function() {
+          $(this).prop('disabled', true).text('投票済');
+        });
+      } else {
+        $(document).on('click', 'button.vote', function(e) {
+          const thisObj = $(this),
+            index = thisObj.closest('#modal')[0] ? parseInt($('#index').val()) : thisObj.closest('[data-type=content-block').index('[data-type=content-block]'),
+            radios = tohyo.find('input[type=radio]');
+          if (radios[0]) {
+            radios.eq(index).prop('checked', true);
+            tohyo.find('input[type=button][name=vote]').click();
+            $('button.vote').each(function() {
+              $(this).prop('disabled', true).text('投票済');
+            });
+            const voteNumElem = $('[data-type=content-block]').eq(index).find('.vote_num span'),
+              voteNum = parseInt(voteNumElem.html());
+            voteNumElem.html(voteNum + 1);
+          }
+          return false;
+        });
+      }
+    }
+  }
+  contestVote();
 
   var imageFull = function() {
     var sn = $('.site-navbar');

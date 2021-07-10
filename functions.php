@@ -3,7 +3,7 @@ require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php';
 
 class Util {
   public $wpdb;
-  public $senryuId;
+  public $contestId = [];
 
   public function __construct($wpdb) {
     $this->wpdb = $wpdb;
@@ -12,10 +12,10 @@ class Util {
   /**
    * アンケートデータを取得する
    */
-  public function getSenryuDatas() {
+  public function getContestDatas($type) {
     $wpdb = $this->wpdb;
 
-    $poll_id = $this->getSenryuId();
+    $poll_id = $this->getContestId($type);
     // SQL文
     $query = "SELECT * FROM wp_pollsa where polla_qid = %s";
     // 結果を連想配列で取得
@@ -28,18 +28,18 @@ class Util {
 
     return $results;
   }
-  public function getSenryuId() {
-    if (isset($this->senryuId)) {
-      return $this->senryuId;
+  public function getContestId($type) {
+    if (isset($this->contestId[$type])) {
+      return $this->contestId[$type];
     } else {
       $wpdb = $this->wpdb;
-      $senryuData = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $wpdb->pollsa WHERE polla_type = 'senryu' order by polla_aid desc limit 1;"));
-      if (isset($senryuData[0]->polla_qid)) {
-        $result = $senryuData[0]->polla_qid;
-        $this->senryuId = $result;
+      $contestData = $wpdb->get_results($wpdb->prepare( "SELECT * FROM $wpdb->pollsa WHERE polla_type = %s order by polla_aid desc limit 1;", $type));
+      if (isset($contestData[0]->polla_qid)) {
+        $result = $contestData[0]->polla_qid;
+        $this->contestId[$type] = $result;
         return $result;
       }
-      $this->senryuId = false;
+      $this->contestId[$type] = false;
       return false;
     }
   }
@@ -47,25 +47,25 @@ class Util {
   /**
    * アンケートデータのJSONデータ部分を取得する
    */
-  public function getSenryuViewDatas() {
-    $senryu = $this->getSenryuDatas();
+  public function getContestViewDatas($type) {
+    $senryu = $this->getContestDatas($type);
     return array_map(function($s) {
       return $s['polla_datas'];
     }, $senryu);
   }
 
-  public function isSenryuOpen() {
+  public function isContestOpen($type) {
     $wpdb = $this->wpdb;
-    $poll_id = $this->getSenryuId();
+    $poll_id = $this->getContestId($type);
 
     if (!$poll_id) return false;
 
     $query = "SELECT * FROM $wpdb->pollsq WHERE pollq_id = %s";
-    $senryuData = $wpdb->get_results($wpdb->prepare($query, $poll_id));
+    $contestData = $wpdb->get_results($wpdb->prepare($query, $poll_id));
 
-    if (!$senryuData[0]) return false;
+    if (!$contestData[0]) return false;
 
-    return $senryuData[0]->pollq_active;
+    return $contestData[0]->pollq_active;
   }
 }
 $util = new Util($wpdb);
