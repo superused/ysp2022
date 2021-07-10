@@ -217,22 +217,22 @@ $(function() {
         }
         // アニメーション開始
         setTimeout(function() {
-          $('.top2').show("fade", {}, speed);
+          $('.top2').fadeIn(speed);
           $('#logo_1').show("blind", {direction: 'horizontal'}, speed, setHeight);
           setTimeout(function() {
-            $('.top3').show('fade', {}, speed);
+            $('.top3').fadeIn(speed);
             $('#logo_3').show("blind", {direction: 'horizontal'}, speed, setHeight);
           }, speed);
-          $('#logo_2').show("fade", {}, speed * 2, setHeight);
+          $('#logo_2').fadeIn(speed * 2, setHeight);
 
           setTimeout(function() {
-            $('.top2').hide('fade', {}, speed);
+            $('.top2').fadeOut(speed);
             $('#logo_1').hide("blind", {direction: 'right'}, speed);
             setTimeout(function() {
-              $('.top3').hide('fade', {}, speed);
+              $('.top3').fadeOut(speed);
               $('#logo_3').hide("blind", {direction: 'right'}, speed);
             }, speed);
-            $('#logo_2').hide("fade", {}, speed * 2);
+            $('#logo_2').fadeOut(speed * 2);
           }, allViewTime + speed * 2);
         }, delay);
       };
@@ -240,10 +240,8 @@ $(function() {
       // TOP画像の高さを再指定
       var actualImage = new Image();
       actualImage.src = $('.top2').css('background-image').replace(/"/g,"").replace(/url\(|\)$/ig, "");
-      console.log(actualImage.src);
       actualImage.onload = function() {
         var topImage = $('.site-blocks-cover.overlay.top');
-        console.log(this.width, this.height);
         topImage.height(topImage.width() * this.height / this.width);
         animation();
       }
