@@ -35,6 +35,12 @@ $(function() {
       });
     }, 1000);
 
+    $('body').on('click', '.site-mobile-menu .inpage-link', function() {
+      if ( $('body').hasClass('offcanvas-menu') ) {
+        $('body').removeClass('offcanvas-menu');
+      }
+    });
+
     $('body').on('click', 'li.has-children a', function() {
       var $this = $(this);
       $this.closest('li').find('.arrow-collapse').click();

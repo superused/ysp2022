@@ -17,7 +17,7 @@
       </div>
     </div>
 
-    <div class="site-section site-section-top bg-light block-13 mt-5">
+    <div id="news" class="site-section site-section-top bg-light block-13 mt-5">
       <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
         <div class="news-area m-4">
           <h4 class="news-title">NEWS</h4>
@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <div class="site-section">
+    <div id="peace-designer-fes" class="site-section">
       <div class="container">
         <div class="row">
           <div class="site-section-heading text-center mb-2 w-border col-md-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
@@ -59,7 +59,7 @@
       </div>
     </div>
 
-    <div class="site-section">
+    <div id="contents-list" class="site-section">
       <div class="container-fluid">
         <div class="row">
           <div class="site-section-heading text-center mb-3 w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
@@ -83,7 +83,7 @@
       </div>
     </div>
 
-    <div class="site-section events-section">
+    <div id="event" class="site-section events-section">
       <div data-aos="fade-up event-bg" data-aos-delay="100">
         <div class="event-bg-left"></div>
         <div class="event-bg-right">
@@ -95,7 +95,7 @@
         <div class="row events-row">
           <div class="col-md-6 col-lg-6 col-xl-6 col-xl-6 mb-lg-6 image">
             <div class="team-member event">
-              <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/event1.jpg" alt="Image" class="img-fluid"></a>
+              <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/live_sample.png" alt="Image" class="img-fluid"></a>
             </div>
           </div>
           <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-lg-6 col-xl-6 mx-auto t" data-aos="fade-up" data-aos-delay="100">
@@ -112,53 +112,71 @@
         <div class="row">
           <div class="site-section-heading nopadding mb-5 w-border col-12 mx-auto t">
             <div class="message-under-image">
-              <div class="pickup-contents text-center px-0 mx-0 mb-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="pickup-list p-3">
-                  <div class="row w-100 p-0 m-0">
-                    <div class="team-member text-center image mb-4">
-                      <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
+              <div class="pickup-contents text-center px-0 mx-0 mb-4">
+                <div class="pickup-list p-3" data-aos="fade-up" data-aos-delay="100">
+                  <div class="row w-100 m-0 p-0">
+                    <div class="col-12 col-md-6 p-0 mx-0">
+                      <div class="team-member text-center image mb-4 mb-md-0 w-auto">
+                        <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="text-left mx-auto mb-3">
-                    <h4 class="font-weight-bold pb-2">タイトル</h4>
-                    <div>
-                      リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。
+                    <div class="col-12 col-md-6 p-0 mx-0">
+                      <div class="ml-md-3 ml-lg-3 ml-xl-3">
+                        <div class="text-left mx-auto mb-3">
+                          <h4 class="font-weight-bold pb-2">タイトル</h4>
+                          <div>
+                            リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。
+                          </div>
+                        </div>
+                        <div class="text-center mb-3">
+                          <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="text-center mb-3">
-                    <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
                   </div>
                 </div>
-                <div class="pickup-list p-3">
-                  <div class="row w-100 p-0 m-0">
-                    <div class="team-member text-center image mb-4">
-                      <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
+                <div class="pickup-list p-3" data-aos="fade-up" data-aos-delay="100">
+                  <div class="row w-100 m-0 p-0">
+                    <div class="col-12 col-md-6 p-0 mx-0">
+                      <div class="team-member text-center image mb-4 mb-md-0 w-auto">
+                        <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="text-left mx-auto mb-3">
-                    <h4 class="font-weight-bold pb-2">タイトル</h4>
-                    <div>
-                      リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。
+                    <div class="col-12 col-md-6 p-0 mx-0">
+                      <div class="ml-md-3 ml-lg-3 ml-xl-3">
+                        <div class="text-left mx-auto mb-3">
+                          <h4 class="font-weight-bold pb-2">タイトル</h4>
+                          <div>
+                            リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。
+                          </div>
+                        </div>
+                        <div class="text-center mb-3">
+                          <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="text-center mb-3">
-                    <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
                   </div>
                 </div>
-                <div class="pickup-list p-3">
-                  <div class="row w-100 p-0 m-0">
-                    <div class="team-member text-center image mb-4">
-                      <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
+                <div class="pickup-list p-3" data-aos="fade-up" data-aos-delay="100">
+                  <div class="row w-100 m-0 p-0">
+                    <div class="col-12 col-md-6 p-0 mx-0">
+                      <div class="team-member text-center image mb-4 mb-md-0 w-auto">
+                        <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="text-left mx-auto mb-3">
-                    <h4 class="font-weight-bold pb-2">タイトル</h4>
-                    <div>
-                      リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。
+                    <div class="col-12 col-md-6 p-0 mx-0">
+                      <div class="ml-md-3 ml-lg-3 ml-xl-3">
+                        <div class="text-left mx-auto mb-3">
+                          <h4 class="font-weight-bold pb-2">タイトル</h4>
+                          <div>
+                            リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。
+                          </div>
+                        </div>
+                        <div class="text-center mb-3">
+                          <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="text-center mb-3">
-                    <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
                   </div>
                 </div>
               </div>
@@ -166,14 +184,14 @@
           </div>
         </div>
       </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div id="project" class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
-          <div class="col-md-6 col-lg-6 col-xl-6 mb-lg-6 image">
+          <div class="col-md-6 col-lg-6 col-xl-6 image">
             <div class="team-member event">
-              <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/event1.jpg" alt="Image" class="img-fluid"></a>
+              <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/project_sample.png" alt="Image" class="img-fluid"></a>
             </div>
           </div>
-          <div class="site-section-heading nopadding mb-5 w-border col-md-6 col-lg-6 col-xl-6 mx-auto t">
+          <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-xl-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="message-under-image">
               <h2 class="mb-3 largeh2">PROJECT</h2>
               <span class="live-message-under">活動紹介コーナー</span>
@@ -182,57 +200,71 @@
                 <a href="<?= esc_url(home_url('/union/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
               </div>
             </div>
+          </div>
+          <div class="site-section-heading nopadding mb-5 w-border col-12 mx-auto t">
             <div class="message-under-image">
               <div class="row mx-0">
-                <div class="project-frame w-100 mb-4">
+                <div class="project-frame w-100 mb-4" data-aos="fade-up" data-aos-delay="100">
                   <h6 class="triangle"></h6>
-                  <div class="row w-100 p-0 mx-0 mt-0 mb-3">
-                    <div class="team-member text-center image">
-                      <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/movie_film.png" alt="Image" class="img-fluid"></a>
+                  <div class="row">
+                    <div class="p-0 mx-0 mt-0 mb-3 col-12 col-md-6 col-lg-6 col-xl-6">
+                      <div class="team-member text-center image mx-3 w-auto">
+                        <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/movie_film.png" alt="Image" class="img-fluid w-100"></a>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="text-left mx-auto">
+                        <h4 class="font-weight-bold pb-2">タイトル</h4>
+                        <h5 class="font-weight-bold p-0 m-0">団体名</h5>
+                        <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
+                        <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                      </div>
+                      <div class="text-center mt-3">
+                        <a href="<?= esc_url(home_url('/union2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                      </div>
                     </div>
                   </div>
-                  <div class="text-left mx-auto">
-                    <h4 class="font-weight-bold pb-2">タイトル</h4>
-                    <h5 class="font-weight-bold p-0 m-0">団体名</h5>
-                    <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
-                    <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
-                  </div>
-                  <div class="text-center mt-3">
-                    <a href="<?= esc_url(home_url('/union2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
-                  </div>
                 </div>
-                <div class="project-frame w-100 mb-4">
+                <div class="project-frame w-100 mb-4" data-aos="fade-up" data-aos-delay="100">
                   <h6 class="triangle"></h6>
-                  <div class="row w-100 p-0 mx-0 mt-0 mb-3">
-                    <div class="team-member text-center image">
-                      <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/movie_film.png" alt="Image" class="img-fluid"></a>
+                  <div class="row">
+                    <div class="p-0 mx-0 mt-0 mb-3 col-12 col-md-6 col-lg-6 col-xl-6">
+                      <div class="team-member text-center image mx-3 w-auto">
+                        <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/movie_film.png" alt="Image" class="img-fluid w-100"></a>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="text-left mx-auto">
+                        <h4 class="font-weight-bold pb-2">タイトル</h4>
+                        <h5 class="font-weight-bold p-0 m-0">団体名</h5>
+                        <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
+                        <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                      </div>
+                      <div class="text-center mt-3">
+                        <a href="<?= esc_url(home_url('/union2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                      </div>
                     </div>
                   </div>
-                  <div class="text-left mx-auto">
-                    <h4 class="font-weight-bold pb-2">タイトル</h4>
-                    <h5 class="font-weight-bold p-0 m-0">団体名</h5>
-                    <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
-                    <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
-                  </div>
-                  <div class="text-center mt-3">
-                    <a href="<?= esc_url(home_url('/union2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
-                  </div>
                 </div>
-                <div class="project-frame w-100 mb-4">
+                <div class="project-frame w-100 mb-4" data-aos="fade-up" data-aos-delay="100">
                   <h6 class="triangle d-none"></h6>
-                  <div class="row w-100 p-0 mx-0 mt-0 mb-3">
-                    <div class="team-member text-center image">
-                      <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/movie_film.png" alt="Image" class="img-fluid"></a>
+                  <div class="row">
+                    <div class="p-0 mx-0 mt-0 mb-3 col-12 col-md-6 col-lg-6 col-xl-6">
+                      <div class="team-member text-center image mx-3 w-auto">
+                        <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/movie_film.png" alt="Image" class="img-fluid w-100"></a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="text-left mx-auto">
-                    <h4 class="font-weight-bold pb-2">タイトル</h4>
-                    <h5 class="font-weight-bold p-0 m-0">団体名</h5>
-                    <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
-                    <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
-                  </div>
-                  <div class="text-center mt-3">
-                    <a href="<?= esc_url(home_url('/union2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="text-left mx-auto">
+                        <h4 class="font-weight-bold pb-2">タイトル</h4>
+                        <h5 class="font-weight-bold p-0 m-0">団体名</h5>
+                        <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
+                        <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                      </div>
+                      <div class="text-center mt-3">
+                        <a href="<?= esc_url(home_url('/union2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -240,14 +272,14 @@
           </div>
         </div>
       </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div id="contest" class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
           <div class="col-md-6 col-lg-6 col-xl-6 mb-lg-6 image">
             <div class="team-member event">
-              <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/event1.jpg" alt="Image" class="img-fluid"></a>
+              <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/contest_sample.png" alt="Image" class="img-fluid"></a>
             </div>
           </div>
-          <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-xl-6 mx-auto t">
+          <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-xl-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="message-under-image">
               <h2 class="mb-3 largeh2">CONTEST</h2>
               <span class="live-message-under">コンテスト</span>
@@ -302,21 +334,21 @@
       <div class="container-fluid m-0 p-0">
         <div class="fixed-button">
           <div class="fixed-button-content">
-            <a href="#" ontouchstart="">
+            <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart="">
               <div class="contents">
                 <img src="<?= get_template_directory_uri(); ?>/images/fixed_live_button.png" alt="Image" class="img-fluid">
               </div>
             </a>
           </div>
           <div class="fixed-button-content">
-            <a href="#" ontouchstart="">
+            <a href="<?= esc_url(home_url('/union/'));?>" ontouchstart="">
               <div class="contents">
                 <img src="<?= get_template_directory_uri(); ?>/images/fixed_union_button.png" alt="Image" class="img-fluid">
               </div>
             </a>
           </div>
           <div class="fixed-button-content">
-            <a href="#" ontouchstart="">
+            <a href="#contest" ontouchstart="">
               <div class="contents">
                 <img src="<?= get_template_directory_uri(); ?>/images/fixed_contest_button.png" alt="Image" class="img-fluid">
               </div>
@@ -325,7 +357,7 @@
         </div>
         <div class="fixed-button-present">
           <div class="fixed-button-content">
-            <a href="#" class="mr-3" ontouchstart="">
+            <a href="<?= QUESTIONNAIRE_URL; ?>" class="mr-3" ontouchstart="">
               <img src="<?= get_template_directory_uri(); ?>/images/fixed_present.png" alt="Image" class="img-fluid">
             </a>
           </div>

@@ -414,7 +414,7 @@ a:hover {
   width: 100%;
   border-bottom: none;
   position: fixed;
-  background: rgba(255, 255, 255, 0.4);
+  background: #fff;
   z-index: 99;
 }
 .site-navbar .site-logo {
@@ -3274,4 +3274,8 @@ div.news-area .owl-carousel {
   z-index: 101;
   white-space: nowrap;
   font-size: 1rem;
+ }
+ .sns-icon img {
+   width: 2rem;
+   height: 2rem;
  }

@@ -1,20 +1,25 @@
     <footer class="site-footer">
       <div class="container pt-5">
         <div class="row">
-          <div class="text-center mb-5 col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3"><img src="<?= get_template_directory_uri(); ?>/images/logo1.png" width="150"></div>
-          <div class="footer-link-box mb-4 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <ul class="border-box">
-              <li><a href="<?= esc_url(home_url('/'));?>" class="link text-center py-4 mx-auto">TOP</a></li><!--
-              --><li><a href="<?= esc_url(home_url('/live/'));?>" class="link text-center py-4 mx-auto">LIVE</a></li><!--
-              --><li><a href="<?= esc_url(home_url('/photo-contest/'));?>" class="link text-center py-4 mx-auto">コンテスト</a></li><!--
-              --><li><a href="<?= esc_url(home_url('/union/'));?>" class="link text-center py-4 mx-auto">連合会</a></li><!--
-              --><li><a href="<?= esc_url(home_url('/'));?>" class="link text-center py-4 mx-auto">その他</a></li>
-            </ul>
+          <div class="text-center mb-5 col-12 col-md-3" data-aos="fade-up" data-aos-delay="100">
+            <a href="<?= esc_url(home_url('/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/logo1.png" width="150"></a>
           </div>
-          <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3"></div>
+          <div class="footer-link-box mb-4 col-12 col-md-6 text-center">
+            <div data-aos="fade-up" data-aos-delay="100">
+              <div><a href="<?= GOODS_SHOP_URL; ?>" class="link text-center mx-auto" ontouchstart="">グッズショップ（外部サイト）</a></div>
+              <div><a href="<?= esc_url(home_url('/'));?>" class="link text-center mx-auto" ontouchstart="">プライバシーポリシー</a></div>
+              <div><a href="<?= esc_url(home_url('/contact'));?>" class="link text-center mx-auto" ontouchstart="">お問い合わせ</a></div>
+            </div>
+            <div class="row justify-content-center align-items-center sns-icon mt-3" data-aos="fade-up" data-aos-delay="100">
+              <span class="m-2"><a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/icon_instagram.png" alt="Image"></a></span>
+              <span class="m-2"><a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/icon_line.png" alt="Image"></a></span>
+              <span class="m-2"><a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/icon_youtube.png" alt="Image"></a></span>
+            </div>
+          </div>
+          <div class="col-12 col-md-3"></div>
         </div>
-        <div class="text-center credit mx-auto mb-4">
-          <span>©Peace Designer FES</span>
+        <div class="text-center credit mx-auto mb-4" data-aos="fade-up" data-aos-delay="100">
+          <span class="font-weight-bold">©Peace Designer FES</span>
         </div>
       </div>
     </footer>
