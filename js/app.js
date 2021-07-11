@@ -217,22 +217,22 @@ $(function() {
         }
         // アニメーション開始
         setTimeout(function() {
-          $('.top2').fadeIn(speed);
+          $('.top2').show("fade", {}, speed);
           $('#logo_1').show("blind", {direction: 'horizontal'}, speed, setHeight);
           setTimeout(function() {
-            $('.top3').fadeIn(speed);
+            $('.top3').show('fade', {}, speed);
             $('#logo_3').show("blind", {direction: 'horizontal'}, speed, setHeight);
           }, speed);
-          $('#logo_2').fadeIn(speed * 2, setHeight);
+          $('#logo_2').show("fade", {}, speed * 2, setHeight);
 
           setTimeout(function() {
-            $('.top2').fadeOut(speed);
+            $('.top2').hide('fade', {}, speed);
             $('#logo_1').hide("blind", {direction: 'right'}, speed);
             setTimeout(function() {
-              $('.top3').fadeOut(speed);
+              $('.top3').hide('fade', {}, speed);
               $('#logo_3').hide("blind", {direction: 'right'}, speed);
             }, speed);
-            $('#logo_2').fadeOut(speed * 2);
+            $('#logo_2').hide("fade", {}, speed * 2);
           }, allViewTime + speed * 2);
         }, delay);
       };
