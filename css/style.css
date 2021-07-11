@@ -751,7 +751,6 @@ a:hover {
   visibility: hidden;
 }
 .site-blocks-cover.overlay.top.show {
-  transition: 1s;
   opacity: 1;
   visibility: visible;
 }
