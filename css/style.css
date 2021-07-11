@@ -152,9 +152,6 @@ a:hover {
   white-space: nowrap;
   margin: 1rem 0.5rem 1rem;
 }
-.union-box {
-  text-align: center;
-}
 @media (min-width: 575.98px) {
   .btn.btn-lg {
     padding: 0.6rem 2rem;
@@ -170,15 +167,18 @@ a:hover {
     font-size: 1.6rem;
     margin: 1.5rem;
   }
+  .union-box .btn.btn-show.type1 {
+    padding: 0.4rem 2rem 0.4rem 1rem;
+    border-radius: 0.5rem;
+    margin: auto;
+    max-width: 150px;
+  }
 }
 @media (min-width: 991.98px) {
   .btn.btn-show.type1 {
     padding: 0.4rem 2rem 0.4rem 1rem;
     border-radius: 0.5rem;
     margin: auto;
-  }
-  .union-box {
-    text-align: left;
   }
   .btn.btn-lg {
     padding: 1rem 4rem;
