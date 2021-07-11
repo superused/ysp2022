@@ -143,7 +143,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.yahoo.co.jp">
+                    <a href="https://peace-designer.stores.jp/">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_goods.png">
                       <span>グッズショップ（外部リンク）</span>
                     </a>
