@@ -3282,3 +3282,19 @@ div.news-area .owl-carousel {
    width: 2rem;
    height: 2rem;
  }
+.result-winner {
+  border: 3px solid #00b9f2;
+  border-radius: 1rem;
+  background-color: #f6f1e2;
+  padding: 1rem;
+  position: relative;
+}
+.result-winner .box-title {
+  background-color: #f6f1e2;
+  border-bottom: 3px solid #00b9f2;
+  border-radius: 1rem 1rem 0 0;
+  color: #c6b891;
+}
+.result-winner .box-body {
+  border-radius: 0 0 1rem 1rem;
+}
