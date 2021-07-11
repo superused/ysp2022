@@ -1,17 +1,25 @@
 <?php get_header(); ?>
     <div class="site-section top-image pb-0" data-aos="fade-up" data-aos-delay="100">
       <div class="container">
-        <div class="row">
-          <img src="images/video1.jpg" alt="Image" class="img-fluid w-100 h-100">
+        <div class="row px-3 justify-content-center">
+          <img src="<?= get_template_directory_uri(); ?>/images/movie_film.png" alt="Image" class="img-fluid w-100 h-100">
         </div>
       </div>
     </div>
 
-    <div class="site-section pb-0" data-aos="fade-up" data-aos-delay="100">
+    <div class="site-section" data-aos="fade-up" data-aos-delay="100">
       <div class="container">
         <div class="row mx-auto text-center">
           <h4 class="col-12 font-weight-bold">タイトル</h4>
           <div class="contents-border mt-3 mb-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section top-image pb-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
+        <div class="row px-3 justify-content-center">
+          <img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid w-100 h-100">
         </div>
       </div>
     </div>
@@ -28,22 +36,22 @@
                 <div class="row mt-4">
                   <div class="col-6 p-0" data-aos="fade-up" data-aos-delay="100">
                     <div class="m-2">
-                      <img src="images/photo5.png" alt="Image" class="img-fluid">
+                      <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid">
                     </div>
                   </div>
                   <div class="col-6 p-0" data-aos="fade-up" data-aos-delay="100">
                     <div class="m-2">
-                      <img src="images/photo5.png" alt="Image" class="img-fluid">
+                      <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid">
                     </div>
                   </div>
                   <div class="col-6 p-0" data-aos="fade-up" data-aos-delay="100">
                     <div class="m-2">
-                      <img src="images/photo5.png" alt="Image" class="img-fluid">
+                      <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid">
                     </div>
                   </div>
                   <div class="col-6 p-0" data-aos="fade-up" data-aos-delay="100">
                     <div class="m-2">
-                      <img src="images/photo5.png" alt="Image" class="img-fluid">
+                      <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid">
                     </div>
                   </div>
                 </div>
@@ -59,7 +67,7 @@
                   <div class="col-3 p-0" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-50 mx-auto">
                       <div class="person-shadow w-100 h-100 rounded-circle">
-                        <img src="images/upper_body.png" class="position-absolute w-50">
+                        <img src="<?= get_template_directory_uri(); ?>/images/upper_body.png" class="position-absolute w-50">
                       </div>
                     </div>
                     <div class="text-center font-weight-bold">
@@ -83,7 +91,7 @@
                 </div>
                 <div class="row">
                   <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 pl-2 pr-2 mt-4" data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/photo5.png" alt="Image" class="img-fluid">
+                    <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid">
                   </div>
                   <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7 pl-2 pr-2 mt-4" data-aos="fade-up" data-aos-delay="100">
                     <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
@@ -92,7 +100,7 @@
                     <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
                   </div>
                   <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 pl-2 pr-2 mt-4" data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/photo5.png" alt="Image" class="img-fluid">
+                    <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid">
                   </div>
                 </div>
               </div>
