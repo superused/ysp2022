@@ -36,10 +36,12 @@
             </div>
             <div class="site-section w-border mx-auto pt-0">
               <h4 class="font-weight-bold bg-cyan text-white p-3 mb-4" data-aos="fade-up" data-aos-delay="100">出演者</h4>
-              <div class="container">
+              <div class="container pt-4">
                 <div class="row mb-4">
                   <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <img src="<?= get_template_directory_uri(); ?>/images/person.jpg" alt="Image" class="img-fluid pb-3 w-100">
+                    <div class="performer mb-4">
+                      <img src="<?= get_template_directory_uri(); ?>/images/person.jpg" alt="Image" class="img-fluid w-100">
+                    </div>
                   </div>
                   <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7" data-aos="fade-up" data-aos-delay="100">
                     <h4 class="font-weight-bold">山田太郎</h4>
@@ -48,10 +50,12 @@
                   </div>
                 </div>
               </div>
-              <div class="container">
+              <div class="container pt-4">
                 <div class="row mb-4">
                   <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <img src="<?= get_template_directory_uri(); ?>/images/person.jpg" alt="Image" class="img-fluid pb-3 w-100">
+                    <div class="performer mb-4">
+                      <img src="<?= get_template_directory_uri(); ?>/images/person.jpg" alt="Image" class="img-fluid w-100">
+                    </div>
                   </div>
                   <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7" data-aos="fade-up" data-aos-delay="100">
                     <h4 class="font-weight-bold">山田太郎</h4>
@@ -60,10 +64,12 @@
                   </div>
                 </div>
               </div>
-              <div class="container">
+              <div class="container pt-4">
                 <div class="row mb-4">
                   <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <img src="<?= get_template_directory_uri(); ?>/images/person.jpg" alt="Image" class="img-fluid pb-3 w-100">
+                    <div class="performer mb-4">
+                      <img src="<?= get_template_directory_uri(); ?>/images/person.jpg" alt="Image" class="img-fluid w-100">
+                    </div>
                   </div>
                   <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7" data-aos="fade-up" data-aos-delay="100">
                     <h4 class="font-weight-bold">山田太郎</h4>
