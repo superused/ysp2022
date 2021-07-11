@@ -113,10 +113,7 @@
           <div class="site-section-heading nopadding mb-5 w-border col-12 mx-auto t">
             <div class="message-under-image">
               <div class="pickup-contents text-center px-0 mx-0 mb-4" data-aos="fade-up" data-aos-delay="100">
-                <div>
-                  <h2 class="">PICK UP</h2>
-                </div>
-                <div class="pickup-list px-3 pb-3">
+                <div class="pickup-list p-3">
                   <div class="row w-100 p-0 m-0">
                     <div class="team-member text-center image mb-4">
                       <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
@@ -129,11 +126,10 @@
                     </div>
                   </div>
                   <div class="text-center mb-3">
-                    <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
+                    <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
                   </div>
-                  <div class="contents-border w-100 border-pickup my-2 pb-2"></div>
                 </div>
-                <div class="pickup-list px-3 pb-3">
+                <div class="pickup-list p-3">
                   <div class="row w-100 p-0 m-0">
                     <div class="team-member text-center image mb-4">
                       <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
@@ -146,11 +142,10 @@
                     </div>
                   </div>
                   <div class="text-center mb-3">
-                    <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
+                    <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
                   </div>
-                  <div class="contents-border w-100 border-pickup my-2 pb-2"></div>
                 </div>
-                <div class="pickup-list px-3 pb-3">
+                <div class="pickup-list p-3">
                   <div class="row w-100 p-0 m-0">
                     <div class="team-member text-center image mb-4">
                       <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
@@ -180,11 +175,66 @@
           </div>
           <div class="site-section-heading nopadding mb-5 w-border col-md-6 col-lg-6 col-xl-6 mx-auto t">
             <div class="message-under-image">
-              <h2 class="mb-3 largeh2">UNION</h2>
-              <span class="live-message-under">連合会</span>
+              <h2 class="mb-3 largeh2">PROJECT</h2>
+              <span class="live-message-under">活動紹介コーナー</span>
               <p>全国で活躍しているピースデザイナーたちの活動を紹介します！あなたの地域のピースデザイナー達の活躍を覗いてみませんか？</p>
               <div class="text-center">
-                <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                <a href="<?= esc_url(home_url('/union/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+              </div>
+            </div>
+            <div class="message-under-image">
+              <div class="row mx-0">
+                <div class="project-frame w-100 mb-4">
+                  <h6 class="triangle"></h6>
+                  <div class="row w-100 p-0 mx-0 mt-0 mb-3">
+                    <div class="team-member text-center image">
+                      <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/movie_film.png" alt="Image" class="img-fluid"></a>
+                    </div>
+                  </div>
+                  <div class="text-left mx-auto">
+                    <h4 class="font-weight-bold pb-2">タイトル</h4>
+                    <h5 class="font-weight-bold p-0 m-0">団体名</h5>
+                    <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
+                    <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <a href="<?= esc_url(home_url('/union2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                  </div>
+                </div>
+                <div class="project-frame w-100 mb-4">
+                  <h6 class="triangle"></h6>
+                  <div class="row w-100 p-0 mx-0 mt-0 mb-3">
+                    <div class="team-member text-center image">
+                      <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/movie_film.png" alt="Image" class="img-fluid"></a>
+                    </div>
+                  </div>
+                  <div class="text-left mx-auto">
+                    <h4 class="font-weight-bold pb-2">タイトル</h4>
+                    <h5 class="font-weight-bold p-0 m-0">団体名</h5>
+                    <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
+                    <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <a href="<?= esc_url(home_url('/union2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                  </div>
+                </div>
+                <div class="project-frame w-100 mb-4">
+                  <h6 class="triangle d-none"></h6>
+                  <div class="row w-100 p-0 mx-0 mt-0 mb-3">
+                    <div class="team-member text-center image">
+                      <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/movie_film.png" alt="Image" class="img-fluid"></a>
+                    </div>
+                  </div>
+                  <div class="text-left mx-auto">
+                    <h4 class="font-weight-bold pb-2">タイトル</h4>
+                    <h5 class="font-weight-bold p-0 m-0">団体名</h5>
+                    <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
+                    <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <a href="<?= esc_url(home_url('/union2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
