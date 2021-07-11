@@ -5,7 +5,6 @@
     <title>PEACE DESIGNER FES</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="shortcut icon" href="<?= esc_url(home_url('favicon.ico'));?>" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,500,600,700,800,900|Oswald:400,500,600,700">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/fonts/icomoon/style.css">
@@ -148,6 +147,17 @@
                       <span>グッズショップ（外部リンク）</span>
                     </a>
                   </li>
+                  <li>
+                    <div class="site-mobile-menu-sns text-center font-weight-bold container-fluid">
+                      <div class="row justify-content-center align-items-center text-nowrap flex-nowrap">
+                          <span class="m-4">OFFICIAL SNS</span>
+                          <span class="m-2"><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/icon_instagram.png" alt="Image"></a></span>
+                          <span class="m-2"><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/icon_line.png" alt="Image"></a></span>
+                          <span class="m-2"><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/icon_youtube.png" alt="Image"></a></span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -174,15 +184,6 @@
         </div>
       </div>
       <div class="site-mobile-menu-body">
-        <div class="site-mobile-menu-sns text-center font-weight-bold container-fluid">
-          <div class="row justify-content-center align-items-center text-nowrap flex-nowrap">
-              <span class="m-4">OFFICIAL SNS</span>
-              <span class="m-2"><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/icon_instagram.png" alt="Image"></a></span>
-              <span class="m-2"><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/icon_line.png" alt="Image"></a></span>
-              <span class="m-2"><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/icon_youtube.png" alt="Image"></a></span>
-            </div>
-          </div>
-        </div>
       </div>
     </div> <!-- .site-mobile-menu -->
 

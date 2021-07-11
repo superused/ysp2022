@@ -630,7 +630,6 @@ a:hover {
   position: relative;
   padding: 0.1px;
   height: calc(100vh - 52px);
-  padding-bottom: 150px;
   color: #6f6f6f;
   background-color: #f6f1e2;
   font-size: 1rem;
@@ -640,6 +639,8 @@ a:hover {
 }
 .site-mobile-menu .site-mobile-menu-sns {
   min-width: 300px;
+  padding-bottom: 70px;
+  background-color: #f6f1e2;
 }
 .site-mobile-menu .site-nav-wrap {
   padding: 0;
@@ -653,6 +654,9 @@ a:hover {
   position: relative;
   color: #6f6f6f;
   font-weight: bold;
+}
+.site-mobile-menu .site-nav-wrap .site-mobile-menu-sns a {
+  padding: 0;
 }
 .site-mobile-menu .site-nav-wrap a:hover {
   color: #00b9f2;
@@ -706,9 +710,6 @@ a:hover {
   float: left;
   width: 100%;
   background-color: #fff;
-}
-.site-mobile-menu .site-nav-wrap > li:last-child {
-  border-bottom: solid 2px #dcdcdc;
 }
 .site-mobile-menu .site-nav-wrap > li a {
   display: flex;
@@ -3235,6 +3236,10 @@ div.news-area .owl-carousel {
     left: -20px;
   }
 }
-/*.pickup-list {
-  background-color: #f6f1e2;
-} */
+.contact-form input[type=submit]{
+  background-color: #00b9f2;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  color: #fff;
+}
