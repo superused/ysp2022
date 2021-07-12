@@ -69,13 +69,13 @@
           </div>
           <div class="site-section-heading text-center mb-5 w-border overflow-hidden m-0 p-0 w-100" data-aos="fade-up" data-aos-delay="100">
             <div class="contents-list-img text-center">
-              <img src="<?= get_template_directory_uri(); ?>/images/contents_list.png" alt="Image" class="w-100">
+              <img src="<?= get_template_directory_uri(); ?>/images/i_map_bg.png" alt="Image" class="w-100">
               <ul class="contents-list-link">
-                <li><a href="<?= esc_url(home_url('/peace-project/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/contents_list-peace_project.png" alt="Image" class="img-fluid"></a></li>
-                <li><a href="<?= esc_url(home_url('/senryu/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/contents_list-tsunagari_senryu.png" alt="Image" class="img-fluid"></a></li>
-                <li><a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/contents_list-live.png" alt="Image" class="img-fluid"></a></li>
-                <li><a href="<?= esc_url(home_url('/short-movie/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/contents_list-short_movie.png" alt="Image" class="img-fluid"></a></li>
-                <li><a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/contents_list-photo_contest.png" alt="Image" class="img-fluid"></a></li>
+                <li><a href="<?= esc_url(home_url('/peace-project/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_appeal.png" alt="Image" class="img-fluid"></a></li>
+                <li><a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_live.png" alt="Image" class="img-fluid"></a></li>
+                <li><a href="<?= esc_url(home_url('/senryu/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_senryu.png" alt="Image" class="img-fluid"></a></li>
+                <li><a href="<?= esc_url(home_url('/short-movie/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_movie.png" alt="Image" class="img-fluid"></a></li>
+                <li><a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_photo.png" alt="Image" class="img-fluid"></a></li>
               </ul>
             </div>
           </div>
