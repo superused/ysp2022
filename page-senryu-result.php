@@ -44,7 +44,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
             <div class="site-section result-winner p-0 mb-4" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <div class="col-12 text-center box-title pt-2 pb-1" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-12 text-center box-title pt-2 pb-1">
                     <h3 class="text-cyan font-weight-bold">最優秀賞</h3>
                     <div class="font-weight-bold">～賞品～<br>ギフトカード（１万円分）<br>地域の特産品</div>
                   </div>
@@ -68,7 +68,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
             <div class="site-section result-winner p-0 mb-4" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <div class="col-12 text-center box-title pt-2 pb-1" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-12 text-center box-title pt-2 pb-1">
                     <h3 class="text-cyan font-weight-bold">優秀賞</h3>
                     <div class="font-weight-bold">～賞品～<br>ギフトカード（５千円分）<br>Pdフェスオリジナルフェイスタオル</div>
                   </div>
@@ -92,12 +92,12 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
             <div class="site-section result-winner p-0 mb-4" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <div class="col-12 text-center box-title pt-2 pb-1" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-12 text-center box-title pt-2 pb-1">
                     <h3 class="text-cyan font-weight-bold">入選</h3>
                     <div class="font-weight-bold">～賞品～<br>ギフトカード（500円分）</div>
                   </div>
                   <div class="text-left mx-auto box-body bg-white p-3">
-                    <div class="row px-3">
+                    <div class="row px-3" data-aos="fade-up" data-aos-delay="100">
                       <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
                       <div class="col-6 text-right p-0 ml-auto">
                         <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
@@ -109,7 +109,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                       <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
                     </div>
                     <div class="contents-border w-100 border-cyan my-3"></div>
-                    <div class="row px-3">
+                    <div class="row px-3" data-aos="fade-up" data-aos-delay="100">
                       <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
                       <div class="col-6 text-right p-0 ml-auto">
                         <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
@@ -121,7 +121,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                       <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
                     </div>
                     <div class="contents-border w-100 border-cyan my-3"></div>
-                    <div class="row px-3">
+                    <div class="row px-3" data-aos="fade-up" data-aos-delay="100">
                       <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
                       <div class="col-6 text-right p-0 ml-auto">
                         <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
@@ -133,7 +133,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                       <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
                     </div>
                     <div class="contents-border w-100 border-cyan my-3"></div>
-                    <div class="row px-3">
+                    <div class="row px-3" data-aos="fade-up" data-aos-delay="100">
                       <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
                       <div class="col-6 text-right p-0 ml-auto">
                         <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
@@ -145,7 +145,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                       <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
                     </div>
                     <div class="contents-border w-100 border-cyan my-3"></div>
-                    <div class="row px-3">
+                    <div class="row px-3" data-aos="fade-up" data-aos-delay="100">
                       <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
                       <div class="col-6 text-right p-0 ml-auto">
                         <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
@@ -157,7 +157,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                       <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
                     </div>
                     <div class="contents-border w-100 border-cyan my-3"></div>
-                    <div class="row px-3">
+                    <div class="row px-3" data-aos="fade-up" data-aos-delay="100">
                       <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
                       <div class="col-6 text-right p-0 ml-auto">
                         <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
@@ -169,7 +169,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                       <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
                     </div>
                     <div class="contents-border w-100 border-cyan my-3"></div>
-                    <div class="row px-3">
+                    <div class="row px-3" data-aos="fade-up" data-aos-delay="100">
                       <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
                       <div class="col-6 text-right p-0 ml-auto">
                         <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
@@ -181,7 +181,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                       <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
                     </div>
                     <div class="contents-border w-100 border-cyan my-3"></div>
-                    <div class="row px-3">
+                    <div class="row px-3" data-aos="fade-up" data-aos-delay="100">
                       <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
                       <div class="col-6 text-right p-0 ml-auto">
                         <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
@@ -200,7 +200,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
             <div class="site-section result-winner p-0 mb-4" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <div class="col-12 text-center box-title pt-2 pb-1" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-12 text-center box-title pt-2 pb-1">
                     <h3 class="text-cyan font-weight-bold">第11位～第100位</h3>
                   </div>
                   <div class="text-center w-100 mx-auto box-body bg-white p-3">
