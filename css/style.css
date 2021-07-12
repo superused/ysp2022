@@ -2819,6 +2819,9 @@ button.vote:disabled {
 .bg-white {
   background-color: #ffffff;
 }
+.bg-yellow {
+  background-color: #f5f842;
+}
 .border-gray {
   border-color: #c0c0c0 !important;
 }

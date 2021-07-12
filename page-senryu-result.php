@@ -38,129 +38,177 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
               </div>
             </div>
 
-            <div class="w-100 result-winner-image">
+            <div class="result-winner-image w-75 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
               <img src="<?= get_template_directory_uri(); ?>/images/result_winner.png" alt="Image" class="img-fluid">
             </div>
-            <div class="site-section result-winner p-0" data-aos="fade-up" data-aos-delay="100">
+            <div class="site-section result-winner p-0 mb-4" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
                   <div class="col-12 text-center box-title pt-2 pb-1" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="text-cyan font-weight-bold">最優秀賞</h3>
                     <div class="font-weight-bold">～賞品～<br>ギフトカード（１万円分）<br>地域の特産品</div>
                   </div>
-                  <div class="text-left mx-auto box-body p-3 bg-white">
-                    <div class="row p-0">
-                      <h5 class="col-7 font-weight-bold pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
-                      <h5 class="col-5 font-weight-bold p-0 m-0">得票数 123票</h5>
+                  <div class="text-left mx-auto box-body bg-white p-3">
+                    <div class="row px-3">
+                      <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
+                      <div class="col-6 text-right p-0 ml-auto">
+                        <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
+                        <div class="pl-3 py-3">
+                          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="kakejiku-episode">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                      <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
                     </div>
-                    <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
-                    <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="site-section">
+            <div class="site-section result-winner p-0 mb-4" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
-                    <h4 class="font-weight-bold mb-2">応募作品</h4>
-                    <div class="contents-border short mt-1 mb-1"></div>
+                  <div class="col-12 text-center box-title pt-2 pb-1" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-cyan font-weight-bold">優秀賞</h3>
+                    <div class="font-weight-bold">～賞品～<br>ギフトカード（５千円分）<br>Pdフェスオリジナルフェイスタオル</div>
                   </div>
-<?php foreach ($datas as $key => $data): ?>
-                  <div class="kakejiku col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="kakejiku_outer m-0 mt-4 mb-3 mx-auto detail c-pointer" data-toggle="modal" data-target="#modal">
-                      <div class="kakejiku_inner">
-                        <?= str_replace('|', '<br>',$data['senryu']); ?>
+                  <div class="text-left mx-auto box-body bg-white p-3">
+                    <div class="row px-3">
+                      <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
+                      <div class="col-6 text-right p-0 ml-auto">
+                        <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
+                        <div class="pl-3 py-3">
+                          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="img-fluid">
+                        </div>
                       </div>
+                      <div class="kakejiku-episode">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                      <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
                     </div>
-                    <div class="kakejiku_episode d-none"><?= nl2br(esc_html($data['episode'])); ?></div>
-                    <div class="kakejiku_name col-10 mx-auto mt-3 mb-2 text-white font-weight-bold d-none">
-                      <?= $data['name'] . '(' . ((int)($data['age'] / 10) * 10) . '代' . ($data['gender'] == 1 ? ' 男性' : ($data['gender'] == 2 ? '女性' :  '')) . ')'; ?>
-                    </div>
-                    <div class="row kakejiku_button mx-auto text-center">
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="detail mx-auto w-100 text-nowrap c-pointer" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
-                      </div>
-                      <div class="col-6 pl-1 pr-1">
-                        <button class="vote mx-auto w-100 text-nowrap c-pointer" ontouchstart="">投票</button>
-                        <p class="vote_num text-danger font-weight-bold mb-0"><span><?= $senryu[$key]['polla_votes']; ?></span>票</p>
-                      </div>
-                    </div>
-                  </div>
-<?php endforeach; ?>
-                  <div class="text-center col-12 mt-5 mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <div href="#" class="arrow down circle"></div>
-                  </div>
-                  <div class="text-center col-12" data-aos="fade-up" data-aos-delay="100">
-                    <p class="text-left mt-6">投票結果は8月7日に掲載されます。</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="site-section pt-3 pb-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="site-section result-winner p-0 mb-4" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <div class="site-section-heading text-center w-border mx-auto col-12">
-                    <h4 class="font-weight-bold mb-2">賞品</h4>
-                    <div class="contents-border short mt-1 mb-1"></div>
+                  <div class="col-12 text-center box-title pt-2 pb-1" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-cyan font-weight-bold">入選</h3>
+                    <div class="font-weight-bold">～賞品～<br>ギフトカード（500円分）</div>
+                  </div>
+                  <div class="text-left mx-auto box-body bg-white p-3">
+                    <div class="row px-3">
+                      <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
+                      <div class="col-6 text-right p-0 ml-auto">
+                        <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
+                        <div class="pl-3 py-3">
+                          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="kakejiku-episode">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                      <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
+                    </div>
+                    <div class="contents-border w-100 border-cyan my-3"></div>
+                    <div class="row px-3">
+                      <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
+                      <div class="col-6 text-right p-0 ml-auto">
+                        <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
+                        <div class="pl-3 py-3">
+                          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="kakejiku-episode">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                      <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
+                    </div>
+                    <div class="contents-border w-100 border-cyan my-3"></div>
+                    <div class="row px-3">
+                      <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
+                      <div class="col-6 text-right p-0 ml-auto">
+                        <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
+                        <div class="pl-3 py-3">
+                          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="kakejiku-episode">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                      <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
+                    </div>
+                    <div class="contents-border w-100 border-cyan my-3"></div>
+                    <div class="row px-3">
+                      <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
+                      <div class="col-6 text-right p-0 ml-auto">
+                        <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
+                        <div class="pl-3 py-3">
+                          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="kakejiku-episode">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                      <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
+                    </div>
+                    <div class="contents-border w-100 border-cyan my-3"></div>
+                    <div class="row px-3">
+                      <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
+                      <div class="col-6 text-right p-0 ml-auto">
+                        <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
+                        <div class="pl-3 py-3">
+                          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="kakejiku-episode">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                      <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
+                    </div>
+                    <div class="contents-border w-100 border-cyan my-3"></div>
+                    <div class="row px-3">
+                      <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
+                      <div class="col-6 text-right p-0 ml-auto">
+                        <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
+                        <div class="pl-3 py-3">
+                          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="kakejiku-episode">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                      <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
+                    </div>
+                    <div class="contents-border w-100 border-cyan my-3"></div>
+                    <div class="row px-3">
+                      <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
+                      <div class="col-6 text-right p-0 ml-auto">
+                        <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
+                        <div class="pl-3 py-3">
+                          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="kakejiku-episode">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                      <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
+                    </div>
+                    <div class="contents-border w-100 border-cyan my-3"></div>
+                    <div class="row px-3">
+                      <h5 class="col-6 font-weight-bold px-0 pb-2">あいうえお<br>かきくけこさし<br>たちつてと</h5>
+                      <div class="col-6 text-right p-0 ml-auto">
+                        <h6 class="w-auto mt-2"><span class="font-weight-bold text-cyan bg-yellow p-2"><span class="font-weight-bold small">得票数 </span><span>123票</span></span></h6>
+                        <div class="pl-3 py-3">
+                          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="img-fluid">
+                        </div>
+                      </div>
+                      <div class="kakejiku-episode">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                      <div class="kakejiku-name mt-2">山田 花子 (30代 女性)</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="site-section beige" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="site-section result-winner p-0 mb-4" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <div class="col-4 text-center mt-2">
-                    <div class="double-circle l mx-auto">
-                      <div class="circle-inner">
-                        <div class="title">最優秀賞</div>
-                        <div class="sub">1名様</div>
-                      </div>
-                    </div>
+                  <div class="col-12 text-center box-title pt-2 pb-1" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-cyan font-weight-bold">第11位～第100位</h3>
                   </div>
-                  <div class="col-8 mt-2">
-                    <div class="text">
-                      ・ギフトカード（1万円分）<br>
-                      ・地域の特産品
+                  <div class="text-center w-100 mx-auto box-body bg-white p-3">
+                    <div class="row px-3">
+                      <div class="w-100">ご覧になりたい方はこちらから</div>
                     </div>
-                    <div class="image">
-                      <img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png"><img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png">
-                    </div>
-                  </div>
-                  <div class="col-4 text-center mt-2">
-                    <div class="double-circle m mx-auto">
-                      <div class="circle-inner">
-                        <div class="title">優秀賞</div>
-                        <div class="sub">1名様</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-8 mt-2">
-                    <div class="text">
-                      ・ギフトカード（1万円分）<br>
-                      ・地域の特産品
-                    </div>
-                    <div class="image">
-                      <img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png"><img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png">
-                    </div>
-                  </div>
-                  <div class="col-4 text-center mt-2">
-                    <div class="double-circle s mx-auto">
-                      <div class="circle-inner">
-                        <div class="title">佳作</div>
-                        <div class="sub">8名様</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-8 mt-2">
-                    <div class="text">
-                      ・ギフトカード（1万円分）<br>
-                      ・地域の特産品
-                    </div>
-                    <div class="image">
-                      <img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png"><img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png">
+                    <div class="text-center mt-3">
+                      <a href="<?= esc_url(home_url('/union2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
                     </div>
                   </div>
                 </div>
