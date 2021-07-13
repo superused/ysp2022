@@ -208,7 +208,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                       <div class="w-100">ご覧になりたい方はこちらから</div>
                     </div>
                     <div class="text-center mt-3">
-                      <a href="<?= esc_url(home_url('/union2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                      <a href="<?= SENRYU_RESULT_LIST_URL ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">作品を見る</button></a>
                     </div>
                   </div>
                 </div>

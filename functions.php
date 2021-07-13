@@ -4,6 +4,8 @@ require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php';
 define('GOODS_SHOP_URL', 'https://peace-designer.stores.jp/'); // グッズショップ外部サイト
 define('QUESTIONNAIRE_URL', '#'); // アンケートURL
 
+define('SENRYU_RESULT_LIST_URL', esc_url(home_url('/senryu-result-list/')));
+
 class Util {
   public $wpdb;
   public $contestId = [];
