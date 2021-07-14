@@ -146,6 +146,14 @@ a:hover {
   border-radius: 0.7rem;
   margin: 0 auto;
 }
+.btn.btn-show.type2 {
+  background-color: #fff;
+  color: #00b9f2;
+  padding: 1rem 5rem;
+  border-top: 2px solid #048bb6;
+  border-left: 2px solid #048bb6;
+  border-right: 2px solid #048bb6;
+}
 .btn.btn-lg {
   padding: 0.6rem 1.6rem;
   border-radius: 0.4rem;
@@ -2549,7 +2557,7 @@ h2.largeh2 {
 }
 
 .site-section a {
-  z-index: 99;
+  z-index: 2;
   position: relative;
 }
 
