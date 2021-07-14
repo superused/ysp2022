@@ -6,6 +6,11 @@ define('QUESTIONNAIRE_URL', '#'); // アンケートURL
 
 define('SENRYU_RESULT_LIST_URL', esc_url(home_url('/senryu-result-list/')));
 
+define('UNION_URL', 'https://www.yahoo.co.jp');
+define('UNION_ACTIVITY_FREQUENCY', '月2回');
+define('UNION_ACTIVITY_PLACE', '東京都世田谷区');
+define('UNION_MAIL', 'mail@mail.com');
+
 class Util {
   public $wpdb;
   public $contestId = [];

@@ -26,11 +26,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
+  color: #00b9f2;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
 }
 a:hover {
+  color: #232529;
   text-decoration: none;
 }
 
@@ -3300,4 +3302,8 @@ div.news-area .owl-carousel {
 }
 .result-winner .box-body {
   border-radius: 0 0 1rem 1rem;
+}
+.location-icon {
+  width: 1rem;
+  height: 1rem;
 }
