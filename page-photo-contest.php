@@ -58,22 +58,28 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                   </div>
 <?php foreach ($datas as $key => $data): ?>
                   <div class="col-12 col-md-6 col-lg-6 col-xl-4 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="shadow w-100 p-0 mb-2 mr-2">
-                      <div class="m-0">
-                        <img src="<?= $data['photo'];?>" class="photo_image w-100">
+                    <div class="project-frame square w-100 p-0 mb-2 mr-2">
+                      <div class="team-member m-0">
+                        <a href="#" data-toggle="modal" data-target="#modal"><img src="<?= $data['photo'];?>" class="photo_image w-100"></a>
                       </div>
                       <div class="row p-2">
-                        <div class="col-7 pr-0">
+                        <div class="col-6 pr-0">
                         <h6 class="photo_name"><?=$data['name']; ?> さん</h6>
                           <p class="photo_address text-secondary mb-1"><?=$data['address']; ?>在住</p>
                         </div>
-                        <div class="photo_button col-5 row m-0">
-                          <div class="col-12 p-0">
-                            <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
-                          </div>
-                          <div class="col-12 p-0">
-                            <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
-                            <p class="vote_num text-danger text-center font-weight-bold mb-0"><span><?= $photo[$key]['polla_votes']; ?></span>票</p>
+                        <div class="photo_button col-6 row w-100 p-0">
+                          <div class="row w-100 m-0">
+                            <div class="col-6 p-0">
+                              <div class="mr-1">
+                                <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
+                              </div>
+                            </div>
+                            <div class="col-6 p-0">
+                              <div class="ml-1">
+                                <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
+                                <p class="vote_num text-danger text-center font-weight-bold mb-0"><span><?= $photo[$key]['polla_votes']; ?></span>票</p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -134,8 +140,8 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                   </div>
                   <div class="col-8 mt-2">
                     <div class="text">
-                      ・ギフトカード（1万円分）<br>
-                      ・地域の特産品
+                      ・ギフトカード（5千円分）<br>
+                      ・Pdフェスオリジナルフェイスタオル
                     </div>
                     <div class="image">
                       <img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png"><img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png">
@@ -151,8 +157,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                   </div>
                   <div class="col-8 mt-2">
                     <div class="text">
-                      ・ギフトカード（1万円分）<br>
-                      ・地域の特産品
+                      ・ギフトカード（500円分）
                     </div>
                     <div class="image">
                       <img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png"><img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png">

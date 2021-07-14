@@ -6,13 +6,13 @@
 $senryu = $util->getContestDatas('senryu');
 $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
 ?>
-<?php include 'parts/senryu-result-head.php'; ?>
+<?php include 'parts/photo-result-head.php'; ?>
 
     <div class="site-section pt-0">
       <div class="container">
         <div class="row">
           <div class="col-12 col-sm-12 col-mg-8 col-lg-8 col-xl-8">
-<?php include 'parts/senryu-result-content-title.php'; ?>
+<?php include 'parts/photo-result-content-title.php'; ?>
 
             <div class="result-winner-image w-75 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
               <img src="<?= get_template_directory_uri(); ?>/images/result_winner.png" alt="Image" class="img-fluid">

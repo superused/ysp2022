@@ -283,8 +283,10 @@ $(function() {
 
   // フォトコンテストのモーダル表示
   var photoView = function() {
+    if (!$('.photo_button')[0]) return false;
+
     // 詳細ボタンを押した際に表示項目を切り替える
-    $('.photo_button .detail[data-toggle=modal]').click(function() {
+    $('[data-type=content-block] [data-toggle=modal]').click(function() {
       var content = $(this).parents('[data-type=content-block]');
       var modal = $('#modal');
       var selectors = [
