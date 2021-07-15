@@ -2846,6 +2846,15 @@ button.vote:disabled {
 .bg-beige #news {
   background-color: #f7f2e3;
 }
+.bg-concept {
+  background-color: #08b9f1;
+}
+.bg-concept h2 {
+  font-weight: 500;
+}
+.bg-concept .font-weight-bold {
+  font-weight: 900 !important;
+}
 .border-gray {
   border-color: #c0c0c0 !important;
 }
@@ -3352,4 +3361,8 @@ div.news-area .owl-carousel {
   right: 0.4rem;
   bottom: -0.35rem;
   position: absolute;
+}
+.concept-img {
+  max-width: 200px;
+  margin: 2rem auto;
 }
