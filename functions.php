@@ -29,7 +29,7 @@ class Util {
 
     $poll_id = $this->getContestId($type);
     // SQL文
-    $query = "SELECT * FROM wp_pollsa where polla_qid = %s";
+    $query = "SELECT * FROM $wpdb->pollsa where polla_qid = %s";
     // 結果を連想配列で取得
     $results = $wpdb->get_results($wpdb->prepare($query, $poll_id), "ARRAY_A");
     foreach ($results as $key => $result) {
