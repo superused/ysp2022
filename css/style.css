@@ -3366,3 +3366,7 @@ div.news-area .owl-carousel {
   max-width: 200px;
   margin: 2rem auto;
 }
+.news-image img {
+  width: 100%;
+  height: 100%;
+}

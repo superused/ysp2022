@@ -81,3 +81,5 @@ class Util {
   }
 }
 $util = new Util($wpdb);
+
+add_theme_support('post-thumbnails');
