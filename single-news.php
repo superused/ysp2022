@@ -27,9 +27,17 @@
             </div>
             <div class="site-section p-0 my-4">
               <div class="container p-0 text-center">
-                <a href="#" class="text-black font-weight-bold mr-3">< Prev</a>
-                <a href="<?= HOME_URL; ?>" class="sns-icon"><img src="<?= get_template_directory_uri(); ?>/images/icon_home.png"></a>
-                <a href="#" class="text-black font-weight-bold ml-3">Next ></a>
+<?php if (get_previous_post()): ?>
+<?php     previous_post_link('%link', '&lt; Prev'); ?>
+<?php else: ?>
+                 <span>&lt; Prev</span>
+<?php endif;?>
+                 <a href="<?= HOME_URL; ?>" class="sns-icon mx-3"><img src="<?= get_template_directory_uri(); ?>/images/icon_home.png"></a>
+<?php if (get_next_post()): ?>
+<?php     next_post_link('%link', 'Next &gt;');?>
+<?php else: ?>
+                 <span>Next &gt;</span>
+<?php endif;?>
               </div>
             </div>
             <h4 class="heading-bar color-cyan font-weight-bold mb-4"><span class="pr-3">関連記事</span></h4>
