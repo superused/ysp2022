@@ -6,6 +6,7 @@ define('QUESTIONNAIRE_URL', '#'); // アンケートURL
 
 // URL群
 define('HOME_URL', esc_url(home_url('/')));
+define('NEWS_URL', esc_url(home_url('/news/')));
 define('SENRYU_RESULT_LIST_URL', esc_url(home_url('/senryu-result-list/')));
 
 define('UNION_URL', 'https://www.yahoo.co.jp');
@@ -13,12 +14,16 @@ define('UNION_ACTIVITY_FREQUENCY', '月2回');
 define('UNION_ACTIVITY_PLACE', '東京都世田谷区');
 define('UNION_MAIL', 'mail@mail.com');
 
+define('NO_IMAGE_URL', get_template_directory_uri() . '/images/noimage.png');
+
 class Util {
   public $wpdb;
+  public $post;
   public $contestId = [];
 
-  public function __construct($wpdb) {
+  public function __construct($wpdb, $post) {
     $this->wpdb = $wpdb;
+    $this->post = $post;
   }
 
   /**
@@ -79,7 +84,18 @@ class Util {
 
     return $contestData[0]->pollq_active;
   }
+
+  public function getNews() {
+    $posts = get_posts([
+      'posts_per_page' => 20,
+      'offset' => 0,
+      'orderby' => 'date',
+      'order' => 'desc',
+      'post_type' => 'news',
+    ]);
+    return $posts;
+  }
 }
-$util = new Util($wpdb);
+$util = new Util($wpdb, $post);
 
 add_theme_support('post-thumbnails');

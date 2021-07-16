@@ -117,8 +117,17 @@ $(function() {
 
 
   var siteCarousel = function () {
-    if ( $('.owl-carousel').length > 0 ) {
+    if ($('.owl-carousel').length > 0) {
       var owl = $('.owl-carousel');
+      var responsive = {
+        768: {items:2},
+        992: {items:3},
+        1200:{items:4},
+      };
+      if ($('.sidebar').length > 0) {
+        responsive[992] = {items:1.5};
+        responsive[1200] = {items:2};
+      }
       owl.owlCarousel({
         center: true,
         items: 1.5,
@@ -127,23 +136,29 @@ $(function() {
         margin: 0,
         nav: false,
         dots: false,
-        responsive:{
-          768:{
-            items:2
-          },
-          992:{
-            items:3
-          },
-          1200:{
-            items:4
-          }
-        }
+        responsive: responsive,
       });
       $('.custom-btn.prev').click(function() {
         owl.trigger('prev.owl.carousel');
       });
       $('.custom-btn.next').click(function() {
         owl.trigger('next.owl.carousel');
+      });
+      setTimeout(function() {
+        let minHeight;
+        $('.owl-item img').each(function() {
+          const height = $(this).height();
+          if (!minHeight || minHeight > height) {
+            minHeight = height;
+          }
+        });
+        $('.owl-item img').each(function() {
+          const $this = $(this);
+          const width = $this.width();
+          const height = $this.height();
+          $this.width(width * minHeight / height);
+          $this.height(minHeight);
+        });
       });
     }
 

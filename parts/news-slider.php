@@ -1,26 +1,15 @@
+<?php $newsDatas = $util->getNews(); ?>
     <div id="news" class="site-section block-13 pb-0">
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+      <div class="container-fluid p-0" data-aos="fade-up" data-aos-delay="100">
         <div class="news-area m-4">
-          <h4 class="news-title">NEWS</h4>
+          <h5 class="news-title">NEWS</h5>
           <div class="owl-carousel">
-            <div class="text-center p-3 p-md-5 bg-white">
-              <a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
+<?php foreach ($newsDatas as $newsData): ?>
+            <div class="text-center bg-white news-thumbnail">
+              <a href="<?= get_permalink($newsData->ID); ?>" ontouchstart=""><?= get_the_post_thumbnail($newsData->ID) ?: '<img src="' . NO_IMAGE_URL . '">'; ?></a>
+
             </div>
-            <div class="text-center p-3 p-md-5 bg-white">
-              <a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
-            </div>
-            <div class="text-center p-3 p-md-5 bg-white">
-              <a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
-            </div>
-            <div class="text-center p-3 p-md-5 bg-white">
-              <a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
-            </div>
-            <div class="text-center p-3 p-md-5 bg-white">
-              <a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
-            </div>
-            <div class="text-center p-3 p-md-5 bg-white">
-              <a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/PHOTO_CONTEST.png" alt="Image" class="mx-auto img-fluid"></a>
-            </div>
+<?php endforeach; ?>
           </div>
           <button class="custom-btn prev" ontouchstart=""></button>
           <button class="custom-btn next" ontouchstart=""></button>
