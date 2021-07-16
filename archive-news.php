@@ -17,7 +17,7 @@
                       <div class="project-frame simple" data-aos="fade-up" data-aos-delay="100">
                         <a href="<?= get_permalink(); ?>">
                           <div class="p-0 mb-3 news-thumbnail team-member">
-                            <?php the_post_thumbnail(); ?>
+                            <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>">
                           </div>
                           <div class="p-0">
                             <div class="site-section-heading w-border mx-auto col-12 p-0">
