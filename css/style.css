@@ -3384,3 +3384,6 @@ div.news-area .owl-carousel {
 .text-break {
   word-wrap: break-word;
 }
+#news {
+  margin: auto;
+}
