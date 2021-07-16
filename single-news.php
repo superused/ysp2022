@@ -37,22 +37,39 @@
             <div class="site-section p-3">
               <h4 class="heading-bar color-cyan font-weight-bold mb-4" data-aos="fade-up" data-aos-delay="100"><span class="pr-3">関連記事</span></h4>
               <div class="row px-3">
+
+
+
+<?php
+//現在のページのカテゴリを取得
+$categories = get_the_category($post->ID);
+$the_query = new WP_Query([
+  'post_type' => get_post_type(),
+  'posts_per_page' => 2,
+  'post__not_in' => [$post->ID],
+  'orderby' => 'rand',
+]);
+if ($the_query->have_posts()) :
+ while ($the_query->have_posts()) : $the_query->the_post();
+?>
                 <div class="col-12 col-md-6 p-0">
                   <div class="project-frame simple" data-aos="fade-up" data-aos-delay="100" data-aos="fade-up" data-aos-delay="100">
-                    <div class="p-0 mb-3">
-                      <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid"></a>
+                    <div class="p-0 mb-3 text-center">
+                        <a href="<?= get_permalink(); ?>">
+                            <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>" alt="Image" class="img-fluid w-100">
+                        </a>
                     </div>
                     <div class="p-0">
                       <div class="site-section-heading w-border mx-auto col-12 p-0">
-                        <h5 class="font-weight-bold mb-2">タイトルタイトル</h5>
-                        <div class="pb-2 mb-2 text-gray-menu">
-                          テキスト入ります。テキスト入ります。
-                        </div>
-                        <div class="news-date-ubar text-right text-gray-menu pr-2 m-0">2021.07.10</div>
+                        <h5 class="font-weight-bold mb-2 text-break"><?php the_title(); ?></h5>
+                        <div class="pb-2 mb-2 text-gray-menu text-break"><?php the_excerpt(); ?></div>
+                        <div class="news-date-ubar text-right text-gray-menu text-break pr-2 m-0"><?php the_time('Y.m.d'); ?></div>
                       </div>
                     </div>
                   </div>
                 </div>
+<?php endwhile;
+endif; ?>
               </div>
             </div>
 <?php include 'parts/news-slider.php'; ?>
