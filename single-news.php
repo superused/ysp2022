@@ -7,7 +7,7 @@
             <div class="news-image col-12 w-100 p-0 m-0 mb-3 pt-md-3 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
               <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>">
             </div>
-            <div class="site-section p-3 m-0">
+            <div class="site-section p-3 m-0" data-aos="fade-up" data-aos-delay="100">
               <div class="container p-0">
                 <div class="row m-0">
                   <p class="text-gray-menu font-weight-bold text-break mb-2"><?php the_time('Y.m.d'); ?></p>
@@ -19,7 +19,7 @@
                 </div>
               </div>
             </div>
-            <div class="site-section p-0 my-4">
+            <div class="site-section p-0 my-4" data-aos="fade-up" data-aos-delay="100">
               <div class="container p-0 text-center">
 <?php if (get_previous_post()): ?>
 <?php     previous_post_link('%link', '&lt; Prev'); ?>
@@ -35,10 +35,10 @@
               </div>
             </div>
             <div class="site-section p-3">
-              <h4 class="heading-bar color-cyan font-weight-bold mb-4"><span class="pr-3">関連記事</span></h4>
+              <h4 class="heading-bar color-cyan font-weight-bold mb-4" data-aos="fade-up" data-aos-delay="100"><span class="pr-3">関連記事</span></h4>
               <div class="row px-3">
                 <div class="col-12 col-md-6 p-0">
-                  <div class="project-frame simple" data-aos="fade-up" data-aos-delay="100">
+                  <div class="project-frame simple" data-aos="fade-up" data-aos-delay="100" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-0 mb-3">
                       <a href="#"><img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid"></a>
                     </div>
