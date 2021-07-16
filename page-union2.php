@@ -90,19 +90,25 @@
                   <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
                 </div>
                 <div class="row">
-                  <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 pl-2 pr-2 mt-4" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-6 pl-2 pr-2 mt-4" data-aos="fade-up" data-aos-delay="100">
                     <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid">
                   </div>
-                  <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7 pl-2 pr-2 mt-4" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-6 pl-2 pr-2 mt-4" data-aos="fade-up" data-aos-delay="100">
                     <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
                   </div>
-                  <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7 pl-2 pr-2 mt-4" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-6 pl-2 pr-2 mt-4" data-aos="fade-up" data-aos-delay="100">
                     <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
                   </div>
-                  <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 pl-2 pr-2 mt-4" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-6 pl-2 pr-2 mt-4" data-aos="fade-up" data-aos-delay="100">
                     <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid">
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="site-section w-border mx-auto pt-0 pb-0">
+              <div class="container">
+                <h4 class="heading-bar color-cyan font-weight-bold pb-3" data-aos="fade-up" data-aos-delay="100"><span class="pr-3">活動紹介コーナー</span></h4>
+                <?php include 'parts/project-frame.php'; ?>
               </div>
             </div>
           </div>

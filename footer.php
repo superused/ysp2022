@@ -7,7 +7,6 @@
           <div class="footer-link-box mb-4 col-12 col-md-6 text-center">
             <div data-aos="fade-up" data-aos-delay="100">
               <div><a href="<?= GOODS_SHOP_URL; ?>" class="link text-center mx-auto" ontouchstart="">グッズショップ（外部サイト）</a></div>
-              <div><a href="<?= HOME_URL;?>" class="link text-center mx-auto" ontouchstart="">プライバシーポリシー</a></div>
               <div><a href="<?= esc_url(home_url('/contact'));?>" class="link text-center mx-auto" ontouchstart="">お問い合わせ</a></div>
             </div>
             <div class="row justify-content-center align-items-center sns-icon mt-3" data-aos="fade-up" data-aos-delay="100">

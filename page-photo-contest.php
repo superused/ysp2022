@@ -60,7 +60,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                   <div class="col-12 col-md-6 col-lg-6 col-xl-4 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-frame square w-100 p-0 mb-2 mr-2">
                       <div class="team-member m-0">
-                        <a href="#" data-toggle="modal" data-target="#modal"><img src="<?= $data['photo'];?>" class="photo_image w-100"></a>
+                        <a href="#" data-toggle="modal" data-target="#modal" ontouchstart=""><img src="<?= $data['photo'];?>" class="photo_image w-100"></a>
                       </div>
                       <div class="row p-2">
                         <div class="col-6 pr-0">

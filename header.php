@@ -115,19 +115,19 @@
                   <li>
                     <a href="<?= QUESTIONNAIRE_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_present.png">
-                      <span>プレゼントアンケート</span>
+                      <span>アンケート＆プレゼント</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= NEWS_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_news.png">
-                      <span>NEWS</span>
+                      <span>最新情報</span>
                     </a>
                   </li>
                   <li>
-                    <a href="<?= HOME_URL;?>">
+                    <a href="<?= CONCEPT_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_about.png">
-                      <span>aboutフェス</span>
+                      <span>Peace designer Fes とは</span>
                     </a>
                   </li>
                   <li>
@@ -139,7 +139,7 @@
                   <li>
                     <a href="<?= CONTACT_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_contact.png">
-                      <span>CONTACT</span>
+                      <span>お問い合わせ</span>
                     </a>
                   </li>
                   <li>

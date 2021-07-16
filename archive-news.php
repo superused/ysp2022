@@ -16,7 +16,7 @@
                   <div class="col-12 col-md-6 p-0">
                       <div class="project-frame simple" data-aos="fade-up" data-aos-delay="100">
                         <a href="<?= get_permalink(); ?>">
-                          <div class="p-0 mb-3 news-thumbnail team-member">
+                          <div class="p-0 mb-3 news-thumbnail team-member" ontouchstart="">
                             <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>">
                           </div>
                           <div class="p-0">

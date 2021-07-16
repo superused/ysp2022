@@ -2,7 +2,7 @@
 require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php';
 
 define('GOODS_SHOP_URL', 'https://peace-designer.stores.jp/'); // グッズショップ外部サイト
-define('QUESTIONNAIRE_URL', '#'); // アンケートURL
+define('QUESTIONNAIRE_URL', 'https://forms.gle/Gn4N6tGe1cv3LFBq8'); // アンケート＆プレゼントURL
 
 // URL群
 define('HOME_URL', esc_url(home_url('/')));
