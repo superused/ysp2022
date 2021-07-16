@@ -7,13 +7,27 @@ define('QUESTIONNAIRE_URL', '#'); // アンケートURL
 // URL群
 define('HOME_URL', esc_url(home_url('/')));
 define('NEWS_URL', esc_url(home_url('/news/')));
+define('LIVE_URL', esc_url(home_url('/live/')));
+define('LIVE_TIME_URL', esc_url(home_url('/live2/')));
+define('UNION_URL', esc_url(home_url('/union/')));
+define('UNION2_URL', esc_url(home_url('/union2/')));
+define('UNION3_URL', esc_url(home_url('/union3/')));
+define('SENRYU_CONTEST_URL', esc_url(home_url('/senryu/')));
+define('MOVIE_CONTEST_URL', esc_url(home_url('/movie-contest/')));
+define('PHOTO_CONTEST_URL', esc_url(home_url('/photo-contest/')));
 define('SENRYU_RESULT_LIST_URL', esc_url(home_url('/senryu-result-list/')));
+define('CONTACT_URL', esc_url(home_url('/contact/')));
+define('CONCEPT_URL', esc_url(home_url('/concept/')));
+define('PROJECT_URL', esc_url(home_url('/#project')));
+define('FAVICON_URL', esc_url(home_url('favicon.ico')));
 
+// 連合会情報
 define('UNION_URL', 'https://www.yahoo.co.jp');
 define('UNION_ACTIVITY_FREQUENCY', '月2回');
 define('UNION_ACTIVITY_PLACE', '東京都世田谷区');
 define('UNION_MAIL', 'mail@mail.com');
 
+// ニュースサムネイル デフォルト画像
 define('NO_IMAGE_URL', get_template_directory_uri() . '/images/noimage.png');
 
 class Util {

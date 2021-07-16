@@ -409,4 +409,38 @@ $(function() {
     }
   };
   footerBanner();
+
+  var projectBuruburu = function() {
+    var buruburu = function(delay) {
+      if ($('#project')[0]) {
+        const navHeight = $('.site-navbar').height();
+        const project = $('#project');
+        const scrollTop = project.offset().top;
+        project.removeAttr('data-aos data-aos-delay').removeClass('aos-unit aos-animate');
+
+        // １秒後にワープしてブルブルさせる
+        setTimeout(function() {
+          const project = $('#project');
+          const ws = parseInt($(window).scrollTop());
+          const pt = parseInt(project.offset().top);
+          $('body').css('overflow', 'hidden');
+          setTimeout(function() {
+            $(window).scrollTop(pt - navHeight);
+            project.addClass('buruburu');
+            setTimeout(function() {
+              project.removeClass('buruburu');
+              $('body').css('overflow', '');
+            }, 500);
+          }, 100);
+        }, delay);
+      }
+    };
+    $(document).on('click', '[href$=#project]', function() {
+      buruburu(300);
+    });
+    if (location.href.endsWith('#project')) {
+      buruburu(1000);
+    }
+  };
+  projectBuruburu();
 });

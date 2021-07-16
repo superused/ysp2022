@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="shortcut icon" href="<?= esc_url(home_url('favicon.ico'));?>" />
+    <link rel="shortcut icon" href="<?= FAVICON_URL;?>" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,500,600,700,800,900|Oswald:400,500,600,700">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/fonts/icomoon/style.css">
 
@@ -81,31 +81,31 @@
                     <a href="javascript:void(0);"><img src="<?= get_template_directory_uri(); ?>/images/icon_contents.png"><span>コンテンツ</span></a>
                     <ul class="dropdown">
                       <li>
-                        <a href="<?= esc_url(home_url('/live/'));?>">
+                        <a href="<?= LIVE_URL;?>">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_live.png">
                           <span>LIVE</span>
                         </a>
                       </li>
                       <li>
-                        <a href="<?= esc_url(home_url('/#project'));?>" class="inpage-link">
+                        <a href="<?= PROJECT_URL;?>" class="inpage-link">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_project.png">
                           <span>プロジェクト</span>
                         </a>
                       </li>
                       <li>
-                        <a href="<?= esc_url(home_url('/photo-contest/'));?>">
+                        <a href="<?= PHOTO_CONTEST_URL;?>">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_photo.png">
                           <span>フォトコンテスト</span>
                         </a>
                       </li>
                       <li>
-                        <a href="<?= esc_url(home_url('/movie-contest/'));?>">
+                        <a href="<?= MOVIE_CONTEST_URL;?>">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_movie.png">
                           <span>ムービーコンテスト</span>
                         </a>
                       </li>
                       <li>
-                        <a href="<?= esc_url(home_url('/senryu/'));?>">
+                        <a href="<?= SENRYU_CONTEST_URL;?>">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_senryu.png">
                           <span>川柳コンテスト</span>
                         </a>
@@ -119,25 +119,25 @@
                     </a>
                   </li>
                   <li>
-                    <a href="<?= esc_url(home_url('/news/'));?>">
+                    <a href="<?= NEWS_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_news.png">
                       <span>NEWS</span>
                     </a>
                   </li>
                   <li>
-                    <a href="<?= esc_url(home_url('/'));?>">
+                    <a href="<?= HOME_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_about.png">
                       <span>aboutフェス</span>
                     </a>
                   </li>
                   <li>
-                    <a href="<?= esc_url(home_url('/'));?>">
+                    <a href="<?= HOME_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_top.png">
                       <span>TOPページ</span>
                     </a>
                   </li>
                   <li>
-                    <a href="<?= esc_url(home_url('/contact/'));?>">
+                    <a href="<?= CONTACT_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_contact.png">
                       <span>CONTACT</span>
                     </a>

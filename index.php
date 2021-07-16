@@ -44,10 +44,10 @@
               <img src="<?= get_template_directory_uri(); ?>/images/i_map_bg.png" alt="Image" class="w-100">
               <ul class="contents-list-link">
                 <li><a href="<?= esc_url(home_url('/peace-project/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_appeal.png" alt="Image" class="img-fluid"></a></li>
-                <li><a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_live.png" alt="Image" class="img-fluid"></a></li>
-                <li><a href="<?= esc_url(home_url('/senryu/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_senryu.png" alt="Image" class="img-fluid"></a></li>
+                <li><a href="<?= LIVE_URL;?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_live.png" alt="Image" class="img-fluid"></a></li>
+                <li><a href="<?= SENRYU_CONTEST_URL;?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_senryu.png" alt="Image" class="img-fluid"></a></li>
                 <li><a href="<?= esc_url(home_url('/short-movie/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_movie.png" alt="Image" class="img-fluid"></a></li>
-                <li><a href="<?= esc_url(home_url('/photo-contest/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_photo.png" alt="Image" class="img-fluid"></a></li>
+                <li><a href="<?= PHOTO_CONTEST_URL;?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_photo.png" alt="Image" class="img-fluid"></a></li>
               </ul>
             </div>
           </div>
@@ -67,7 +67,7 @@
         <div class="row events-row">
           <div class="col-md-6 col-lg-6 col-xl-6 col-xl-6 mb-lg-6 image">
             <div class="team-member event">
-              <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/live_sample.png" alt="Image" class="img-fluid"></a>
+              <a href="<?= LIVE_URL;?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/live_sample.png" alt="Image" class="img-fluid"></a>
             </div>
           </div>
           <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-lg-6 col-xl-6 mx-auto t" data-aos="fade-up" data-aos-delay="100">
@@ -76,7 +76,7 @@
               <span class="live-message-under">ライブ</span>
               <p>ウェビナーやクイズなどの生配信企画！地域活性化で活躍する若手リーダーが語ります！見るだけでも、チャットで質問してもOK！</p>
               <div class="text-center">
-                <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
+                <a href="<?= LIVE_TIME_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@
                   <div class="row w-100 m-0 p-0">
                     <div class="col-12 col-md-6 p-0 mx-0">
                       <div class="team-member text-center image mb-4 mb-md-0 w-auto">
-                        <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="<?= LIVE_URL;?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
                       </div>
                     </div>
                     <div class="col-12 col-md-6 p-0 mx-0">
@@ -101,7 +101,7 @@
                           </div>
                         </div>
                         <div class="text-center mb-3">
-                          <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
+                          <a href="<?= LIVE_TIME_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
                         </div>
                       </div>
                     </div>
@@ -111,7 +111,7 @@
                   <div class="row w-100 m-0 p-0">
                     <div class="col-12 col-md-6 p-0 mx-0">
                       <div class="team-member text-center image mb-4 mb-md-0 w-auto">
-                        <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="<?= LIVE_URL;?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
                       </div>
                     </div>
                     <div class="col-12 col-md-6 p-0 mx-0">
@@ -123,7 +123,7 @@
                           </div>
                         </div>
                         <div class="text-center mb-3">
-                          <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
+                          <a href="<?= LIVE_TIME_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
                         </div>
                       </div>
                     </div>
@@ -133,7 +133,7 @@
                   <div class="row w-100 m-0 p-0">
                     <div class="col-12 col-md-6 p-0 mx-0">
                       <div class="team-member text-center image mb-4 mb-md-0 w-auto">
-                        <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="<?= LIVE_URL;?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
                       </div>
                     </div>
                     <div class="col-12 col-md-6 p-0 mx-0">
@@ -145,7 +145,7 @@
                           </div>
                         </div>
                         <div class="text-center mb-3">
-                          <a href="<?= esc_url(home_url('/live2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
+                          <a href="<?= LIVE_TIME_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
                         </div>
                       </div>
                     </div>
@@ -156,20 +156,20 @@
           </div>
         </div>
       </div>
-      <div id="project" class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
         <div class="row">
-          <div class="col-md-6 col-lg-6 col-xl-6 image">
+          <div class="col-md-6 col-lg-6 col-xl-6 image" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member event">
-              <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/project_sample.png" alt="Image" class="img-fluid"></a>
+              <a href="<?= LIVE_URL;?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/project_sample.png" alt="Image" class="img-fluid"></a>
             </div>
           </div>
-          <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-xl-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
+          <div id="project" class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-xl-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="message-under-image">
               <h2 class="mb-3 largeh2">PROJECT</h2>
               <span class="live-message-under">活動紹介コーナー</span>
               <p>全国で活躍しているピースデザイナーたちの活動を紹介します！あなたの地域のピースデザイナー達の活躍を覗いてみませんか？</p>
               <div class="text-center">
-                <a href="<?= esc_url(home_url('/union/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                <a href="<?= UNION_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
               </div>
             </div>
           </div>
@@ -192,7 +192,7 @@
                         <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
                       </div>
                       <div class="text-center mt-3">
-                        <a href="<?= esc_url(home_url('/union2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                        <a href="<?= UNION2_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
                       </div>
                     </div>
                   </div>
@@ -213,7 +213,7 @@
                         <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
                       </div>
                       <div class="text-center mt-3">
-                        <a href="<?= esc_url(home_url('/union2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                        <a href="<?= UNION2_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
                       </div>
                     </div>
                   </div>
@@ -234,7 +234,7 @@
                         <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
                       </div>
                       <div class="text-center mt-3">
-                        <a href="<?= esc_url(home_url('/union2/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                        <a href="<?= UNION2_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
                       </div>
                     </div>
                   </div>
@@ -306,14 +306,14 @@
       <div class="container-fluid m-0 p-0">
         <div class="fixed-button">
           <div class="fixed-button-content">
-            <a href="<?= esc_url(home_url('/live/'));?>" ontouchstart="">
+            <a href="<?= LIVE_URL;?>" ontouchstart="">
               <div class="contents">
                 <img src="<?= get_template_directory_uri(); ?>/images/fixed_live_button.png" alt="Image" class="img-fluid">
               </div>
             </a>
           </div>
           <div class="fixed-button-content">
-            <a href="<?= esc_url(home_url('/union/'));?>" ontouchstart="">
+            <a href="<?= UNION_URL;?>" ontouchstart="">
               <div class="contents">
                 <img src="<?= get_template_directory_uri(); ?>/images/fixed_union_button.png" alt="Image" class="img-fluid">
               </div>
@@ -357,7 +357,7 @@
               <div class="contents-border short mt-2 mb-2"></div>
               <span class="organizer-text mt-4">Peace Designer Fes に関する<br>お問い合わせはこちら</span>
             </div>
-            <a href="<?= esc_url(home_url('/contact/'));?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">お問い合わせ</button></a>
+            <a href="<?= CONTACT_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">お問い合わせ</button></a>
           </div>
         </div>
       </div>

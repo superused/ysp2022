@@ -12,28 +12,28 @@
           <h4 class="font-weight-bold mb-3">連合会</h4>
           <div class="heading-bar color-gray mb-3"></div>
           <div class="text-center image col-12 mt-3 mb-3">
-            <a href="<?= esc_url(home_url('/union/'));?>"><img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid"></a>
+            <a href="<?= UNION_URL;?>"><img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid"></a>
           </div>
         </div>
         <div data-aos="fade-up" data-aos-delay="100">
           <h4 class="font-weight-bold mb-3">MOVIEコンテスト</h4>
           <div class="heading-bar color-gray mb-3"></div>
           <div class="text-center image col-12 mt-3 mb-3">
-            <a href="<?= esc_url(home_url('/movie-contest/'));?>"><img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid"></a>
+            <a href="<?= MOVIE_CONTEST_URL;?>"><img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid"></a>
           </div>
         </div>
         <div data-aos="fade-up" data-aos-delay="100">
           <h4 class="font-weight-bold mb-3">PHOTOコンテスト</h4>
           <div class="heading-bar color-gray mb-3"></div>
           <div class="text-center image col-12 mt-3 mb-3">
-            <a href="<?= esc_url(home_url('/photo-contest/'));?>"><img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid"></a>
+            <a href="<?= PHOTO_CONTEST_URL;?>"><img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid"></a>
           </div>
         </div>
         <div data-aos="fade-up" data-aos-delay="100">
           <h4 class="font-weight-bold mb-3">川柳コンテスト</h4>
           <div class="heading-bar color-gray mb-3"></div>
           <div class="text-center image col-12 mt-3 mb-3">
-            <a href="<?= esc_url(home_url('/senryu/'));?>"><img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid"></a>
+            <a href="<?= SENRYU_CONTEST_URL;?>"><img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid"></a>
           </div>
         </div>
       </div>
