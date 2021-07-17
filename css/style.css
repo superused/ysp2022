@@ -35,6 +35,12 @@ a:hover {
   text-decoration: none;
 }
 
+input[type=submit],
+input[type=button],
+button {
+  cursor: pointer;
+}
+
 .text-black {
   color: #000 !important;
 }
@@ -3444,4 +3450,12 @@ div.news-area .owl-carousel {
 }
 .rem2 {
   font-size: 2rem;
+}
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 95%;
+  align-content: center;
 }
