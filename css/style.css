@@ -3258,16 +3258,6 @@ div.news-area .owl-carousel {
   background-color: #ededed;
   border: none;
 }
-.contact-form input[type=submit]{
-  background-color: #00b9f2;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.25rem;
-  color: #fff;
-}
-.contact-form input[type=submit]:hover {
-  opacity: 0.6;
-}
 .c-pointer {
   cursor: pointer;
 }
@@ -3458,4 +3448,7 @@ div.news-area .owl-carousel {
   align-items: center;
   min-height: 95%;
   align-content: center;
+}
+.veu_socialSet.veu_socialSet-position-after.veu_contentAddSection {
+  display: none;
 }
