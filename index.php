@@ -315,7 +315,7 @@
           <div class="fixed-button-content">
             <a href="<?= UNION_URL;?>" ontouchstart="">
               <div class="contents">
-                <img src="<?= get_template_directory_uri(); ?>/images/fixed_union_button.png" alt="Image" class="img-fluid">
+                <img src="<?= get_template_directory_uri(); ?>/images/fixed_project_button.png" alt="Image" class="img-fluid">
               </div>
             </a>
           </div>
