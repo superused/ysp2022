@@ -3456,6 +3456,6 @@ div.news-area .owl-carousel {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  height: 95%;
+  min-height: 95%;
   align-content: center;
 }
