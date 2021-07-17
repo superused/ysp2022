@@ -3252,6 +3252,16 @@ div.news-area .owl-carousel {
   background-color: #ededed;
   border: none;
 }
+.contact-form input[type=submit]{
+  background-color: #00b9f2;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  color: #fff;
+}
+.contact-form input[type=submit]:hover {
+  opacity: 0.6;
+}
 .c-pointer {
   cursor: pointer;
 }
@@ -3310,13 +3320,6 @@ div.news-area .owl-carousel {
     top: -56px;
     left: -20px;
   }
-}
-.contact-form input[type=submit]{
-  background-color: #00b9f2;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.25rem;
-  color: #fff;
 }
 .project-frame {
   box-shadow: 0px 2px 5px 1px #cdcdcd;
