@@ -161,7 +161,8 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                 </div>
               </div>
             </div>
-            <?php include 'parts/other-contest.php'; ?>
+<?php $viewPhoto = false; ?>
+<?php include 'parts/other-contest.php'; ?>
           </div>
           <div class="col-12 col-md-4">
             <?= get_sidebar();?>

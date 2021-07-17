@@ -29,7 +29,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
     <div class="site-section pt-0">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-12 col-mg-8 col-lg-8 col-xl-8">
+          <div class="col-12 col-lg-8">
             <div class="site-section" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
@@ -86,7 +86,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                     <div href="#" class="arrow down circle"></div>
                   </div>
                   <div class="text-center col-12" data-aos="fade-up" data-aos-delay="100">
-                    <p class="text-left mt-6">投票結果は8月7日に掲載されます。</p>
+                    <p class="text-left mt-6">投票結果は8月9日に掲載されます。</p>
                   </div>
                 </div>
               </div>
@@ -159,8 +159,10 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                 </div>
               </div>
             </div>
+<?php $viewSenryu = false; ?>
+<?php include 'parts/other-contest.php'; ?>
           </div>
-          <div class="col-12 col-sm-12 col-mg-4 col-lg-4 col-xl-4">
+          <div class="col-12 col-lg-4">
             <?= get_sidebar();?>
           </div>
         </div>
