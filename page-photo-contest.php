@@ -6,8 +6,12 @@
 $photo = $util->getContestDatas('photo');
 $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
 ?>
-    <div class="site-section top-image full pb-0" data-aos="fade-up" data-aos-delay="100">
-      <div class="top-full-image photo_contest"></div>
+    <div class="site-section top-image pb-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
+        <div class="row">
+          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid w-100 h-100">
+        </div>
+      </div>
     </div>
 
     <div class="site-section pb-0">
