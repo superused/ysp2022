@@ -57,27 +57,22 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                     <div class="contents-border short mt-1 mb-1"></div>
                   </div>
 <?php foreach ($datas as $key => $data): ?>
-                  <div class="col-12 col-md-6 col-lg-6 col-xl-4 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-12 col-md-6 col-xl-4 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-frame square w-100 p-0 mb-2 mr-2">
                       <div class="team-member m-0">
                         <a href="#" data-toggle="modal" data-target="#modal" ontouchstart=""><img src="<?= $data['photo'];?>" class="photo_image w-100"></a>
                       </div>
-                      <div class="row p-2">
-                        <div class="col-6 pr-0">
+                      <div class="row px-2">
+                        <div class="col-8 col-lg-7 pt-2 pr-0">
                         <h6 class="photo_name"><?=$data['name']; ?> さん</h6>
                           <p class="photo_address text-secondary mb-1"><?=$data['address']; ?>在住</p>
                         </div>
-                        <div class="photo_button col-6 row w-100 p-0">
+                        <div class="photo_button col-4 col-lg-5 row w-100 p-0 text-right">
                           <div class="row w-100 m-0">
-                            <div class="col-6 p-0">
-                              <div class="mr-1">
-                                <button class="detail mx-auto m-1 w-100 text-nowrap" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
-                              </div>
-                            </div>
-                            <div class="col-6 p-0">
-                              <div class="ml-1">
-                                <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="" data-vote="<?= $photo[$key]['polla_qid']; ?>">投票</button>
-                                <p class="vote_num text-danger text-center font-weight-bold mb-0"><span><?= $photo[$key]['polla_votes']; ?></span>票</p>
+                            <div class="col-12 p-0">
+                              <div class="ml-1 text-center mx-auto">
+                                <span class="rem0_8 text-right font-weight-bold m-0 p-0">得票数<span class="vote_num oswald rem1 text-cyan ml-2 mr-1"><?= $photo[$key]['polla_votes']; ?></span>票</span>
+                                <button class="vote mx-auto m-0 p-0 w-100 text-nowrap" ontouchstart="" data-vote="<?= $photo[$key]['polla_qid']; ?>">投票</button>
                               </div>
                             </div>
                           </div>

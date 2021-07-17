@@ -3400,3 +3400,18 @@ div.news-area .owl-carousel {
     75% {transform: translate(1rem, 0rem) rotateZ(-1deg)}
     100% {transform: translate(0rem, 0rem) rotateZ(0deg)}
 }
+.oswald {
+  font-family: 'Oswald', sans-serif;
+}
+.rem0_8 {
+  font-size: 0.8rem;
+}
+.rem1 {
+  font-size: 1rem;
+}
+.rem1-5 {
+  font-size: 1.5rem;
+}
+.rem2 {
+  font-size: 2rem;
+}

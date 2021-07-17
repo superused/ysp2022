@@ -395,7 +395,7 @@ $(function() {
               $(this).prop('disabled', true).text('投票済');
               const contentBlock = $(this).closest('[data-type=content-block]');
               if (contentBlock[0]) {
-                const voteNumElem = contentBlock.find('.vote_num span'),
+                const voteNumElem = contentBlock.find('.vote_num'),
                   voteNum = parseInt(voteNumElem.html());
                 voteNumElem.html(voteNum + 1);
               }

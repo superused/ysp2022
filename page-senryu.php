@@ -61,8 +61,9 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                     <div class="contents-border short mt-1 mb-1"></div>
                   </div>
 <?php foreach ($datas as $key => $data): ?>
-                  <div class="kakejiku col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
-                    <div class="kakejiku_outer m-0 mt-4 mb-3 mx-auto detail c-pointer" data-toggle="modal" data-target="#modal">
+                  <div class="kakejiku col-6 col-sm-6 col-md-4 col-lg-3 mt-4" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
+                    <h5 class="text-center font-weight-bold mb-0"><span class="small">投票数</span><span class="vote_num text-cyan ml-2 mr-1"><?= $senryu[$key]['polla_votes']; ?></span><span class="small">票</span></h5>
+                    <div class="kakejiku_outer m-0 mt-0 mb-3 mx-auto detail c-pointer" data-toggle="modal" data-target="#modal">
                       <div class="kakejiku_inner">
                         <?= str_replace('|', '<br>',$data['senryu']); ?>
                       </div>
@@ -77,7 +78,6 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                       </div>
                       <div class="col-6 pl-1 pr-1">
                         <button class="vote mx-auto w-100 text-nowrap c-pointer" data-vote="<?= $senryu[$key]['polla_qid']; ?>" ontouchstart="">投票</button>
-                        <p class="vote_num text-danger font-weight-bold mb-0"><span><?= $senryu[$key]['polla_votes']; ?></span>票</p>
                       </div>
                     </div>
                   </div>
