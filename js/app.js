@@ -320,7 +320,6 @@ $(function() {
         modal.find(selector).html(content.find(selector).html());
       }
       var modalVoteButton = modal.find('button.vote');
-      console.log(voteButton.data('vote'));
       // modalVoteButton.data('vote', voteButton.data('vote'));
       modalVoteButton.attr('data-vote', voteButton.data('vote'));
       if (voteButton.prop('disabled')) {
@@ -359,9 +358,7 @@ $(function() {
         }
       }
       var modalVoteButton = modal.find('button.vote');
-      console.log(voteButton.data('vote'));
-      // modalVoteButton.data('vote', voteButton.data('vote'));
-      modalVoteButton.attr('data-vote', voteButton.data('vote'));
+      modalVoteButton.attr('data-vote', voteButton.attr('data-vote'));
       if (voteButton.prop('disabled')) {
         modalVoteButton.prop('disabled', true).html('投票済');
       } else {
@@ -377,9 +374,8 @@ $(function() {
     if (tohyo[0] && $('button.vote')[0]) {
       var flg = false;
       $('button.vote').each(function() {
-        var qid = $(this).data('vote');
+        var qid = $(this).attr('data-vote');
         var poll = tohyo.find('div.wp-polls#polls-' + qid);
-        console.log(poll, poll.find('input[type=button][name=vote]'));
         if (!poll[0] || !poll.find('input[type=button][name=vote]')[0]) {
           $(this).prop('disabled', true).text('投票済');
         } else {
@@ -387,13 +383,9 @@ $(function() {
         }
       });
       if (flg) {
-        $('#modalvote').on('click', function(e) {
-          alert('test');
-        });
         $('button.vote').on('click', function(e) {
-          console.log('click');
           const thisObj = $(this),
-            qid = thisObj.data('vote'),
+            qid = thisObj.attr('data-vote'),
             poll = tohyo.find('div.wp-polls#polls-' + qid),
             radio = poll.find('input[type=radio]').first();
           if (radio[0]) {

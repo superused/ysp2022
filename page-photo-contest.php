@@ -184,7 +184,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
         <div class="text-left mb-1"><span class="mr-3">タイトル</span><span class="photo_title"></span></div>
         <div class="text-left mb-1"><span class="mr-3">撮影場所</span><span class="photo_region"></span></div>
         <div class="photo_comment text-left mb-3"></div>
-        <div class="col-12">
+        <div class="col-12 modal-content bg-transparent border-0">
           <button class="vote mx-auto m-1 pt-2 pb-2 pl-4 pr-4 text-nowrap" data-vote="" ontouchstart="">投票</button>
         </div>
       </div>

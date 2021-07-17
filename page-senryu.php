@@ -179,7 +179,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
         </div>
         <input type="hidden" id="index" value="">
         <div class="mx-auto text-center modal-content bg-transparent border-0">
-          <button id="modalvote" class="vote mx-auto pl-4 pr-4 c-pointer" data-vote="" ontouchstart="">投票</button>
+          <button class="vote mx-auto pl-4 pr-4 c-pointer" data-vote="" ontouchstart="">投票</button>
         </div>
       </div>
     </div>
