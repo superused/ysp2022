@@ -64,8 +64,8 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                       </div>
                       <div class="row px-2">
                         <div class="col-8 col-lg-7 pt-2 pr-0">
-                        <h6 class="photo_name"><?=$data['name']; ?> さん</h6>
-                          <p class="photo_address text-secondary mb-1"><?=$data['address']; ?>在住</p>
+                          <h6 class="photo_title"><?=$data['title']; ?></h6>
+                          <p class="photo_name text-secondary mb-1"><?=$data['name']; ?></p>
                         </div>
                         <div class="photo_button col-4 col-lg-5 row w-100 p-0 text-right">
                           <div class="row w-100 m-0">
@@ -79,9 +79,6 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                         </div>
                       </div>
                       <div class="photo_episode small pl-2 pr-2 pb-2"><?= nl2br(esc_html($data['episode'])); ?></div>
-                      <div class="photo_title d-none"><?= esc_html($data['title']); ?></div>
-                      <div class="photo_region d-none"><?= esc_html($data['location']); ?></div>
-                      <div class="photo_comment d-none"><?= esc_html($data['comment']); ?></div>
                     </div>
                   </div>
 <?php endforeach; ?>
@@ -173,14 +170,12 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
 
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
       <div class="modal-dialog text-white text-center" role="document">
-        <h4 class="photo_title font-weight-bold mb-2"></h4>
-        <h6 class="photo_name mb-4"></h6>
+        <h4 class="photo_title font-weight-bold mb-3"></h4>
         <div class="m-0 mb-4">
           <img src="" class="photo_image w-100">
         </div>
-        <div class="text-left mb-1"><span class="mr-3">タイトル</span><span class="photo_title"></span></div>
-        <div class="text-left mb-1"><span class="mr-3">撮影場所</span><span class="photo_region"></span></div>
-        <div class="photo_comment text-left mb-3"></div>
+        <div class="text-left mb-1 w-100"><span class="mr-3">ペンネーム</span><span class="photo_name"></span></div>
+        <div class="photo_episode text-left mb-3 w-100"></div>
         <div class="col-12 modal-content bg-transparent border-0">
           <button class="vote mx-auto m-1 pt-2 pb-2 pl-4 pr-4 text-nowrap" data-vote="" ontouchstart="">投票</button>
         </div>
