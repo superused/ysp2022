@@ -308,6 +308,7 @@ $(function() {
     // 詳細ボタンを押した際に表示項目を切り替える
     $('.kakejiku .detail').click(function() {
       var content = $(this).parents('[data-type=content-block]');
+      var voteButton = content.find('button.vote');
       var modal = $('#modal');
       var selectors = [
         '.kakejiku_inner',
@@ -318,7 +319,15 @@ $(function() {
         var selector = selectors[i];
         modal.find(selector).html(content.find(selector).html());
       }
-      modal.find(selector).html(content.find(selector).html());
+      var modalVoteButton = modal.find('button.vote');
+      console.log(voteButton.data('vote'));
+      // modalVoteButton.data('vote', voteButton.data('vote'));
+      modalVoteButton.attr('data-vote', voteButton.data('vote'));
+      if (voteButton.prop('disabled')) {
+        modalVoteButton.prop('disabled', true).html('投票済');
+      } else {
+        modalVoteButton.prop('disabled', false).html('投票');
+      }
       modal.find('#index').val($('.kakejiku button.detail').index(content.find('button.detail')));
     });
   };
@@ -331,6 +340,7 @@ $(function() {
     // 詳細ボタンを押した際に表示項目を切り替える
     $('[data-type=content-block] [data-toggle=modal]').click(function() {
       var content = $(this).parents('[data-type=content-block]');
+      var voteButton = content.find('button.vote');
       var modal = $('#modal');
       var selectors = [
         '.photo_title',
@@ -348,6 +358,15 @@ $(function() {
           modal.find(selector).attr('src', content.find(selector).attr('src'));
         }
       }
+      var modalVoteButton = modal.find('button.vote');
+      console.log(voteButton.data('vote'));
+      // modalVoteButton.data('vote', voteButton.data('vote'));
+      modalVoteButton.attr('data-vote', voteButton.data('vote'));
+      if (voteButton.prop('disabled')) {
+        modalVoteButton.prop('disabled', true).html('投票済');
+      } else {
+        modalVoteButton.prop('disabled', false).html('投票');
+      }
     });
   };
   photoView();
@@ -356,24 +375,39 @@ $(function() {
   var contestVote = function() {
     const tohyo = $('#tohyo');
     if (tohyo[0] && $('button.vote')[0]) {
-      if (!tohyo.find('input[type=radio]')[0]) {
-        $('button.vote').each(function() {
+      var flg = false;
+      $('button.vote').each(function() {
+        var qid = $(this).data('vote');
+        var poll = tohyo.find('div.wp-polls#polls-' + qid);
+        console.log(poll, poll.find('input[type=button][name=vote]'));
+        if (!poll[0] || !poll.find('input[type=button][name=vote]')[0]) {
           $(this).prop('disabled', true).text('投票済');
+        } else {
+          flg = true;
+        }
+      });
+      if (flg) {
+        $('#modalvote').on('click', function(e) {
+          alert('test');
         });
-      } else {
-        $(document).on('click', 'button.vote', function(e) {
+        $('button.vote').on('click', function(e) {
+          console.log('click');
           const thisObj = $(this),
-            index = thisObj.closest('#modal')[0] ? parseInt($('#index').val()) : thisObj.closest('[data-type=content-block').index('[data-type=content-block]'),
-            radios = tohyo.find('input[type=radio]');
-          if (radios[0]) {
-            radios.eq(index).prop('checked', true);
-            tohyo.find('input[type=button][name=vote]').click();
-            $('button.vote').each(function() {
+            qid = thisObj.data('vote'),
+            poll = tohyo.find('div.wp-polls#polls-' + qid),
+            radio = poll.find('input[type=radio]').first();
+          if (radio[0]) {
+            radio.prop('checked', true);
+            poll.find('input[type=button][name=vote]').click();
+            $('button.vote[data-vote=' + qid + ']').each(function() {
               $(this).prop('disabled', true).text('投票済');
+              const contentBlock = $(this).closest('[data-type=content-block]');
+              if (contentBlock[0]) {
+                const voteNumElem = contentBlock.find('.vote_num span'),
+                  voteNum = parseInt(voteNumElem.html());
+                voteNumElem.html(voteNum + 1);
+              }
             });
-            const voteNumElem = $('[data-type=content-block]').eq(index).find('.vote_num span'),
-              voteNum = parseInt(voteNumElem.html());
-            voteNumElem.html(voteNum + 1);
           }
           return false;
         });

@@ -76,7 +76,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                             </div>
                             <div class="col-6 p-0">
                               <div class="ml-1">
-                                <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="">投票</button>
+                                <button class="vote mx-auto m-1 w-100 text-nowrap" ontouchstart="" data-vote="<?= $photo[$key]['polla_qid']; ?>">投票</button>
                                 <p class="vote_num text-danger text-center font-weight-bold mb-0"><span><?= $photo[$key]['polla_votes']; ?></span>票</p>
                               </div>
                             </div>
@@ -185,7 +185,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
         <div class="text-left mb-1"><span class="mr-3">撮影場所</span><span class="photo_region"></span></div>
         <div class="photo_comment text-left mb-3"></div>
         <div class="col-12">
-          <button class="vote mx-auto m-1 pt-2 pb-2 pl-4 pr-4 text-nowrap" ontouchstart="">投票</button>
+          <button class="vote mx-auto m-1 pt-2 pb-2 pl-4 pr-4 text-nowrap" data-vote="" ontouchstart="">投票</button>
         </div>
       </div>
     </div>
