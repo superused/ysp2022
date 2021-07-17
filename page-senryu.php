@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php
-// $datas = [['senryu' => '', 'episode' => '', 'name' => '', 'age' => '', 'gender' => '']];
+// $datas = [['senryu' => '', 'episode' => '', 'name' => '', 'personal' => '']];
 // アンケートの終了フラグを確認
 // var_dump($util->isContestOpen('senryu'));
 $senryu = $util->getContestDatas('senryu');
@@ -70,7 +70,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                     </div>
                     <div class="kakejiku_episode d-none"><?= nl2br(esc_html($data['episode'])); ?></div>
                     <div class="kakejiku_name col-10 mx-auto mt-3 mb-2 text-white font-weight-bold d-none">
-                      <?= $data['name'] . '(' . ((int)($data['age'] / 10) * 10) . '代' . ($data['gender'] == 1 ? ' 男性' : ($data['gender'] == 2 ? '女性' :  '')) . ')'; ?>
+                      <?= $data['name'] . '(' . $data['personal'] . ')'; ?>
                     </div>
                     <div class="row kakejiku_button mx-auto text-center">
                       <div class="col-6 pl-1 pr-1">
