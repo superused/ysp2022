@@ -85,11 +85,12 @@
           <div class="site-section-heading nopadding mb-5 w-border col-12 mx-auto t">
             <div class="message-under-image">
               <div class="pickup-contents text-center px-0 mx-0 mb-4">
+<?php for ($i = 0; $i < 3; $i++): ?>
                 <div class="pickup-list p-3" data-aos="fade-up" data-aos-delay="100">
                   <div class="row w-100 m-0 p-0">
                     <div class="col-12 col-md-6 p-0 mx-0">
                       <div class="team-member text-center image mb-4 mb-md-0 w-auto">
-                        <a href="<?= LIVE_URL;?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
+                        <a href="<?= LIVE_URL;?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/dummy.png" alt="Image" class="img-fluid"></a>
                       </div>
                     </div>
                     <div class="col-12 col-md-6 p-0 mx-0">
@@ -107,50 +108,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="pickup-list p-3" data-aos="fade-up" data-aos-delay="100">
-                  <div class="row w-100 m-0 p-0">
-                    <div class="col-12 col-md-6 p-0 mx-0">
-                      <div class="team-member text-center image mb-4 mb-md-0 w-auto">
-                        <a href="<?= LIVE_URL;?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6 p-0 mx-0">
-                      <div class="ml-md-3 ml-lg-3 ml-xl-3">
-                        <div class="text-left mx-auto mb-3">
-                          <h4 class="font-weight-bold pb-2">タイトル</h4>
-                          <div>
-                            リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。
-                          </div>
-                        </div>
-                        <div class="text-center mb-3">
-                          <a href="<?= LIVE_TIME_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="pickup-list p-3" data-aos="fade-up" data-aos-delay="100">
-                  <div class="row w-100 m-0 p-0">
-                    <div class="col-12 col-md-6 p-0 mx-0">
-                      <div class="team-member text-center image mb-4 mb-md-0 w-auto">
-                        <a href="<?= LIVE_URL;?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid"></a>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6 p-0 mx-0">
-                      <div class="ml-md-3 ml-lg-3 ml-xl-3">
-                        <div class="text-left mx-auto mb-3">
-                          <h4 class="font-weight-bold pb-2">タイトル</h4>
-                          <div>
-                            リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。
-                          </div>
-                        </div>
-                        <div class="text-center mb-3">
-                          <a href="<?= LIVE_TIME_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+<?php endfor; ?>
               </div>
             </div>
           </div>
@@ -176,15 +134,16 @@
           <div class="site-section-heading nopadding mb-5 w-border col-12 mx-auto t">
             <div class="message-under-image">
               <div class="row mx-0">
+<?php for ($i = 0; $i < 3; $i++): ?>
                 <div class="project-frame w-100 mb-4" data-aos="fade-up" data-aos-delay="100">
                   <h6 class="triangle"></h6>
                   <div class="row">
-                    <div class="p-0 mx-0 mt-0 mb-3 col-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="p-0 mx-0 mt-0 mb-3 col-12 col-md-6">
                       <div class="team-member text-center image mx-3 w-auto">
-                        <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/movie_film.png" alt="Image" class="img-fluid w-100"></a>
+                        <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/dummy.png" alt="Image" class="img-fluid w-100"></a>
                       </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-6 col-xl-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                       <div class="text-left mx-auto">
                         <h4 class="font-weight-bold pb-2">タイトル</h4>
                         <h5 class="font-weight-bold p-0 m-0">団体名</h5>
@@ -197,48 +156,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="project-frame w-100 mb-4" data-aos="fade-up" data-aos-delay="100">
-                  <h6 class="triangle"></h6>
-                  <div class="row">
-                    <div class="p-0 mx-0 mt-0 mb-3 col-12 col-md-6 col-lg-6 col-xl-6">
-                      <div class="team-member text-center image mx-3 w-auto">
-                        <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/movie_film.png" alt="Image" class="img-fluid w-100"></a>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-6 col-xl-6" data-aos="fade-up" data-aos-delay="100">
-                      <div class="text-left mx-auto">
-                        <h4 class="font-weight-bold pb-2">タイトル</h4>
-                        <h5 class="font-weight-bold p-0 m-0">団体名</h5>
-                        <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
-                        <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
-                      </div>
-                      <div class="text-center mt-3">
-                        <a href="<?= UNION2_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="project-frame w-100 mb-4" data-aos="fade-up" data-aos-delay="100">
-                  <h6 class="triangle d-none"></h6>
-                  <div class="row">
-                    <div class="p-0 mx-0 mt-0 mb-3 col-12 col-md-6 col-lg-6 col-xl-6">
-                      <div class="team-member text-center image mx-3 w-auto">
-                        <a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/movie_film.png" alt="Image" class="img-fluid w-100"></a>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-6 col-xl-6" data-aos="fade-up" data-aos-delay="100">
-                      <div class="text-left mx-auto">
-                        <h4 class="font-weight-bold pb-2">タイトル</h4>
-                        <h5 class="font-weight-bold p-0 m-0">団体名</h5>
-                        <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
-                        <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
-                      </div>
-                      <div class="text-center mt-3">
-                        <a href="<?= UNION2_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+<?php endfor; ?>
               </div>
             </div>
           </div>
