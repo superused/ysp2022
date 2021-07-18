@@ -1,4 +1,5 @@
 <?php require_once('functions.php'); ?>
+<?php global $util; ?>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -180,3 +181,12 @@
     </div> <!-- .site-mobile-menu -->
 
     <!-- ヘッダー共通処理 end -->
+<?php if ($util->is_IE()): ?>
+    <div class="ie_alert">
+      <h2><b>ご利用の環境はサポートされておりません</b></h2>
+      <p>PD-FESでは、あなたがご利用中のブラウザ<b>Internet Explorer</b>は、サポートされておりません。<br>お手数ですが以下のブラウザからアクセス頂きますよう、お願い致します。</p>
+      <p><b>Google Chrome / Microsoft Edge</p>
+      <a href="https://www.google.co.jp/chrome/index.html" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">Google Chromeをダウンロード</button></a>
+      <a href="https://www.microsoft.com/ja-jp/edge" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">Microsoft Edgeをダウンロード</button></a>
+    <div>
+<?php endif; ?>

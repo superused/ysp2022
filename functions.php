@@ -47,6 +47,17 @@ class Util {
   }
 
   /**
+   * IE判定
+   */
+  public function is_IE() {
+    $ua = mb_strtolower( $_SERVER['HTTP_USER_AGENT'] );  //すべて小文字にしてユーザーエージェントを取得
+    if ( strpos( $ua,'msie' ) !== false || strpos( $ua, 'trident' ) !== false ) {
+      return true;
+    }
+    return false;
+  }
+
+  /**
    * アンケートデータを取得する
    */
   public function getContestDatas($type) {
