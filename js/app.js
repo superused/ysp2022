@@ -437,36 +437,43 @@ $(function() {
   footerBanner();
 
   var projectBuruburu = function() {
-    var buruburu = function(delay) {
-      if ($('#project')[0]) {
+    var buruburu = function(url, delay) {
+      let elem;
+      if (url.endsWith(('#project'))) {
+        elem = $('#project');
+      } else if (url.endsWith('#live')) {
+        elem = $('#live');
+      } else if (url.endsWith('#contest')) {
+        elem = $('#contest');
+      } else if (url.endsWith('#contents-list')) {
+        elem = $('#contents-list');
+      }
+      if (elem[0]) {
         const navHeight = $('.site-navbar').height();
-        const project = $('#project');
-        const scrollTop = project.offset().top;
-        project.removeAttr('data-aos data-aos-delay').removeClass('aos-unit aos-animate');
+        const scrollTop = elem.offset().top;
+        elem.removeAttr('data-aos data-aos-delay').removeClass('aos-unit aos-animate');
 
         // １秒後にワープしてブルブルさせる
         setTimeout(function() {
-          const project = $('#project');
+          const element = elem;
           const ws = parseInt($(window).scrollTop());
-          const pt = parseInt(project.offset().top);
+          const pt = parseInt(element.offset().top);
           $('body').css('overflow', 'hidden');
           setTimeout(function() {
             $(window).scrollTop(pt - navHeight);
-            project.addClass('buruburu');
+            element.addClass('buruburu');
             setTimeout(function() {
-              project.removeClass('buruburu');
+              element.removeClass('buruburu');
               $('body').css('overflow', '');
             }, 700);
           }, 100);
         }, delay);
       }
     };
-    $(document).on('click', '[href$=#project]', function() {
-      buruburu(300);
+    $(document).on('click', '[href$=#project], [href$=#live], [href$=#contest], [href$=#contents-list]', function() {
+      buruburu($(this).attr('href'), 300);
     });
-    if (location.href.endsWith('#project')) {
-      buruburu(1000);
-    }
+    buruburu(location.href, 1000);
   };
   projectBuruburu();
 });

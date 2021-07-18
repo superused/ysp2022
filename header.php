@@ -74,7 +74,7 @@
                     <a href="javascript:void(0);"><img src="<?= get_template_directory_uri(); ?>/images/icon_contents.png"><span>コンテンツ</span></a>
                     <ul class="dropdown">
                       <li>
-                        <a href="<?= LIVE_URL;?>">
+                        <a href="<?= LIVE_CONTENTS_URL;?>">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_live.png">
                           <span>LIVE</span>
                         </a>
