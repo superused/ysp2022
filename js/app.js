@@ -456,7 +456,7 @@ $(function() {
             setTimeout(function() {
               project.removeClass('buruburu');
               $('body').css('overflow', '');
-            }, 500);
+            }, 700);
           }, 100);
         }, delay);
       }

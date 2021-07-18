@@ -116,18 +116,20 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-lg-6 col-xl-6 image" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member event">
-              <a href="<?= LIVE_URL;?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/project_sample.png" alt="Image" class="img-fluid"></a>
+          <div id="project" class="row p-0 m-0">
+            <div class="col-md-6 col-lg-6 col-xl-6 image" data-aos="fade-up" data-aos-delay="100">
+              <div class="team-member event">
+                <a href="<?= LIVE_URL;?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/project_sample.png" alt="Image" class="img-fluid"></a>
+              </div>
             </div>
-          </div>
-          <div id="project" class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-xl-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
-            <div class="message-under-image">
-              <h2 class="mb-3 largeh2">PROJECT</h2>
-              <span class="live-message-under">活動紹介コーナー</span>
-              <p>全国で活躍しているピースデザイナーたちの活動を紹介します！あなたの地域のピースデザイナー達の活躍を覗いてみませんか？</p>
-              <div class="text-center">
-                <a href="<?= UNION_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+            <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-xl-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="message-under-image">
+                <h2 class="mb-3 largeh2">PROJECT</h2>
+                <span class="live-message-under">活動紹介コーナー</span>
+                <p>全国で活躍しているピースデザイナーたちの活動を紹介します！あなたの地域のピースデザイナー達の活躍を覗いてみませんか？</p>
+                <div class="text-center">
+                  <a href="<?= UNION_URL;?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                </div>
               </div>
             </div>
           </div>
