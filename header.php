@@ -143,9 +143,9 @@
                   <li class="d-lg-none">
                     <div class="site-mobile-menu-sns text-center font-weight-bold container-fluid">
                       <div class="row justify-content-center align-items-center text-nowrap flex-nowrap py-2">
-                          <span class="m-3"><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/icon_instagram.png" alt="Image"></a></span>
-                          <span class="m-3"><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/icon_line.png" alt="Image"></a></span>
-                          <span class="m-3"><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/icon_youtube.png" alt="Image"></a></span>
+                          <span class="m-3"><a href="<?= SNS_INSTAGRAM_URL; ?>"><img src="<?= get_template_directory_uri(); ?>/images/icon_instagram.png" alt="Image"></a></span>
+                          <span class="m-3"><a href="<?= SNS_LINE_URL; ?>"><img src="<?= get_template_directory_uri(); ?>/images/icon_line.png" alt="Image"></a></span>
+                          <span class="m-3"><a href="<?= SNS_YOUTUBE_URL; ?>"><img src="<?= get_template_directory_uri(); ?>/images/icon_youtube.png" alt="Image"></a></span>
                         </div>
                       </div>
                     </div>

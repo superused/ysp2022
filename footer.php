@@ -10,9 +10,9 @@
               <div><a href="<?= CONTACT_URL; ?>" class="link text-center mx-auto" ontouchstart="">お問い合わせ</a></div>
             </div>
             <div class="row justify-content-center align-items-center sns-icon mt-3" data-aos="fade-up" data-aos-delay="100">
-              <span class="m-2"><a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/icon_instagram.png" alt="Image"></a></span>
-              <span class="m-2"><a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/icon_line.png" alt="Image"></a></span>
-              <span class="m-2"><a href="#" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/icon_youtube.png" alt="Image"></a></span>
+              <span class="m-2"><a href="<?= SNS_INSTAGRAM_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/icon_instagram.png" alt="Image"></a></span>
+              <span class="m-2"><a href="<?= SNS_LINE_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/icon_line.png" alt="Image"></a></span>
+              <span class="m-2"><a href="<?= SNS_YOUTUBE_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/icon_youtube.png" alt="Image"></a></span>
             </div>
           </div>
           <div class="col-12 col-md-3"></div>

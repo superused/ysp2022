@@ -1,6 +1,7 @@
 <?php
 require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php';
 
+// 外部サイトURL
 define('GOODS_SHOP_URL', 'https://peace-designer.stores.jp/'); // グッズショップ外部サイト
 define('QUESTIONNAIRE_URL', 'https://forms.gle/Gn4N6tGe1cv3LFBq8'); // アンケート＆プレゼントURL
 
@@ -20,6 +21,11 @@ define('CONTACT_URL', esc_url(home_url('/contact/')));
 define('CONCEPT_URL', esc_url(home_url('/concept/')));
 define('PROJECT_URL', esc_url(home_url('/#project')));
 define('FAVICON_URL', esc_url(home_url('favicon.ico')));
+
+// SNS
+define('SNS_INSTAGRAM_URL', '#');
+define('SNS_LINE_URL', '#');
+define('SNS_YOUTUBE_URL', '#');
 
 // 連合会情報
 define('UNION_URL', 'https://www.yahoo.co.jp');
