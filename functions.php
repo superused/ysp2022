@@ -23,9 +23,9 @@ define('PROJECT_URL', esc_url(home_url('/#project')));
 define('FAVICON_URL', esc_url(home_url('favicon.ico')));
 
 // SNS
-define('SNS_INSTAGRAM_URL', '#');
-define('SNS_LINE_URL', '#');
-define('SNS_YOUTUBE_URL', '#');
+define('SNS_INSTAGRAM_URL', 'https://instagram.com/peace_designer_fes');
+define('SNS_LINE_URL', 'https://lin.ee/sAjXedp');
+define('SNS_YOUTUBE_URL', 'https://www.youtube.com/channel/UC9_j943rPgN0a5R55id3V9A');
 
 // 連合会情報
 define('UNION_URL', 'https://www.yahoo.co.jp');
