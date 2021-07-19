@@ -5,7 +5,7 @@
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
           <div class="logo_bg">
-            <img src="<?= get_template_directory_uri(); ?>/images/tsunagari.png" class="logo-message-top" id="logo_1">
+            <img src="<?= get_template_directory_uri(); ?>/images/tsunagari2.png" class="logo-message-top" id="logo_1">
           </div>
           <div class="logo_bg">
             <img src="<?= get_template_directory_uri(); ?>/images/logo2.png" class="logo-center" id="logo_2">
@@ -23,7 +23,7 @@
       <div class="container">
         <div class="row">
           <div class="site-section-heading text-center mb-2 w-border col-md-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="mb-4">PEACE DESIGNER FES</h2>
+            <h1 class="mb-4">PEACE DESIGNER FES</h1>
             <p class="text-left">「つながりが描く私たちの未来」をテーマに、日本の魅力を楽しく再発見できるオンラインフェス！</p>
             <a href="<?= CONCEPT_URL; ?>"><button class="btn btn-show mx-auto" ontouchstart="">もっと詳しく</button></a>
           </div>
@@ -43,11 +43,11 @@
             <div class="contents-list-img text-center">
               <img src="<?= get_template_directory_uri(); ?>/images/i_map_bg.png" alt="Image" class="w-100">
               <ul class="contents-list-link">
-                <li><a href="<?= PROJECT_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_appeal.png" alt="Image" class="img-fluid"></a></li>
-                <li><a href="<?= LIVE_CONTENTS_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_live.png" alt="Image" class="img-fluid"></a></li>
-                <li><a href="<?= SENRYU_CONTEST_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_senryu.png" alt="Image" class="img-fluid"></a></li>
-                <li><a href="<?= MOVIE_CONTEST_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_movie.png" alt="Image" class="img-fluid"></a></li>
-                <li><a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_photo.png" alt="Image" class="img-fluid"></a></li>
+                <li><a href="<?= PROJECT_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_appeal.png" alt="活動紹介コーナー" class="img-fluid"></a></li>
+                <li><a href="<?= LIVE_CONTENTS_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_live.png" alt="LIVE配信" class="img-fluid"></a></li>
+                <li><a href="<?= SENRYU_CONTEST_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_senryu.png" alt="川柳コンテスト" class="img-fluid"></a></li>
+                <li><a href="<?= MOVIE_CONTEST_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_movie.png" alt="MOVIEコンテスト" class="img-fluid"></a></li>
+                <li><a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_photo.png" alt="PHOTOコンテスト" class="img-fluid"></a></li>
               </ul>
             </div>
           </div>
@@ -187,7 +187,7 @@
                   <span class="thema">テーマ</span>
                   <span class="title">my favorite town</span>
                   <div class="team-member text-center image">
-                    <a href="<?= MOVIE_CONTEST_URL ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/movie2.png" alt="Image" class="img-fluid"></a>
+                    <a href="<?= MOVIE_CONTEST_URL ?>" ontouchstart=""><img src="<?= MOVIE_TITLE_IMG; ?>" alt="MOVIEコンテスト" class="img-fluid"></a>
                   </div>
                 </div>
                 <a href="<?= MOVIE_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
@@ -199,7 +199,7 @@
                   <span class="thema">テーマ</span>
                   <span class="title">私の推し町</span>
                   <div class="team-member text-center image">
-                    <a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid"></a>
+                    <a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart=""><img src="<?= PHOTO_TITLE_IMG; ?>" alt="PHOTOコンテスト" class="img-fluid"></a>
                   </div>
                 </div>
                 <a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
@@ -211,7 +211,7 @@
                   <span class="thema">テーマ</span>
                   <span class="title">つながり川柳</span>
                   <div class="team-member text-center image">
-                    <a href="<?= SENRYU_CONTEST_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/senryu3.png" alt="Image" class="img-fluid"></a>
+                    <a href="<?= SENRYU_CONTEST_URL; ?>" ontouchstart=""><img src="<?= SENRYU_TITLE_IMG; ?>" alt="川柳コンテスト" class="img-fluid"></a>
                   </div>
                 </div>
                 <a href="<?= SENRYU_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>

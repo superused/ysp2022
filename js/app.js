@@ -213,12 +213,14 @@ $(function() {
       $('.site-blocks-cover.overlay.top .container .row').css('margin-top', ($(window).height() * 0.35 ) + 'px');
 
       const portrait = [
-        'peacedesigner_kameoka_sp1.jpg',
+        // 'peacedesigner_kameoka_sp1.jpg',
+        'top_mobile3.jpg',
         'moyou_top.png',
         'moyou_bottom.png',
       ];
       const landscape = [
-        'peacedesigner_kameoka_pc1.jpg',
+        //'peacedesigner_kameoka_pc1.jpg',
+        'top_pc3.jpg',
         'moyou_pc_top.png',
         'moyou_pc_bottom.png',
       ];

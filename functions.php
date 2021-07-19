@@ -41,6 +41,12 @@ define('SITE_TITLE', 'PEACE DESIGNER FES');
 // ニュースサムネイル デフォルト画像
 define('NO_IMAGE_URL', get_template_directory_uri() . '/images/noimage.png');
 
+// 背景画像
+define('SENRYU_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/senryu.png');
+define('PHOTO_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/photo.png');
+define('MOVIE_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/movie.png');
+define('UNION_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/union.png');
+
 class Util {
   public $wpdb;
   public $post;

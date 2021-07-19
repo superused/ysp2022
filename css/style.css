@@ -2149,6 +2149,7 @@ button {
   transform: scale(1);
 }
 
+.site-section-heading h1,
 .site-section-heading h2 {
   font-size: 2rem;
   text-transform: uppercase;
@@ -2159,11 +2160,13 @@ button {
   transform: scale(1, 1.2);
 }
 
+.site-section-heading.w-border h1,
 .site-section-heading.w-border h2 {
   position: relative;
   display: inline-block;
 }
 
+.site-section-heading.w-border.text-center h1:after,
 .site-section-heading.w-border.text-center h2:after {
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -3440,6 +3443,12 @@ div.news-area .owl-carousel {
 .rem1 {
   font-size: 1rem;
 }
+.rem1-2 {
+  font-size: 1.2rem;
+}
+.rem1-3 {
+  font-size: 1.3rem;
+}
 .rem1-5 {
   font-size: 1.5rem;
 }
@@ -3488,4 +3497,16 @@ div.news-area .owl-carousel {
       background: rgba(255,255,255,0.1);
     }
   }
+}
+.w-55 {
+  width: 55%;
+}
+.w-60 {
+  width: 60%;
+}
+.w-65 {
+  width: 65%;
+}
+.w-70 {
+  width: 70%;
 }

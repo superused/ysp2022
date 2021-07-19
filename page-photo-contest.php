@@ -9,7 +9,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
     <div class="site-section top-image pb-0" data-aos="fade-up" data-aos-delay="100">
       <div class="container">
         <div class="row">
-          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid w-100 h-100">
+          <img src="<?= PHOTO_TITLE_IMG; ?>" alt="PHOTOコンテスト" class="img-fluid w-100 h-100">
         </div>
       </div>
     </div>
@@ -38,15 +38,18 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
               </div>
             </div>
 
-            <div class="site-section beige pt-4 pb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="site-section beige py-3" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <div class="site-section-heading text-center w-border mx-auto col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h5 class="font-weight-bold mb-2">投票期間</h5>
-                    <div class="contents-border short mt-1 mb-1"></div>
+                  <div class="site-section-heading text-center w-border mx-auto col-12">
+                    <div class="rem1-3 font-weight-bold mt-3">投票方法</div>
+                    <div class="contents-border short mb-2"></div>
+                    <div class="text-left mx-auto w-60">１．気に入った作品すべてに投票できます！<br>２．投票期間中は毎日１回投票できます！</div>
+                    <div class="rem1-3 font-weight-bold mt-3">投票期間</div>
+                    <div class="contents-border short mb-2"></div>
                     <p>2021年8月8日まで</p>
-                    <h5 class="font-weight-bold mb-2">結果発表</h5>
-                    <div class="contents-border short mt-1 mb-1"></div>
+                    <div class="rem1-3 font-weight-bold mt-3">結果発表</div>
+                    <div class="contents-border short mb-2"></div>
                     <p>2021年8月9日</p>
                   </div>
                 </div>

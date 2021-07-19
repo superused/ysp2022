@@ -58,16 +58,16 @@
         <div class="container-fluid px-4 py-0">
           <div class="row align-items-center">
             <div class="col-8 col-lg-2">
-              <h1 class="logo-header mb-0">
-                <a href="<?= home_url();?>" class="text-white h2 mb-0">
-                  <img src="<?= get_template_directory_uri(); ?>/images/logo1.png" alt="Image" class="mx-auto">
+              <div class="logo-header my-2">
+                <a href="<?= home_url();?>">
+                  <img src="<?= get_template_directory_uri(); ?>/images/logo2.png" alt="PEACE DISIGNER FES" class="mx-auto">
                 </a>
-              </h1>
+              </div>
             </div>
             <div class="col-4 col-lg-10 p-lg-0">
               <nav class="site-navigation text-right text-md-right" role="navigation">
 
-                <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h2"></span></a></div>
+                <div class="d-inline-block d-lg-none ml-md-0 mr-auto p-0"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h2"></span></a></div>
 
                 <ul class="site-menu js-clone-nav d-none d-lg-block text-nowrap">
                   <li class="has-children">
@@ -161,16 +161,16 @@
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
-        <div class="container-fluid px-4 py-1">
+        <div class="container-fluid px-4 py-0">
           <div class="row align-items-center">
-            <div class="col-8">
-              <h1 class="logo-header mb-0">
-                <a href="<?= home_url();?>" class="text-white h2 mb-0">
-                  <img src="<?= get_template_directory_uri(); ?>/images/logo1.png" alt="Image" class="mx-auto">
+            <div class="col-8 col-lg-2">
+              <div class="logo-header my-2">
+                <a href="<?= home_url();?>">
+                  <img src="<?= get_template_directory_uri(); ?>/images/logo2.png" alt="PEACE DISIGNER FES" class="mx-auto">
                 </a>
-              </h1>
+              </div>
             </div>
-            <div class="col-4 site-mobile-menu-close text-right">
+            <div class="col-4 col-lg-10 p-lg-0 site-mobile-menu-close text-right">
               <span class="icon-close2 js-menu-toggle text-cyan"></span>
             </div>
           </div>
