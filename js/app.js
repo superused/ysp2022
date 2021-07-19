@@ -448,7 +448,7 @@ $(function() {
       } else if (url.endsWith('#contents-list')) {
         elem = $('#contents-list');
       }
-      if (elem[0]) {
+      if (elem && elem[0]) {
         const navHeight = $('.site-navbar').height();
         const scrollTop = elem.offset().top;
         elem.removeAttr('data-aos data-aos-delay').removeClass('aos-unit aos-animate');

@@ -226,21 +226,21 @@
       <div class="container-fluid m-0 p-0">
         <div class="fixed-button">
           <div class="fixed-button-content">
-            <a href="<?= LIVE_URL; ?>" ontouchstart="">
+            <a href="<?= LIVE_CONTENTS_URL; ?>" ontouchstart="">
               <div class="contents">
                 <img src="<?= get_template_directory_uri(); ?>/images/fixed_live_button.png" alt="Image" class="img-fluid">
               </div>
             </a>
           </div>
           <div class="fixed-button-content">
-            <a href="<?= UNION_URL; ?>" ontouchstart="">
+            <a href="<?= PROJECT_URL; ?>" ontouchstart="">
               <div class="contents">
                 <img src="<?= get_template_directory_uri(); ?>/images/fixed_project_button.png" alt="Image" class="img-fluid">
               </div>
             </a>
           </div>
           <div class="fixed-button-content">
-            <a href="#contest" ontouchstart="">
+            <a href="<?= CONTEST_URL; ?>" ontouchstart="">
               <div class="contents">
                 <img src="<?= get_template_directory_uri(); ?>/images/fixed_contest_button.png" alt="Image" class="img-fluid">
               </div>
