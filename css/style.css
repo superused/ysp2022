@@ -452,7 +452,7 @@ button {
   margin-bottom: 0;
   margin-left: 0;
   padding-left: 0;
-  font-size: 0.5rem;
+  font-size: 0.7rem;
 }
 .site-navbar .site-navigation .site-menu .active > a {
   color: #000000;
@@ -466,16 +466,22 @@ button {
 }
 .site-navbar .site-navigation .site-menu > li {
   display: inline-block;
-  padding: 10px 1px;
 }
 .site-navbar .site-navigation .site-menu > li > a {
-  padding: 10px 10px;
-  letter-spacing: .05em;
-  color: #000000;
+  padding: 0 7px;
+  color: #6f6f6f;
   text-decoration: none !important;
 }
+@media (min-width: 1199.98px) {
+  .site-navbar .site-navigation .site-menu {
+    font-size: 0.9rem;
+  }
+  .site-navbar .site-navigation .site-menu > li > a {
+    padding: 0 10px;
+  }
+}
 .site-navbar .site-navigation .site-menu > li > a:hover {
-  color: #000000;
+  color: #00b9f2;
 }
 .site-navbar .site-navigation .site-menu > li:last-child {
   padding-right: 0;

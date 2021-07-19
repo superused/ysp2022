@@ -57,50 +57,50 @@
       <div class="site-navbar">
         <div class="container-fluid px-4 py-0">
           <div class="row align-items-center">
-            <div class="col-8 col-md-8 col-lg-2 col-xl-2">
+            <div class="col-8 col-lg-2">
               <h1 class="logo-header mb-0">
                 <a href="<?= home_url();?>" class="text-white h2 mb-0">
                   <img src="<?= get_template_directory_uri(); ?>/images/logo1.png" alt="Image" class="mx-auto">
                 </a>
               </h1>
             </div>
-            <div class="col-4 col-md-4 col-lg-10 col-xl-10">
+            <div class="col-4 col-lg-10 p-lg-0">
               <nav class="site-navigation text-right text-md-right" role="navigation">
 
                 <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h2"></span></a></div>
 
                 <ul class="site-menu js-clone-nav d-none d-lg-block text-nowrap">
                   <li class="has-children">
-                    <a href="javascript:void(0);"><img src="<?= get_template_directory_uri(); ?>/images/icon_contents.png"><span>コンテンツ</span></a>
+                    <a href="javascript:void(0);"><img src="<?= get_template_directory_uri(); ?>/images/icon_contents.png"><span class="font-weight-bold">コンテンツ</span></a>
                     <ul class="dropdown">
                       <li>
                         <a href="<?= LIVE_CONTENTS_URL;?>" class="inpage-link">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_live.png">
-                          <span>LIVE</span>
+                          <span class="font-weight-bold">LIVE</span>
                         </a>
                       </li>
                       <li>
                         <a href="<?= PROJECT_URL;?>" class="inpage-link">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_project.png">
-                          <span>プロジェクト</span>
+                          <span class="font-weight-bold">プロジェクト</span>
                         </a>
                       </li>
                       <li>
                         <a href="<?= PHOTO_CONTEST_URL;?>">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_photo.png">
-                          <span>フォトコンテスト</span>
+                          <span class="font-weight-bold">フォトコンテスト</span>
                         </a>
                       </li>
                       <li>
                         <a href="<?= MOVIE_CONTEST_URL;?>">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_movie.png">
-                          <span>ムービーコンテスト</span>
+                          <span class="font-weight-bold">ムービーコンテスト</span>
                         </a>
                       </li>
                       <li>
                         <a href="<?= SENRYU_CONTEST_URL;?>">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_senryu.png">
-                          <span>川柳コンテスト</span>
+                          <span class="font-weight-bold">川柳コンテスト</span>
                         </a>
                       </li>
                     </ul>
@@ -108,37 +108,37 @@
                   <li>
                     <a href="<?= QUESTIONNAIRE_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_present.png">
-                      <span>アンケート＆プレゼント</span>
+                      <span class="font-weight-bold">アンケート＆プレゼント</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= NEWS_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_news.png">
-                      <span>最新情報</span>
+                      <span class="font-weight-bold">最新情報</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= CONCEPT_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_about.png">
-                      <span>Peace designer Fes とは</span>
+                      <span class="font-weight-bold">Peace designer Fes とは</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= HOME_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_top.png">
-                      <span>TOPページ</span>
+                      <span class="font-weight-bold">TOPページ</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= CONTACT_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_contact.png">
-                      <span>お問い合わせ</span>
+                      <span class="font-weight-bold">お問い合わせ</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= GOODS_SHOP_URL; ?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_goods.png">
-                      <span>グッズショップ（外部リンク）</span>
+                      <span class="font-weight-bold">グッズショップ（外部リンク）</span>
                     </a>
                   </li>
                   <li class="d-lg-none">
