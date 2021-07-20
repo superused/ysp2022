@@ -2701,6 +2701,7 @@ div.notice-bar .notice-contents {
   width: 135px;
   height: 324px;
   padding: 10px 10px 40px;
+  background-size: cover;
 }
 .kakejiku_inner {
   width: 100%;
@@ -2711,6 +2712,7 @@ div.notice-bar .notice-contents {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: cover;
   -ms-writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;

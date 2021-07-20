@@ -43,10 +43,10 @@
   }
 }
 .kakejiku_outer {
-  background-image: url('<?= get_template_directory_uri(); ?>/images/washi_outer_s.jpg');
+  background-image: url('<?= get_template_directory_uri(); ?>/images/washi_green.png');
 }
 .kakejiku_inner {
-  background-image: url('<?= get_template_directory_uri(); ?>/images/washi_inner_s.jpg');
+  background-image: url('<?= get_template_directory_uri(); ?>/images/washi_white.png');
 }
     </style>
     <?php wp_head();?>
