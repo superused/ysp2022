@@ -44,7 +44,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                   <div class="site-section-heading text-center w-border mx-auto col-12">
                     <div class="rem1-3 font-weight-bold mt-3">投票方法</div>
                     <div class="contents-border short mb-2"></div>
-                    <div class="text-left mx-auto w-60">１．気に入った作品すべてに投票できます！<br>２．投票期間中は毎日１回投票できます！</div>
+                    <div class="text-left mx-auto voting_method">１．気に入った作品すべてに投票できます！<br>２．投票期間中は毎日１回投票できます！</div>
                     <div class="rem1-3 font-weight-bold mt-3">投票期間</div>
                     <div class="contents-border short mb-2"></div>
                     <p>2021年8月8日まで</p>
