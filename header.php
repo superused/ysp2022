@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>PEACE DESIGNER FES</title>
+    <title><?= $util->getSiteTitle(); ?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -71,36 +71,36 @@
 
                 <ul class="site-menu js-clone-nav d-none d-lg-block text-nowrap">
                   <li class="has-children">
-                    <a href="javascript:void(0);"><img src="<?= get_template_directory_uri(); ?>/images/icon_contents.png"><span class="font-weight-bold">コンテンツ</span></a>
+                    <a href="javascript:void(0);"><img src="<?= get_template_directory_uri(); ?>/images/icon_contents.png"><span>コンテンツ</span></a>
                     <ul class="dropdown">
                       <li>
                         <a href="<?= LIVE_CONTENTS_URL;?>" class="inpage-link">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_live.png">
-                          <span class="font-weight-bold">LIVE</span>
+                          <span>LIVE</span>
                         </a>
                       </li>
                       <li>
                         <a href="<?= PROJECT_URL;?>" class="inpage-link">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_project.png">
-                          <span class="font-weight-bold">プロジェクト</span>
+                          <span>プロジェクト</span>
                         </a>
                       </li>
                       <li>
                         <a href="<?= PHOTO_CONTEST_URL;?>">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_photo.png">
-                          <span class="font-weight-bold">フォトコンテスト</span>
+                          <span>フォトコンテスト</span>
                         </a>
                       </li>
                       <li>
                         <a href="<?= MOVIE_CONTEST_URL;?>">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_movie.png">
-                          <span class="font-weight-bold">ムービーコンテスト</span>
+                          <span>ムービーコンテスト</span>
                         </a>
                       </li>
                       <li>
                         <a href="<?= SENRYU_CONTEST_URL;?>">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_senryu.png">
-                          <span class="font-weight-bold">川柳コンテスト</span>
+                          <span>川柳コンテスト</span>
                         </a>
                       </li>
                     </ul>
@@ -108,37 +108,37 @@
                   <li>
                     <a href="<?= QUESTIONNAIRE_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_present.png">
-                      <span class="font-weight-bold">アンケート＆プレゼント</span>
+                      <span>アンケート＆プレゼント</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= NEWS_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_news.png">
-                      <span class="font-weight-bold">最新情報</span>
+                      <span>最新情報</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= CONCEPT_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_about.png">
-                      <span class="font-weight-bold">Peace designer Fes とは</span>
+                      <span>Peace designer Fes とは</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= HOME_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_top.png">
-                      <span class="font-weight-bold">TOPページ</span>
+                      <span>TOPページ</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= CONTACT_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_contact.png">
-                      <span class="font-weight-bold">お問い合わせ</span>
+                      <span>お問い合わせ</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= GOODS_SHOP_URL; ?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_goods.png">
-                      <span class="font-weight-bold">グッズショップ（外部リンク）</span>
+                      <span>グッズショップ（外部リンク）</span>
                     </a>
                   </li>
                   <li class="d-lg-none">

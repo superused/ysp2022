@@ -36,6 +36,8 @@ define('UNION_ACTIVITY_FREQUENCY', '月2回');
 define('UNION_ACTIVITY_PLACE', '東京都世田谷区');
 define('UNION_MAIL', 'mail@mail.com');
 
+define('SITE_TITLE', 'PEACE DESIGNER FES');
+
 // ニュースサムネイル デフォルト画像
 define('NO_IMAGE_URL', get_template_directory_uri() . '/images/noimage.png');
 
@@ -58,6 +60,15 @@ class Util {
       return true;
     }
     return false;
+  }
+
+  public function getSiteTitle() {
+    if (get_the_title()) {
+      return SITE_TITLE . ' | ' . get_the_title();
+    } else if (is_front_page()) {
+      return SITE_TITLE;
+    }
+    return SITE_TITLE;
   }
 
   /**
