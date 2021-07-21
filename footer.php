@@ -1,3 +1,4 @@
+<?php include 'parts/fixed-menu.php'; ?>
     <footer class="site-footer">
       <div class="container pt-5">
         <div class="row">

@@ -455,27 +455,27 @@ $(function() {
         const scrollTop = elem.offset().top;
         elem.removeAttr('data-aos data-aos-delay').removeClass('aos-unit aos-animate');
 
-        // １秒後にワープしてブルブルさせる
+        // ワープしてブルブルさせる
         setTimeout(function() {
           const element = elem;
           const ws = parseInt($(window).scrollTop());
           const pt = parseInt(element.offset().top);
           $('body').css('overflow', 'hidden');
+          $(window).scrollTop(pt - navHeight);
+          element.addClass('buruburu');
           setTimeout(function() {
-            $(window).scrollTop(pt - navHeight);
-            element.addClass('buruburu');
-            setTimeout(function() {
-              element.removeClass('buruburu');
-              $('body').css('overflow', '');
-            }, 700);
-          }, 100);
+            element.removeClass('buruburu');
+            $('body').css('overflow', '');
+          }, 700);
         }, delay);
       }
     };
     $(document).on('click', '[href$=#project], [href$=#live], [href$=#contest], [href$=#contents-list]', function() {
-      buruburu($(this).attr('href'), 300);
+      buruburu($(this).attr('href'), 0);
     });
-    buruburu(location.href, 1000);
+    $(document).ready(function() {
+      buruburu(location.href, 0);
+    });
   };
   projectBuruburu();
 });

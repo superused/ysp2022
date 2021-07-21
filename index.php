@@ -164,19 +164,21 @@
           </div>
         </div>
       </div>
-      <div id="contest" class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
-          <div class="col-12 col-md-6 mb-lg-6 image">
-            <div class="event">
-              <img src="<?= get_template_directory_uri(); ?>/images/contest_sample.png" alt="Image" class="img-fluid">
+          <div id="contest">
+            <div class="col-12 col-md-6 mb-lg-6 image">
+              <div class="event">
+                <img src="<?= get_template_directory_uri(); ?>/images/contest_sample.png" alt="Image" class="img-fluid">
+              </div>
             </div>
-          </div>
-          <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-xl-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
-            <div class="message-under-image">
-              <h2 class="mb-3 largeh2">CONTEST</h2>
-              <span class="live-message-under">コンテスト</span>
-              <p>私たちの町の魅力を再発見！</p>
-              <p>コロナでなかなか地元に戻れないそこのあなた！３つの企画の中から地元の"素敵"を再発見できませんか？</p>
+            <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-xl-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="message-under-image">
+                <h2 class="mb-3 largeh2">CONTEST</h2>
+                <span class="live-message-under">コンテスト</span>
+                <p>私たちの町の魅力を再発見！</p>
+                <p>コロナでなかなか地元に戻れないそこのあなた！３つの企画の中から地元の"素敵"を再発見できませんか？</p>
+              </div>
             </div>
           </div>
           <div class="site-section-heading nopadding mb-5 w-border col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto t">
@@ -217,41 +219,6 @@
                 <a href="<?= SENRYU_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="site-section fixed-menu zindex-tooltip m-0 p-0">
-      <div class="container-fluid m-0 p-0">
-        <div class="fixed-button">
-          <div class="fixed-button-content">
-            <a href="<?= LIVE_CONTENTS_URL; ?>" ontouchstart="">
-              <div class="contents">
-                <img src="<?= get_template_directory_uri(); ?>/images/fixed_live_button.png" alt="Image" class="img-fluid">
-              </div>
-            </a>
-          </div>
-          <div class="fixed-button-content">
-            <a href="<?= PROJECT_URL; ?>" ontouchstart="">
-              <div class="contents">
-                <img src="<?= get_template_directory_uri(); ?>/images/fixed_project_button.png" alt="Image" class="img-fluid">
-              </div>
-            </a>
-          </div>
-          <div class="fixed-button-content">
-            <a href="<?= CONTEST_URL; ?>" ontouchstart="">
-              <div class="contents">
-                <img src="<?= get_template_directory_uri(); ?>/images/fixed_contest_button.png" alt="Image" class="img-fluid">
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="fixed-button-present">
-          <div class="fixed-button-content">
-            <a href="<?= QUESTIONNAIRE_URL; ?>" class="mr-3" ontouchstart="">
-              <img src="<?= get_template_directory_uri(); ?>/images/fixed_present.png" alt="Image" class="img-fluid">
-            </a>
           </div>
         </div>
       </div>
