@@ -69,7 +69,7 @@
 
                 <div class="d-inline-block d-lg-none ml-md-0 mr-auto p-0"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h2"></span></a></div>
 
-                <ul class="site-menu js-clone-nav d-none d-lg-block text-nowrap">
+                <ul class="site-menu js-clone-nav d-none d-lg-block">
                   <li>
                     <a href="<?= HOME_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_top.png">
@@ -114,7 +114,7 @@
                   <li>
                     <a href="<?= QUESTIONNAIRE_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_present.png">
-                      <div>アンケート＆プレゼント</div>
+                      <div>アンケート ＆ プレゼント</div>
                     </a>
                   </li>
                   <li>
@@ -138,7 +138,7 @@
                   <li>
                     <a href="<?= GOODS_SHOP_URL; ?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_goods.png">
-                      <div>グッズショップ（外部リンク）</div>
+                      <div>グッズショップ（外部サイト）</div>
                     </a>
                   </li>
                   <li class="d-lg-none">
