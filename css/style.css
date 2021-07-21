@@ -2465,6 +2465,7 @@ div.event-bg-right {
   }
   .events-section .container .site-section-heading {
     padding-left: 0;
+    padding-right: 0;
   }
 }
 .site-section.events-section {

@@ -166,8 +166,8 @@
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row">
-          <div id="contest">
-            <div class="col-12 col-md-6 mb-lg-6 image">
+          <div id="contest" class="row p-0 m-0">
+            <div class="col-12 col-md-6 image">
               <div class="event">
                 <img src="<?= get_template_directory_uri(); ?>/images/contest_sample.png" alt="Image" class="img-fluid">
               </div>
@@ -181,7 +181,7 @@
               </div>
             </div>
           </div>
-          <div class="site-section-heading nopadding mb-5 w-border col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto t">
+          <div class="site-section-heading nopadding mb-5 w-border col-12 mx-auto">
             <div class="message-under-image">
               <div class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="mb-4">SHORT MOVIE</h2>
