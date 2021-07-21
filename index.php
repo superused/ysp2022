@@ -39,8 +39,8 @@
             <div class="contents-border mt-1 mb-2"></div>
             <p class="text-center">楽しむコンテンツをクリック！</p>
           </div>
-          <div class="site-section-heading text-center mb-5 w-border overflow-hidden m-0 p-0 w-100" data-aos="fade-up" data-aos-delay="100">
-            <div class="contents-list-img text-center">
+          <div class="site-section-heading contents-list-img text-center mb-5 w-border overflow-hidden m-0 p-0 w-100" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-center">
               <img src="<?= get_template_directory_uri(); ?>/images/i_map_bg.png" alt="Image" class="w-100">
               <ul class="contents-list-link">
                 <li><a href="<?= PROJECT_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_appeal.png" alt="活動紹介コーナー" class="img-fluid"></a></li>

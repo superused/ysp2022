@@ -3161,6 +3161,10 @@ div.news-area .owl-carousel {
   top: 0;
   left: 0;
 }
+.contents-list-img {
+  max-width: 768px;
+  margin: 0 auto !important;
+}
 .contents-list-link li {
   width: 100%;
 }
@@ -3194,6 +3198,39 @@ div.news-area .owl-carousel {
   left: 0vw;
   width: 30.19vw;
 }
+@media (min-width: 767.98px) {
+  .contents-list-link li:nth-child(1) {
+    position: absolute;
+    top: calc(7.5 / 100 * 768px);
+    left: calc(8 / 100 * 768px);
+    width: calc(35.34 / 100 * 768px);
+  }
+  .contents-list-link li:nth-child(2) {
+    position: absolute;
+    top: calc(14.4 / 100 * 768px);
+    left: calc(53.6 / 100 * 768px);
+    width: calc(36.65 / 100 * 768px);
+  }
+  .contents-list-link li:nth-child(3) {
+    position: absolute;
+    top: calc(41.8 / 100 * 768px);
+    left: calc(69.9 / 100 * 768px);
+    width: calc(27.65 / 100 * 768px);
+  }
+  .contents-list-link li:nth-child(4) {
+    position: absolute;
+    top: calc(54.16 / 100 * 768px);
+    left: calc(23.85 / 100 * 768px);
+    width: calc(36.72 / 100 * 768px);
+  }
+  .contents-list-link li:nth-child(5) {
+    position: absolute;
+    top: calc(38 / 100 * 768px);
+    left: calc(0 / 100 * 768px);
+    width: calc(30.19 / 100 * 768px);
+  }
+}
+
 .contents-list-link img {
   width: 100%;
   transition: 0.5s all;
