@@ -502,7 +502,7 @@ button {
 }
 .site-navbar .site-navigation .site-menu .has-children > a {
   position: relative;
-  padding-right: 20px;
+  padding-right: 5px;
 }
 @media (min-width: 767.98px) {
   .site-navbar .site-navigation .site-menu a div {
@@ -512,9 +512,6 @@ button {
   .site-navbar .site-navigation .site-menu > li > a {
     padding: 0 1px;
   }
-  .site-navbar .site-navigation .site-menu .has-children > a {
-    padding-right: 5px;
-  }
 }
 @media (min-width: 991.98px) {
   .site-navbar .site-navigation .site-menu a div {
@@ -523,9 +520,6 @@ button {
   }
   .site-navbar .site-navigation .site-menu > li > a {
     padding: 0 7px;
-  }
-  .site-navbar .site-navigation .site-menu .has-children > a {
-    padding-right: 20px;
   }
 }
 @media (min-width: 1199.98px) {
