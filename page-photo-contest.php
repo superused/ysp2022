@@ -99,76 +99,12 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
               </div>
             </div>
 
-            <div class="site-section pt-3 pb-3">
-              <div class="container">
-                <div class="row">
-                  <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
-                    <h4 class="font-weight-bold mb-2">賞品</h4>
-                    <div class="contents-border short mt-1 mb-1"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="site-section beige mb-3" data-aos="fade-up" data-aos-delay="100">
-              <div class="container">
-                <div class="row">
-                  <div class="col-4 text-center mt-2">
-                    <div class="double-circle l mx-auto">
-                      <div class="circle-inner">
-                        <div class="title">最優秀賞</div>
-                        <div class="sub">1名様</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-8 mt-2">
-                    <div class="text">
-                      ・ギフトカード（1万円分）<br>
-                      ・地域の特産品
-                    </div>
-                    <div class="image">
-                      <img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png"><img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png">
-                    </div>
-                  </div>
-                  <div class="col-4 text-center mt-2">
-                    <div class="double-circle m mx-auto">
-                      <div class="circle-inner">
-                        <div class="title">優秀賞</div>
-                        <div class="sub">1名様</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-8 mt-2">
-                    <div class="text">
-                      ・ギフトカード（5千円分）<br>
-                      ・Pdフェスオリジナルフェイスタオル
-                    </div>
-                    <div class="image">
-                      <img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png"><img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png">
-                    </div>
-                  </div>
-                  <div class="col-4 text-center mt-2">
-                    <div class="double-circle s mx-auto">
-                      <div class="circle-inner">
-                        <div class="title">佳作</div>
-                        <div class="sub">8名様</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-8 mt-2">
-                    <div class="text">
-                      ・ギフトカード（500円分）
-                    </div>
-                    <div class="image">
-                      <img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png"><img class="prize col-6" src="<?= get_template_directory_uri(); ?>/images/photo5.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<?php include 'parts/contest-prize.php'; ?>
+
 <?php $viewPhoto = false; ?>
 <?php include 'parts/other-contest.php'; ?>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-lg-4">
             <?= get_sidebar();?>
           </div>
         </div>

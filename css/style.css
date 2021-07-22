@@ -513,6 +513,7 @@ button {
   font-family: 'icomoon';
 }
 .site-navbar .site-navigation .site-menu .has-children .dropdown {
+  display: flex;
   visibility: hidden;
   opacity: 0;
   top: 100%;
@@ -2784,7 +2785,11 @@ button.vote:disabled {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
-
+.contest-prize .image img.prize {
+  padding: 0;
+  width: 49%;
+  max-width: 12rem;
+}
 .double-circle {
   position: relative;
   border: solid #de442d 1px;
@@ -2796,7 +2801,7 @@ button.vote:disabled {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -2805,7 +2810,7 @@ button.vote:disabled {
   margin: 0.2rem -2rem -0.2rem;
 }
 .double-circle .sub {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   margin: 0 -2rem 0;
 }
 .double-circle:before {
@@ -2817,33 +2822,29 @@ button.vote:disabled {
   box-sizing: border-box;
   background-color: #de442d;
 }
-.double-circle.l:before {
-  top: 0.2rem;
-  left: 0.15rem;
-}
 .double-circle.l {
-  width: 5rem;
-  height: 5rem;
+  width: 6.5rem;
+  height: 6.5rem;
 }
 .double-circle.l::before {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 6rem;
+  height: 6rem;
 }
 .double-circle.m {
-  width: 4.3rem;
-  height: 4.3rem;
+  width: 5.8rem;
+  height: 5.8rem;
 }
 .double-circle.m::before {
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 5.3rem;
+  height: 5.3rem;
 }
 .double-circle.s {
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 5.3rem;
+  height: 5.3rem;
 }
 .double-circle.s::before {
-  width: 3.3rem;
-  height: 3.3rem;
+  width: 4.8rem;
+  height: 4.8rem;
 }
 .color-cyan {
   color: #00b9f2;
