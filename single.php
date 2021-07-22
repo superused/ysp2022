@@ -2,7 +2,7 @@
     <div class="site-section pt-0">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="site-margin-top-section col-12 col-lg-8 bg-beige p-3">
+          <div class="site-margin-top-section col-12 col-md-8 bg-beige p-3">
 <?php
 if ( have_posts() ) :
     while ( have_posts() ) : the_post();
@@ -16,7 +16,7 @@ if ( have_posts() ) :
 endif;
 ?>
           </div>
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-md-4">
             <?= get_sidebar();?>
           </div>
         </div>

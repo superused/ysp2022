@@ -29,7 +29,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
     <div class="site-section pt-0">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-8">
+          <div class="col-12 col-md-8">
             <div class="site-section" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
@@ -64,7 +64,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                     <div class="contents-border short mt-1 mb-1"></div>
                   </div>
 <?php foreach ($datas as $key => $data): ?>
-                  <div class="kakejiku col-6 col-sm-6 col-md-4 col-lg-3 mt-4" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
+                  <div class="kakejiku col-6 col-lg-4 col-xl-3 mt-4" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
                     <h5 class="text-center font-weight-bold mb-0"><span class="small">投票数</span><span class="vote_num text-cyan ml-2 mr-1"><?= $senryu[$key]['polla_votes']; ?></span><span class="small">票</span></h5>
                     <div class="kakejiku_outer m-0 mt-0 mb-3 mx-auto detail c-pointer" data-toggle="modal" data-target="#modal">
                       <div class="kakejiku_inner">
@@ -99,7 +99,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
 <?php $viewSenryu = false; ?>
 <?php include 'parts/other-contest.php'; ?>
           </div>
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-md-4">
             <?= get_sidebar();?>
           </div>
         </div>

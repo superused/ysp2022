@@ -94,6 +94,7 @@ $(function() {
           1200:{items:4},
         };
         if ($('.sidebar').length > 0) {
+          responsive[768] = {items:1.5};
           responsive[992] = {items:1.5};
           responsive[1200] = {items:2};
         }

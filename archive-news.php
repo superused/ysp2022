@@ -4,7 +4,7 @@
     <div class="site-section pt-0">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="site-margin-top-section col-12 col-lg-8 bg-beige">
+          <div class="site-margin-top-section col-12 col-md-8 bg-beige">
 <?php $title = 'NEWS'; ?>
 <?php include 'parts/title-block.php'; ?>
 <?php include 'parts/news-slider.php'; ?>
@@ -13,7 +13,7 @@
                 <div class="row">
 <?php if (have_posts()): ?>
 <?php     while (have_posts()): the_post(); ?>
-                  <div class="col-12 col-md-6 p-0">
+                  <div class="col-12 col-lg-6 p-0">
                       <div class="project-frame simple" data-aos="fade-up" data-aos-delay="100">
                         <a href="<?= get_permalink(); ?>">
                           <div class="p-0 mb-3 news-thumbnail team-member" ontouchstart="">
@@ -35,7 +35,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-md-4">
             <?= get_sidebar();?>
           </div>
         </div>

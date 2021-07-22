@@ -22,7 +22,7 @@
     <div class="site-section pt-0">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-8">
+          <div class="col-12 col-md-8">
             <div class="site-section" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
@@ -210,7 +210,7 @@
 <?php $viewMovie = false; ?>
 <?php include 'parts/other-contest.php'; ?>
           </div>
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-md-4">
             <?= get_sidebar();?>
           </div>
         </div>

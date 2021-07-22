@@ -17,7 +17,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
     <div class="site-section pb-0">
       <div class="container">
         <div class="row">
-          <div class="site-section-heading text-center w-border mx-auto col-xs-12 col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay="100">
+          <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
             <div class="mx-auto">
             <h4 class="font-weight-bold text-center ml-3 mr-3">あなたの投票で優勝が決まる！<br>プレゼントが当たる！<br>あなたが選ぶ○○川柳大賞！</h4>
             </div>
@@ -29,7 +29,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
     <div class="site-section pt-0">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-8">
+          <div class="col-12 col-md-8">
             <div class="site-section" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
@@ -64,17 +64,17 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                     <div class="contents-border short mt-1 mb-1"></div>
                   </div>
 <?php foreach ($datas as $key => $data): ?>
-                  <div class="col-12 col-md-6 col-xl-4 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-12 col-lg-6 col-xl-4 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-frame square w-100 p-0 mb-2 mr-2">
                       <div class="team-member m-0">
                         <a href="#" data-toggle="modal" data-target="#modal" ontouchstart=""><img src="<?= $data['photo'];?>" class="photo_image w-100"></a>
                       </div>
                       <div class="row px-2">
-                        <div class="col-8 col-lg-7 pt-2 pr-0">
+                        <div class="col-8 col-xl-7 pt-2 pr-0">
                           <h6 class="photo_title"><?=$data['title']; ?></h6>
                           <p class="photo_name text-secondary mb-1"><?=$data['name']; ?></p>
                         </div>
-                        <div class="photo_button col-4 col-lg-5 row w-100 p-0 text-right">
+                        <div class="photo_button col-4 col-xl-5 row w-100 p-0 text-right">
                           <div class="row w-100 m-0">
                             <div class="col-12 p-0">
                               <div class="ml-1 text-center mx-auto">
@@ -104,7 +104,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
 <?php $viewPhoto = false; ?>
 <?php include 'parts/other-contest.php'; ?>
           </div>
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-md-4">
             <?= get_sidebar();?>
           </div>
         </div>

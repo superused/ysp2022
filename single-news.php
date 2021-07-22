@@ -3,7 +3,7 @@
     <div class="site-section pt-0">
       <div class="container p-0">
         <div class="row justify-content-center">
-          <div class="site-margin-top-section col-12 col-lg-8 bg-beige">
+          <div class="site-margin-top-section col-12 col-md-8 bg-beige">
             <div class="news-image col-12 w-100 p-0 m-0 mb-3 pt-md-3 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
               <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>">
             </div>
@@ -52,7 +52,7 @@ $the_query = new WP_Query([
 if ($the_query->have_posts()) :
  while ($the_query->have_posts()) : $the_query->the_post();
 ?>
-                <div class="col-12 col-md-6 p-0">
+                <div class="col-12 col-lg-6 p-0">
                   <div class="project-frame simple" data-aos="fade-up" data-aos-delay="100" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-0 mb-3 text-center">
                         <a href="<?= get_permalink(); ?>">
@@ -74,7 +74,7 @@ endif; ?>
             </div>
 <?php include 'parts/news-slider.php'; ?>
           </div>
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-md-4">
             <?= get_sidebar();?>
           </div>
         </div>

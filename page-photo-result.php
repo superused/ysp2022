@@ -11,7 +11,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
     <div class="site-section pt-0">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-12 col-mg-8 col-lg-8 col-xl-8">
+          <div class="col-12 col-md-8">
 <?php include 'parts/photo-result-content-title.php'; ?>
 
             <div class="result-winner-image w-75 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
@@ -191,7 +191,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-12 col-mg-4 col-lg-4 col-xl-4">
+          <div class="col-12 col-md-4">
             <?= get_sidebar();?>
           </div>
         </div>

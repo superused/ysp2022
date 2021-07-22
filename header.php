@@ -57,19 +57,19 @@
       <div class="site-navbar">
         <div class="container-fluid px-4 py-0">
           <div class="row align-items-center">
-            <div class="col-8 col-lg-2">
+            <div class="col-8 col-md-2">
               <div class="logo-header my-2">
                 <a href="<?= home_url();?>">
                   <img src="<?= get_template_directory_uri(); ?>/images/logo2.png" alt="PEACE DISIGNER FES" class="mx-auto">
                 </a>
               </div>
             </div>
-            <div class="col-4 col-lg-10 p-lg-0">
+            <div class="col-4 col-md-10 p-md-0">
               <nav class="site-navigation text-right text-md-right" role="navigation">
 
-                <div class="d-inline-block d-lg-none ml-md-0 mr-auto p-0"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h2"></span></a></div>
+                <div class="d-inline-block d-md-none ml-md-0 mr-auto p-0"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h2"></span></a></div>
 
-                <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <ul class="site-menu js-clone-nav d-none d-md-block">
                   <li>
                     <a href="<?= HOME_URL;?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_top.png">
@@ -141,7 +141,7 @@
                       <div>お問い合わせ</div>
                     </a>
                   </li>
-                  <li class="d-lg-none">
+                  <li class="d-md-none">
                     <div class="site-mobile-menu-sns text-center font-weight-bold container-fluid">
                       <div class="row justify-content-center align-items-center text-nowrap flex-nowrap py-2">
                           <span class="m-3"><a href="<?= SNS_INSTAGRAM_URL; ?>"><img src="<?= get_template_directory_uri(); ?>/images/icon_instagram.png" alt="Image"></a></span>
@@ -163,14 +163,14 @@
       <div class="site-mobile-menu-header">
         <div class="container-fluid px-4 py-0">
           <div class="row align-items-center">
-            <div class="col-8 col-lg-2">
+            <div class="col-8 col-md-2">
               <div class="logo-header my-2">
                 <a href="<?= home_url();?>">
                   <img src="<?= get_template_directory_uri(); ?>/images/logo2.png" alt="PEACE DISIGNER FES" class="mx-auto">
                 </a>
               </div>
             </div>
-            <div class="col-4 col-lg-10 p-lg-0 site-mobile-menu-close text-right">
+            <div class="col-4 col-md-10 p-md-0 site-mobile-menu-close text-right">
               <span class="icon-close2 js-menu-toggle text-cyan"></span>
             </div>
           </div>

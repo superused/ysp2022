@@ -27,7 +27,7 @@
     <div class="site-section py-0">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-sm-12 col-mg-8 col-lg-8 col-xl-8">
+          <div class="col-12 col-md-8">
             <div class="site-section w-border mx-auto">
               <div class="container">
                 <div class="" data-aos="fade-up" data-aos-delay="100">
@@ -98,7 +98,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-12 col-mg-4 col-lg-4 col-xl-4">
+          <div class="col-12 col-md-4">
             <?= get_sidebar();?>
           </div>
         </div>

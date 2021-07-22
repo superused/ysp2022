@@ -222,6 +222,9 @@ button {
   padding: 3em 0;
   min-width: 320px;
 }
+.site-section.sidebar {
+  min-width: 0;
+}
 .site-section.site-section-sm {
   padding: 4em 0;
 }
@@ -500,6 +503,40 @@ button {
 .site-navbar .site-navigation .site-menu .has-children > a {
   position: relative;
   padding-right: 20px;
+}
+@media (min-width: 767.98px) {
+  .site-navbar .site-navigation .site-menu a div {
+    width: 4.5rem;
+    font-size: 0.5rem;
+  }
+  .site-navbar .site-navigation .site-menu > li > a {
+    padding: 0 1px;
+  }
+  .site-navbar .site-navigation .site-menu .has-children > a {
+    padding-right: 5px;
+  }
+}
+@media (min-width: 991.98px) {
+  .site-navbar .site-navigation .site-menu a div {
+    width: 5.5rem;
+    font-size: 0.75rem;
+  }
+  .site-navbar .site-navigation .site-menu > li > a {
+    padding: 0 7px;
+  }
+  .site-navbar .site-navigation .site-menu .has-children > a {
+    padding-right: 20px;
+  }
+}
+@media (min-width: 1199.98px) {
+  .site-navbar .site-navigation .site-menu a div {
+    width: 6.3rem;
+    font-size: 0.85rem;
+  }
+  .site-navbar .site-navigation .site-menu a img {
+    width: 1.8rem;
+    margin: 0.1rem;
+  }
 }
 .site-navbar .site-navigation .site-menu .has-children > a:before {
   position: absolute;
@@ -954,7 +991,7 @@ button {
 .site-block-1 {
   padding-top: 50px;
 }
-@media (min-width: 992px) {
+@media (min-width: 991.98px) {
   .site-block-1 {
     padding-top: 0;
     position: absolute;
@@ -1039,7 +1076,7 @@ button {
 .site-block-half .image, .site-block-half .text {
   width: 100%;
 }
-@media (min-width: 992px) {
+@media (min-width: 991.98px) {
   .site-block-half .image, .site-block-half .text {
     width: 50%;
   }
@@ -1055,7 +1092,7 @@ button {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media (min-width: 992px) {
+@media (min-width: 991.98px) {
   .site-block-half .text {
     padding: 4rem;
   }
@@ -2479,6 +2516,30 @@ div.event-bg-right {
   background-color: #f7f2e3;
   width: 100%;
   padding: 0 0 3rem;
+}
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 1rem;
+}
+.sidebar .image {
+  margin: 0 0 0.5rem;
+  padding: 0;
+  text-align: center;
+}
+@media (min-width: 767.98px) {
+  .sidebar-title {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .sidebar-title {
+    font-size: 1.5rem;
+  }
+  .sidebar .image {
+    margin-bottom: 0.5rem;
+  }
 }
 .events-section .container {
   margin-top: 3em;
