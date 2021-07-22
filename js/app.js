@@ -177,14 +177,20 @@ $(function() {
         $('.site-blocks-cover.overlay.top .container .row').css('margin-top', ($(window).height() * 0.35 ) + 'px');
 
         const portrait = [
-          // 'peacedesigner_kameoka_sp1.jpg',
-          'top_mobile3.jpg',
+          [
+            'top_mobile1.jpg',
+            'top_mobile2.jpg',
+            'top_mobile3.jpg',
+          ],
           'moyou_top.png',
           'moyou_bottom.png',
         ];
         const landscape = [
-          //'peacedesigner_kameoka_pc1.jpg',
-          'top_pc3.jpg',
+          [
+            'top_pc1.jpg',
+            'top_pc2.jpg',
+            'top_pc3.jpg',
+          ],
           'moyou_pc_top.png',
           'moyou_pc_bottom.png',
         ];
@@ -208,9 +214,13 @@ $(function() {
           if (changed) {
             topAnime = isPortrait ? portrait : landscape;
             for (const i in topAnime) {
+              let topAnimeImg = topAnime[i];
+              if (Array.isArray(topAnimeImg)) {
+                topAnimeImg = topAnimeImg[Math.floor(Math.random() * topAnimeImg.length)];
+              }
               let bi = topAnimeElem[i].css('background-image');
               let split = bi.split('"');
-              split[1] = split[1].split('/').slice(0, -1).concat(topAnime[i]).join('/');
+              split[1] = split[1].split('/').slice(0, -1).concat(topAnimeImg).join('/');
               topAnimeElem[i].css('background-image', split.join('"'));
             }
           }
