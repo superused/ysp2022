@@ -130,15 +130,15 @@
                     </a>
                   </li>
                   <li>
-                    <a href="<?= CONTACT_URL;?>">
-                      <img src="<?= get_template_directory_uri(); ?>/images/icon_contact.png">
-                      <div>お問い合わせ</div>
-                    </a>
-                  </li>
-                  <li>
                     <a href="<?= GOODS_SHOP_URL; ?>">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_goods.png">
                       <div>グッズショップ（外部サイト）</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?= CONTACT_URL;?>">
+                      <img src="<?= get_template_directory_uri(); ?>/images/icon_contact.png">
+                      <div>お問い合わせ</div>
                     </a>
                   </li>
                   <li class="d-lg-none">

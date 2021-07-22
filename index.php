@@ -137,7 +137,7 @@
             <div class="message-under-image">
               <div class="row mx-0">
 <?php for ($i = 0; $i < 3; $i++): ?>
-                <div class="project-frame w-100 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-frame w-100 mb-5" data-aos="fade-up" data-aos-delay="100">
                   <h6 class="triangle"></h6>
                   <div class="row">
                     <div class="p-0 mx-0 mt-0 mb-3 col-12 col-md-6">
@@ -192,7 +192,7 @@
                     <a href="<?= MOVIE_CONTEST_URL ?>" ontouchstart=""><img src="<?= MOVIE_TITLE_IMG; ?>" alt="MOVIEコンテスト" class="img-fluid"></a>
                   </div>
                 </div>
-                <a href="<?= MOVIE_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                <a href="<?= MOVIE_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">ムービーを見る</button></a>
               </div>
 
               <div class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
@@ -204,7 +204,7 @@
                     <a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart=""><img src="<?= PHOTO_TITLE_IMG; ?>" alt="PHOTOコンテスト" class="img-fluid"></a>
                   </div>
                 </div>
-                <a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                <a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">フォトを見る</button></a>
               </div>
 
               <div class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
@@ -216,7 +216,7 @@
                     <a href="<?= SENRYU_CONTEST_URL; ?>" ontouchstart=""><img src="<?= SENRYU_TITLE_IMG; ?>" alt="川柳コンテスト" class="img-fluid"></a>
                   </div>
                 </div>
-                <a href="<?= SENRYU_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                <a href="<?= SENRYU_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">川柳を見る</button></a>
               </div>
             </div>
           </div>

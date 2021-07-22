@@ -472,7 +472,8 @@ button {
   font-size: 0.75rem;
 }
 .site-navbar .site-navigation .site-menu a img {
-  width: 2rem;
+  width: 1.4rem;
+  margin: 0.3rem;
 }
 .site-navbar .site-navigation .site-menu > li {
   display: inline-block;
@@ -522,7 +523,7 @@ button {
   border-left: 1px solid #edf0f5;
   border-right: 1px solid #edf0f5;
   border-bottom: 1px solid #edf0f5;
-  padding: 10px 0;
+  padding: 0;
   margin-top: 20px;
   margin-left: 0px;
   background: #fff;
@@ -2483,8 +2484,10 @@ div.event-bg-right {
 }
 .message-under-image {
   background-color: #fff;
-  padding: 2rem 1rem 1rem;
+  padding: 3rem 1rem 0;
+  border-bottom: 2px solid #fff;
 }
+.message-under-image 
 .live-message-under {
   border-bottom: 3px solid #00b9f2;
   font-weight: bold;
