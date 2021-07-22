@@ -21,13 +21,13 @@ $(function() {
   siteBase.prototype = {
     siteMenuClone: function() {
       $('.js-clone-nav').each(function() {
-        var $this = $(this);
+        const $this = $(this);
         $this.clone().attr('class', 'site-nav-wrap').prependTo('.site-mobile-menu-body');
       });
       setTimeout(function() {
-        var counter = 0;
+        let counter = 0;
         $('.site-mobile-menu .has-children').each(function(){
-          var $this = $(this);
+          const $this = $(this);
           $this.prepend('<span class="arrow-collapse collapsed">');
           $this.find('.arrow-collapse').attr({
             'data-toggle' : 'collapse',
@@ -44,32 +44,29 @@ $(function() {
       }, 1000);
 
       $('body').on('click', '.site-mobile-menu .inpage-link', function() {
-        if ( $('body').hasClass('offcanvas-menu') ) {
+        if ($('body').hasClass('offcanvas-menu')) {
           $('body').removeClass('offcanvas-menu');
         }
       });
 
       $('body').on('click', 'li.has-children a', function() {
-        var $this = $(this);
+        const $this = $(this);
         $this.closest('li').find('.arrow-collapse').click();
       });
 
       $(window).resize(function() {
-        var $this = $(this),
+        const $this = $(this),
           w = $this.width();
-
-        if ( w > 768 ) {
-          if ( $('body').hasClass('offcanvas-menu') ) {
-            $('body').removeClass('offcanvas-menu');
-          }
+        if (w > 768 && $('body').hasClass('offcanvas-menu')) {
+          $('body').removeClass('offcanvas-menu');
         }
       })
 
       $('body').on('click', '.js-menu-toggle', function(e) {
-        var $this = $(this);
+        const $this = $(this);
         e.preventDefault();
 
-        if ( $('body').hasClass('offcanvas-menu') ) {
+        if ($('body').hasClass('offcanvas-menu')) {
           $('body').removeClass('offcanvas-menu');
           $this.removeClass('active');
         } else {
@@ -80,7 +77,7 @@ $(function() {
 
       // click outisde offcanvas
       $(document).on('mouseup', 'html', function(e) {
-        var container = $(".site-mobile-menu");
+        const container = $(".site-mobile-menu");
         if (!container.is(e.target) && container.has(e.target).length === 0) {
           if ( $('body').hasClass('offcanvas-menu') ) {
             $('body').removeClass('offcanvas-menu');
@@ -90,8 +87,8 @@ $(function() {
     },
     siteCarousel: function () {
       if ($('.owl-carousel').length > 0) {
-        var owl = $('.owl-carousel');
-        var responsive = {
+        const owl = $('.owl-carousel');
+        let responsive = {
           768: {items:2},
           992: {items:3},
           1200:{items:4},
@@ -117,7 +114,7 @@ $(function() {
           owl.trigger('next.owl.carousel');
         });
         setTimeout(function() {
-          var adjustHeight = function() {
+          const adjustHeight = function() {
             let minHeight;
             const imgs = $('.owl-item img');
             imgs.each(function() {
@@ -133,12 +130,12 @@ $(function() {
           };
           adjustHeight();
 
-          var resizeCnt = 0;
+          let resizeCnt = 0;
           $(window).resize(function() {
             resizeCnt++;
             const width = $('.owl-item:first').width();
             let cnt = 0;
-            var fn = function(rcnt) {
+            const fn = function(rcnt) {
               setTimeout(function() {
                 cnt++;
                 if (cnt < 100 && rcnt == resizeCnt) {
@@ -221,15 +218,15 @@ $(function() {
         $(window).on('resize', resize);
         resize();
 
-        var speed = 500; // 1動作の時間(ms) （少ないほうが速い）
-        var delay = speed * 5; // アニメーション開始までの待ち時間(ms)
-        var allViewTime = speed * 6; // アニメーション全表示の時間(ms)
+        const speed = 500; // 1動作の時間(ms) （少ないほうが速い）
+        const delay = speed * 5; // アニメーション開始までの待ち時間(ms)
+        const allViewTime = speed * 6; // アニメーション全表示の時間(ms)
 
-        var setHeight = function() {
+        const setHeight = function() {
           const target = $(this);
           target.closest('.logo_bg').css('height', target.height());
         };
-        var animation = function() {
+        const animation = function() {
           for (const i in topAnimeElem) {
             topAnimeElem[i].addClass('show');
           }
@@ -256,17 +253,17 @@ $(function() {
         };
 
         // TOP画像の高さを再指定
-        var actualImage = new Image();
+        let actualImage = new Image();
         actualImage.src = $('.top2').css('background-image').replace(/"/g,"").replace(/url\(|\)$/ig, "");
           actualImage.onload = function() {
-            var topImage = $('.site-blocks-cover.overlay.top');
+            const topImage = $('.site-blocks-cover.overlay.top');
             topImage.height(topImage.width() * this.height / this.width);
             animation();
           }
       } else {
         // TOP以外のページの画像の表示でヘッダーのバーの高さに画像のpaddingをあわせる
-        var topTarget = $('.site-mobile-menu').next();
-        var height = $('.site-navbar').height();
+        const topTarget = $('.site-mobile-menu').next();
+        const height = $('.site-navbar').height();
         topTarget.css('padding-top', height + 'px').show();
       }
     },
@@ -274,20 +271,19 @@ $(function() {
     senryuView: function() {
       // 詳細ボタンを押した際に表示項目を切り替える
       $('.kakejiku .detail').click(function() {
-        var content = $(this).parents('[data-type=content-block]');
-        var voteButton = content.find('button.vote');
-        var modal = $('#modal');
-        var selectors = [
+        const content = $(this).parents('[data-type=content-block]');
+        const voteButton = content.find('button.vote');
+        const modal = $('#modal');
+        const selectors = [
           '.kakejiku_inner',
           '.kakejiku_episode',
           '.kakejiku_name',
         ];
-        for (var i in selectors) {
-          var selector = selectors[i];
+        for (const i in selectors) {
+          const selector = selectors[i];
           modal.find(selector).html(content.find(selector).html());
         }
-        var modalVoteButton = modal.find('button.vote');
-        // modalVoteButton.data('vote', voteButton.data('vote'));
+        const modalVoteButton = modal.find('button.vote');
         modalVoteButton.attr('data-vote', voteButton.data('vote'));
         if (voteButton.prop('disabled')) {
           modalVoteButton.prop('disabled', true).html('投票済');
@@ -304,10 +300,10 @@ $(function() {
 
       // 詳細ボタンを押した際に表示項目を切り替える
       $('[data-type=content-block] [data-toggle=modal]').click(function() {
-        var content = $(this).parents('[data-type=content-block]');
-        var voteButton = content.find('button.vote');
-        var modal = $('#modal');
-        var selectors = [
+        const content = $(this).parents('[data-type=content-block]');
+        const voteButton = content.find('button.vote');
+        const modal = $('#modal');
+        const selectors = [
           '.photo_title',
           '.photo_name',
           '.photo_image',
@@ -315,15 +311,15 @@ $(function() {
           '.photo_comment',
           '.photo_episode',
         ];
-        for (var i in selectors) {
-          var selector = selectors[i];
+        for (const i in selectors) {
+          const selector = selectors[i];
           if (selector != '.photo_image') {
             modal.find(selector).html(content.find(selector).html());
           } else {
             modal.find(selector).attr('src', content.find(selector).attr('src'));
           }
         }
-        var modalVoteButton = modal.find('button.vote');
+        const modalVoteButton = modal.find('button.vote');
         modalVoteButton.attr('data-vote', voteButton.attr('data-vote'));
         if (voteButton.prop('disabled')) {
           modalVoteButton.prop('disabled', true).html('投票済');
@@ -337,10 +333,10 @@ $(function() {
     contestVote: function() {
       const tohyo = $('#tohyo');
       if (tohyo[0] && $('button.vote')[0]) {
-        var flg = false;
+        let flg = false;
         $('button.vote').each(function() {
-          var qid = $(this).attr('data-vote');
-          var poll = tohyo.find('div.wp-polls#polls-' + qid);
+          const qid = $(this).attr('data-vote');
+          const poll = tohyo.find('div.wp-polls#polls-' + qid);
           if (!poll[0] || !poll.find('input[type=button][name=vote]')[0]) {
             $(this).prop('disabled', true).text('投票済');
           } else {
@@ -373,11 +369,11 @@ $(function() {
     },
 
     imageFull: function() {
-      var sn = $('.site-navbar');
-      var tif = $('.top-image.full .top-full-image');
+      const sn = $('.site-navbar');
+      const tif = $('.top-image.full .top-full-image');
       if (!tif[0]) return;
-      var resize = function() {
-        var w = $(window);
+      const resize = function() {
+        const w = $(window);
         if (w.outerWidth() < 768) {
           tif.outerWidth(w.outerWidth());
           tif.height(w.height() - sn.height());
@@ -390,7 +386,7 @@ $(function() {
     },
 
     footerBanner: function() {
-      var btn = $('.footer-banner .close-btn');
+      const btn = $('.footer-banner .close-btn');
       if (btn[0]) {
         btn.on('click', function() {
           $('.footer-banner').hide();
@@ -399,7 +395,7 @@ $(function() {
     },
 
     projectBuruburu: function() {
-      var buruburu = function(url, delay) {
+      const buruburu = function(url, delay) {
         let elem;
         if (url.endsWith(('#project'))) {
           elem = $('#project');
@@ -435,7 +431,7 @@ $(function() {
       });
       $(document).ready(function() {
         buruburu(location.href, 0);
-      });
+      }, 100);
     },
   };
   const base = new siteBase();
