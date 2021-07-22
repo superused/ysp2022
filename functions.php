@@ -13,7 +13,7 @@ define('LIVE_TIME_URL', esc_url(home_url('/live2/')));
 define('UNION_URL', esc_url(home_url('/union/')));
 define('UNION2_URL', esc_url(home_url('/union2/')));
 define('UNION3_URL', esc_url(home_url('/union3/')));
-define('SENRYU_CONTEST_URL', esc_url(home_url('/senryu/')));
+define('SENRYU_CONTEST_URL', esc_url(home_url('/senryu-contest/')));
 define('MOVIE_CONTEST_URL', esc_url(home_url('/movie-result/')));
 define('PHOTO_CONTEST_URL', esc_url(home_url('/photo-contest/')));
 define('SENRYU_RESULT_LIST_URL', esc_url(home_url('/senryu-result-list/')));
