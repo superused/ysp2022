@@ -441,8 +441,10 @@ $(function() {
         buruburu($(this).attr('href'), 0);
       });
       $(document).ready(function() {
-        buruburu(location.href, 0);
-      }, 100);
+        setTimeout(function() {
+          buruburu(location.href, 0);
+        }, 300);
+      });
     },
   };
   const base = new siteBase();
