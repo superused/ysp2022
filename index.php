@@ -185,38 +185,38 @@
             <div class="message-under-image">
               <div class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="mb-4">SHORT MOVIE</h2>
-                <div class="text-left contest-values">
+                <div class="text-left contest-values" data-aos="fade-up" data-aos-delay="100">
                   <span class="thema">テーマ</span>
                   <span class="title">my favorite town</span>
                   <div class="team-member text-center image">
                     <a href="<?= MOVIE_CONTEST_URL ?>" ontouchstart=""><img src="<?= MOVIE_TITLE_IMG; ?>" alt="MOVIEコンテスト" class="img-fluid"></a>
                   </div>
                 </div>
-                <a href="<?= MOVIE_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">ムービーを見る</button></a>
+                <a href="<?= MOVIE_CONTEST_URL; ?>" ontouchstart="" data-aos="fade-up" data-aos-delay="100"><button class="btn btn-show mx-auto" ontouchstart="">ムービーを見る</button></a>
               </div>
 
               <div class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="mb-4">PHOTO</h2>
-                <div class="text-left contest-values">
+                <div class="text-left contest-values" data-aos="fade-up" data-aos-delay="100">
                   <span class="thema">テーマ</span>
                   <span class="title">私の推し町</span>
                   <div class="team-member text-center image">
                     <a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart=""><img src="<?= PHOTO_TITLE_IMG; ?>" alt="PHOTOコンテスト" class="img-fluid"></a>
                   </div>
                 </div>
-                <a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">フォトを見る</button></a>
+                <a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart="" data-aos="fade-up" data-aos-delay="100"><button class="btn btn-show mx-auto" ontouchstart="">フォトを見る</button></a>
               </div>
 
               <div class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="mb-4">SENRYU</h2>
-                <div class="text-left contest-values">
+                <div class="text-left contest-values" data-aos="fade-up" data-aos-delay="100">
                   <span class="thema">テーマ</span>
                   <span class="title">つながり川柳</span>
                   <div class="team-member text-center image">
                     <a href="<?= SENRYU_CONTEST_URL; ?>" ontouchstart=""><img src="<?= SENRYU_TITLE_IMG; ?>" alt="川柳コンテスト" class="img-fluid"></a>
                   </div>
                 </div>
-                <a href="<?= SENRYU_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">川柳を見る</button></a>
+                <a href="<?= SENRYU_CONTEST_URL; ?>" ontouchstart="" data-aos="fade-up" data-aos-delay="100"><button class="btn btn-show mx-auto" ontouchstart="">川柳を見る</button></a>
               </div>
             </div>
           </div>

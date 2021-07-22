@@ -345,16 +345,16 @@ $(function() {
         });
         if (flg) {
           $('button.vote').on('click', function(e) {
-            const thisObj = $(this),
-              qid = thisObj.attr('data-vote'),
+            const qid = $(this).attr('data-vote'),
               poll = tohyo.find('div.wp-polls#polls-' + qid),
               radio = poll.find('input[type=radio]').first();
             if (radio[0]) {
               radio.prop('checked', true);
               poll.find('input[type=button][name=vote]').click();
               $('button.vote[data-vote=' + qid + ']').each(function() {
-                $(this).prop('disabled', true).text('投票済');
-                const contentBlock = $(this).closest('[data-type=content-block]');
+                const $this = $(this);
+                $this.prop('disabled', true).text('投票済');
+                const contentBlock = $this.closest('[data-type=content-block]');
                 if (contentBlock[0]) {
                   const voteNumElem = contentBlock.find('.vote_num'),
                     voteNum = parseInt(voteNumElem.html());
