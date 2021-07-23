@@ -159,6 +159,12 @@ button {
 .btn.btn-show:disabled:hover {
   opacity: 1;
 }
+.btn.btn-show:disabled:active {
+  border-top: 2px solid #a0a0a0;
+  border-bottom: 4px solid #bdbdbd;
+  transform: translate(0);
+  opacity: 1;
+}
 .btn.btn-show.type1 {
   padding: 1rem 5rem;
   border-radius: 0.7rem;
