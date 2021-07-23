@@ -13,8 +13,8 @@
         </div>
         <div class="heading-bar color-gray mb-4" data-aos="fade-up" data-aos-delay="100"></div>
         <div data-aos="fade-up" data-aos-delay="100">
-          <div class="team-member image col-12">
-            <a href="<?= MOVIE_CONTEST_URL;?>"><img src="<?= MOVIE_TITLE_IMG; ?>" alt="MOVIEコンテスト" class="img-fluid"></a>
+          <div class="image col-12">
+            <a href="<?= MOVIE_CONTEST_URL;?>" disabled><div class="gray-out"><img src="<?= MOVIE_TITLE_IMG; ?>" alt="MOVIEコンテスト" class="img-fluid"></div></a>
           </div>
           <div class="sidebar-title">MOVIEコンテスト</div>
         </div>

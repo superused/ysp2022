@@ -78,7 +78,7 @@
               <span class="live-message-under">ライブ</span>
               <p>ウェビナーやクイズなどの生配信企画！地域活性化で活躍する若手リーダーが語ります！見るだけでも、チャットで質問してもOK！</p>
               <div class="text-center">
-                <a href="<?= LIVE_TIME_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
+                <a href="<?= LIVE_TIME_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="" disabled>タイムテーブルを見る</button></a>
               </div>
             </div>
           </div>
@@ -87,6 +87,7 @@
           <div class="site-section-heading nopadding mb-5 w-border col-12 mx-auto t">
             <div class="message-under-image">
               <div class="pickup-contents text-center px-0 mx-0 mb-4">
+                <div class="coming-soon live"></div>
 <?php for ($i = 0; $i < 3; $i++): ?>
                 <div class="pickup-list p-3" data-aos="fade-up" data-aos-delay="100">
                   <div class="row w-100 m-0 p-0">
@@ -102,7 +103,7 @@
                           <div>準備中</div>
                         </div>
                         <div class="text-center mb-3">
-                          <a href="<?= LIVE_TIME_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
+                          <a href="<?= LIVE_TIME_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="" disabled>この配信を見る</button></a>
                         </div>
                       </div>
                     </div>
@@ -128,7 +129,7 @@
                 <span class="live-message-under">活動紹介コーナー</span>
                 <p>全国で活躍しているピースデザイナーたちの活動を紹介します！あなたの地域のピースデザイナー達の活躍を覗いてみませんか？</p>
                 <div class="text-center">
-                  <a href="<?= UNION2_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                  <a href="<?= UNION2_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="" disabled>詳しく見る</button></a>
                 </div>
               </div>
             </div>
@@ -136,13 +137,14 @@
           <div class="site-section-heading nopadding mb-5 w-border col-12 mx-auto t">
             <div class="message-under-image">
               <div class="row mx-0">
+                <div class="coming-soon live"></div>
 <?php for ($i = 0; $i < 3; $i++): ?>
                 <div class="project-frame w-100 mb-5" data-aos="fade-up" data-aos-delay="100">
                   <h6 class="triangle"></h6>
                   <div class="row">
                     <div class="p-0 mx-0 mt-0 mb-3 col-12 col-md-6">
                       <div class="team-member text-center image mx-3 w-auto">
-                        <a href="<?= UNION2_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/dummy.png" alt="Image" class="img-fluid w-100"></a>
+                        <a href="<?= UNION2_URL; ?>" ontouchstart="" disabled><img src="<?= get_template_directory_uri(); ?>/images/dummy.png" alt="Image" class="img-fluid w-100"></a>
                       </div>
                     </div>
                     <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -153,7 +155,7 @@
                         <div>準備中</div>
                       </div>
                       <div class="text-center mt-3">
-                        <a href="<?= UNION2_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                        <a href="<?= UNION2_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="" disabled>詳しく見る</button></a>
                       </div>
                     </div>
                   </div>
@@ -189,10 +191,10 @@
                   <span class="thema">テーマ</span>
                   <span class="title">my favorite town</span>
                   <div class="team-member text-center image">
-                    <a href="<?= MOVIE_CONTEST_URL ?>" ontouchstart=""><img src="<?= MOVIE_TITLE_IMG; ?>" alt="MOVIEコンテスト" class="img-fluid"></a>
+                    <img src="<?= MOVIE_TITLE_IMG; ?>" alt="MOVIEコンテスト" class="img-fluid">
                   </div>
                 </div>
-                <a href="<?= MOVIE_CONTEST_URL; ?>" ontouchstart="" data-aos="fade-up" data-aos-delay="100"><button class="btn btn-show mx-auto" ontouchstart="">ムービーを見る</button></a>
+                <a href="<?= MOVIE_CONTEST_URL; ?>" ontouchstart="" data-aos="fade-up" data-aos-delay="100"><button class="btn btn-show mx-auto" ontouchstart="" disabled>ムービーを見る</button></a>
               </div>
 
               <div id="photo" class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
@@ -228,8 +230,10 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="site-section-heading">
-            <div class="team-member contest-values questionnaire" data-aos="fade-up" data-aos-delay="100">
-              <img src="<?= get_template_directory_uri(); ?>/images/questionnaire.jpg" class="img-fluid">
+            <div class="contest-values questionnaire" data-aos="fade-up" data-aos-delay="100">
+              <div class="gray-out">
+                <img src="<?= get_template_directory_uri(); ?>/images/questionnaire.jpg" class="img-fluid">
+              </div>
             </div>
           </div>
         </div>
