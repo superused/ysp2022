@@ -85,7 +85,8 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                           </div>
                         </div>
                       </div>
-                      <div class="photo_episode small pl-2 pr-2 pb-2"><?= nl2br(esc_html($data['episode'])); ?></div>
+                      <div class="photo_episode small pl-2 pr-2 mb-2"><?= nl2br(esc_html($data['episode'])); ?></div>
+                      <div style="height:3px;"></div>
                     </div>
                   </div>
 <?php endforeach; ?>

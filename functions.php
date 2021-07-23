@@ -23,6 +23,9 @@ define('LIVE_CONTENTS_URL', esc_url(home_url('/#live')));
 define('PROJECT_URL', esc_url(home_url('/#project')));
 define('CONTEST_URL', esc_url(home_url('/#contest')));
 define('CONTENTS_LIST_URL', esc_url(home_url('/#contents-list')));
+define('SENRYU_URL', esc_url(home_url('/#senryu')));
+define('PHOTO_URL', esc_url(home_url('/#photo')));
+define('MOVIE_URL', esc_url(home_url('/#movie')));
 define('FAVICON_URL', esc_url(home_url('favicon.ico')));
 
 // SNS

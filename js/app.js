@@ -416,6 +416,12 @@ $(function() {
           elem = $('#contest');
         } else if (url.endsWith('#contents-list')) {
           elem = $('#contents-list');
+        } else if (url.endsWith('#senryu')) {
+          elem = $('#senryu');
+        } else if (url.endsWith('#photo')) {
+          elem = $('#photo');
+        } else if (url.endsWith('#movie')) {
+          elem = $('#movie');
         }
         if (elem && elem[0]) {
           const navHeight = $('.site-navbar').height();
@@ -437,7 +443,7 @@ $(function() {
           }, delay);
         }
       };
-      $(document).on('click', '[href$=#project], [href$=#live], [href$=#contest], [href$=#contents-list]', function() {
+      $(document).on('click', '[href$=#project], [href$=#live], [href$=#contest], [href$=#contents-list], [href$=#senryu], [href$=#photo], [href$=#movie]', function() {
         buruburu($(this).attr('href'), 0);
       });
       $(document).ready(function() {

@@ -45,9 +45,9 @@
               <ul class="contents-list-link">
                 <li><a href="<?= PROJECT_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_appeal.png" alt="活動紹介コーナー" class="img-fluid"></a></li>
                 <li><a href="<?= LIVE_CONTENTS_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_live.png" alt="LIVE配信" class="img-fluid"></a></li>
-                <li><a href="<?= SENRYU_CONTEST_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_senryu.png" alt="川柳コンテスト" class="img-fluid"></a></li>
-                <li><a href="<?= MOVIE_CONTEST_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_movie.png" alt="MOVIEコンテスト" class="img-fluid"></a></li>
-                <li><a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_photo.png" alt="PHOTOコンテスト" class="img-fluid"></a></li>
+                <li><a href="<?= SENRYU_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_senryu.png" alt="川柳コンテスト" class="img-fluid"></a></li>
+                <li><a href="<?= MOVIE_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_movie.png" alt="MOVIEコンテスト" class="img-fluid"></a></li>
+                <li><a href="<?= PHOTO_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_photo.png" alt="PHOTOコンテスト" class="img-fluid"></a></li>
               </ul>
             </div>
           </div>
@@ -183,7 +183,7 @@
           </div>
           <div class="site-section-heading nopadding mb-5 w-border col-12 mx-auto">
             <div class="message-under-image">
-              <div class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+              <div id="movie" class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="mb-4">SHORT MOVIE</h2>
                 <div class="text-left contest-values" data-aos="fade-up" data-aos-delay="100">
                   <span class="thema">テーマ</span>
@@ -195,7 +195,7 @@
                 <a href="<?= MOVIE_CONTEST_URL; ?>" ontouchstart="" data-aos="fade-up" data-aos-delay="100"><button class="btn btn-show mx-auto" ontouchstart="">ムービーを見る</button></a>
               </div>
 
-              <div class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+              <div id="photo" class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="mb-4">PHOTO</h2>
                 <div class="text-left contest-values" data-aos="fade-up" data-aos-delay="100">
                   <span class="thema">テーマ</span>
@@ -207,7 +207,7 @@
                 <a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart="" data-aos="fade-up" data-aos-delay="100"><button class="btn btn-show mx-auto" ontouchstart="">フォトを見る</button></a>
               </div>
 
-              <div class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+              <div id="senryu" class="contest-contents text-center pb-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <h2 class="mb-4">SENRYU</h2>
                 <div class="text-left contest-values" data-aos="fade-up" data-aos-delay="100">
                   <span class="thema">テーマ</span>
@@ -263,6 +263,10 @@
               <div class="contents-border short mt-2 mb-2"></div>
               <span class="organizer-text mt-4">IAYSP-Japan</span>
             </div>
+            <div class="mt-5">
+              <span class="organizer-title">協賛</span>
+              <div class="contents-border short mt-2 mb-2"></div>
+              <span class="organizer-text mt-4">日本活魚株式会社<br>株式会社ハッピーワールド<br>株式会社コスモフーズ</span> </div>
           </div>
         </div>
       </div>

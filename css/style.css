@@ -135,6 +135,7 @@ button {
   width: 100%;
   padding: 1rem 0;
   border-radius: 0.7rem;
+  border-top: none;
   border-bottom: 5px solid #048bb6;
 }
 .btn.btn-show:hover {
@@ -146,6 +147,17 @@ button {
   transform: translate(0, 5px);
   border-bottom: none;
   border-top: 6px solid transparent;
+}
+.btn.btn-show:disabled {
+  background: linear-gradient(#a0a0a0 0%, #bdbdbd 15%);
+  background-color: #bdbdbd;
+  border-top: 2px solid #a0a0a0;
+  border-bottom: 4px solid #bdbdbd;
+  opacity: 1;
+  cursor: default;
+}
+.btn.btn-show:disabled:hover {
+  opacity: 1;
 }
 .btn.btn-show.type1 {
   padding: 1rem 5rem;
@@ -2785,6 +2797,12 @@ div.notice-bar .notice-contents {
 .kakejiku_button {
   width: 135px;
 }
+[data-type=content-block] .photo_episode {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 button.detail {
   background-color: #fff;
   border: 3px solid #00b9f2;
@@ -3302,6 +3320,9 @@ div.news-area .owl-carousel {
 .contents-list-link li img:hover{
   transform: scale(1.2);
 }
+.contents-list-link li:disabled img:hover{
+  transform: scale(1);
+}
 .contents-list-link.link1 a {
   animation: vertical 1s ease-in-out infinite alternate;
 }
@@ -3616,4 +3637,42 @@ div.news-area .owl-carousel {
 }
 .voting_method {
   width: 18rem;
+}
+.coming-soon {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+}
+.coming-soon:after {
+  content: 'COMING SOON';
+  color: #fff;
+  font-size: 3rem;
+  border: 5px solid #fff;
+  top: 30%;
+}
+.coming-soon.live {
+  top: 2rem;
+  bottom: 0.5rem;
+  height: auto;
+}
+.coming-soon:after {
+  content: 'COMING SOON';
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 0.5rem solid #fff;
+  left: 0;
+  top: 0;
+  text-align: center;
+  padding: 1rem;
+  margin: 30% 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
