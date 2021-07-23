@@ -3180,14 +3180,14 @@ div.news-area .owl-carousel {
   width: 80%;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 .fixed-menu .fixed-button-content {
   display: flex;
   align-content: flex-end;
 }
 .fixed-menu .fixed-button-content .contents {
-  margin: 0.2rem;
-  margin-bottom: 0;
+  margin: 0.2rem 0.2rem 0;
   padding: 0.2rem 0.7rem;
   background-color: #00b9f2;
   border: 1px solid #fff;
