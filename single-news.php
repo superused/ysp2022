@@ -2,10 +2,12 @@
 <div></div>
     <div class="site-section pt-0">
       <div class="container p-0">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-5 mt-md-0">
           <div class="site-margin-top-section col-12 col-md-8 bg-beige">
-            <div class="news-image col-12 w-100 p-0 m-0 mb-3 pt-md-3 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
-              <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>">
+            <div class="m-3">
+              <div class="news-image col-12 w-100 p-0 pt-3 m-0 mb-3 pt-md-3 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
+                <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>">
+              </div>
             </div>
             <div class="site-section p-3 m-0" data-aos="fade-up" data-aos-delay="100">
               <div class="container p-0">
@@ -34,7 +36,7 @@
 <?php endif;?>
               </div>
             </div>
-            <div class="site-section p-3">
+            <div class="site-section p-3 pt-5">
               <h4 class="heading-bar color-cyan font-weight-bold mb-4" data-aos="fade-up" data-aos-delay="100"><span class="pr-3">関連記事</span></h4>
               <div class="row px-3">
 
