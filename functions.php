@@ -72,10 +72,10 @@ class Util {
   }
 
   public function getSiteTitle() {
-    if (get_the_title()) {
-      return SITE_TITLE . ' | ' . get_the_title();
-    } else if (is_front_page()) {
+    if (is_front_page()) {
       return SITE_TITLE;
+    } else if (get_the_title()) {
+      return SITE_TITLE . ' | ' . get_the_title();
     }
     return SITE_TITLE;
   }
