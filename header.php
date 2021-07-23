@@ -2,10 +2,37 @@
 <?php global $util; ?>
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <title><?= $util->getSiteTitle(); ?></title>
+<?php if (is_single()): ?>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/website#">
+<?php else: ?>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<?php endif; ?>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><?= $util->getSiteTitle(); ?></title>
+    <meta property="og:locale" content="ja_JP" />
+
+<?php if (is_single() || is_page()): //投稿記事か固定ページ ?>
+<?php   if (has_post_thumbnail()): //アイキャッチがある場合 ?>
+<?php
+$image_id = get_post_thumbnail_id();
+$image = wp_get_attachment_image_src($image_id, 'full');
+?>
+    <meta property="og:image" content="<?= $image[0]; ?>">
+<?php   elseif (preg_match( '/<img.*?src=(["\'])(.+?)\1.*?>/i', $post->post_content, $imgurl ) && !is_archive()): //アイキャッチ以外の画像がある場合 ?>
+    <meta property="og:image" content="<?= $imgurl[2]; ?>">
+<?php   else: //画像が1つも無い場合 ?>
+    <meta property="og:image" content="<?= get_template_directory_uri(); ?>/images/ogp.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+<?php   endif; ?>
+<?php else: //ホーム・カテゴリーページなど ?>
+    <meta property="og:image" content="<?= get_template_directory_uri(); ?>/images/ogp.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+<?php endif; ?>
 
     <link rel="shortcut icon" href="<?= FAVICON_URL;?>" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,500,600,700,800,900|Oswald:400,500,600,700">
