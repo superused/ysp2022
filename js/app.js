@@ -17,6 +17,7 @@ $(function() {
     this.imageFull();
     this.footerBanner();
     this.projectBuruburu();
+    this.moveRecaptcha();
   };
   siteBase.prototype = {
     siteMenuClone: function() {
@@ -451,6 +452,26 @@ $(function() {
           buruburu(location.href, 0);
         }, 300);
       });
+    },
+    adjustRecaptcha: function() {
+      const recaptcha = $('.grecaptcha-badge'),
+        fixedMenu = $('.fixed-menu'),
+        fixedLast = $('.fixed-button-content').last();
+      if (recaptcha[0]) {
+        recaptcha.css('visibility', 'visible');
+        if (fixedMenu.css('display') !== 'none') {
+          recaptcha.css('bottom', ((fixedLast.height() + 30) + 'px'));
+        } else {
+          recaptcha.css('bottom', '14px');
+        }
+      }
+    },
+    moveRecaptcha: function() {
+      if ($('.contact-form')[0] && $('.sidebar')[0]) {
+        const self = this;
+        $(window).resize(self.adjustRecaptcha);
+        setTimeout(self.adjustRecaptcha, 700);
+      }
     },
   };
   const base = new siteBase();

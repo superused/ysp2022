@@ -3676,3 +3676,6 @@ div.news-area .owl-carousel {
   justify-content: center;
   align-items: center;
 }
+.grecaptcha-badge {
+  visibility: hidden;
+}
