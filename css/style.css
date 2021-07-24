@@ -840,7 +840,8 @@ button {
   opacity: 1;
   visibility: visible;
 }
-.site-blocks-cover.overlay.top.bg {
+.site-blocks-cover.overlay.top.bg ,
+.site-blocks-cover.overlay.top.white {
   display: block;
   position: absolute;
   width: 100%;
@@ -895,7 +896,7 @@ button {
   position: absolute;
   top: 0;
 }
-.site-blocks-cover.overlay.top.bg:before {
+.site-blocks-cover.overlay.top.white:before {
   position: absolute;
   content: '';
   left: 0;

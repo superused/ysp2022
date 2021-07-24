@@ -175,8 +175,6 @@ $(function() {
     initTopView: function() {
       // TOP画面の場合
       if ($('.site-blocks-cover.overlay.top')[0]) {
-        // ロゴの表示位置
-        $('.site-blocks-cover.overlay.top .container .row').css('margin-top', ($(window).height() * 0.35 ) + 'px');
 
         const portrait = [
           [
@@ -187,6 +185,15 @@ $(function() {
           'moyou_top.png',
           'moyou_bottom.png',
         ];
+        const square = [
+          [
+            'top_pc1.jpg',
+            'top_pc2.jpg',
+            'top_pc3.jpg',
+          ],
+          'moyou_tb_top.png',
+          'moyou_tb_bottom.png',
+        ]
         const landscape = [
           [
             'top_pc1.jpg',
@@ -202,21 +209,35 @@ $(function() {
           $('.site-blocks-cover.overlay.top3'),
         ];
         let topAnime = [];
-        let isPortrait = true;
+        let imgType = 1;
         let interval = null;
 
         const resize = function() {
+        // ロゴの表示位置
+        $('.site-blocks-cover.overlay.top .container .row').css('margin-top', ($(window).height() * 0.35 ) + 'px');
           const w =  $(window);
+          const wd = w.width();
+          const hg = w.height();
+          const rate = wd / hg;
           let changed = false;
-          if (w.width() < w.height()) {
-            if (!topAnime.length || !isPortrait) changed = true;
-            isPortrait = true;
+          if (0.67 <= rate && rate <= 1.33) {
+            if (!topAnime.length || imgType != 2) changed = true;
+            imgType = 2;
+          } else if (wd < hg) {
+            if (!topAnime.length || imgType != 1) changed = true;
+            imgType = 1;
           } else {
-            if (!topAnime.length || isPortrait) changed = true;
-            isPortrait = false;
+            if (!topAnime.length || imgType != 3) changed = true;
+            imgType = 3;
           }
           if (changed) {
-            topAnime = isPortrait ? portrait : landscape;
+            if (imgType == 1) {
+              topAnime = portrait;
+            } else if (imgType == 2) {
+              topAnime = square;
+            } else {
+              topAnime = landscape;
+            }
             let index;
             for (const i in topAnime) {
               let topAnimeImg = topAnime[i];
@@ -230,7 +251,7 @@ $(function() {
             }
 
             if (interval) {
-              interval.clearInterval();
+              clearInterval(interval);
               interval = null;
             }
             // フェード切り替え
@@ -287,14 +308,12 @@ $(function() {
           }, delay);
         };
 
-        // TOP画像の高さを再指定
-        let actualImage = new Image();
-        actualImage.src = $('.top2').css('background-image').replace(/"/g,"").replace(/url\(|\)$/ig, "");
-          actualImage.onload = function() {
-            const topImage = $('.site-blocks-cover.overlay.top');
-            topImage.height(topImage.width() * this.height / this.width);
-            animation();
-          }
+        // // TOP画像の高さを再指定
+        const w = $(window);
+        const topImage = $('.site-blocks-cover.overlay.top');
+        topImage.height(w.height());
+        // topImage.height(topImage.width() * ((w.width() > w.height()) ? 2560 / 3840 : 3840 / 2560));
+        animation();
       } else {
         // TOP以外のページの画像の表示でヘッダーのバーの高さに画像のpaddingをあわせる
         const topTarget = $('.site-mobile-menu').next();

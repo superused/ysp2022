@@ -47,13 +47,13 @@ $image = wp_get_attachment_image_src($image_id, 'full');
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/style.css">
     <style>
 .site-blocks-cover.overlay.top {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/dummy.png');
+    background-image: url('<?= get_template_directory_uri(); ?>/images/logo/bg/dummy.png');
 }
 .site-blocks-cover.overlay.top.top2 {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/moyou_top.png');
+    background-image: url('<?= get_template_directory_uri(); ?>/images/logo/moyou_top.png');
 }
 .site-blocks-cover.overlay.top.top3 {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/moyou_bottom.png');
+    background-image: url('<?= get_template_directory_uri(); ?>/images/logo/moyou_bottom.png');
 }
 @media (min-width: 767.98px) {
   .site-blocks-cover.overlay.top {

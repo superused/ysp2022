@@ -1,18 +1,19 @@
 <?php get_header(); ?>
     <div id="top-image" class="site-blocks-cover overlay top top-main">
       <div class="site-blocks-cover overlay top bg"></div>
+      <div class="site-blocks-cover overlay top white"></div>
       <div class="site-blocks-cover overlay top top2"></div>
       <div class="site-blocks-cover overlay top top3"></div>
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
           <div class="logo_bg">
-            <img src="<?= get_template_directory_uri(); ?>/images/tsunagari2.png" class="logo-message-top" id="logo_1">
+            <img src="<?= get_template_directory_uri(); ?>/images/logo/tsunagari2.png" class="logo-message-top" id="logo_1">
           </div>
           <div class="logo_bg">
             <img src="<?= get_template_directory_uri(); ?>/images/logo2.png" class="logo-center" id="logo_2">
           </div>
           <div class="logo_bg">
-            <img src="<?= get_template_directory_uri(); ?>/images/online.png" class="logo-message-bottom" id="logo_3">
+            <img src="<?= get_template_directory_uri(); ?>/images/logo/online.png" class="logo-message-bottom" id="logo_3">
           </div>
         </div>
       </div>
