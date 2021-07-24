@@ -19,7 +19,7 @@
           <div class="col-12 col-md-3"></div>
         </div>
         <div class="text-center credit mx-auto mb-4" data-aos="fade-up" data-aos-delay="100">
-          <span class="font-weight-bold">©Peace designer Fes</span>
+          <span class="rem0-9">©Peace designer Fes</span>
         </div>
       </div>
     </footer>

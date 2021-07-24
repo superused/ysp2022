@@ -389,14 +389,14 @@ button {
 }
 
 .site-footer {
-  padding: 4em 0;
+  margin: 4em 0;
 }
 @media (min-width: 768px) {
   .site-footer {
-    padding: 7em 0;
+    margin: 7em 0;
   }
 }
-.site-footer .container {
+.site-footer  {
   border-top: 2px solid #00b9f2;
 }
 .site-footer p {
@@ -3556,8 +3556,11 @@ div.news-area .owl-carousel {
 .oswald {
   font-family: 'Oswald', sans-serif;
 }
-.rem0_8 {
+.rem0-8 {
   font-size: 0.8rem;
+}
+.rem0-9 {
+  font-size: 0.9rem;
 }
 .rem1 {
   font-size: 1rem;

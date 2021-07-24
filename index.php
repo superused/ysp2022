@@ -98,10 +98,8 @@
                     <div class="col-12 col-md-6 p-0 mx-0">
                       <div class="ml-md-3 ml-lg-3 ml-xl-3">
                         <div class="text-left mx-auto mb-3">
-                          <h4 class="font-weight-bold pb-2">タイトル</h4>
-                          <div>
-                            リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。リード文入ります。
-                          </div>
+                          <h4 class="font-weight-bold pb-2">準備中</h4>
+                          <div>準備中</div>
                         </div>
                         <div class="text-center mb-3">
                           <a href="<?= LIVE_TIME_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
@@ -149,10 +147,10 @@
                     </div>
                     <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                       <div class="text-left mx-auto">
-                        <h4 class="font-weight-bold pb-2">タイトル</h4>
-                        <h5 class="font-weight-bold p-0 m-0">団体名</h5>
+                        <h4 class="font-weight-bold pb-2">準備中</h4>
+                        <h5 class="font-weight-bold p-0 m-0">準備中</h5>
                         <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
-                        <div>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
+                        <div>準備中</div>
                       </div>
                       <div class="text-center mt-3">
                         <a href="<?= UNION2_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
@@ -240,10 +238,10 @@
     <div class="site-section top-footer" data-aos="fade-up" data-aos-delay="100">
       <div class="container-fluid">
         <div class="row organizer contact-form">
-          <div class="text-center my-4 w-border mx-auto w-100" data-aos="fade-up" data-aos-delay="100">
+          <div class="site-section-heading text-center my-5 w-border mx-auto w-100" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-3">
-              <span class="organizer-title font-weight-bold">CONTACT</span>
-              <div class="contents-border short mt-2 mb-2"></div>
+              <h2 class="font-weight-bold">CONTACT</h2>
+              <div class="contents-border mt-1 mb-2"></div>
               <span class="organizer-text mt-4">Peace Designer Fes に関する<br>お問い合わせはこちら</span>
             </div>
             <a href="<?= CONTACT_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">お問い合わせ</button></a>
