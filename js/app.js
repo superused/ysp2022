@@ -213,11 +213,16 @@ $(function() {
         let interval = null;
 
         const resize = function() {
-        // ロゴの表示位置
-        $('.site-blocks-cover.overlay.top .container .row').css('margin-top', ($(window).height() * 0.35 ) + 'px');
-          const w =  $(window);
-          const wd = w.width();
-          const hg = w.height();
+          const w =  $(window),
+            wd = w.width(),
+            hg = w.height();
+
+          // ロゴの表示位置
+          $('.site-blocks-cover.overlay.top .container .row').css('margin-top', (hg * 0.35 ) + 'px');
+          // TOP画像の高さを再指定
+          const topImage = $('.site-blocks-cover.overlay.top');
+          topImage.height(hg);
+
           const rate = wd / hg;
           let changed = false;
           if (0.67 <= rate && rate <= 1.33) {
@@ -308,10 +313,6 @@ $(function() {
           }, delay);
         };
 
-        // // TOP画像の高さを再指定
-        const w = $(window);
-        const topImage = $('.site-blocks-cover.overlay.top');
-        topImage.height(w.height());
         // topImage.height(topImage.width() * ((w.width() > w.height()) ? 2560 / 3840 : 3840 / 2560));
         animation();
       } else {
