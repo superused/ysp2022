@@ -119,15 +119,15 @@ $image = wp_get_attachment_image_src($image_id, 'full');
                         </a>
                       </li>
                       <li>
-                        <a href="<?= PHOTO_CONTEST_URL;?>">
-                          <img src="<?= get_template_directory_uri(); ?>/images/icon_photo.png">
-                          <div>フォトコンテスト</div>
-                        </a>
-                      </li>
-                      <li>
                         <a href="<?= MOVIE_CONTEST_URL;?>">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_movie.png">
                           <div>ムービーコンテスト</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="<?= PHOTO_CONTEST_URL;?>">
+                          <img src="<?= get_template_directory_uri(); ?>/images/icon_photo.png">
+                          <div>フォトコンテスト</div>
                         </a>
                       </li>
                       <li>

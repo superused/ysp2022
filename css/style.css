@@ -714,7 +714,7 @@ button {
   -webkit-overflow-scrolling: touch;
   position: relative;
   padding: 0.1px;
-  height: calc(100vh - 52px);
+  height: calc(100vh - 58px);
   color: #6f6f6f;
   background-color: #f6f1e2;
   font-size: 1rem;
@@ -724,7 +724,6 @@ button {
 }
 .site-mobile-menu .site-mobile-menu-sns {
   min-width: 300px;
-  padding-bottom: 70px;
   background-color: #f6f1e2;
 }
 .site-mobile-menu .site-nav-wrap {
@@ -2854,9 +2853,9 @@ button.vote:disabled {
   transform: rotate(135deg);
 }
 .contest-prize .image img.prize {
-  padding: 0;
-  width: 49%;
-  max-width: 12rem;
+  padding: 0.25rem;
+  width: 45%;
+  max-width: 8rem;
 }
 .double-circle {
   position: relative;

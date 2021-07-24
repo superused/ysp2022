@@ -39,7 +39,7 @@
           <div class="site-section-heading text-center mb-3 w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
             <h2>CONTENTS LIST</h2>
             <div class="contents-border mt-1 mb-2"></div>
-            <p class="text-center">楽しむコンテンツをクリック！</p>
+            <p class="text-center">気になるコンテンツをクリック！</p>
           </div>
           <div class="site-section-heading contents-list-img text-center mb-5 w-border overflow-hidden m-0 p-0 w-100" data-aos="fade-up" data-aos-delay="100">
             <div class="text-center">
@@ -178,8 +178,8 @@
               <div class="message-under-image">
                 <h2 class="mb-3 largeh2">CONTEST</h2>
                 <span class="live-message-under">コンテスト</span>
-                <p>私たちの町の魅力を再発見！</p>
-                <p>コロナでなかなか地元に戻れないそこのあなた！３つの企画の中から地元の"素敵"を再発見できませんか？</p>
+                <p class="rem1-5 font-weight-bold">私たちの町の魅力を再発見！</p>
+                <p>コロナでなかなか地元に戻れないそこのあなた！３つの企画の中から地元の"素敵"を再発見しませんか？</p>
               </div>
             </div>
           </div>

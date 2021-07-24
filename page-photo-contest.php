@@ -19,7 +19,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
         <div class="row">
           <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
             <div class="mx-auto">
-            <h4 class="font-weight-bold text-center ml-3 mr-3">あなたの投票で優勝が決まる！<br>プレゼントが当たる！<br>あなたが選ぶ○○川柳大賞！</h4>
+            <h4 class="font-weight-bold text-center ml-3 mr-3">あなたの投票で優勝が決まる！<br>『私の推し町』フォトコンテスト！</h4>
             </div>
           </div>
         </div>
@@ -33,28 +33,12 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
             <div class="site-section" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <p class="text-left ml-3 mr-3">「地域の魅力」を感じるひとコマをテーマに何月何日まで募集をしました。応募された作品のなかから選抜されたものを掲載しています。素晴らしい作品をぜひ御覧ください。サムネイルをクリックすると作品の情報をご覧いただけます。（エピソードはクリックして確認）<br>あなたが素敵だと思う作品に投票してみてください。投票期間は○月○日までです。</p>
+                  <p class="text-left ml-3 mr-3">「地域の魅力」を感じるひとコマをテーマに7月4日まで募集しました。応募があった全194作品の中から選ばれた10作品を掲載しています。<br><br>あなたが素敵だと思う写真に、ぜひ投票してみてください！投票結果で順位が決まります！</p>
                 </div>
               </div>
             </div>
 
-            <div class="site-section beige py-3" data-aos="fade-up" data-aos-delay="100">
-              <div class="container">
-                <div class="row">
-                  <div class="site-section-heading text-center w-border mx-auto col-12">
-                    <div class="rem1-3 font-weight-bold mt-3">投票方法</div>
-                    <div class="contents-border short mb-2"></div>
-                    <div class="text-left mx-auto voting_method">１．気に入った作品すべてに投票できます！<br>２．投票期間中は毎日１回投票できます！</div>
-                    <div class="rem1-3 font-weight-bold mt-3">投票期間</div>
-                    <div class="contents-border short mb-2"></div>
-                    <p>2021年8月8日まで</p>
-                    <div class="rem1-3 font-weight-bold mt-3">結果発表</div>
-                    <div class="contents-border short mb-2"></div>
-                    <p>2021年8月9日</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+<?php include 'parts/contest-voting-method.php'; ?>
 
             <div class="site-section">
               <div class="container">
@@ -64,7 +48,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                     <div class="contents-border short mt-1 mb-1"></div>
                   </div>
 <?php foreach ($datas as $key => $data): ?>
-                  <div class="col-12 col-lg-6 col-xl-4 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-12 col-lg-6 p-2" data-type="content-block" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-frame square w-100 p-0 mb-2 mr-2">
                       <div class="team-member m-0">
                         <a href="#" data-toggle="modal" data-target="#modal" ontouchstart=""><img src="<?= $data['photo'];?>" class="photo_image w-100"></a>
@@ -94,7 +78,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                     <div href="#" class="arrow down circle"></div>
                   </div>
                   <div class="text-center col-12" data-aos="fade-up" data-aos-delay="100">
-                    <p class="text-left mt-6">投票結果は8月7日に掲載されます。</p>
+                    <p class="text-left mt-6">投票結果は8月9日に発表します。</p>
                   </div>
                 </div>
               </div>

@@ -11,11 +11,11 @@
                   <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="mx-auto">
                       <h2 class="text-white text-center mx-3">CONCEPT</h2>
-                      <p class="mb-5">Peace Designer Fes 開催の目的・想い</p>
+                      <p class="mb-5">Peace designer Fes 開催によせる想い</p>
                       <div>
-                        <div class="font-weight-bold mb-1">つながりが描く私たちの未来</div>
-                        <p>「自分の住んでいる町を元気にしたい！」<br>「希望にあふれた日本をつくりたい！」<br>ステキな夢を持っている青年が、<br>日本には沢山います。<br>青年たちの"夢"を育み、<br>日本の"未来"をみんなで考えるのが<br>「Peace designer」フェスです。<br>いっしょに平和な未来描きませんか？</p>
-                        <div class="font-weight-bold pb-1">Peace designer って？</div>
+                        <div class="rem1-3 font-weight-bold mb-1">つながりが描く私たちの未来</div>
+                        <p>東京オリンピックは史上初の無観客開催。<br>旅行やイベントにも行けず、毎日マスクしてソーシャルディスタンス。<br><br>コロナ禍では夢をあきらめるしかない…そんな青年の声も耳にします。<br><br> 気がつけば、人と人、地域と若手、日本と世界...<br>私たちはつながりを失いかけていました。<br><br>出会いやつながりは、青年が夢を見つけ、地域を活性化するきっかけでもあります。<br>こんなときだからこそ、出会いやつながりを止めたくない！<br><br>そんな想いで始まったのが、オンラインで参加型のPeace designer Fesです！<br><br>「自分の住んでいる町を元気にしたい！」<br>「希望にあふれた日本をつくりたい！」<br><br>そんな熱い人たちや、町の魅力との出会いをお届けします。<br><br>彼らとのつながりが、あなたの未来を明るくすることを願って。</p>
+                        <div class="rem1-3 font-weight-bold pb-1 pt-3">Peace designer って？</div>
                         <p>「Peace」は、みんなで思い描く幸せの<br>"青写真"。<br><br>みんなが少しずつデザインした<br>「Peace」を持ち寄り、つなぎ合わせることで<br>平和というパズルは完成します。<br><br>「Peace designer」は、<br>身近な人の幸せを想い描いて行動する人々の<br>シンボルマークです。</p>
                       </div>
                       <div class="concept-img">

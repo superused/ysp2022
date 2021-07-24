@@ -21,12 +21,12 @@
                   </div>
                   <div class="col-8 m-0 p-0">
                     <div class="text" data-aos="fade-up" data-aos-delay="100">
-                      ・ギフトカード（1万円分）<br>
-                      ・地域の特産品
+                      ・Amazonギフト券（1万円分）<br>
+                      ・地域の特産ギフトカタログ
                     </div>
                     <div class="image w-100">
                       <img class="prize" src="<?= get_template_directory_uri(); ?>/images/contest/amazon_10000.png" data-aos="fade-up" data-aos-delay="100">
-                      <img class="prize" src="<?= get_template_directory_uri(); ?>/images/contest/amazon_10000.png" data-aos="fade-up" data-aos-delay="100">
+                      <img class="prize" src="<?= get_template_directory_uri(); ?>/images/contest/tokusan.png" data-aos="fade-up" data-aos-delay="100">
                     </div>
                   </div>
                 </div>
@@ -41,12 +41,12 @@
                   </div>
                   <div class="col-8 m-0 p-0">
                     <div class="text" data-aos="fade-up" data-aos-delay="100">
-                      ・ギフトカード（5千円分）<br>
-                      ・地域の特産品
+                      ・Amazonギフト券（5千円分）<br>
+                      ・Peace designer オリジナルフェイスタオル
                     </div>
                     <div class="image w-100">
                       <img class="prize" src="<?= get_template_directory_uri(); ?>/images/contest/amazon_5000.png" data-aos="fade-up" data-aos-delay="100">
-                      <img class="prize" src="<?= get_template_directory_uri(); ?>/images/contest/amazon_5000.png" data-aos="fade-up" data-aos-delay="100">
+                      <img class="prize" src="<?= get_template_directory_uri(); ?>/images/contest/peace_designer_towel.jpg" data-aos="fade-up" data-aos-delay="100">
                     </div>
                   </div>
                 </div>
@@ -61,12 +61,15 @@
                   </div>
                   <div class="col-8 m-0 p-0">
                     <div class="text" data-aos="fade-up" data-aos-delay="100">
-                      ・ギフトカード（500円分）
+                      ・Amazonギフト券（500円分）
                     </div>
                     <div class="image w-100">
                       <img class="prize" src="<?= get_template_directory_uri(); ?>/images/contest/amazon_500.png" data-aos="fade-up" data-aos-delay="100">
                     </div>
                   </div>
+                </div>
+                <div class="row my-3">
+                  <div class="col-12 m-0 p-3" data-aos="fade-up" data-aos-delay="100">※AmazonはAmazon.com, Inc. またはその関連会社の商標です。</div>
                 </div>
               </div>
             </div>

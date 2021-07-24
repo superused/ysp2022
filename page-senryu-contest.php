@@ -19,7 +19,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
         <div class="row">
           <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
             <div class="mx-auto">
-            <h4 class="font-weight-bold text-left text-md-center ml-3 mr-3">あなたの投票で優勝が決まる！<br>プレゼントが当たる！<br>あなたが選ぶ○○川柳大賞！</h4>
+            <h4 class="font-weight-bold text-left text-md-center ml-3 mr-3">あなたの投票で優勝が決まる！<br>あなたが選ぶつながり川柳大賞！</h4>
             </div>
           </div>
         </div>
@@ -33,28 +33,12 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
             <div class="site-section" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <p class="text-left ml-3 mr-3">「コロナ禍で気づいたこと」をテーマに五・七・五の川柳を募集しました！改めて気づいた家族や大切な人との繋がり、実際に経験したことなど、素敵な作品がたくさん寄せられました！<br><br>あなたの気に入った川柳に、ぜひ投票してみてください！</p>
+                  <p class="text-left ml-3 mr-3">「コロナ禍で気づいたこと」をテーマに五・七・五の川柳を募集しました！改めて気づいた家族や大切な人との繋がり、実際に経験したことなど、素敵な作品が800も寄せられました！<br><br>あなたの気に入った川柳に、ぜひ投票してみてください！投票結果で順位が決まります！</p>
                 </div>
               </div>
             </div>
 
-            <div class="site-section beige py-3" data-aos="fade-up" data-aos-delay="100">
-              <div class="container">
-                <div class="row">
-                  <div class="site-section-heading text-center w-border mx-auto col-12">
-                    <div class="rem1-3 font-weight-bold mt-3">投票方法</div>
-                    <div class="contents-border short mb-2"></div>
-                    <div class="text-left mx-auto voting_method">１．気に入った作品すべてに投票できます！<br>２．投票期間中は毎日１回投票できます！</div>
-                    <div class="rem1-3 font-weight-bold mt-3">投票期間</div>
-                    <div class="contents-border short mb-2"></div>
-                    <p>2021年8月8日まで</p>
-                    <div class="rem1-3 font-weight-bold mt-3">結果発表</div>
-                    <div class="contents-border short mb-2"></div>
-                    <p>2021年8月9日</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+<?php include 'parts/contest-voting-method.php'; ?>
 
             <div class="site-section">
               <div class="container">
