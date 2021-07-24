@@ -5,6 +5,7 @@
         <div data-aos="fade-up" data-aos-delay="100">
           <div class="sidebar-title heading-bar color-cyan mb-4"><span class="pr-3">その他プログラム</span></div>
         </div>
+<?php if (false): // 非表示 ?>
         <div data-aos="fade-up" data-aos-delay="100">
           <div class="team-member image col-12">
             <a href="<?= UNION_URL;?>"><img src="<?= UNION_TITLE_IMG; ?>" alt="連合会" class="img-fluid"></a>
@@ -19,6 +20,7 @@
           <div class="sidebar-title">MOVIEコンテスト</div>
         </div>
         <div class="heading-bar color-gray mb-4" data-aos="fade-up" data-aos-delay="100"></div>
+<?php endif; ?>
         <div data-aos="fade-up" data-aos-delay="100">
           <div class="team-member image col-12">
             <a href="<?= PHOTO_CONTEST_URL;?>"><img src="<?= PHOTO_TITLE_IMG; ?>" alt="PHOTOコンテスト" class="img-fluid"></a>
