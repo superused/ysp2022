@@ -835,19 +835,18 @@ button {
 }
 .site-blocks-cover.overlay.top {
   position: relative;
-  visibility: hidden;
 }
 .site-blocks-cover.overlay.top.show {
   opacity: 1;
   visibility: visible;
 }
-.site-blocks-cover.overlay.top.top2 {
-  display: none;
+.site-blocks-cover.overlay.top.bg {
+  display: block;
   position: absolute;
   width: 100%;
-  background-size: cover;
   background-position: 50%;
 }
+.site-blocks-cover.overlay.top.top2,
 .site-blocks-cover.overlay.top.top3 {
   display: none;
   position: absolute;
@@ -896,14 +895,14 @@ button {
   position: absolute;
   top: 0;
 }
-.site-blocks-cover.overlay:before {
+.site-blocks-cover.overlay.top.bg:before {
   position: absolute;
   content: '';
   left: 0;
   bottom: 0;
   right: 0;
   top: 0;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(255, 255, 255, 0.6);
 }
 .site-blocks-cover, .site-blocks-cover .row {
   min-height: 600px;

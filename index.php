@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-    <div class="site-blocks-cover overlay top">
+    <div id="top-image" class="site-blocks-cover overlay top top-main">
+      <div class="site-blocks-cover overlay top bg"></div>
       <div class="site-blocks-cover overlay top top2"></div>
       <div class="site-blocks-cover overlay top top3"></div>
       <div class="container">

@@ -47,7 +47,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/style.css">
     <style>
 .site-blocks-cover.overlay.top {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/peacedesigner_kameoka_sp1.jpg');
+    background-image: url('<?= get_template_directory_uri(); ?>/images/dummy.png');
 }
 .site-blocks-cover.overlay.top.top2 {
     background-image: url('<?= get_template_directory_uri(); ?>/images/moyou_top.png');

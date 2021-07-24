@@ -197,12 +197,14 @@ $(function() {
           'moyou_pc_bottom.png',
         ];
         const topAnimeElem = [
-          $('.site-blocks-cover.overlay.top'),
+          $('.site-blocks-cover.overlay.bg'),
           $('.site-blocks-cover.overlay.top2'),
           $('.site-blocks-cover.overlay.top3'),
         ];
         let topAnime = [];
         let isPortrait = true;
+        let interval = null;
+
         const resize = function() {
           const w =  $(window);
           let changed = false;
@@ -215,16 +217,36 @@ $(function() {
           }
           if (changed) {
             topAnime = isPortrait ? portrait : landscape;
+            let index;
             for (const i in topAnime) {
               let topAnimeImg = topAnime[i];
               if (Array.isArray(topAnimeImg)) {
-                topAnimeImg = topAnimeImg[Math.floor(Math.random() * topAnimeImg.length)];
+                index = Math.floor(Math.random() * topAnimeImg.length);
+                topAnimeImg = topAnimeImg[index];
               }
-              let bi = topAnimeElem[i].css('background-image');
-              let split = bi.split('"');
+              const split = topAnimeElem[i].css('background-image').split('"');
               split[1] = split[1].split('/').slice(0, -1).concat(topAnimeImg).join('/');
               topAnimeElem[i].css('background-image', split.join('"'));
             }
+
+            if (interval) {
+              interval.clearInterval();
+              interval = null;
+            }
+            // フェード切り替え
+            interval = setInterval(function() {
+              index = index == topAnime[0].length - 1 ? 0 : index + 1
+              const nextImg = topAnime[0][index];
+              const target = $('.site-blocks-cover.overlay.bg').last();
+              const split = target.css('background-image').split('"');
+              split[1] = split[1].split('/').slice(0, -1).concat(nextImg).join('/');
+              const clone = target.clone();
+              target.after(clone);
+              clone.css('background-image', split.join('"')).hide();
+              clone.show('fade', {}, 2000, function() {
+                $('.site-blocks-cover.overlay.bg').first().remove();
+              });
+            }, 8000);
           }
         };
         $(window).on('resize', resize);
@@ -252,15 +274,16 @@ $(function() {
             }, speed);
             $('#logo_2').show("fade", {}, speed * 2, setHeight);
 
-            setTimeout(function() {
-              $('.top2').hide('fade', {}, speed);
-              $('#logo_1').hide("blind", {direction: 'right'}, speed);
-              setTimeout(function() {
-                $('.top3').hide('fade', {}, speed);
-                $('#logo_3').hide("blind", {direction: 'right'}, speed);
-              }, speed);
-              $('#logo_2').hide("fade", {}, speed * 2);
-            }, allViewTime + speed * 2);
+            // 消す処理
+            // setTimeout(function() {
+            //   $('.top2').hide('fade', {}, speed);
+            //   $('#logo_1').hide("blind", {direction: 'right'}, speed);
+            //   setTimeout(function() {
+            //     $('.top3').hide('fade', {}, speed);
+            //     $('#logo_3').hide("blind", {direction: 'right'}, speed);
+            //   }, speed);
+            //   $('#logo_2').hide("fade", {}, speed * 2);
+            // }, allViewTime + speed * 2);
           }, delay);
         };
 
