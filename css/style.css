@@ -2662,20 +2662,9 @@ h2.largeh2 {
 .site-section.top-footer {
   padding-bottom: 0;
 }
-
-.site-section.top-footer .row.questionnaire {
-  margin: 0 10px;
-  background-color: #fbfcc4;
-  border-radius: 10px;
-}
-.site-section.top-footer .row.questionnaire p {
-  font-size: 1.8rem;
-  color: #000;
-  margin-bottom: 0;
-}
-.site-section.top-footer .row.questionnaire .term {
-  font-size: 0.7rem;
-  color: #000;
+.questionnaire {
+  margin: 0 auto;
+  text-align: center;
 }
 .site-section.top-footer .row.organizer .organizer-title {
   font-size: 1.2rem;

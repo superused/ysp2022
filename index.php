@@ -226,11 +226,11 @@
 
     <div class="site-section top-footer" data-aos="fade-up" data-aos-delay="100">
       <div class="container">
-        <div class="row questionnaire">
-          <div class="text-center mt-2 mb-2 w-border col-md-6 mx-auto">
-            <div><img src="<?= get_template_directory_uri(); ?>/images/questionnaire.png" style="width:200px"></div>
-            <p class="text-center font-weight-bold">アンケート募集中</p>
-            <div class="term">実施期間：<span class="font-weight-bold">8</span>月<span class="font-weight-bold">7</span>日(土)～<span class="font-weight-bold">8</span>月<span class="font-weight-bold">9</span>日(月)</div>
+        <div class="row justify-content-center">
+          <div class="site-section-heading">
+            <div class="team-member contest-values questionnaire" data-aos="fade-up" data-aos-delay="100">
+              <img src="<?= get_template_directory_uri(); ?>/images/questionnaire.jpg" class="img-fluid">
+            </div>
           </div>
         </div>
       </div>
