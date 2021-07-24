@@ -82,7 +82,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
     <!-- ヘッダー共通処理 start -->
     <div class="site-wrap">
       <div class="site-navbar">
-        <div class="container-fluid px-4 py-0">
+        <div class="container-fluid px-3 py-0">
           <div class="row align-items-center">
             <div class="col-8 col-md-2">
               <div class="logo-header my-2">
@@ -188,7 +188,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
 
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
-        <div class="container-fluid px-4 py-0">
+        <div class="container-fluid px-3 py-0">
           <div class="row align-items-center">
             <div class="col-8 col-md-2">
               <div class="logo-header my-2">
