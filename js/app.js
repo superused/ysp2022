@@ -215,26 +215,35 @@ $(function() {
         const resize = function() {
           const w =  $(window),
             wd = w.width(),
-            hg = w.height();
+            hg = w.height(),
+            rate = hg / wd,
+            topImage = $('.site-blocks-cover.overlay.top');
 
-          // ロゴの表示位置
-          $('.site-blocks-cover.overlay.top .container .row').css('margin-top', (hg * 0.35 ) + 'px');
-          // TOP画像の高さを再指定
-          const topImage = $('.site-blocks-cover.overlay.top');
-          topImage.height(hg);
-
-          const rate = wd / hg;
+          let minRate = 1;
           let changed = false;
+
           if (0.67 <= rate && rate <= 1.33) {
             if (!topAnime.length || imgType != 2) changed = true;
             imgType = 2;
+            // TOP画像の高さを再指定
+            topImage.height(minRate > rate ? (wd * minRate) : hg);
           } else if (wd < hg) {
             if (!topAnime.length || imgType != 1) changed = true;
             imgType = 1;
+            minRate = 3840 / 2560;
+            // TOP画像の高さを再指定
+            topImage.height(minRate > rate ? hg : (wd * minRate));
           } else {
             if (!topAnime.length || imgType != 3) changed = true;
             imgType = 3;
+            minRate = 2560 / 3840;
+            // TOP画像の高さを再指定
+            topImage.height(minRate > rate ? (wd * minRate) : hg);
           }
+
+          // ロゴの表示位置
+          topImage.find('.container .row').css('margin-top', (hg * 0.35) + 'px');
+
           if (changed) {
             if (imgType == 1) {
               topAnime = portrait;
@@ -261,13 +270,13 @@ $(function() {
             }
             // フェード切り替え
             interval = setInterval(function() {
-              index = index == topAnime[0].length - 1 ? 0 : index + 1
-              const nextImg = topAnime[0][index];
-              const target = $('.site-blocks-cover.overlay.bg').last();
-              const split = target.css('background-image').split('"');
-              split[1] = split[1].split('/').slice(0, -1).concat(nextImg).join('/');
-              const clone = target.clone();
+              index = index == topAnime[0].length - 1 ? 0 : index + 1;
+              const nextImg = topAnime[0][index],
+                target = $('.site-blocks-cover.overlay.bg').last(),
+                split = target.css('background-image').split('"'),
+                clone = target.css('opacity', 1).clone();
               target.after(clone);
+              split[1] = split[1].split('/').slice(0, -1).concat(nextImg).join('/');
               clone.css('background-image', split.join('"')).hide();
               clone.show('fade', {}, 2000, function() {
                 $('.site-blocks-cover.overlay.bg').first().remove();
@@ -312,8 +321,6 @@ $(function() {
             // }, allViewTime + speed * 2);
           }, delay);
         };
-
-        // topImage.height(topImage.width() * ((w.width() > w.height()) ? 2560 / 3840 : 3840 / 2560));
         animation();
       } else {
         // TOP以外のページの画像の表示でヘッダーのバーの高さに画像のpaddingをあわせる
