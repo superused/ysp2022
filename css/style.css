@@ -3163,7 +3163,7 @@ div.news-area .owl-carousel {
   position: fixed;
   width: 100%;
   bottom: 0;
-  z-index: 9999;
+  z-index: 1040;
 }
 @media (min-width: 767.98px) {
   .fixed-menu {
@@ -3672,4 +3672,8 @@ div.news-area .owl-carousel {
 }
 .grecaptcha-badge {
   visibility: hidden;
+}
+.modal {
+  min-height: 95%;
+  padding-bottom: 100px;
 }

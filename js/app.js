@@ -329,8 +329,19 @@ $(function() {
         topTarget.css('padding-top', height + 'px').show();
       }
     },
+    contestView: function() {
+      const fixedMenu = $('#fixed-menu');
+      if (!$('#modal')[0] || !$('#fixed-menu-move')[0]) return false;
+      const clone = fixedMenu.clone();
+      fixedMenu.remove();
+      $('#fixed-menu-move').html(clone);
+      return true;
+    },
     // 川柳のモーダル表示
     senryuView: function() {
+      if (!$('.kakejiku_button')[0]) return false;
+      this.contestView();
+
       // 詳細ボタンを押した際に表示項目を切り替える
       $('.kakejiku .detail').click(function() {
         const content = $(this).parents('[data-type=content-block]');
@@ -359,6 +370,7 @@ $(function() {
     // フォトコンテストのモーダル表示
     photoView: function() {
       if (!$('.photo_button')[0]) return false;
+      this.contestView();
 
       // 詳細ボタンを押した際に表示項目を切り替える
       $('[data-type=content-block] [data-toggle=modal]').click(function() {

@@ -96,6 +96,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
       </div>
     </div>
 
+    <div id="fixed-menu-move"></div>
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
       <div class="modal-dialog text-white text-center" role="document">
         <h4 class="photo_title font-weight-bold mb-3"></h4>

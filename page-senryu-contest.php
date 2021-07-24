@@ -90,6 +90,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
       </div>
     </div>
 
+    <div id="fixed-menu-move"></div>
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="kakejiku_outer m-0 mt-4 mb-3 mx-auto">
