@@ -19,7 +19,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
         <div class="row">
           <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
             <div class="mx-auto">
-            <h4 class="font-weight-bold text-left text-md-center ml-3 mr-3">あなたの投票で優勝が決まる！<br>あなたが選ぶつながり川柳大賞！</h4>
+            <h1 class="font-weight-bold text-left text-md-center ml-3 mr-3 small">あなたの投票で優勝が決まる！<br>あなたが選ぶつながり川柳大賞！</h1>
             </div>
           </div>
         </div>
