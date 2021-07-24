@@ -2791,12 +2791,14 @@ div.notice-bar .notice-contents {
 .kakejiku_button {
   width: 135px;
 }
+/* 写真コンテストの説明を３行以上の場合省く処理
 [data-type=content-block] .photo_episode {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+*/
 button.detail {
   background-color: #fff;
   border: 3px solid #00b9f2;

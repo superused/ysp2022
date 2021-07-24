@@ -69,10 +69,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                     </div>
                   </div>
 <?php endforeach; ?>
-                  <div class="text-center col-12 mt-5 mb-5" data-aos="fade-up" data-aos-delay="100">
-                    <div href="#" class="arrow down circle"></div>
-                  </div>
-                  <div class="text-center col-12" data-aos="fade-up" data-aos-delay="100">
+                  <div class="text-center col-12 mt-5" data-aos="fade-up" data-aos-delay="100">
                     <p class="text-left mt-6">投票結果は8月9日に掲載されます。</p>
                   </div>
                 </div>
