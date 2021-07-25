@@ -15,7 +15,7 @@
                   <p class="text-gray-menu font-weight-bold text-break mb-2"><?php the_time('Y.m.d'); ?></p>
                   <div class="heading-bar w-100 mb-3"></div>
                   <div class="w-100">
-                    <h6 class="text-black font-weight-bold text-break mb-3"><?php the_title(); ?></h6>
+                    <h1 class="text-black font-weight-bold text-break mb-3 rem1-3"><?php the_title(); ?></h1>
                   </div>
                   <div class="text-gray-menu text-break w-100"><?php the_content(); ?></div>
                 </div>
