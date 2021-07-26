@@ -212,12 +212,19 @@ $(function() {
         let imgType = 1;
         let interval = null;
 
+        const setHeight = function() {
+          const target = $(this);
+          target.closest('.logo_bg').css('height', target.height());
+        };
+
         const resize = function() {
           const w =  $(window),
             wd = w.width(),
             hg = w.height(),
             rate = hg / wd,
             topImage = $('.site-blocks-cover.overlay.top');
+
+          $('.logo_bg img').each(setHeight);
 
           let minRate = 1;
           let changed = false;
@@ -290,11 +297,6 @@ $(function() {
         const speed = 500; // 1動作の時間(ms) （少ないほうが速い）
         const delay = speed * 5; // アニメーション開始までの待ち時間(ms)
         const allViewTime = speed * 6; // アニメーション全表示の時間(ms)
-
-        const setHeight = function() {
-          const target = $(this);
-          target.closest('.logo_bg').css('height', target.height());
-        };
         const animation = function() {
           for (const i in topAnimeElem) {
             topAnimeElem[i].addClass('show');
