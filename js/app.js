@@ -87,14 +87,14 @@ $(function() {
       });
     },
     siteCarousel: function () {
-      if ($('.owl-carousel').length > 0) {
-        const owl = $('.owl-carousel');
+      const owl = $('.owl-carousel');
+      if (owl.length > 0) {
         let responsive = {
           768: {items:2},
           992: {items:3},
           1200:{items:4},
         };
-        if ($('.sidebar').length > 0) {
+        if (owl.hasClass('short')) {
           responsive[768] = {items:1.5};
           responsive[992] = {items:1.5};
           responsive[1200] = {items:2};

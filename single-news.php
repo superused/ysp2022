@@ -74,6 +74,7 @@ if ($the_query->have_posts()) :
 endif; ?>
               </div>
             </div>
+<?php $newsShort = true; ?>
 <?php include 'parts/news-slider.php'; ?>
           </div>
           <div class="col-12 col-md-4">

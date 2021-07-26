@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 
     <div class=""></div>
-    <div class="site-section pt-0">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="site-margin-top-section col-12 col-md-8 bg-beige">
+    <div class="site-section-heading bg-beige">
 <?php $title = 'NEWS'; ?>
 <?php include 'parts/title-block.php'; ?>
 <?php include 'parts/news-slider.php'; ?>
-            <div class="site-section pt-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="site-margin-top-section col-12 col-md-8">
+            <div class="site-section">
               <div class="container">
                 <div class="row">
 <?php if (have_posts()): ?>
@@ -41,4 +41,5 @@
         </div>
       </div>
     </div>
-<?php get_footer(); ?>
+<?php $footerNoPadding = true; ?>
+<?php get_footer('nomargin'); ?>
