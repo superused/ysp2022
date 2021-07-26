@@ -2821,6 +2821,8 @@ button.vote {
   border: 3px solid #00b9f2;
   font-weight: 600;
   color: #fff;
+  display: flex;
+  justify-content: center;
 }
 button.vote:disabled {
   background-color: #c0c0c0;
