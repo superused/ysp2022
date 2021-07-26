@@ -1,6 +1,6 @@
 <?php $newsDatas = $util->getNews(); ?>
     <div id="news" class="site-section block-13 pb-0">
-      <div class="container-fluid p-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="container p-0" data-aos="fade-up" data-aos-delay="100">
         <div class="news-area m-4">
           <h5 class="news-title">NEWS</h5>
           <div class="owl-carousel">
