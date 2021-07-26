@@ -230,9 +230,11 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="site-section-heading">
-            <div class="contest-values questionnaire" data-aos="fade-up" data-aos-delay="100">
-              <div class="gray-out">
-                <img src="<?= get_template_directory_uri(); ?>/images/questionnaire.jpg" class="img-fluid">
+            <div class="contest-contents border-0">
+              <div class="contest-values questionnaire px-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="gray-out">
+                  <img src="<?= get_template_directory_uri(); ?>/images/questionnaire.jpg" class="img-fluid">
+                </div>
               </div>
             </div>
           </div>
