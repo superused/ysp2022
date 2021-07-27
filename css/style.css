@@ -187,6 +187,12 @@ button {
   border-right: 2px solid #048bb6;
   max-width: 300px;
 }
+.btn.btn-show.type2:active {
+  -webkit-transform: translate(0, 5px);
+  -moz-transform: translate(0, 5px);
+  transform: translate(0, 5px);
+  border-bottom: none;
+}
 .btn.btn-lg {
   padding: 0.6rem 1.6rem;
   border-radius: 0.4rem;
@@ -264,6 +270,9 @@ button {
 @media (min-width: 767.98px) {
   .site-section {
     padding: 7em 0;
+  }
+  .site-section.important {
+    padding: 7em 0 !important;
   }
   .site-section .site-margin-top-section  {
     margin: 7em 0;
@@ -3628,6 +3637,18 @@ div.news-area .owl-carousel {
   }
   .concept-img {
     max-width: 300px;
+  }
+}
+.news-title-header {
+  width: 100%;
+  position: relative;
+  padding: 0 1rem;
+}
+@media (min-width: 767.98px) {
+  .news-title-header {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 .news-thumbnail {

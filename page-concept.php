@@ -24,7 +24,7 @@
                       <div class="concept-img">
                         <img src="<?= get_template_directory_uri(); ?>/images/logo3.png" class="w-100">
                       </div>
-                      <a href="<?= CONTENTS_LIST_URL; ?>" ontouchstart=""><button class="btn btn-show type2 mx-auto" ontouchstart="">コンテンツを見る</button></a>
+                      <a href="<?= CONTENTS_LIST_URL; ?>" ontouchstart=""><button class="btn btn-show type2 mx-auto my-md-3" ontouchstart="">コンテンツを見る</button></a>
                     </div>
                   </div>
                 </div>
@@ -34,4 +34,4 @@
         </div>
       </div>
     </div>
-<?php get_footer(); ?>
+<?php get_footer('nomargin'); ?>

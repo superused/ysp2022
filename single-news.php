@@ -1,22 +1,32 @@
 <?php get_header(); ?>
-<div></div>
-    <div class="site-section pt-0">
+    <div></div>
+    <div class="site-section pt-0 bg-beige">
       <div class="container p-0">
-        <div class="row justify-content-center mt-5 mt-md-0">
-          <div class="site-margin-top-section col-12 col-md-8 bg-beige">
-            <div class="m-3">
-              <div class="news-image col-12 w-100 p-0 pt-3 m-0 mb-3 pt-md-3 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
-                <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>">
-              </div>
+        <div class="row justify-content-center mt-0 mx-0">
+          <div class="site-section col-12 col-md-8 pt-0 important">
+
+
+            <div class="contents-border m-0 mt-md-5 w-100 d-none d-md-block"></div>
+            <p class="text-gray-menu text-right font-weight-bold text-break my-2 d-none d-md-block rem1-1"><?php the_time('Y.m.d'); ?></p>
+
+
+            <div class="news-image col-12 w-100 p-0 pt-0 pt-md-3 m-0 mb-4 pt-md-3 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
+              <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>">
             </div>
-            <div class="site-section p-3 m-0" data-aos="fade-up" data-aos-delay="100">
+            <div class="site-section py-0 mx-3" data-aos="fade-up" data-aos-delay="100">
               <div class="container p-0">
                 <div class="row m-0">
-                  <p class="text-gray-menu font-weight-bold text-break mb-2"><?php the_time('Y.m.d'); ?></p>
-                  <div class="heading-bar w-100 mb-3"></div>
-                  <div class="w-100">
-                    <h1 class="text-black font-weight-bold text-break mb-3 rem1-3"><?php the_title(); ?></h1>
-                  </div>
+                  <p class="text-gray-menu font-weight-bold text-break mb-2 d-md-none"><?php the_time('Y.m.d'); ?></p>
+                  <div class="heading-bar w-100 mb-3 d-md-none"></div>
+                </div>
+              </div>
+            </div>
+            <div class="news-title-header" data-aos="fade-up" data-aos-delay="100">
+              <h1 class="text-black font-weight-bold text-break mb-3 rem1-3"><?php the_title(); ?></h1>
+            </div>
+            <div class="site-section py-0 mx-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="container p-0">
+                <div class="row m-0">
                   <div class="text-gray-menu text-break w-100"><?php the_content(); ?></div>
                 </div>
               </div>
