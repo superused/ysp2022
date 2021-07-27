@@ -3487,10 +3487,15 @@ div.news-area .owl-carousel {
 .contact-form input[type=text],
 .contact-form input[type=email],
 .contact-form textarea {
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
   width: 100%;
   background-color: #ededed;
   border: none;
+}
+.contact-form-content {
+  max-width: 700px;
+  margin: 0 auto;
 }
 .c-pointer {
   cursor: pointer;
