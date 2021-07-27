@@ -38,7 +38,7 @@
         <div class="row">
           <div class="site-section-heading text-center mb-3 w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
             <h2 class="top-subtitle">CONTENTS LIST</h2>
-            <div class="contents-border mt-1 mb-2"></div>
+            <div class="contents-border mt-1 mt-md-3 mb-2"></div>
             <p class="text-center mt-md-4">気になるコンテンツをクリック！</p>
           </div>
           <div class="site-section-heading contents-list-img text-center mb-5 w-border overflow-hidden m-0 p-0 w-100" data-aos="fade-up" data-aos-delay="100">
