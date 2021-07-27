@@ -3647,7 +3647,7 @@ div.news-area .owl-carousel {
 @media (min-width: 767.98px) {
   .news-title-header {
     position: absolute;
-    top: 0;
+    top: 7rem;
     left: 0;
   }
 }

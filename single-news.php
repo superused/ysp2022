@@ -6,11 +6,13 @@
           <div class="site-section col-12 col-md-8 pt-0 important">
 
 
-            <div class="contents-border m-0 mt-md-5 w-100 d-none d-md-block"></div>
-            <p class="text-gray-menu text-right font-weight-bold text-break my-2 d-none d-md-block rem1-1"><?php the_time('Y.m.d'); ?></p>
+            <div class="container d-none d-md-block" data-aos="fade-up" data-aos-delay="100">
+              <div class="contents-border m-0 mt-md-5 w-100"></div>
+              <p class="text-gray-menu text-right font-weight-bold text-break my-2 rem1-1"><?php the_time('Y.m.d'); ?></p>
+            </div>
 
 
-            <div class="news-image col-12 w-100 p-0 pt-0 pt-md-3 m-0 mb-4 pt-md-3 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="news-image col-12 w-100 p-0 pt-0 pt-md-3 px-md-3 m-0 mb-4 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
               <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>">
             </div>
             <div class="site-section py-0 mx-3" data-aos="fade-up" data-aos-delay="100">
