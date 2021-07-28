@@ -86,20 +86,21 @@
           </div>
         </div>
         <div class="row">
-          <div class="site-section-heading nopadding mb-5 w-border col-12 mx-auto t">
-            <div class="message-under-image">
-              <div class="pickup-contents text-center px-0 mx-0 mb-4">
+          <div class="site-section-heading nopadding w-border col-12 mx-auto t">
+            <div class="message-under-image mt-md-4">
+              <div class="text-center px-0 mx-0 mb-4">
                 <div class="coming-soon live"></div>
 <?php for ($i = 0; $i < 3; $i++): ?>
-                <div class="pickup-list p-3" data-aos="fade-up" data-aos-delay="100">
-                  <div class="row w-100 m-0 p-0">
-                    <div class="col-12 col-md-6 p-0 mx-0">
-                      <div class="team-member text-center image mb-4 mb-md-0 w-auto">
+                <div class="project-frame w-100 mb-5" data-aos="fade-up" data-aos-delay="100">
+                  <h6 class="triangle"></h6>
+                  <div class="row">
+                    <div class="p-0 mx-0 mt-0 mb-3 col-12 col-md-6">
+                      <div class="team-member text-center image mx-3 mb-4 mb-md-0 w-auto">
                         <a href="<?= LIVE_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/dummy.png" alt="Image" class="img-fluid"></a>
                       </div>
                     </div>
-                    <div class="col-12 col-md-6 p-0 mx-0">
-                      <div class="ml-md-3 ml-lg-3 ml-xl-3">
+                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                      <div class="ml-lg-3 ml-xl-3">
                         <div class="text-left mx-auto mb-3">
                           <h4 class="font-weight-bold pb-2">準備中</h4>
                           <div>準備中</div>
@@ -136,8 +137,8 @@
               </div>
             </div>
           </div>
-          <div class="site-section-heading nopadding mb-5 w-border col-12 mx-auto t">
-            <div class="message-under-image">
+          <div class="site-section-heading nopadding w-border col-12 mx-auto t">
+            <div class="message-under-image mt-md-4">
               <div class="row mx-0">
                 <div class="coming-soon live"></div>
 <?php for ($i = 0; $i < 3; $i++): ?>
