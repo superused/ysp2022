@@ -107,22 +107,19 @@ $image = wp_get_attachment_image_src($image_id, 'full');
                     <a href="javascript:void(0);"><img src="<?= get_template_directory_uri(); ?>/images/icon_contents.png"><div>コンテンツ</div></a>
                     <ul class="dropdown">
                       <li>
-                          <div class="gray-out"></div>
-                        <a href="<?= LIVE_URL;?>" disabled>
+                        <a href="<?= LIVE_CONTENTS_URL;?>" class="inpage-link">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_live.png">
                           <div>LIVE</div>
                         </a>
                       </li>
                       <li>
-                        <div class="gray-out"></div>
-                        <a href="<?= UNION_URL;?>" disabled>
+                        <a href="<?= PROJECT_URL;?>" class="inpage-link">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_project.png">
                           <div>プロジェクト</div>
                         </a>
                       </li>
                       <li>
-                        <div class="gray-out"></div>
-                        <a href="<?= MOVIE_CONTEST_URL;?>" disabled>
+                        <a href="<?= MOVIE_CONTEST_URL;?>">
                           <img src="<?= get_template_directory_uri(); ?>/images/icon_movie.png">
                           <div>ムービーコンテスト</div>
                         </a>

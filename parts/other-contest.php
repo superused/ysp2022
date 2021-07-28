@@ -5,8 +5,8 @@
                 <div class="balloon bottom text-cyan border-cyan rounded mx-auto px-3 mb-2 mt-4 rem1-5">ムービーコンテストの結果を見る</div>
               </div>
               <div data-aos="fade-up" data-aos-delay="100">
-                <div class="text-center image col-12 mt-3 mb-3">
-                  <a href="<?= MOVIE_CONTEST_URL; ?>" disabled><div class="gray-out"><img src="<?= MOVIE_TITLE_IMG; ?>" alt="MOVIEコンテスト" class="img-fluid"></div></a>
+                <div class="team-member text-center image col-12 mt-3 mb-3">
+                  <a href="<?= MOVIE_CONTEST_URL; ?>"><img src="<?= MOVIE_TITLE_IMG; ?>" alt="MOVIEコンテスト" class="img-fluid"></a>
                 </div>
               </div>
 <?php endif; ?>
