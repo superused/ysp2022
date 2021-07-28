@@ -1,6 +1,6 @@
             <div id="other-contest" class="site-section mx-auto pb-0">
               <h4 class="heading-bar color-cyan font-weight-bold mb-2" data-aos="fade-up" data-aos-delay="100"><span class="pr-3">その他コンテスト</span></h4>
-<?php if (false && (!isset($viewMovie) || $viewMovie)): ?>
+<?php if (!isset($viewMovie) || $viewMovie): ?>
               <div class="row text-center" data-aos="fade-up" data-aos-delay="100">
                 <div class="balloon bottom text-cyan border-cyan rounded mx-auto px-3 mb-2 mt-4 rem1-5">ムービーコンテストの結果を見る</div>
               </div>
