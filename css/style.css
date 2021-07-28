@@ -3909,4 +3909,5 @@ div.news-area .owl-carousel {
 }
 .width-fixmax {
   max-width: 500px;
+  clear: both;
 }
