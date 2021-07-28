@@ -85,6 +85,8 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                 </div>
               </div>
             </div>
+<?php $viewSenryu = false; ?>
+<?php include 'parts/other-contest.php'; ?>
           </div>
           <div class="col-12 col-md-4">
             <?= get_sidebar();?>
