@@ -3911,3 +3911,6 @@ div.news-area .owl-carousel {
   max-width: 500px;
   clear: both;
 }
+#add-ranking {
+  cursor: pointer;
+}

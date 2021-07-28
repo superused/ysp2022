@@ -18,6 +18,7 @@ $(function() {
     this.footerBanner();
     this.projectBuruburu();
     this.moveRecaptcha();
+    this.senryu100Data();
   };
   siteBase.prototype = {
     siteMenuClone: function() {
@@ -535,6 +536,34 @@ $(function() {
         const self = this;
         $(window).resize(self.adjustRecaptcha);
         setTimeout(self.adjustRecaptcha, 700);
+      }
+    },
+    senryu100Data: function() {
+      const data = $('.senryu-100-data');
+      const jsonElem = $('.json-data');
+      if (data[0] && jsonElem[0]) {
+        let ranking = 0;
+        let count = 0;
+        const parentElem = data.parent();
+        const datas = JSON.parse(jsonElem.html());
+        const fn = function() {
+          for (const i in datas) {
+            if (count >= 10) break;
+            if (ranking != 0 && i != ranking + 1) continue;
+            const clone = data.first().clone().removeClass('d-none');
+            clone.find('.ranking').html(i);
+            clone.find('.senryu').html(datas[i][0]);
+            clone.find('.senryu-name').html(datas[i][1] + ' (' + datas[i][2] + ')');
+            console.log(i, clone);
+            parentElem.append(clone);
+            ranking = parseInt(i);
+            count++;
+          }
+          count = 0;
+          if (ranking >= 100) $('#add-ranking').remove();
+        };
+        $(document).on('click', '#add-ranking', fn);
+        fn();
       }
     },
   };
