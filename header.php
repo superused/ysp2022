@@ -142,7 +142,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
                     </ul>
                   </li>
                   <li>
-                    <a href="<?= QUESTIONNAIRE_URL;?>">
+                    <a href="<?= QUESTIONNAIRE_URL;?>" target="_blank">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_present.png">
                       <div>アンケート ＆ プレゼント</div>
                     </a>
@@ -160,7 +160,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
                     </a>
                   </li>
                   <li>
-                    <a href="<?= GOODS_SHOP_URL; ?>">
+                    <a href="<?= GOODS_SHOP_URL; ?>" target="_blank">
                       <img src="<?= get_template_directory_uri(); ?>/images/icon_goods.png">
                       <div>グッズショップ（外部サイト）</div>
                     </a>
@@ -174,9 +174,9 @@ $image = wp_get_attachment_image_src($image_id, 'full');
                   <li class="d-md-none">
                     <div class="site-mobile-menu-sns text-center font-weight-bold container-fluid">
                       <div class="row justify-content-center align-items-center text-nowrap flex-nowrap py-2">
-                          <span class="m-3"><a href="<?= SNS_INSTAGRAM_URL; ?>"><img src="<?= get_template_directory_uri(); ?>/images/icon_instagram.png" alt="Image"></a></span>
-                          <span class="m-3"><a href="<?= SNS_LINE_URL; ?>"><img src="<?= get_template_directory_uri(); ?>/images/icon_line.png" alt="Image"></a></span>
-                          <span class="m-3"><a href="<?= SNS_YOUTUBE_URL; ?>"><img src="<?= get_template_directory_uri(); ?>/images/icon_youtube.png" alt="Image"></a></span>
+                          <span class="m-3"><a href="<?= SNS_INSTAGRAM_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icon_instagram.png" alt="Image"></a></span>
+                          <span class="m-3"><a href="<?= SNS_LINE_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icon_line.png" alt="Image"></a></span>
+                          <span class="m-3"><a href="<?= SNS_YOUTUBE_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icon_youtube.png" alt="Image"></a></span>
                         </div>
                       </div>
                     </div>

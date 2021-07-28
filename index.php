@@ -234,9 +234,9 @@
         <div class="row justify-content-center">
           <div class="site-section-heading">
             <div class="contest-contents border-0 my-0">
-              <div class="contest-values questionnaire px-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="team-member contest-values questionnaire" data-aos="fade-up" data-aos-delay="100">
                 <div class="gray-out">
-                  <img src="<?= get_template_directory_uri(); ?>/images/questionnaire.jpg" class="img-fluid">
+                  <a href="<?= QUESTIONNAIRE_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/questionnaire.jpg" class="img-fluid"></a>
                 </div>
               </div>
             </div>

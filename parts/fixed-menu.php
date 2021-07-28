@@ -25,7 +25,7 @@
         </div>
         <div class="fixed-button-present">
           <div class="fixed-button-content">
-            <a href="<?= QUESTIONNAIRE_URL; ?>" class="ml-1 mr-2" ontouchstart="">
+            <a href="<?= QUESTIONNAIRE_URL; ?>" class="ml-1 mr-2" ontouchstart="" target="_blank">
               <img src="<?= get_template_directory_uri(); ?>/images/fixed_present.png" alt="Image" class="img-fluid">
             </a>
           </div>

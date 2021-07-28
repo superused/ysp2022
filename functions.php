@@ -5,6 +5,11 @@ require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php';
 define('GOODS_SHOP_URL', 'https://peace-designer.stores.jp/'); // グッズショップ外部サイト
 define('QUESTIONNAIRE_URL', 'https://forms.gle/Gn4N6tGe1cv3LFBq8'); // アンケート＆プレゼントURL
 
+// SNS
+define('SNS_INSTAGRAM_URL', 'https://instagram.com/peace_designer_fes');
+define('SNS_LINE_URL', 'https://lin.ee/sAjXedp');
+define('SNS_YOUTUBE_URL', 'https://www.youtube.com/channel/UC9_j943rPgN0a5R55id3V9A');
+
 // URL群
 define('HOME_URL', esc_url(home_url('/')));
 define('NEWS_URL', esc_url(home_url('/news/')));
@@ -34,11 +39,6 @@ define('SENRYU_URL', esc_url(home_url('/#senryu')));
 define('PHOTO_URL', esc_url(home_url('/#photo')));
 define('MOVIE_URL', esc_url(home_url('/#movie')));
 define('FAVICON_URL', esc_url(home_url('favicon.ico')));
-
-// SNS
-define('SNS_INSTAGRAM_URL', 'https://instagram.com/peace_designer_fes');
-define('SNS_LINE_URL', 'https://lin.ee/sAjXedp');
-define('SNS_YOUTUBE_URL', 'https://www.youtube.com/channel/UC9_j943rPgN0a5R55id3V9A');
 
 // 連合会情報
 define('UNION_URL', 'https://www.yahoo.co.jp');
