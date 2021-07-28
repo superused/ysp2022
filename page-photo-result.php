@@ -6,14 +6,36 @@
 $senryu = $util->getContestDatas('senryu');
 $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
 ?>
-<?php include 'parts/photo-result-head.php'; ?>
+    <div class="site-section top-image pb-0" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
+        <div class="row">
+          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid w-100 h-100">
+        </div>
+      </div>
+    </div>
 
     <div class="site-section pt-0">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-8">
-<?php include 'parts/photo-result-content-title.php'; ?>
-
+            <div class="site-section pb-0">
+              <div class="container">
+                <div class="row">
+                  <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mx-auto">
+                      <h4 class="font-weight-bold text-cyan text-center ml-3 mr-3">フォトコンテスト！<br>総合グランプリ発表！</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="site-section py-5" data-aos="fade-up" data-aos-delay="100">
+              <div class="container">
+                <div class="row">
+                  <p class="text-left ml-3 mr-3">「地域の魅力」を感じるひとコマをテーマに何月何日まで募集をしました。応募された作品のなかから選抜されたものを掲載しています。素晴らしい作品をぜひ御覧ください。サムネイルをクリックすると作品の情報をご覧いただけます。（エピソードはクリックして確認）<br>それでは、結果発表です！</p>
+                </div>
+              </div>
+            </div>
             <div class="result-winner-image w-75 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
               <img src="<?= get_template_directory_uri(); ?>/images/result_winner.png" alt="Image" class="img-fluid">
             </div>

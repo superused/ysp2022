@@ -9,10 +9,11 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
     <div class="site-section top-image pb-0" data-aos="fade-up" data-aos-delay="100">
       <div class="container">
         <div class="row">
-          <img src="<?= SENRYU_RESULT_IMG; ?>" alt="Image" class="img-fluid w-100 h-100">
+          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid w-100 h-100">
         </div>
       </div>
     </div>
+
     <div class="site-section pt-0">
       <div class="container">
         <div class="row">
@@ -22,7 +23,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                 <div class="row">
                   <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="mx-auto">
-                      <h4 class="font-weight-bold text-cyan text-center ml-3 mr-3">ご応募いただいた皆さま<br>ありがとうございました！</h4>
+                      <h4 class="font-weight-bold text-cyan text-center ml-3 mr-3">フォトコンテスト！<br>総合グランプリ発表！</h4>
                     </div>
                   </div>
                 </div>
@@ -31,7 +32,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
             <div class="site-section py-5" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <p class="text-left ml-3 mr-3">「コロナ禍で気づいたこと」をテーマに五・七・五の川柳を募集しました！改めて気づいた家族や大切な人との繋がり、実際に経験したことなど、素敵な作品がたくさん寄せられました！<br>それでは、結果発表です！</p>
+                  <p class="text-left ml-3 mr-3">「地域の魅力」を感じるひとコマをテーマに何月何日まで募集をしました。応募された作品のなかから選抜されたものを掲載しています。素晴らしい作品をぜひ御覧ください。サムネイルをクリックすると作品の情報をご覧いただけます。（エピソードはクリックして確認）<br>それでは11位～100位、一気に見ていきましょう！</p>
                 </div>
               </div>
             </div>
