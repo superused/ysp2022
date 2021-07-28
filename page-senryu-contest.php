@@ -14,25 +14,26 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
       </div>
     </div>
 
-    <div class="site-section pb-0">
-      <div class="container">
-        <div class="row">
-          <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
-            <div class="mx-auto">
-            <h1 class="font-weight-bold text-left text-md-center ml-3 mr-3 small">あなたの投票で優勝が決まる！<br>あなたが選ぶつながり川柳大賞！</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="site-section pt-0">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-8">
-            <div class="site-section" data-aos="fade-up" data-aos-delay="100">
+            <div class="site-section pb-0">
               <div class="container">
                 <div class="row">
+                  <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mx-auto">
+                      <h1 class="font-weight-bold text-left text-md-center small">あなたの投票で優勝が決まる！<br>あなたが選ぶつながり川柳大賞！</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="site-section py-5" data-aos="fade-up" data-aos-delay="100">
+              <div class="container">
+                <div class="row">
+                  <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
+                  </div>
                   <p class="text-left ml-3 mr-3">「コロナ禍で気づいたこと」をテーマに五・七・五の川柳を募集しました！改めて気づいた家族や大切な人との繋がり、実際に経験したことなど、素敵な作品が800も寄せられました！<br><br>あなたの気に入った川柳に、ぜひ投票してみてください！投票結果で順位が決まります！</p>
                 </div>
               </div>
