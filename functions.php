@@ -104,6 +104,18 @@ class Util {
 
     return $results;
   }
+  /**
+   * getContestDatasのラッパー
+   * 投票数多い順でソートする
+   */
+  public function getContestDatasSort($type) {
+    $datas = $this->getContestDatas($type);
+    array_multisort(array_map(function($data) {
+      return $data['polla_votes'];
+    }, $datas), SORT_DESC, $datas);
+
+    return $datas;
+  }
   public function getContestId($type) {
     if (isset($this->contestId[$type])) {
       return $this->contestId[$type];

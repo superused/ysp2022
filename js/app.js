@@ -377,18 +377,16 @@ $(function() {
       this.contestView();
 
       // 詳細ボタンを押した際に表示項目を切り替える
-      $('[data-type=content-block] [data-toggle=modal]').click(function() {
-        const content = $(this).parents('[data-type=content-block]');
-        const voteButton = content.find('button.vote');
-        const modal = $('#modal');
-        const selectors = [
-          '.photo_title',
-          '.photo_name',
-          '.photo_image',
-          '.photo_region',
-          '.photo_comment',
-          '.photo_episode',
-        ];
+      $(document).on('click', '[data-type=content-block] [data-toggle=modal]', function() {
+        const content = $(this).parents('[data-type=content-block]'),
+          voteButton = content.find('button.vote'),
+          modal = $('#modal'),
+          selectors = [
+            '.photo_title',
+            '.photo_name',
+            '.photo_image',
+            '.photo_episode',
+          ];
         for (const i in selectors) {
           const selector = selectors[i];
           if (selector != '.photo_image') {
@@ -556,7 +554,6 @@ $(function() {
             clone.find('.ranking').html(i);
             clone.find('.senryu').html(datas[i][0]);
             clone.find('.senryu-name').html(datas[i][1] + ' (' + datas[i][2] + ')');
-            console.log(i, clone);
             parentElem.append(clone);
             ranking = parseInt(i);
             count++;
@@ -574,7 +571,7 @@ $(function() {
       if (data[0] && jsonElem[0]) {
         let ranking = 0;
         let count = 0;
-        const maxCount = 100;
+        const maxCount = 70;
         const parentElem = data.parent();
         const datas = JSON.parse(jsonElem.html());
         const fn = function() {
@@ -583,11 +580,10 @@ $(function() {
             if (ranking != 0 && i != ranking + 1) continue;
             const clone = data.first().clone().removeClass('d-none');
             clone.find('.ranking').html(i);
-            clone.find('.photo_image').html(datas[i][0]);
+            clone.find('.photo_image').attr('src', datas[i][0]);
             clone.find('.photo_title').html(datas[i][1]);
             clone.find('.photo_name').html(datas[i][2]);
             clone.find('.photo_episode').html(datas[i][3]);
-            console.log(i, clone);
             parentElem.append(clone);
             ranking = parseInt(i);
             count++;

@@ -1,10 +1,7 @@
 <?php get_header(); ?>
 <?php
-// $datas = [['senryu' => '', 'episode' => '', 'name' => '', 'age' => '', 'gender' => '']];
-// アンケートの終了フラグを確認
-// var_dump($util->isContestOpen('senryu'));
-$senryu = $util->getContestDatas('senryu');
-$datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
+$photo = $util->getContestDatasSort('photo');
+$datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
 ?>
     <div class="site-section top-image pb-0" data-aos="fade-up" data-aos-delay="100">
       <div class="container">
@@ -36,59 +33,64 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                 </div>
               </div>
             </div>
-            <div class="site-section bg-gold p-0 mb-4 project-frame" data-aos="fade-up" data-aos-delay="100">
+<?php $count = 0; ?>
+<?php foreach ($datas as $key => $data): ?>
+<?php     $count++; ?>
+<?php     if ($count == 1): ?>
+            <div class="photo_button site-section bg-gold p-0 mb-4 project-frame" data-aos="fade-up" data-aos-delay="100" data-type="content-block">
               <div class="container">
                 <div class="row">
                   <div class="trophy-box row text-center mx-auto mt-5 mb-2 align-items-center">
                     <img src="<?= get_template_directory_uri(); ?>/images/trophy_g.png" class="mr-3">
                     <div class="text">
                       <div class="font-weight-bold rem1-5">最優秀賞</div>
-                      <div class="font-weight-bold">得票数<span class="text-cyan rem1-3 ml-1">123</span>票</div>
+                      <div class="font-weight-bold">得票数<span class="text-cyan rem1-3 ml-1"><?= $photo[$key]['polla_votes']; ?></span>票</div>
                     </div>
                   </div>
                   <div class="col-12 text-center mx-auto">
-                    <div class="font-weight-bold px-0 rem1-2">「タイトル」</div>
+                    <div class="photo_title font-weight-bold px-0 rem1-2"><?= $data['title']; ?></div>
                   </div>
                   <div class="px-3 pb-4 pt-2 mx-auto">
                     <div class="width-fixmax">
                       <div class="team-member mb-3">
-                        <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="img-fluid">
+                        <a href="#" data-toggle="modal" data-target="#modal" ontouchstart=""><img src="<?= $data['photo']; ?>" class="photo_image img-fluid"></a>
                       </div>
-                      <div class="episode">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
-                      <div class="name mt-2">山田 花子 (30代 女性)</div>
+                      <div class="photo_episode"><?= nl2br(esc_html($data['episode'])); ?></div>
+                      <div class="photo_name mt-2"><?= $data['name']; ?> さん</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="site-section bg-silver p-0 mb-4 project-frame" data-aos="fade-up" data-aos-delay="100">
+<?php     elseif ($count == 2): ?>
+            <div class="photo_button site-section bg-silver p-0 mb-4 project-frame" data-aos="fade-up" data-aos-delay="100" data-type="content-block">
               <div class="container">
                 <div class="row">
                   <div class="trophy-box row text-center mx-auto mt-5 mb-2 align-items-center">
                     <img src="<?= get_template_directory_uri(); ?>/images/trophy_s.png" class="mr-3">
                     <div class="text">
                       <div class="font-weight-bold rem1-5">優秀賞</div>
-                      <div class="font-weight-bold">得票数<span class="text-cyan rem1-3 ml-1">123</span>票</div>
+                      <div class="font-weight-bold">得票数<span class="text-cyan rem1-3 ml-1"><?= $photo[$key]['polla_votes']; ?></span>票</div>
                     </div>
                   </div>
                   <div class="col-12 text-center mx-auto">
-                    <div class="font-weight-bold px-0 rem1-2">「タイトル」</div>
+                  <div class="photo_title font-weight-bold px-0 rem1-2"><?= $data['title']; ?></div>
                   </div>
                   <div class="px-3 pb-4 pt-2 mx-auto">
                     <div class="width-fixmax">
                       <div class="team-member mb-3">
-                        <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="img-fluid">
+                        <a href="#" data-toggle="modal" data-target="#modal" ontouchstart=""><img src="<?= $data['photo']; ?>" class="photo_image img-fluid"></a>
                       </div>
-                      <div class="episode">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
-                      <div class="name mt-2">山田 花子 (30代 女性)</div>
+                      <div class="photo_episode"><?= nl2br(esc_html($data['episode'])); ?></div>
+                      <div class="photo_name mt-2"><?= $data['name']; ?> さん</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="site-section bg-bronze p-0 mb-4 project-frame" data-aos="fade-up" data-aos-delay="100">
+<?php     else: ?>
+<?php         if ($count == 3): ?>
+            <div class="photo_button site-section bg-bronze p-0 mb-4 project-frame" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
                   <div class="col-12 justify-content-center trophy-box row text-center mx-auto mt-5 mb-4 align-items-center">
@@ -99,24 +101,27 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                   </div>
                 </div>
                 <div class="row">
-<?php for ($i = 0; $i < 8; $i++): ?>
-                  <div class="col-12 col-lg-6 p-0">
+<?php         endif; ?>
+                  <div class="col-12 col-lg-6 p-0" data-type="content-block">
                     <div class="m-3 mt-4 mt-lg-3">
-                      <div class="float-left font-weight-bold px-0 rem1-2">「タイトル」</div>
-                      <div class="float-right font-weight-bold small">得票数<span class="text-cyan rem1-3 ml-1">123</span>票</div>
+                      <div class="photo_title float-left font-weight-bold px-0 rem1-2"><?= $data['title']; ?></div>
+                      <div class="float-right font-weight-bold small">得票数<span class="text-cyan rem1-3 ml-1"><?= $photo[$key]['polla_votes']; ?></span>票</div>
                       <div class="width-fixmax">
                         <div class="team-member mb-3">
-                          <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" class="img-fluid">
+                          <a href="#" data-toggle="modal" data-target="#modal" ontouchstart=""><img src="<?= $data['photo']; ?>" class="img-fluid photo_image"></a>
                         </div>
-                        <div class="episode">テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</div>
-                        <div class="name mt-2">山田 花子 (30代 女性)</div>
+                        <div class="photo_episode"><?= nl2br(esc_html($data['episode'])); ?></div>
+                        <div class="photo_name mt-2"><?= $data['name']; ?> さん</div>
                       </div>
                     </div>
                   </div>
-<?php endfor; ?>
+<?php         if ($count == count($datas)): ?>
                 </div>
               </div>
             </div>
+<?php         endif; ?>
+<?php     endif; ?>
+<?php endforeach; ?>
 <?php $viewPhoto = false; ?>
 <?php include 'parts/other-contest.php'; ?>
           </div>
@@ -127,23 +132,15 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
       </div>
     </div>
 
+    <div id="fixed-menu-move"></div>
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="kakejiku_outer m-0 mt-4 mb-3 mx-auto">
-          <div class="kakejiku_inner">
-          </div>
+      <div class="modal-dialog text-white text-center" role="document">
+        <h4 class="photo_title font-weight-bold mb-3"></h4>
+        <div class="m-0 mb-4">
+          <img src="" class="photo_image w-100">
         </div>
-        <div class="kakejiku_episode col-10 mx-auto mt-4 mb-3 text-white font-weight-bold">
-        </div>
-        <div class="kakejiku_name col-10 mx-auto mt-3 mb-2 text-white font-weight-bold">
-        </div>
-        <input type="hidden" id="index" value="">
-        <div class="mx-auto text-center modal-content bg-transparent border-0">
-          <button class="vote mx-auto pl-4 pr-4 c-pointer" ontouchstart="">投票</button>
-        </div>
+        <div class="text-left mb-1 w-100"><span class="mr-3">ペンネーム</span><span class="photo_name"></span></div>
+        <div class="photo_episode text-left mb-3 w-100"></div>
       </div>
-    </div>
-    <div id="tohyo" class="d-none">
-      <?php the_content(); ?>
     </div>
 <?php get_footer(); ?>

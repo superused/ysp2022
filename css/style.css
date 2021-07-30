@@ -3931,5 +3931,26 @@ div.news-area .owl-carousel {
   height: 100%;
   object-fit: cover;
 }
-
-
+.senryu-result h3 {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.senryu-result .number-of-votes {
+  position: absolute;
+  right: 1rem;
+  z-index: 1;
+}
+@media (min-width: 767.98px) {
+  .senryu-result h3 {
+    width: auto;
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .senryu-result h3 {
+    width: auto;
+    font-size: 1.75rem;
+  }
+}
