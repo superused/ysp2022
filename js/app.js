@@ -19,6 +19,7 @@ $(function() {
     this.projectBuruburu();
     this.moveRecaptcha();
     this.senryu100Data();
+    this.photo100Data();
   };
   siteBase.prototype = {
     siteMenuClone: function() {
@@ -544,11 +545,12 @@ $(function() {
       if (data[0] && jsonElem[0]) {
         let ranking = 0;
         let count = 0;
+        const maxCount = 10;
         const parentElem = data.parent();
         const datas = JSON.parse(jsonElem.html());
         const fn = function() {
           for (const i in datas) {
-            if (count >= 10) break;
+            if (count >= maxCount) break;
             if (ranking != 0 && i != ranking + 1) continue;
             const clone = data.first().clone().removeClass('d-none');
             clone.find('.ranking').html(i);
@@ -563,6 +565,35 @@ $(function() {
           if (ranking >= 100) $('#add-ranking').remove();
         };
         $(document).on('click', '#add-ranking', fn);
+        fn();
+      }
+    },
+    photo100Data: function() {
+      const data = $('.photo-100-data');
+      const jsonElem = $('.json-data');
+      if (data[0] && jsonElem[0]) {
+        let ranking = 0;
+        let count = 0;
+        const maxCount = 100;
+        const parentElem = data.parent();
+        const datas = JSON.parse(jsonElem.html());
+        const fn = function() {
+          for (const i in datas) {
+            if (count >= maxCount) break;
+            if (ranking != 0 && i != ranking + 1) continue;
+            const clone = data.first().clone().removeClass('d-none');
+            clone.find('.ranking').html(i);
+            clone.find('.photo_image').html(datas[i][0]);
+            clone.find('.photo_title').html(datas[i][1]);
+            clone.find('.photo_name').html(datas[i][2]);
+            clone.find('.photo_episode').html(datas[i][3]);
+            console.log(i, clone);
+            parentElem.append(clone);
+            ranking = parseInt(i);
+            count++;
+          }
+          count = 0;
+        };
         fn();
       }
     },
