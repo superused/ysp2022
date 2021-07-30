@@ -44,7 +44,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/aos.css">
-    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/style.css">
+    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/style.css?20210730">
     <style>
 .site-blocks-cover.overlay.top {
     background-image: url('<?= get_template_directory_uri(); ?>/images/logo/bg/dummy.png');

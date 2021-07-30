@@ -32,7 +32,7 @@
     <script src="<?= get_template_directory_uri(); ?>/js/jquery.countdown.min.js"></script>
     <script src="<?= get_template_directory_uri(); ?>/js/jquery.magnific-popup.min.js"></script>
     <script src="<?= get_template_directory_uri(); ?>/js/aos.js"></script>
-    <script src="<?= get_template_directory_uri(); ?>/js/app.js"></script>
+    <script src="<?= get_template_directory_uri(); ?>/js/app.js?20210730"></script>
     <?php wp_footer();?>
   </body>
 </html>
