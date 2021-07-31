@@ -2,7 +2,7 @@
 require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php';
 
 // コンテスト締切
-define('CONTEST_END_DATE', '2021-08-09');
+define('CONTEST_END_DATE', '2021-08-08 15:00:00');
 
 // 外部サイトURL
 define('GOODS_SHOP_URL', 'https://peace-designer.stores.jp/'); // グッズショップ外部サイト
