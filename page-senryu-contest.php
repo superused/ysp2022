@@ -61,7 +61,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                     <div class="row px-3">
                       <h3><?= str_replace('|', '<br>', $data['senryu']); ?></h3>
                       <h6 class="number-of-votes w-auto mt-2 font-family-none"><span class="font-weight-bold text-cyan bg-yellow p-1"><span class="font-weight-bold small">得票数 </span><span><?= $senryu[$key]['polla_votes']; ?></span><span class="font-weight-bold small">票</span></span></h6>
-                      <div class="w-50 px-0 py-3 pt-md-0 mx-auto ml-md-auto mr-md-0">
+                      <div class="w-50 p-0 mx-auto ml-md-auto mr-md-0">
                         <img src="<?= !empty($data['image']) ? $data['image'] : NO_IMAGE_URL; ?>" class="img-fluid">
                       </div>
                       <div class="kakejiku-episode w-100"><?= $data['episode']; ?></div>
@@ -85,7 +85,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                     <div class="row px-3" data-aos="fade-up" data-aos-delay="100">
                       <h3><?= str_replace('|', '<br>',$data['senryu']); ?></h3>
                       <h6 class="number-of-votes w-auto mt-2 font-family-none"><span class="font-weight-bold text-cyan bg-yellow p-1"><span class="font-weight-bold small">得票数 </span><span><?= $senryu[$key]['polla_votes']; ?></span><span class="font-weight-bold small">票</span></span></h6>
-                      <div class="w-50 px-0 py-3 pt-md-0 mx-auto ml-md-auto mr-md-0">
+                      <div class="w-50 p-0 mx-auto ml-md-auto mr-md-0">
                         <img src="<?= !empty($data['image']) ? $data['image'] : NO_IMAGE_URL; ?>" class="img-fluid">
                       </div>
                       <div class="kakejiku-episode w-100"><?= $data['episode']; ?></div>
