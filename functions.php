@@ -1,6 +1,9 @@
 <?php
 require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php';
 
+// コンテスト締切
+define('CONTEST_END_DATE', '2021-08-09');
+
 // 外部サイトURL
 define('GOODS_SHOP_URL', 'https://peace-designer.stores.jp/'); // グッズショップ外部サイト
 define('QUESTIONNAIRE_URL', 'https://forms.gle/Gn4N6tGe1cv3LFBq8'); // アンケート＆プレゼントURL
@@ -19,9 +22,10 @@ define('UNION_URL', esc_url(home_url('/union/')));
 define('UNION2_URL', esc_url(home_url('/union2/')));
 define('UNION3_URL', esc_url(home_url('/union3/')));
 define('SENRYU_CONTEST_URL', esc_url(home_url('/senryu-contest/')));
-define('MOVIE_CONTEST_URL', esc_url(home_url('/movie-result/')));
-define('PHOTO_CONTEST_URL', esc_url(home_url('/photo-contest/')));
 define('SENRYU_RESULT_LIST_URL', esc_url(home_url('/senryu-result-list/')));
+define('MOVIE_CONTEST_URL', esc_url(home_url('/movie-contest/')));
+define('PHOTO_CONTEST_URL', esc_url(home_url('/photo-contest/')));
+define('PHOTO_RESULT_LIST_URL', esc_url(home_url('/photo-result-list/')));
 define('CONTACT_URL', esc_url(home_url('/contact/')));
 define('CONCEPT_URL', esc_url(home_url('/concept/')));
 define('LIVE_CONTENTS_URL', esc_url(home_url('/#live')));
@@ -169,6 +173,18 @@ class Util {
       'post_type' => 'news',
     ]);
     return $posts;
+  }
+
+  /**
+   * 検索して最後にヒットした文字列を置換する
+   */
+  public function replaceLastMatch($str, $search, $replace) {
+    $pattern = sprintf("~%s(?!.*%1$s)~", $search);
+    return preg_replace($pattern, $replace, $str, 1);
+  }
+
+  public function checkAfterDate($date) {
+    return date('YmdHis') >= date('YmdHis', strtotime($date));
   }
 }
 $util = new Util($wpdb, $post);

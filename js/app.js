@@ -392,7 +392,12 @@ $(function() {
           if (selector != '.photo_image') {
             modal.find(selector).html(content.find(selector).html());
           } else {
-            modal.find(selector).attr('src', content.find(selector).attr('src'));
+            const src = content.find(selector).attr('src');
+            if (src) {
+              modal.find(selector).attr('src', src);
+            } else {
+              modal.find(selector).attr('src', content.find(selector).html());
+            }
           }
         }
         const modalVoteButton = modal.find('button.vote');
@@ -580,7 +585,10 @@ $(function() {
             if (ranking != 0 && i != ranking + 1) continue;
             const clone = data.first().clone().removeClass('d-none');
             clone.find('.ranking').html(i);
-            clone.find('.photo_image').attr('src', datas[i][0]);
+            clone.find('.photo_image').html(datas[i][0]);
+            let arr = datas[i][0].split('.');
+            let ext = '-150x150.' + arr.pop();
+            clone.find('.photo_thumbnail').attr('src', arr.join('.') + ext);
             clone.find('.photo_title').html(datas[i][1]);
             clone.find('.photo_name').html(datas[i][2]);
             clone.find('.photo_episode').html(datas[i][3]);
