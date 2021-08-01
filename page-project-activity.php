@@ -59,19 +59,19 @@
               <div class="container p-0">
                   <div class="mt-2">URL</div>
                   <div class="contents-border text-left short m-0 mb-2"></div>
-                  <p><a href="<?= UNION_URL; ?>"><?= UNION_URL; ?></a></p>
+                  <p><a href="<?= PROJECT_URL; ?>"><?= PROJECT_URL; ?></a></p>
 
                   <div class="mt-2">活動頻度</div>
                   <div class="contents-border text-left short m-0 mb-2"></div>
-                  <p><?= UNION_ACTIVITY_FREQUENCY; ?></p>
+                  <p><?= PROJECT_ACTIVITY_FREQUENCY; ?></p>
 
                   <div class="mt-2">活動場所</div>
                   <div class="contents-border text-left short m-0 mb-2"></div>
-                  <p><img src="<?= get_template_directory_uri(); ?>/images/icon_location.png" alt="Image" class="img-fluid location-icon mb-1"><?= UNION_ACTIVITY_PLACE; ?></p>
+                  <p><img src="<?= get_template_directory_uri(); ?>/images/icon_location.png" alt="Image" class="img-fluid location-icon mb-1"><?= PROJECT_ACTIVITY_PLACE; ?></p>
 
                   <div class="mt-2">Mail</div>
                   <div class="contents-border text-left short m-0 mb-2"></div>
-                  <p><?= UNION_MAIL; ?></p>
+                  <p><?= PROJECT_MAIL; ?></p>
               </div>
             </div>
 

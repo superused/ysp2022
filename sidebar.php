@@ -7,7 +7,7 @@
         </div>
         <div data-aos="fade-up" data-aos-delay="100">
           <div class="team-member image col-12">
-            <a href="<?= UNION_URL;?>"><img src="<?= UNION_TITLE_IMG; ?>" alt="連合会" class="img-fluid"></a>
+            <a href="<?= PROJECT_URL; ?>"><img src="<?= PROJECT_TITLE_IMG; ?>" alt="連合会" class="img-fluid"></a>
           </div>
           <div class="sidebar-title">連合会</div>
         </div>

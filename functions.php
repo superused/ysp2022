@@ -17,10 +17,10 @@ define('SNS_YOUTUBE_URL', 'https://www.youtube.com/channel/UC9_j943rPgN0a5R55id3
 define('HOME_URL', esc_url(home_url('/')));
 define('NEWS_URL', esc_url(home_url('/news/')));
 define('LIVE_URL', esc_url(home_url('/live/')));
-define('LIVE_TIME_URL', esc_url(home_url('/live2/')));
-define('UNION_URL', esc_url(home_url('/union/')));
-define('UNION2_URL', esc_url(home_url('/union2/')));
-define('UNION3_URL', esc_url(home_url('/union3/')));
+define('LIVE_DETAIL_URL', esc_url(home_url('/live-detail/')));
+define('PROJECT_URL', esc_url(home_url('/project/')));
+define('PROJECT_REGION_URL', esc_url(home_url('/project-region/')));
+define('PROJECT_ACTIVITY_URL', esc_url(home_url('/project-activity/')));
 define('SENRYU_CONTEST_URL', esc_url(home_url('/senryu-contest/')));
 define('SENRYU_RESULT_LIST_URL', esc_url(home_url('/senryu-result-list/')));
 define('MOVIE_CONTEST_URL', esc_url(home_url('/movie-contest/')));
@@ -38,10 +38,10 @@ define('MOVIE_URL', esc_url(home_url('/#movie')));
 define('FAVICON_URL', esc_url(home_url('favicon.ico')));
 
 // 連合会情報
-define('UNION_URL', 'https://www.yahoo.co.jp');
-define('UNION_ACTIVITY_FREQUENCY', '月2回');
-define('UNION_ACTIVITY_PLACE', '東京都世田谷区');
-define('UNION_MAIL', 'mail@mail.com');
+define('PROJECT_URL', 'https://www.yahoo.co.jp');
+define('PROJECT_ACTIVITY_FREQUENCY', '月2回');
+define('PROJECT_ACTIVITY_PLACE', '東京都世田谷区');
+define('PROJECT_MAIL', 'mail@mail.com');
 
 define('SITE_TITLE', 'PEACE DESIGNER FES｜2021.08.07~09 オンライン');
 
@@ -57,7 +57,7 @@ define('PHOTO_RESULT_IMG', get_template_directory_uri() . '/images/sidebar/photo
 define('PHOTO_RESULT_100_IMG', get_template_directory_uri() . '/images/sidebar/photo_result_100.png');
 define('MOVIE_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/movie.png');
 define('MOVIE_RESULT_IMG', get_template_directory_uri() . '/images/sidebar/movie_result.png');
-define('UNION_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/union.png');
+define('PROJECT_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/union.png');
 
 class Util {
   public $wpdb;

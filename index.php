@@ -80,7 +80,7 @@
               <span class="live-message-under">ライブ</span>
               <p>ウェビナーやクイズなどの生配信企画！地域活性化で活躍する若手リーダーが語ります！見るだけでも、チャットで質問してもOK！</p>
               <div class="text-center text-md-left">
-                <a href="<?= LIVE_TIME_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
+                <a href="<?= LIVE_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">タイムテーブルを見る</button></a>
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@
                           <div>準備中</div>
                         </div>
                         <div class="text-center text-md-left mb-3">
-                          <a href="<?= LIVE_TIME_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
+                          <a href="<?= LIVE_DETAIL_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
                         </div>
                       </div>
                     </div>
@@ -131,7 +131,7 @@
                 <span class="live-message-under">活動紹介コーナー</span>
                 <p>全国で活躍しているピースデザイナーたちの活動を紹介します！あなたの地域のピースデザイナー達の活躍を覗いてみませんか？</p>
                 <div class="text-center text-md-left">
-                  <a href="<?= UNION2_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                  <a href="<?= PROJECT_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
                 </div>
               </div>
             </div>
@@ -145,7 +145,7 @@
                   <div class="row">
                     <div class="p-0 mx-0 mt-0 mb-3 col-12 col-md-6">
                       <div class="team-member text-center image mx-3 w-auto">
-                        <a href="<?= UNION2_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/dummy.png" alt="Image" class="img-fluid w-100"></a>
+                        <a href="<?= PROJECT_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/dummy.png" alt="Image" class="img-fluid w-100"></a>
                       </div>
                     </div>
                     <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -156,7 +156,7 @@
                         <div>準備中</div>
                       </div>
                       <div class="text-center text-md-left mt-3">
-                        <a href="<?= UNION2_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                        <a href="<?= PROJECT_REGION_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
                       </div>
                     </div>
                   </div>
