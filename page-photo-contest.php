@@ -7,7 +7,13 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
     <div class="site-section top-image pb-0" data-aos="fade-up" data-aos-delay="100">
       <div class="container">
         <div class="row">
-          <img src="<?= PHOTO_RESULT_IMG; ?>" alt="Image" class="img-fluid w-100 h-100">
+          <div class="slide-show">
+            <img src="<?= get_template_directory_uri(); ?>/images/sidebar/photo_bg1.jpg" class="img-fluid slide-image">
+            <img src="<?= get_template_directory_uri(); ?>/images/sidebar/photo_bg2.jpg" class="img-fluid slide-image">
+            <img src="<?= get_template_directory_uri(); ?>/images/sidebar/photo_bg3.jpg" class="img-fluid slide-image">
+            <div class="img-fluid white"></div>
+            <img src="<?= PHOTO_RESULT_IMG; ?>" alt="Image" class="img-fluid fix-image">
+          </div>
         </div>
       </div>
     </div>

@@ -21,7 +21,14 @@ $datas = [
     <div class="site-section top-image pb-0" data-aos="fade-up" data-aos-delay="100">
       <div class="container">
         <div class="row">
-          <img src="<?= MOVIE_RESULT_IMG; ?>" alt="Image" class="img-fluid w-100 h-100">
+          <div class="slide-show">
+            <img src="<?= get_template_directory_uri(); ?>/images/sidebar/movie_bg1.jpg" class="img-fluid slide-image">
+            <img src="<?= get_template_directory_uri(); ?>/images/sidebar/movie_bg2.jpg" class="img-fluid slide-image">
+            <img src="<?= get_template_directory_uri(); ?>/images/sidebar/movie_bg3.jpg" class="img-fluid slide-image">
+            <img src="<?= get_template_directory_uri(); ?>/images/sidebar/movie_bg4.jpg" class="img-fluid slide-image">
+            <div class="img-fluid white"></div>
+            <img src="<?= MOVIE_RESULT_IMG; ?>" alt="Image" class="img-fluid fix-image">
+          </div>
         </div>
       </div>
     </div>
@@ -101,6 +108,18 @@ $datas = [
                   </div>
                 </div>
                 <div class="row">
+<?php         elseif ($count == 11): ?>
+            <div class="photo_button site-section bg-beige p-0 mb-4 project-frame" data-aos="fade-up" data-aos-delay="100">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 justify-content-center row text-center mx-auto mt-5 mb-4 align-items-center">
+                    <div class="text">
+                      <div class="font-weight-bold rem1-5">その他作品</div>
+                      <div class="contents-border"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
 <?php         endif; ?>
                   <div class="col-12 col-lg-6 p-0" data-type="content-block">
                     <div class="m-3 mt-4 mt-lg-3">
@@ -114,7 +133,7 @@ $datas = [
                       </div>
                     </div>
                   </div>
-<?php         if ($count == count($datas)): ?>
+<?php         if ($count == 10 || $count == count($datas)): ?>
                 </div>
               </div>
             </div>

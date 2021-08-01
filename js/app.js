@@ -20,6 +20,7 @@ $(function() {
     this.moveRecaptcha();
     this.senryu100Data();
     this.photo100Data();
+    this.slideShow();
   };
   siteBase.prototype = {
     siteMenuClone: function() {
@@ -599,6 +600,24 @@ $(function() {
           count = 0;
         };
         fn();
+      }
+    },
+    slideShow: function() {
+      const target = $('.slide-show');
+      if (target[0]) {
+        const images = target.find('.slide-image');
+        let index = Math.floor(Math.random() * images.length);
+        images.eq(index).show();
+        let interval = setInterval(function() {
+          const nowImg = images.eq(index);
+          index = index == images.length - 1 ? 0 : index + 1;
+          const nextImg = images.eq(index);
+          nowImg.css('z-index', 0);
+          nextImg.css('z-index', 1);
+          nextImg.show('fade', {}, 2000, function() {
+            nowImg.css('display', '');
+          });
+        }, 8000);
       }
     },
   };
