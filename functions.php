@@ -175,6 +175,16 @@ class Util {
     return $posts;
   }
 
+  public function getLiveDetail($field) {
+    if (!$field) return false;
+    $wpdb = $this->wpdb;
+
+    $query = "SELECT * FROM $wpdb->live_details WHERE post_name = %s";
+    $liveDetailData = $wpdb->get_results($wpdb->prepare($query, $field));
+    if (!isset($liveDetailData[0])) return false;
+    return $liveDetailData[0];
+  }
+
   /**
    * 検索して最後にヒットした文字列を置換する
    */
@@ -185,6 +195,15 @@ class Util {
 
   public function checkAfterDate($date) {
     return date('YmdHis') >= date('YmdHis', strtotime($date));
+  }
+
+  public static function getYoubi($date) {
+    $youbi = ['日', '月', '火', '水', '木', '金', '土'];
+    $date = date('w', strtotime($date));
+    if (isset($youbi[$date])) {
+      return $youbi[$date];
+    }
+    return false;
   }
 }
 $util = new Util($wpdb, $post);

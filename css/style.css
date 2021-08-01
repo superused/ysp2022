@@ -2596,7 +2596,7 @@ div.event-bg-right {
 }
 @media (min-width: 991.98px) {
   .sidebar-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   .sidebar .image {
     margin-bottom: 0.5rem;
@@ -3985,4 +3985,28 @@ div.news-area .owl-carousel {
   top: 0;
   left: 0;
   z-index: 2;
+}
+
+#adjust-live-detail {
+  display: none;
+}
+.site-section.live-detail {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+#adjust-live-detail {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+}
+@media (max-width: 767.98px) {
+  .site-section.live-detail {
+    position: fixed;
+  }
+  .site-section.live-detail .container {
+    max-width: none;
+  }
 }

@@ -332,6 +332,16 @@ $(function() {
         const topTarget = $('.site-mobile-menu').next();
         const height = $('.site-navbar').height();
         topTarget.css('padding-top', height + 'px').show();
+
+        // LIVE詳細ページで動画をスマホ版では固定表示、PC版では固定解除
+        const adjustLiveDetail = $('#adjust-live-detail');
+        if (adjustLiveDetail[0]) {
+          const adjust = function() {
+            adjustLiveDetail.css('padding-top', ($('.site-section.live-detail').outerHeight()) + 'px');
+          };
+          $(window).resize(adjust);
+          adjust();
+        }
       }
     },
     contestView: function() {
