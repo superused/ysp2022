@@ -133,6 +133,29 @@
             </div>
           </div>
           <div class="col-12 col-md-4">
+            <div class="other-live-container">
+<?php if (have_posts()): ?>
+<?php     while (have_posts()): the_post(); ?>
+                <div class="project-frame row w-100 mx-auto mb-4" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-12 p-0 mb-3">
+                    <a href="<?= get_permalink(); ?>">
+                      <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>" alt="Image" class="img-fluid">
+                    </a>
+                  </div>
+                  <div class="col-12 p-0">
+                    <div class="site-section-heading w-border mx-auto col-12 p-0">
+                      <h6 class="font-weight-bold mb-2"><?php the_title(); ?></h6>
+                      <div class="contents-border mt-1 mb-1 text-left w-100 ml-0"></div>
+                      <div class="small mb-2 description"><?php the_excerpt(); ?></div>
+                      <div class="union-box text-center text-md-left">
+                        <a href="<?= get_permalink(); ?>"><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<?php     endwhile; ?>
+<?php endif; ?>
+            </div>
             <?= get_sidebar();?>
           </div>
         </div>
