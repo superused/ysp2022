@@ -12,7 +12,7 @@ $data = $util->getLiveDetail($field);
               <div class="container">
                 <div class="row">
                   <div class="youtube">
-                    <iframe src="https://www.youtube.com/embed/<?= 'Mn5oomPNOfE'; ?>" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                    <iframe src="https://www.youtube.com/embed/<?= $data->youtube_id; ?>" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                   </div>
                 </div>
               </div>
