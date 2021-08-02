@@ -2589,9 +2589,23 @@ div.event-bg-right {
   padding: 0;
   text-align: center;
 }
+.other-live {
+  height: 400px;
+}
+.other-live .other-live-container {
+  width: 100%;
+  height: calc(100% - 2.75rem);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing:border-box;
+  scrollbar-width: thin;
+}
 @media (min-width: 767.98px) {
   .sidebar-title {
     font-size: 1rem;
+  }
+  .other-live .other-live-container {
+    height: calc(100% - 2.25rem);
   }
 }
 @media (min-width: 991.98px) {
@@ -2601,6 +2615,22 @@ div.event-bg-right {
   .sidebar .image {
     margin-bottom: 0.5rem;
   }
+  .other-live .other-live-container {
+    height: calc(100% - 2.5rem);
+  }
+}
+.other-live-container::-webkit-scrollbar {
+  width: 10px;
+}
+.other-live-container::-webkit-scrollbar-track {
+  background: #e4f7fd;
+  border: none;
+  border-radius: 10px;
+}
+.other-live-container::-webkit-scrollbar-thumb {
+  background: #72d8f7;
+  border-radius: 10px;
+  box-shadow: none;
 }
 .events-section .container {
   margin-top: 3em;

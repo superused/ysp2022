@@ -7,7 +7,7 @@ $data = $util->getLiveDetail($field);
     <div class="site-section pt-0">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-9">
+          <div class="col-12 col-md-8">
             <div class="site-section live-detail top-image pb-0" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
@@ -51,6 +51,9 @@ $data = $util->getLiveDetail($field);
                   <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7" data-aos="fade-up" data-aos-delay="100">
                     <h4 class="font-weight-bold"><?= $data->name1; ?></h4>
                     <div class="description"><?= $data->description1; ?></div>
+<?php     if (isset($data->sns)): ?>
+                    <div class="mt-4 sns">SNS: <a href="<?= $data->sns; ?>" target="_blank"><?= $data->sns; ?></a></div>
+<?php     endif; ?>
                   </div>
                 </div>
               </div>
@@ -65,7 +68,44 @@ $data = $util->getLiveDetail($field);
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-3">
+          <div class="col-12 col-md-4">
+            <div class="other-live site-section-heading project-frame w-border mx-auto pt-1 pr-0" data-aos="fade-up" data-aos-delay="100">
+              <div>
+                <div class="sidebar-title heading-bar color-cyan mb-2 pr-3"><span class="pr-3">その他LIVE</span></div>
+              </div>
+              <div class="other-live-container">
+<?php
+//現在のページのカテゴリを取得
+$categories = get_the_category($post->ID);
+$the_query = new WP_Query([
+  'post_type' => get_post_type(),
+  'posts_per_page' => 100,
+  'post__not_in' => [$post->ID],
+  'orderby' => 'desc',
+]);
+if ($the_query->have_posts()) :
+ while ($the_query->have_posts()) : $the_query->the_post();
+?>
+                <div class="col-12 col-lg-6 p-0">
+                  <div class="project-frame simple">
+                    <div class="p-0 mb-3 text-center">
+                        <a href="<?= get_permalink(); ?>">
+                            <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>" alt="Image" class="img-fluid w-100">
+                        </a>
+                    </div>
+                    <div class="p-0">
+                      <div class="site-section-heading w-border mx-auto col-12 p-0">
+                        <h5 class="font-weight-bold mb-2 text-break"><?php the_title(); ?></h5>
+                        <div class="pb-2 mb-2 text-gray-menu text-break"><?php the_excerpt(); ?></div>
+                        <div class="news-date-ubar text-right text-gray-menu text-break pr-2 m-0"><?php the_time('Y.m.d'); ?></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<?php endwhile;
+endif; ?>
+            </div>
+            </div>
             <?= get_sidebar();?>
           </div>
           <div class="col-12">

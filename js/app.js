@@ -342,6 +342,17 @@ $(function() {
           $(window).resize(adjust);
           adjust();
         }
+
+        const otherLive = $('.other-live');
+        if (otherLive[0]) {
+          const adjustLive = function() {
+            if ($(window).outerWidth() >= 768) {
+              otherLive.css('height', $('.site-section.live-detail').outerHeight() + 'px');
+            }
+          }
+          $(window).resize(adjustLive);
+          adjustLive();
+        }
       }
     },
     contestView: function() {
