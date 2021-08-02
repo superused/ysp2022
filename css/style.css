@@ -2590,7 +2590,7 @@ div.event-bg-right {
   text-align: center;
 }
 .other-live {
-  height: 400px;
+  height: 500px;
 }
 .other-live .other-live-container {
   width: 100%;
@@ -2599,6 +2599,12 @@ div.event-bg-right {
   overflow-x: hidden;
   box-sizing:border-box;
   scrollbar-width: thin;
+}
+.other-live-container .description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 @media (min-width: 767.98px) {
   .sidebar-title {
