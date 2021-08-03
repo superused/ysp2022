@@ -176,11 +176,17 @@ class Util {
   }
 
   public function getLiveDetail($field) {
-    if (!$field) return false;
     $wpdb = $this->wpdb;
 
-    $query = "SELECT * FROM $wpdb->live_details WHERE post_name = %s";
-    $liveDetailData = $wpdb->get_results($wpdb->prepare($query, $field));
+    $query = "SELECT * FROM $wpdb->live_details";
+    $param = null;
+    if (!$field) {
+      $param = $wpdb->prepare($query);
+    } else {
+      $query .= " WHERE post_name = %s";
+      $param = $wpdb->prepare($query, $field);
+    }
+    $liveDetailData = $wpdb->get_results($wpdb->prepare($query));
     if (!isset($liveDetailData[0])) return false;
     return $liveDetailData[0];
   }

@@ -87,7 +87,7 @@ if ($the_query->have_posts()) :
  while ($the_query->have_posts()) : $the_query->the_post();
 ?>
                   <div class="row">
-                    <div class="p-0 pr-3 pr-xl-0 mx-0 mt-0 mb-2 col-12 col-xl-6">
+                    <div class="p-0 px-3 pr-xl-1 pr-xl-0 mx-0 mt-0 mb-2 col-12 col-xl-6">
                       <div class="team-member text-center image ml-1 mr-1 mb-4 mb-md-0 w-auto">
                         <a href="<?= get_permalink(); ?>">
                             <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>" alt="Image" class="img-fluid w-100">

@@ -2592,6 +2592,9 @@ div.event-bg-right {
 .other-live {
   height: 500px;
 }
+.site-section.other-live-container {
+  min-width: auto;
+}
 .other-live .other-live-container {
   width: 100%;
   height: calc(100% - 2.75rem);
@@ -3128,7 +3131,7 @@ button.vote:disabled {
   background: #bdbdbd;
 }
 .live-time {
-  min-height: 200px;
+  min-height: 50px;
 }
 .performer {
   border: 3px solid #b3b3b3;
@@ -4045,4 +4048,59 @@ div.news-area .owl-carousel {
   .site-section.live-detail .container {
     max-width: none;
   }
+}
+.time-table {
+  width: 100%;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.time-table::-webkit-scrollbar {
+  display: none;
+}
+.time-table > div {
+  width: 100%;
+  line-height: 1rem;
+  height: 1rem;
+  display: flex;
+}
+.time-table > div > div {
+  margin: 0;
+  margin-left: 0.5rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.time-table > div > div > img {
+  position: absolute;
+  height: 4rem;
+}
+@media (max-width: 399.98px) {
+  .time-table > div > div > img {
+    left: 0.5rem;
+  }
+}
+[data-date="20210807"],
+[data-date="20210808"],
+[data-date="20210809"] {
+  display: none;
+}
+button[data-date="20210807"],
+button[data-date="20210808"],
+button[data-date="20210809"] {
+  display: inline;
+}
+.date-button button {
+  border-color: #c0c0c0;
+  background-color: #fff;
+}
+.date-button button.active {
+  color: #fff;
+  border-color: #00b9f2;
+  background-color: #00b9f2;
 }

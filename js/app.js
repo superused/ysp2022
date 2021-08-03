@@ -21,6 +21,7 @@ $(function() {
     this.senryu100Data();
     this.photo100Data();
     this.slideShow();
+    this.liveTimeSchedule();
   };
   siteBase.prototype = {
     siteMenuClone: function() {
@@ -641,6 +642,41 @@ $(function() {
         }, 8000);
       }
     },
+    liveTimeSchedule: function() {
+      let date = '20210807';
+      const todayNum = this.getToday8num();
+      if (todayNum == '20210808') {
+        date = '20210808';
+      } else if (todayNum == '20210809') {
+        date = '20210809';
+      }
+
+      const fn = function() {
+        if ($(this)[0]) date = $(this).attr('data-date');
+        $('[data-date]').each(function() {
+          var $this = $(this);
+          if ($this.attr('data-date') == date) {
+            if ($this.prop('tagName') == 'BUTTON') {
+              $this.addClass('active');
+            } else {
+              $this.show();
+            }
+          } else {
+            if ($this.prop('tagName') == 'BUTTON') {
+              $this.removeClass('active');
+            } else {
+              $this.hide();
+            }
+          }
+        });
+      };
+      $(document).on('click', 'button[data-date]', fn);
+      fn();
+    },
+    getToday8num: function() {
+      const today = new Date();
+      return parseInt(today.getFullYear() + ('0' + (today.getMonth() + 1)).slice(-2) + ('0' + today.getDate()).slice(-2));
+    }
   };
   const base = new siteBase();
 
