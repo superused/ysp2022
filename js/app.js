@@ -664,8 +664,10 @@ $(function() {
           } else {
             if ($this.prop('tagName') == 'BUTTON') {
               $this.removeClass('active');
+            } else if ($this.parents('.live-detail-table')[0]) {
+              $this.parents('.time-table').show();
             } else {
-              $this.hide();
+              $this.parents('.time-table').hide();
             }
           }
         });

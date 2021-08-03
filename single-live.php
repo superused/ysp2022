@@ -70,7 +70,7 @@ $data = $util->getLiveDetail($field);
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4 pr-0">
             <div class="other-live site-section-heading project-frame w-border mx-auto pl-2 pb-2 pt-1 pr-0" data-aos="fade-up" data-aos-delay="100">
               <div>
                 <div class="sidebar-title heading-bar color-cyan mb-2 pr-3"><span class="pr-3">その他LIVE</span></div>
@@ -83,11 +83,11 @@ $the_query = new WP_Query([
   'post_type' => get_post_type(),
   'posts_per_page' => 100,
   'post__not_in' => [$post->ID],
-  'orderby' => 'desc',
+  'orderby' => 'post__in',
 ]);
-if ($the_query->have_posts()) :
- while ($the_query->have_posts()) : $the_query->the_post();
 ?>
+<?php if ($the_query->have_posts()): ?>
+<?php   while ($the_query->have_posts()) : $the_query->the_post(); ?>
                   <div class="row">
                     <div class="p-0 px-3 pr-xl-1 pr-xl-0 mx-0 mt-0 mb-2 col-12 col-xl-6">
                       <div class="team-member text-center image ml-1 mr-1 mb-4 mb-md-0 w-auto">
@@ -104,9 +104,32 @@ if ($the_query->have_posts()) :
                       </div>
                     </div>
                   </div>
-<?php endwhile;
-endif; ?>
+<?php   endwhile; ?>
+<?php endif; ?>
+              </div>
             </div>
+            <div class="site-section sidebar pb-0">
+              <div class="container">
+                <div class="row">
+                  <div class="site-section-heading w-border mx-auto col-12 px-md-0 px-lg-2 px-xl-3" data-aos="fade-up" data-aos-delay="100">
+                    <div data-aos="fade-up" data-aos-delay="100">
+                      <div class="sidebar-title heading-bar color-cyan"><span class="pr-3">LIVEプログラム</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="live-detail-timetable">
+<?php if (!empty($data->start_date)): ?>
+<?php   $date = date('Ymd', strtotime($data->start_date)); ?>
+<?php   if ($date == '20210807'): ?>
+<?php     include 'parts/timetable0807.php'; ?>
+<?php   elseif ($date == '20210808'): ?>
+<?php     include 'parts/timetable0808.php'; ?>
+<?php   elseif ($date == '20210809'): ?>
+<?php     include 'parts/timetable0809.php'; ?>
+<?php   endif; ?>
+<?php endif; ?>
             </div>
             <?= get_sidebar();?>
           </div>

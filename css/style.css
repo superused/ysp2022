@@ -4076,13 +4076,13 @@ div.news-area .owl-carousel {
   display: flex;
   justify-content: center;
 }
-.time-table > div > div > img {
+.time-table > div > div > a {
   position: absolute;
   height: 4rem;
 }
 @media (max-width: 399.98px) {
-  .time-table > div > div > img {
-    left: 0.5rem;
+  .time-table > div > div > a {
+    left: 0.25rem;
   }
 }
 [data-date="20210807"],
@@ -4094,6 +4094,24 @@ button[data-date="20210807"],
 button[data-date="20210808"],
 button[data-date="20210809"] {
   display: inline;
+}
+.live-detail-timetable [data-date="20210807"],
+.live-detail-timetable [data-date="20210808"],
+.live-detail-timetable [data-date="20210809"] {
+  display: block;
+}
+.live-detail-timetable .time-table > div > div > a {
+  left: 0.25rem;
+}
+@media (max-width: 767.98px) {
+  .live-detail-timetable .time-table > div > div > a {
+    left: auto;
+  }
+}
+@media (max-width: 399.98px) {
+  .live-detail-timetable .time-table > div > div > a {
+    left: 0.25rem;
+  }
 }
 .date-button button {
   border-color: #c0c0c0;
