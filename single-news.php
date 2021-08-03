@@ -40,7 +40,7 @@
 <?php else: ?>
                  <span>&lt; Prev</span>
 <?php endif;?>
-                 <a href="<?= NEWS_URL; ?>" class="sns-icon mx-3"><img src="<?= get_template_directory_uri(); ?>/images/icon_home.png"></a>
+                 <a href="<?= NEWS_URL; ?>" class="sns-icon mx-3" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/icon_home.png"></a>
 <?php if (get_next_post()): ?>
 <?php     next_post_link('%link', 'Next &gt;');?>
 <?php else: ?>
@@ -69,7 +69,7 @@ if ($the_query->have_posts()) :
                 <div class="col-12 col-lg-6 p-0">
                   <div class="project-frame simple" data-aos="fade-up" data-aos-delay="100" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-0 mb-3 text-center">
-                        <a href="<?= get_permalink(); ?>">
+                        <a href="<?= get_permalink(); ?>" ontouchstart="">
                             <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>" alt="Image" class="img-fluid w-100">
                         </a>
                     </div>

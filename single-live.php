@@ -29,6 +29,7 @@ $data = $util->getLiveDetail($field);
                 <div><?php the_content(); ?></div>
               </div>
             </div>
+<?php if (isset($data->start_date) && isset($data->end_date)): ?>
             <div class="site-section w-border mx-auto pt-0" data-aos="fade-up" data-aos-delay="100">
               <h4 class="font-weight-bold bg-cyan text-white p-3 mb-4">開催概要</h4>
               <div class="container">
@@ -38,6 +39,7 @@ $data = $util->getLiveDetail($field);
                 <div><?= date('H:i', strtotime($data->start_date)) . '-' . date('H:i', strtotime($data->end_date)); ?></div>
               </div>
             </div>
+<?php endif; ?>
 <?php if (isset($data->name1) && isset($data->description1) && isset($data->image1)): ?>
             <div class="site-section w-border mx-auto pt-0">
               <h4 class="font-weight-bold bg-cyan text-white p-3 mb-4" data-aos="fade-up" data-aos-delay="100">出演者</h4>
@@ -52,7 +54,7 @@ $data = $util->getLiveDetail($field);
                     <h4 class="font-weight-bold"><?= $data->name1; ?></h4>
                     <div class="description"><?= $data->description1; ?></div>
 <?php     if (isset($data->sns)): ?>
-                    <div class="mt-4 sns">SNS: <a href="<?= $data->sns; ?>" target="_blank"><?= $data->sns; ?></a></div>
+                    <div class="mt-4 sns">SNS: <a href="<?= $data->sns; ?>" target="_blank" ontouchstart=""><?= $data->sns; ?></a></div>
 <?php     endif; ?>
                   </div>
                 </div>
@@ -89,7 +91,7 @@ if ($the_query->have_posts()) :
                   <div class="row">
                     <div class="p-0 px-3 pr-xl-1 pr-xl-0 mx-0 mt-0 mb-2 col-12 col-xl-6">
                       <div class="team-member text-center image ml-1 mr-1 mb-4 mb-md-0 w-auto">
-                        <a href="<?= get_permalink(); ?>">
+                        <a href="<?= get_permalink(); ?>" ontouchstart="">
                             <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>" alt="Image" class="img-fluid w-100">
                         </a>
                       </div>

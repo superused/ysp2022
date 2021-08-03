@@ -19,32 +19,7 @@
       </div>
     </div>
 
-    <div class="site-section beige p-0" data-aos="fade-up" data-aos-delay="100">
-      <div class="container">
-        <div class="row">
-          <div class="date-button site-section-heading text-center w-border mx-auto col-12 font-weight-bold">
-            <button class="btn btn-lg" ontouchstart="" data-date="20210807">
-              <div class="row">
-                <div class="col-12 col-md-4 col-lg-4 col-xl-4 m-0 p-0"><span>7</span></div>
-                <div class="col-12 col-md-8 col-lg-8 col-xl-8 m-0 pl-1 pr-1 d-flex align-items-end"><span class="mx-auto small">SAT</span></div>
-              </div>
-            </button>
-            <button class="btn btn-lg" ontouchstart="" data-date="20210808">
-              <div class="row">
-                <div class="col-12 col-md-4 col-lg-4 col-xl-4 m-0 p-0"><span>8</span></div>
-                <div class="col-12 col-md-8 col-lg-8 col-xl-8 m-0 pl-1 pr-1 d-flex align-items-end"><span class="mx-auto small">SUN</span></div>
-              </div>
-            </button>
-            <button class="btn btn-lg" ontouchstart="" data-date="20210809">
-              <div class="row">
-                <div class="col-12 col-md-4 col-lg-4 col-xl-4 m-0 p-0"><span>9</span></div>
-                <div class="col-12 col-md-8 col-lg-8 col-xl-8 m-0 pl-1 pr-1 d-flex align-items-end"><span class="mx-auto small">MON</span></div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+<?php include 'parts/live-date-button.php'; ?>
 
     <div class="site-section pt-0">
       <div class="container">
@@ -624,27 +599,7 @@
               <div>
                 <div class="sidebar-title heading-bar color-cyan mb-2"><span class="pr-3">注目！LIVE配信</span></div>
               </div>
-<?php if (have_posts()): ?>
-<?php     while (have_posts()): the_post(); ?>
-                <div class="project-frame row w-100 mx-auto mb-4" data-aos="fade-up" data-aos-delay="100">
-                  <div class="team-member col-12 p-0 mb-3">
-                    <a href="<?= get_permalink(); ?>">
-                      <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>" alt="Image" class="img-fluid">
-                    </a>
-                  </div>
-                  <div class="col-12 p-0">
-                    <div class="site-section-heading w-border mx-auto col-12 p-0">
-                      <h6 class="font-weight-bold mb-2"><?php the_title(); ?></h6>
-                      <div class="contents-border mt-1 mb-1 text-left w-100 ml-0"></div>
-                      <div class="small mb-2 description"><?php the_excerpt(); ?></div>
-                      <div class="text-center">
-                        <a href="<?= get_permalink(); ?>" class="w-100"><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-<?php     endwhile; ?>
-<?php endif; ?>
+<?php include 'parts/live-pickup.php'; ?>
             </div>
             <?= get_sidebar();?>
           </div>
@@ -652,30 +607,5 @@
       </div>
     </div>
 
-    <div class="site-section beige p-0" data-aos="fade-up" data-aos-delay="100">
-      <div class="container">
-        <div class="row">
-          <div class="site-section-heading text-center w-border mx-auto col-12 font-weight-bold">
-            <button class="btn btn-lg text-white bg-cyan" ontouchstart="">
-              <div class="row">
-                <div class="col-12 col-md-4 col-lg-4 col-xl-4 m-0 p-0"><span>7</span></div>
-                <div class="col-12 col-md-8 col-lg-8 col-xl-8 m-0 pl-1 pr-1 d-flex align-items-end"><span class="mx-auto small">SAT</span></div>
-              </div>
-            </button>
-            <button class="btn btn-lg border-gray bg-white" ontouchstart="">
-              <div class="row">
-                <div class="col-12 col-md-4 col-lg-4 col-xl-4 m-0 p-0"><span>8</span></div>
-                <div class="col-12 col-md-8 col-lg-8 col-xl-8 m-0 pl-1 pr-1 d-flex align-items-end"><span class="mx-auto small">SUN</span></div>
-              </div>
-            </button>
-            <button class="btn btn-lg border-gray bg-white" ontouchstart="">
-              <div class="row">
-                <div class="col-12 col-md-4 col-lg-4 col-xl-4 m-0 p-0"><span>9</span></div>
-                <div class="col-12 col-md-8 col-lg-8 col-xl-8 m-0 pl-1 pr-1 d-flex align-items-end"><span class="mx-auto small">MON</span></div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+<?php include 'parts/live-date-button.php'; ?>
 <?php get_footer(); ?>

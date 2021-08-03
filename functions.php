@@ -186,7 +186,7 @@ class Util {
       $query .= " WHERE post_name = %s";
       $param = $wpdb->prepare($query, $field);
     }
-    $liveDetailData = $wpdb->get_results($wpdb->prepare($query));
+    $liveDetailData = $wpdb->get_results($param);
     if (!isset($liveDetailData[0])) return false;
     return $liveDetailData[0];
   }
