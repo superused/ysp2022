@@ -4104,3 +4104,6 @@ button[data-date="20210809"] {
   border-color: #00b9f2;
   background-color: #00b9f2;
 }
+.x-small {
+  font-size: 60%;
+}
