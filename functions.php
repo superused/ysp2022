@@ -184,15 +184,44 @@ class Util {
 
     $query = "SELECT * FROM $wpdb->live_details";
     $param = null;
-    if (!$field) {
-      $param = $wpdb->prepare($query);
-    } else {
+    if ($field) {
       $query .= " WHERE post_name = %s";
       $param = $wpdb->prepare($query, $field);
+    } else {
+      $param = $wpdb->prepare($query);
     }
     $liveDetailData = $wpdb->get_results($param);
     if (!isset($liveDetailData[0])) return false;
-    return $liveDetailData[0];
+    if ($field) {
+      return $liveDetailData[0];
+    } else {
+      return $liveDetailData;
+    }
+  }
+
+  public function getProjectDetail() {
+    if (!$this->projectDetail) {
+      $wpdb = $this->wpdb;
+      $query = 'SELECT * FROM ' . $wpdb->projects;
+
+      $param = $wpdb->prepare($query);
+      $datas = $wpdb->get_results($param);
+      if (!isset($datas[0])) return false;
+
+      $result = [];
+      foreach ($datas as $data) {
+        if ($data->sns_json) {
+          $data->sns_json = json_decode($data->sns_json, true);
+        } else {
+          $data->sns_json = [];
+        }
+        if ($data->data) $data->data = json_decode($data->data, true);
+        $result[$data->post_name] = $data;
+      }
+
+      $this->projectDetail = $result;
+    }
+    return $this->projectDetail;
   }
 
   /**
@@ -207,6 +236,20 @@ class Util {
     return date('YmdHis') >= date('YmdHis', strtotime($date));
   }
 
+  public function getProjectImages($name) {
+    $dir = 'wp-content/themes/peacedesigner/images/project/' . $name . '/';
+    $images = [];
+    if (is_dir($dir) && $dh = opendir($dir)) {
+      while (($file = readdir($dh)) !== false) {
+        if (filetype($dir . $file) == 'file' && $file != 'top.jpg') {
+          $images[] = $file;
+        }
+      }
+      closedir($dh);
+    }
+    return $images;
+  }
+
   public static function getYoubi($date) {
     $youbi = ['日', '月', '火', '水', '木', '金', '土'];
     $date = date('w', strtotime($date));
@@ -214,6 +257,18 @@ class Util {
       return $youbi[$date];
     }
     return false;
+  }
+
+  /**
+   * 画像の存在確認を行い、存在すればその画像パス、存在しなければデフォルト画像のパスを返す
+   */
+  public function viewProjectTopImage($postName) {
+    $path = '/images/project/' . $postName . '/top.jpg';
+    if (file_exists(get_template_directory() . $path)) {
+      return get_template_directory_uri() . $path;
+    } else {
+      return NO_IMAGE_URL;
+    }
   }
 }
 $util = new Util($wpdb, $post);

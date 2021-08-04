@@ -2603,7 +2603,8 @@ div.event-bg-right {
   box-sizing:border-box;
   scrollbar-width: thin;
 }
-.other-live-container .description {
+.other-live-container .description,
+.project-list .description {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
