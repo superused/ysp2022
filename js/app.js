@@ -349,6 +349,8 @@ $(function() {
           const adjustLive = function() {
             if ($(window).outerWidth() >= 768) {
               otherLive.css('height', $('.site-section.live-detail').outerHeight() + 'px');
+            } else {
+              otherLive.css('height', '');
             }
           }
           $(window).resize(adjustLive);
@@ -664,10 +666,10 @@ $(function() {
           } else {
             if ($this.prop('tagName') == 'BUTTON') {
               $this.removeClass('active');
-            } else if ($this.parents('.live-detail-table')[0]) {
-              $this.parents('.time-table').show();
+            } else if ($this.parents('.live-detail-timetable')[0]) {
+              $this.show();
             } else {
-              $this.parents('.time-table').hide();
+              $this.hide();
             }
           }
         });

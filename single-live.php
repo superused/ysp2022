@@ -70,7 +70,7 @@ $data = $util->getLiveDetail($field);
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4 pr-0">
+          <div class="col-12 col-md-4 pr-md-0">
             <div class="other-live site-section-heading project-frame w-border mx-auto pl-2 pb-2 pt-1 pr-0" data-aos="fade-up" data-aos-delay="100">
               <div>
                 <div class="sidebar-title heading-bar color-cyan mb-2 pr-3"><span class="pr-3">その他LIVE</span></div>
@@ -90,14 +90,14 @@ $the_query = new WP_Query([
 <?php   while ($the_query->have_posts()) : $the_query->the_post(); ?>
                   <div class="row">
                     <div class="p-0 px-3 pr-xl-1 pr-xl-0 mx-0 mt-0 mb-2 col-12 col-xl-6">
-                      <div class="team-member text-center image ml-1 mr-1 mb-4 mb-md-0 w-auto">
+                      <div class="team-member text-center image mx-1 mb-md-0 w-auto">
                         <a href="<?= get_permalink(); ?>" ontouchstart="">
                             <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>" alt="Image" class="img-fluid w-100">
                         </a>
                       </div>
                     </div>
                     <div class="col-12 col-xl-6 pl-0">
-                      <div class="text-left mx-auto mb-2 pl-3 pr-1 px-xl-0">
+                      <div class="text-left mx-auto mb-3 pl-3 pr-1 px-xl-0">
                         <h6 class="font-weight-bold mb-1"><?php the_title(); ?></h6>
                         <div class="contents-border w-100 ml-0 my-1"></div>
                         <div class="small description"><?php the_excerpt(); ?></div>
