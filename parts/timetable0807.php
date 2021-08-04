@@ -48,7 +48,7 @@
                 <div class="bg-light2-gray" data-time="15:20">
                   <div class="col-1" style="visibility: hidden;">15:20</div>
                   <div class="col-11">
-                    <a href="<?= esc_url(home_url('/live/quiz/')); ?>"><img src="/wp-content/uploads/2021/08/クイズ_LIVE.jpg" alt="Image" style="height: 9rem"></a>
+                    <a href="<?= esc_url(home_url('/live/quiz/')); ?>"><img src="/wp-content/uploads/2021/08/クイズ_LIVE.jpg" alt="Image" style="height: 8rem"></a>
                   </div>
                 </div>
                 <div class="bg-light2-gray" data-time="15:25">
