@@ -50,7 +50,7 @@
           <div class="col-12 col-md-4">
             <div class="site-section other-live-container pb-0">
               <div>
-                <div class="sidebar-title heading-bar color-cyan mb-2"><span class="pr-3">注目！LIVE配信</span></div>
+                <div class="sidebar-title heading-bar color-cyan mb-2" data-aos="fade-up" data-aos-delay="100"><span class="pr-3">注目！LIVE配信</span></div>
               </div>
 <?php include 'parts/live-pickup.php'; ?>
             </div>

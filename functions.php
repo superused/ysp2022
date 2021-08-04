@@ -3,6 +3,7 @@ require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php';
 
 // コンテスト締切
 define('CONTEST_END_DATE', '2021-08-08 15:00:00');
+define('CONTEST_ENDED', strtotime(date('Y-m-d H:i:s')) >= strtotime(CONTEST_END_DATE));
 
 // 外部サイトURL
 define('GOODS_SHOP_URL', 'https://peace-designer.stores.jp/'); // グッズショップ外部サイト
@@ -49,15 +50,18 @@ define('SITE_TITLE', 'PEACE DESIGNER FES｜2021.08.07~09 オンライン');
 define('NO_IMAGE_URL', get_template_directory_uri() . '/images/noimage.png');
 
 // 背景画像
-define('SENRYU_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/senryu.png');
-define('SENRYU_RESULT_IMG', get_template_directory_uri() . '/images/sidebar/senryu_result.png');
-define('SENRYU_RESULT_100_IMG', get_template_directory_uri() . '/images/sidebar/senryu_result_100.png');
-define('PHOTO_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/photo.png');
+define('SENRYU_IMG', get_template_directory_uri() . '/images/sidebar/senryu.jpg');
+define('SENRYU_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/' . (CONTEST_ENDED ? 'senryu_result_s.jpg' : 'senryu_s.jpg'));
+define('SENRYU_RESULT_IMG', get_template_directory_uri() . '/images/sidebar/senryu_result.jpg');
+define('SENRYU_RESULT_100_IMG', get_template_directory_uri() . '/images/sidebar/senryu_result_100.jpg');
+define('PHOTO_IMG', get_template_directory_uri() . '/images/sidebar/photo.jpg');
+define('PHOTO_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/' . (CONTEST_ENDED ? 'photo_result_s.jpg' : 'photo_s.jpg'));
 define('PHOTO_RESULT_IMG', get_template_directory_uri() . '/images/sidebar/photo_result.png');
 define('PHOTO_RESULT_100_IMG', get_template_directory_uri() . '/images/sidebar/photo_result_100.png');
-define('MOVIE_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/movie.png');
+define('MOVIE_IMG', get_template_directory_uri() . '/images/sidebar/movie.jpg');
+define('MOVIE_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/' . (CONTEST_ENDED ? 'movie_result_s.jpg' : 'movie_s.jpg'));
 define('MOVIE_RESULT_IMG', get_template_directory_uri() . '/images/sidebar/movie_result.png');
-define('PROJECT_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/union.png');
+define('PROJECT_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/union.jpg');
 
 class Util {
   public $wpdb;
