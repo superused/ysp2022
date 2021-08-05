@@ -70,7 +70,6 @@ $datas = [
             <img src="<?= get_template_directory_uri(); ?>/images/sidebar/photo_bg1.jpg" class="img-fluid slide-image">
             <img src="<?= get_template_directory_uri(); ?>/images/sidebar/photo_bg2.jpg" class="img-fluid slide-image">
             <img src="<?= get_template_directory_uri(); ?>/images/sidebar/photo_bg3.jpg" class="img-fluid slide-image">
-            <div class="img-fluid white"></div>
             <img src="<?= PHOTO_RESULT_100_IMG; ?>" alt="Image" class="img-fluid fix-image">
           </div>
         </div>
