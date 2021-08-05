@@ -42,13 +42,13 @@ $data = $datas[$postName];
               </div>
             </div>
 <?php if ($data->sns_json || $data->frequency || $data->place): ?>
-            <div class="site-section w-border beige mx-auto p-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="site-section w-border beige mx-auto text-break p-4" data-aos="fade-up" data-aos-delay="100">
               <div class="container p-0">
 <?php   foreach ($data->sns_json as $type => $url): ?>
 <?php     if (strtolower($type) !== 'mail'): ?>
                   <div class="mt-2"><?= $type; ?></div>
                   <div class="contents-border text-left short m-0 mb-2"></div>
-                  <p><a href="<?= $url; ?>"><?= $url; ?></a></p>
+                  <p><a href="<?= $url; ?>" target="_blank"><?= $url; ?></a></p>
 <?php     endif; ?>
 <?php   endforeach; ?>
 <?php   if ($data->frequency): ?>

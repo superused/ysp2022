@@ -62,6 +62,8 @@ define('MOVIE_IMG', get_template_directory_uri() . '/images/sidebar/movie.jpg');
 define('MOVIE_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/' . (CONTEST_ENDED ? 'movie_result_s.jpg' : 'movie_s.jpg'));
 define('MOVIE_RESULT_IMG', get_template_directory_uri() . '/images/sidebar/movie_result.png');
 define('PROJECT_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/union.jpg');
+define('LIVE_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/live.jpg');
+define('CONTEST_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/contest.jpg');
 
 class Util {
   public $wpdb;

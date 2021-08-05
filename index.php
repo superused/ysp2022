@@ -71,7 +71,7 @@
         <div id="live" class="row events-row">
           <div class="col-md-6 col-lg-6 col-xl-6 col-xl-6 mb-lg-6 image">
             <div class="event">
-              <img src="<?= get_template_directory_uri(); ?>/images/live_sample.png" alt="Image" class="img-fluid">
+              <img src="<?= LIVE_TITLE_IMG; ?>" alt="Image" class="img-fluid">
             </div>
           </div>
           <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-lg-6 col-xl-6 mx-auto t" data-aos="fade-up" data-aos-delay="100">
@@ -93,7 +93,7 @@
 //現在のページのカテゴリを取得
 $the_query = new WP_Query([
   'post_type' => 'live',
-  'posts_per_page' => 100,
+  'posts_per_page' => -1,
   'orderby' => 'post__in',
 ]);
 ?>
@@ -136,7 +136,7 @@ $the_query = new WP_Query([
           <div id="project" class="row p-0 m-0">
             <div class="col-12 col-md-6 image" data-aos="fade-up" data-aos-delay="100">
               <div class="event">
-                <img src="<?= get_template_directory_uri(); ?>/images/project_sample.png" alt="Image" class="img-fluid">
+                <img src="<?= PROJECT_TITLE_IMG; ?>" alt="Image" class="img-fluid">
               </div>
             </div>
             <div class="site-section-heading nopadding w-border col-12 col-md-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
@@ -153,29 +153,41 @@ $the_query = new WP_Query([
           <div class="site-section-heading nopadding w-border col-12 mx-auto t">
             <div class="message-under-image mt-md-4">
               <div class="row mx-0">
-<?php for ($i = 0; $i < 3; $i++): ?>
-                <div class="project-frame w-100 mb-5" data-aos="fade-up" data-aos-delay="100">
+<?php
+//現在のページのカテゴリを取得
+$the_query = new WP_Query([
+  'post_type' => 'project',
+  'posts_per_page' => 3,
+  'orderby' => 'post__in',
+]);
+?>
+<?php $datas = $util->getProjectDetail(); ?>
+<?php if ($the_query->have_posts()): ?>
+<?php   while ($the_query->have_posts()) : $the_query->the_post(); ?>
+<?php $postName = get_post_field('post_name', get_the_ID()); ?>
+                <div class="project-list project-frame w-100 mb-5" data-aos="fade-up" data-aos-delay="100">
                   <h6 class="triangle"></h6>
                   <div class="row">
                     <div class="p-0 mx-0 mt-0 mb-3 col-12 col-md-6">
                       <div class="team-member text-center image mx-3 w-auto">
-                        <a href="<?= PROJECT_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/dummy.png" alt="Image" class="img-fluid w-100"></a>
+                        <a href="<?= get_permalink(); ?>" ontouchstart=""><img src="<?= $util->viewProjectTopImage($postName); ?>" alt="Image" class="img-fluid w-100"></a>
                       </div>
                     </div>
                     <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                       <div class="text-left mx-auto">
-                        <h4 class="font-weight-bold pb-2">準備中</h4>
-                        <h5 class="font-weight-bold p-0 m-0">準備中</h5>
+                        <h4 class="font-weight-bold pb-2"><?= $datas[$postName]->title; ?></h4>
+                        <h5 class="font-weight-bold p-0 m-0"><?= $datas[$postName]->union_name; ?></h5>
                         <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
-                        <div>準備中</div>
+                        <div class="description"><?= $datas[$postName]->description; ?></div>
                       </div>
                       <div class="text-center text-md-left mt-3">
-                        <a href="<?= PROJECT_REGION_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                        <a href="<?= get_permalink(); ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
                       </div>
                     </div>
                   </div>
                 </div>
-<?php endfor; ?>
+<?php   endwhile; ?>
+<?php endif; ?>
               </div>
             </div>
           </div>
@@ -186,7 +198,7 @@ $the_query = new WP_Query([
           <div id="contest" class="row p-0 m-0">
             <div class="col-12 col-md-6 image">
               <div class="event">
-                <img src="<?= get_template_directory_uri(); ?>/images/contest_sample.png" alt="Image" class="img-fluid">
+                <img src="<?= CONTEST_TITLE_IMG; ?>" alt="Image" class="img-fluid">
               </div>
             </div>
             <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-xl-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
