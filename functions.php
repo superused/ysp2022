@@ -289,3 +289,12 @@ class Util {
 $util = new Util($wpdb, $post);
 
 add_theme_support('post-thumbnails');
+
+function iframe_in_div($the_content) {
+  if ( is_singular() ) {
+    $the_content = preg_replace('/<iframe/i', '<div class="youtube"><iframe', $the_content);
+    $the_content = preg_replace('/<\/iframe>/i', '</iframe></div>', $the_content);
+  }
+  return $the_content;
+}
+add_filter('the_content','iframe_in_div');
