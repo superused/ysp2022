@@ -51,7 +51,7 @@ $datas = [
             <div class="site-section py-5" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <p class="text-left ml-3 mr-3">「My Favorite Town」をテーマに、町の魅力を収めたショートムービーの数々が寄せられました。全○作品の中から、総合グランプリが決定しました！</p>
+                  <p class="text-left ml-3 mr-3">「My Favorite Town」をテーマに、町の魅力を収めたショートムービーの数々が寄せられました。全21作品の中から、総合グランプリが決定しました！</p>
                 </div>
               </div>
             </div>
