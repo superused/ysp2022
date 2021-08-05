@@ -4067,25 +4067,63 @@ div.news-area .owl-carousel {
 }
 .time-table > div {
   width: 100%;
-  line-height: 1rem;
-  height: 1rem;
+  line-height: 2.5rem;
+  height: 2.5rem;
   display: flex;
 }
-.time-table > div > div {
-  margin: 0;
-  margin-left: 0.5rem;
+.time-table .time {
+  position: absolute;
+  margin-left: 3%;
   padding: 0;
-  display: flex;
-  justify-content: center;
+  width: 25%;
 }
-.time-table > div > div > a {
+.time-table .image {
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0;
+  padding: 0;
+}
+.time-table .image a {
   position: absolute;
   height: 4rem;
+  max-width: 50%;
+  background-color: #fff;
+  outline: 2px solid #00b9f2;
+  overflow: hidden;
 }
-@media (max-width: 399.98px) {
-  .time-table > div > div > a {
-    left: 0.25rem;
+.time-table .image a > img {
+  max-width: 100%;
+}
+.time-table .image a div {
+  color: #000;
+  margin: 1rem 0.25rem 0;
+  font-size: 0.9rem;
+}
+.time-table .image a .title {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+}
+@media (min-width: 767.98px) {
+  .time-table .image a div {
+    font-size: 0.7rem;
   }
+  .time-table .image a .title {
+    font-size: 0.9rem;
+    line-height: 0.9rem;
+  }
+}
+@media (min-width: 991.98px) {
+  .time-table .image a div {
+    font-size: 0.9rem;
+  }
+  .time-table .image a .title {
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+  }
+}
+.time-table .image a .sentence {
+  line-height: 1rem;
+  font-weight: 500;
 }
 [data-date="20210807"],
 [data-date="20210808"],
@@ -4097,23 +4135,17 @@ button[data-date="20210808"],
 button[data-date="20210809"] {
   display: inline;
 }
+.live-detail-timetable {
+  margin: 0 1.25rem;
+}
 .live-detail-timetable [data-date="20210807"],
 .live-detail-timetable [data-date="20210808"],
 .live-detail-timetable [data-date="20210809"] {
   display: block;
 }
-.live-detail-timetable .time-table > div > div > a {
-  left: 0.25rem;
-}
-@media (max-width: 767.98px) {
-  .live-detail-timetable .time-table > div > div > a {
-    left: auto;
-  }
-}
-@media (max-width: 399.98px) {
-  .live-detail-timetable .time-table > div > div > a {
-    left: 0.25rem;
-  }
+.live-detail-timetable .time-table .image a {
+  left: 20%;
+  max-width: 60%;
 }
 .date-button button {
   border-color: #c0c0c0;

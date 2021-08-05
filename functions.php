@@ -277,6 +277,14 @@ class Util {
       return NO_IMAGE_URL;
     }
   }
+
+  public function getTimetableHeight($postName) {
+    $liveDetail = $this->getLiveDetail();
+    if (!isset($liveDetail[$postName])) return false;
+    $data = $liveDetail[$postName];
+    // 5分で1目盛り、1目盛り辺り2rem
+    return (strtotime($data->end_date) - strtotime($data->start_date)) / 60 / 5 * 2.5;
+  }
 }
 $util = new Util($wpdb, $post);
 
