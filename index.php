@@ -299,7 +299,7 @@ $the_query = new WP_Query([
             <div class="mt-5">
               <span class="organizer-title">協賛</span>
               <div class="contents-border short mt-2 mb-2"></div>
-              <span class="organizer-text mt-4">日本活魚株式会社<br>株式会社ハッピーワールド<br>株式会社コスモフーズ</span> </div>
+              <span class="organizer-text mt-4">日本活魚株式会社<br>株式会社ハッピーワールド<br>株式会社コスモフーズ<br>十勝アルプス牧場</span> </div>
           </div>
         </div>
       </div>
