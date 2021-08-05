@@ -24,7 +24,7 @@ $the_query = new WP_Query([
                       <div class="font-weight-bold mb-1 small"><?= $datas[$postName]->subtitle; ?></div>
 <?php       endif; ?>
                       <div class="contents-border mt-1 mb-1 text-left w-100 ml-0"></div>
-                      <div class="small mb-2 description"><?= $datas[$postName]->description; ?></div>
+                      <div class="small mb-2 description"><?= $datas[$postName]->sentence; ?></div>
                       <div class="text-center">
                         <a href="<?= get_permalink(); ?>" class="w-100" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
                       </div>

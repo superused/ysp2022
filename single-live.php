@@ -75,6 +75,51 @@ $data = $datas[$field];
                 <div>・Youtubeチャット欄へのコメント・Twitterでの実況　歓迎！</div>
               </div>
             </div>
+<?php if ($field == 'nazotoki' || $field == 'peacedesignertalk'): ?>
+            <div class="col-12">
+              <div class="site-section w-border mx-auto pt-0" data-aos="fade-up" data-aos-delay="100">
+                <h4 class="font-weight-bold bg-cyan text-white p-3 mb-4">関連ページ</h4>
+<?php if ($field == 'nazotoki'): ?>
+                <div class="row">
+                  <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-member image col-12">
+                      <a href="<?= PHOTO_CONTEST_URL;?>"><img src="<?= PHOTO_TITLE_IMG; ?>" alt="PHOTOコンテスト" class="img-fluid"></a>
+                    </div>
+                    <div class="sidebar-title">PHOTOコンテスト</div>
+                  </div>
+                  <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-member image col-12">
+                      <a href="<?= SENRYU_CONTEST_URL;?>"><img src="<?= SENRYU_TITLE_IMG ?>" alt="川柳コンテスト" class="img-fluid"></a>
+                    </div>
+                    <div class="sidebar-title">川柳コンテスト</div>
+                  </div>
+                </div>
+<?php elseif ($field == 'peacedesignertalk'): ?>
+
+<?php $datas = $util->getProjectDetail(); ?>
+<?php
+$the_query = new WP_Query([
+  'post_type' => 'project',
+  'posts_per_page' => -1,
+  'orderby' => 'post__in',
+]);
+?>
+<?php   if ($the_query->have_posts()): ?>
+              <div class="row project-list">
+<?php     while ($the_query->have_posts()) : $the_query->the_post(); ?>
+<?php       $postName = get_post_field('post_name', get_the_ID()); ?>
+<?php         if (in_array($postName, ['shiga', 'tamatokyo', 'ehime'])): ?>
+<?php           include 'parts/project-frame.php'; ?>
+<?php         endif; ?>
+<?php     endwhile; ?>
+              </div>
+<?php   endif; ?>
+<?php $datas = $util->getLiveDetail(); ?>
+<?php endif; ?>
+
+              </div>
+            </div>
+<?php endif; ?>
           </div>
           <div class="col-12 col-md-4 pr-md-0">
             <div class="other-live site-section-heading project-frame w-border mx-auto pl-2 pb-2 pt-1 pr-0" data-aos="fade-up" data-aos-delay="100">
@@ -142,14 +187,6 @@ $the_query = new WP_Query([
 <?php endif; ?>
             </div>
             <?= get_sidebar();?>
-          </div>
-          <div class="col-12">
-            <div class="site-section w-border mx-auto pt-0" data-aos="fade-up" data-aos-delay="100">
-              <h4 class="font-weight-bold bg-cyan text-white p-3 mb-4">関連ページ</h4>
-              <div class="w-50 mx-auto m-5">
-                <img src="<?= get_template_directory_uri(); ?>/images/photo5.png" alt="Image" class="img-fluid">
-              </div>
-            </div>
           </div>
         </div>
       </div>

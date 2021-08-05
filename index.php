@@ -116,7 +116,7 @@ $the_query = new WP_Query([
                       <div class="ml-lg-3 ml-xl-3">
                         <div class="text-left mx-auto mb-3">
                           <h4 class="font-weight-bold pb-2"><?= $datas[$postName]->title; ?></h4>
-                          <div class="description"><?= $datas[$postName]->description; ?></div>
+                          <div class="description"><?= $datas[$postName]->sentence; ?></div>
                         </div>
                         <div class="text-center text-md-left mb-3">
                           <a href="<?= get_permalink(); ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
