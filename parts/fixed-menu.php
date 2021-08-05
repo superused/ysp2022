@@ -2,7 +2,7 @@
       <div class="container-fluid m-0 p-0">
         <div class="fixed-button">
           <div class="fixed-button-content">
-            <a href="<?= LIVE_CONTENTS_URL; ?>" ontouchstart="">
+            <a href="<?= LIVE_URL; ?>" ontouchstart="">
               <div class="contents">
                 <img src="<?= get_template_directory_uri(); ?>/images/fixed_live_button.png" alt="Image" class="img-fluid">
               </div>
@@ -23,6 +23,10 @@
             </a>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="site-section fixed-menu fixed-menu-pc zindex-tooltip m-0 p-0">
+      <div class="container-fluid m-0 p-0">
         <div class="fixed-button-present">
           <div class="fixed-button-content">
             <a href="<?= QUESTIONNAIRE_URL; ?>" class="ml-1 mr-2" ontouchstart="" target="_blank">

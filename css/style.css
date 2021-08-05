@@ -3351,6 +3351,12 @@ div.news-area .owl-carousel {
   .fixed-menu {
     display: none;
   }
+  .fixed-menu.fixed-menu-pc {
+    display: block;
+  }
+  .fixed-menu.fixed-menu-pc .fixed-button-present {
+    width: 7rem;
+  }
 }
 .fixed-button {
   width: 80%;
