@@ -7,9 +7,16 @@
         </div>
         <div data-aos="fade-up" data-aos-delay="100">
           <div class="team-member image col-12">
-            <a href="<?= PROJECT_URL; ?>"><img src="<?= PROJECT_TITLE_IMG; ?>" alt="連合会" class="img-fluid"></a>
+            <a href="<?= LIVE_URL; ?>"><img src="<?= LIVE_TITLE_IMG; ?>" alt="LIVE" class="img-fluid"></a>
           </div>
-          <div class="sidebar-title">連合会</div>
+          <div class="sidebar-title">LIVE</div>
+        </div>
+        <div class="heading-bar color-gray mb-4" data-aos="fade-up" data-aos-delay="100"></div>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div class="team-member image col-12">
+            <a href="<?= PROJECT_URL; ?>"><img src="<?= PROJECT_TITLE_IMG; ?>" alt="PROJECT" class="img-fluid"></a>
+          </div>
+          <div class="sidebar-title">PROJECT</div>
         </div>
         <div class="heading-bar color-gray mb-4" data-aos="fade-up" data-aos-delay="100"></div>
         <div data-aos="fade-up" data-aos-delay="100">

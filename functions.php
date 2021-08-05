@@ -30,7 +30,7 @@ define('PHOTO_RESULT_LIST_URL', esc_url(home_url('/photo-result-list/')));
 define('CONTACT_URL', esc_url(home_url('/contact/')));
 define('CONCEPT_URL', esc_url(home_url('/concept/')));
 define('LIVE_CONTENTS_URL', esc_url(home_url('/#live')));
-define('PROJECT_URL', esc_url(home_url('/#project')));
+define('PROJECT_CONTENTS_URL', esc_url(home_url('/#project')));
 define('CONTEST_URL', esc_url(home_url('/#contest')));
 define('CONTENTS_LIST_URL', esc_url(home_url('/#contents-list')));
 define('SENRYU_URL', esc_url(home_url('/#senryu')));

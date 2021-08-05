@@ -58,7 +58,7 @@ $data = $datas[$field];
                   </div>
                   <div class="col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7" data-aos="fade-up" data-aos-delay="100">
                     <h4 class="font-weight-bold"><?= $data->name1; ?></h4>
-                    <div class="description"><?= $data->description1; ?></div>
+                    <div class="description"><?= nl2br($data->description1); ?></div>
 <?php     if (isset($data->sns)): ?>
                     <div class="mt-4 sns text-break">SNS: <a href="<?= $data->sns; ?>" target="_blank" ontouchstart=""><?= $data->sns; ?></a></div>
 <?php     endif; ?>
@@ -128,10 +128,8 @@ $the_query = new WP_Query([
               </div>
               <div class="other-live-container">
 <?php
-//現在のページのカテゴリを取得
-$categories = get_the_category($post->ID);
 $the_query = new WP_Query([
-  'post_type' => get_post_type(),
+  'post_type' => 'live',
   'posts_per_page' => -1,
   'post__not_in' => [$post->ID],
   'orderby' => 'post__in',

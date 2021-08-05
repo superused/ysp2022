@@ -39,8 +39,8 @@
                 </div>
               </div>
             </div>
-            <div class="site-section w-border mx-auto" data-aos="fade-up" data-aos-delay="100">
-              <h4 class="heading-bar color-cyan font-weight-bold mb-2 px-3"><span class="pr-3">LIVEプログラム</span></h4>
+            <div class="site-section live-top-timetable w-border mx-auto px-4" data-aos="fade-up" data-aos-delay="100">
+              <h4 class="heading-bar color-cyan font-weight-bold mb-2"><span class="pr-3">LIVEプログラム</span></h4>
               <div class="mt-4"></div>
 <?php include 'parts/timetable0807.php'; ?>
 <?php include 'parts/timetable0808.php'; ?>

@@ -4077,6 +4077,16 @@ div.news-area .owl-carousel {
   padding: 0;
   width: 25%;
 }
+@media (min-width: 767.98px) {
+  .time-table .time {
+    font-size: 70%;
+  }
+}
+@media (min-width: 991.98px) {
+  .time-table .time {
+    font-size: 100%;
+  }
+}
 .time-table .image {
   margin-left: auto;
   margin-right: auto;
@@ -4142,6 +4152,10 @@ button[data-date="20210809"] {
 .live-detail-timetable [data-date="20210808"],
 .live-detail-timetable [data-date="20210809"] {
   display: block;
+}
+.live-top-timetable .time-table .image a {
+  left: 26%;
+  max-width: 48%;
 }
 .live-detail-timetable .time-table .image a {
   left: 20%;

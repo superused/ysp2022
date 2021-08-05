@@ -45,7 +45,7 @@
             <div class="text-center">
               <img src="<?= get_template_directory_uri(); ?>/images/i_map_bg.png" alt="Image" class="w-100">
               <ul class="contents-list-link">
-                <li><a href="<?= PROJECT_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_appeal.png" alt="活動紹介コーナー" class="img-fluid"></a></li>
+                <li><a href="<?= PROJECT_CONTENTS_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_appeal.png" alt="活動紹介コーナー" class="img-fluid"></a></li>
                 <li><a href="<?= LIVE_CONTENTS_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_live.png" alt="LIVE配信" class="img-fluid"></a></li>
                 <li><a href="<?= SENRYU_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_senryu.png" alt="川柳コンテスト" class="img-fluid"></a></li>
                 <li><a href="<?= MOVIE_URL; ?>" ontouchstart=""><img src="<?= get_template_directory_uri(); ?>/images/i_map_movie.png" alt="MOVIEコンテスト" class="img-fluid"></a></li>
@@ -105,8 +105,8 @@ $the_query = new WP_Query([
                 <div class="live-list project-frame w-100 mb-5" data-aos="fade-up" data-aos-delay="100">
                   <h6 class="triangle"></h6>
                   <div class="row">
-                    <div class="p-0 mx-0 mt-0 mb-3 col-12 col-md-6">
-                      <div class="team-member text-center image mx-3 mb-4 mb-md-0 w-auto">
+                    <div class="p-0 m-0 mb-md-3 col-12 col-md-6">
+                      <div class="team-member text-center image mx-3 mb-3 mb-md-0 w-auto">
                         <a href="<?= get_permalink(); ?>" ontouchstart="">
                           <img src="<?= $util->viewLiveTopImage($postName); ?>" alt="Image" class="img-fluid">
                         </a>
@@ -115,8 +115,8 @@ $the_query = new WP_Query([
                     <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                       <div class="ml-lg-3 ml-xl-3">
                         <div class="text-left mx-auto mb-3">
-                          <h4 class="font-weight-bold pb-2"><?= $datas[$postName]->title; ?></h4>
-                          <div class="description"><?= $datas[$postName]->sentence; ?></div>
+                          <h4 class="font-weight-bold pb-2 mt-md-2 mr-md-2"><?= $datas[$postName]->title; ?></h4>
+                          <div class="description"><?= nl2br($datas[$postName]->sentence); ?></div>
                         </div>
                         <div class="text-center text-md-left mb-3">
                           <a href="<?= get_permalink(); ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>
@@ -177,10 +177,10 @@ $the_query = new WP_Query([
                     </div>
                     <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                       <div class="text-left mx-auto">
-                        <h4 class="font-weight-bold pb-2"><?= $datas[$postName]->title; ?></h4>
+                        <h4 class="font-weight-bold pb-2 mt-md-2 mr-md-2"><?= $datas[$postName]->title; ?></h4>
                         <h5 class="font-weight-bold p-0 m-0"><?= $datas[$postName]->union_name; ?></h5>
                         <div class="contents-border w-100 border-cyan mt-0 mb-2 pb-2"></div>
-                        <div class="description"><?= $datas[$postName]->description; ?></div>
+                        <div class="description"><?= nl2br($datas[$postName]->description); ?></div>
                       </div>
                       <div class="text-center text-md-left mt-3">
                         <a href="<?= get_permalink(); ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>

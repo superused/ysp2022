@@ -48,18 +48,22 @@ $data = $datas[$postName];
 <?php     if (strtolower($type) !== 'mail'): ?>
                   <div class="mt-2"><?= $type; ?></div>
                   <div class="contents-border text-left short m-0 mb-2"></div>
+<?php       if (preg_match('(https?://[-_.!~*\'()a-zA-Z0-9;/?:@&=+$,%#]+)', $url)): // URL文字列かどうか ?>
                   <p><a href="<?= $url; ?>" target="_blank"><?= $url; ?></a></p>
+<?php       else: ?>
+                  <p><?= $url; ?></p>
+<?php       endif; ?>
 <?php     endif; ?>
 <?php   endforeach; ?>
 <?php   if ($data->frequency): ?>
                   <div class="mt-2">活動頻度</div>
                   <div class="contents-border text-left short m-0 mb-2"></div>
-                  <p><?= $data->frequency; ?></p>
+                  <p><?= nl2br($data->frequency); ?></p>
 <?php   endif; ?>
 <?php   if ($data->place): ?>
                   <div class="mt-2">活動場所</div>
                   <div class="contents-border text-left short m-0 mb-2"></div>
-                  <p><img src="<?= get_template_directory_uri(); ?>/images/icon_location.png" alt="Image" class="img-fluid location-icon mb-1"><?= $data->place; ?></p>
+                  <p><img src="<?= get_template_directory_uri(); ?>/images/icon_location.png" alt="Image" class="img-fluid location-icon mb-1"><?= nl2br($data->place); ?></p>
 <?php   endif; ?>
 <?php   if (isset($data->sns_json['Mail'])): ?>
                   <div class="mt-2">Mail</div>
