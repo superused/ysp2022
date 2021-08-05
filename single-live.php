@@ -3,6 +3,7 @@
 $field = get_post_field('post_name', get_the_ID());
 $datas = $util->getLiveDetail();
 $data = $datas[$field];
+$liveId = get_the_ID();
 ?>
     <div></div>
     <div class="site-section pt-0">
@@ -131,7 +132,7 @@ $the_query = new WP_Query([
 $the_query = new WP_Query([
   'post_type' => 'live',
   'posts_per_page' => -1,
-  'post__not_in' => [$post->ID],
+  'post__not_in' => [$liveId],
   'orderby' => 'post__in',
 ]);
 ?>
