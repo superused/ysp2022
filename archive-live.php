@@ -2,7 +2,7 @@
     <div class="site-section top-image pb-0" data-aos="fade-up" data-aos-delay="100">
       <div class="container">
         <div class="row">
-          <img src="<?= get_template_directory_uri(); ?>/images/video1.jpg" alt="Image" class="img-fluid w-100 h-100">
+          <img src="<?= LIVE_TITLE_IMG; ?>" alt="Image" class="img-fluid w-100 h-100">
         </div>
       </div>
     </div>

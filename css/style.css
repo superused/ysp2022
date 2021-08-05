@@ -2604,6 +2604,7 @@ div.event-bg-right {
   scrollbar-width: thin;
 }
 .other-live-container .description,
+.live-list .description,
 .project-list .description {
   display: -webkit-box;
   -webkit-line-clamp: 3;

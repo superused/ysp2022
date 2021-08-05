@@ -30,7 +30,7 @@
                 <div class="bg-light2-gray" data-time="15:00">
                   <div class="col-1" style="">15:00</div>
                   <div class="col-11">
-                    <a href="<?= esc_url(home_url('/live/peacedesignertalk/')); ?>"><img src="/wp-content/uploads/2021/08/Pdトーク_LIVE.jpg" alt="Image" style="height: 9rem"></a>
+                    <a href="<?= esc_url(home_url('/live/peacedesignertalk/')); ?>"><img src="<?= $util->viewLiveTopImage('peacedesignertalk'); ?>" alt="Image" style="height: 9rem"></a>
                   </div>
                 </div>
                 <div class="bg-light2-gray" data-time="15:05">
@@ -104,7 +104,7 @@
                 <div class="bg-light-gray" data-time="16:30">
                   <div class="col-1" style="">16:30</div>
                   <div class="col-11">
-                    <a href="<?= esc_url(home_url('/live/sinergytalk0809/')); ?>"><img src="/wp-content/uploads/2021/08/シナジークロス_カデロ_LIVE.jpg" alt="Image" style="height: 12rem"></a>
+                    <a href="<?= esc_url(home_url('/live/sinergycross0809/')); ?>"><img src="<?= $util->viewLiveTopImage('sinergycross0809'); ?>" alt="Image" style="height: 12rem"></a>
                   </div>
                 </div>
                 <div class="bg-light-gray" data-time="16:35">
@@ -158,7 +158,7 @@
                 <div class="bg-light-gray" data-time="17:35">
                   <div class="col-1" style="visibility: hidden;">17:35</div>
                   <div class="col-11">
-                    <a href="<?= esc_url(home_url('/live/closing/')); ?>"><img src="/wp-content/uploads/2021/08/クロージング_LIVE.jpg" alt="Image" style="height: 5rem"></a>
+                    <a href="<?= esc_url(home_url('/live/closing/')); ?>"><img src="<?= $util->viewLiveTopImage('closing'); ?>" alt="Image" style="height: 5rem"></a>
                   </div>
                 </div>
                 <div class="bg-light-gray" data-time="17:40">

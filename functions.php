@@ -181,24 +181,23 @@ class Util {
     return $posts;
   }
 
-  public function getLiveDetail($field) {
-    $wpdb = $this->wpdb;
+  public function getLiveDetail() {
+    if (!$this->liveDetail) {
+      $wpdb = $this->wpdb;
+      $query = 'SELECT * FROM ' . $wpdb->live_details;
 
-    $query = "SELECT * FROM $wpdb->live_details";
-    $param = null;
-    if ($field) {
-      $query .= " WHERE post_name = %s";
-      $param = $wpdb->prepare($query, $field);
-    } else {
-      $param = $wpdb->prepare($query);
+      $datas = $wpdb->get_results($wpdb->prepare($query));
+      if (!isset($datas[0])) return false;
+
+      $result = [];
+      foreach ($datas as $data) {
+        if ($data->data) $data->data = json_decode($data->data, true);
+        $result[$data->post_name] = $data;
+      }
+
+      $this->liveDetail = $result;
     }
-    $liveDetailData = $wpdb->get_results($param);
-    if (!isset($liveDetailData[0])) return false;
-    if ($field) {
-      return $liveDetailData[0];
-    } else {
-      return $liveDetailData;
-    }
+    return $this->liveDetail;
   }
 
   public function getProjectDetail() {
@@ -206,8 +205,7 @@ class Util {
       $wpdb = $this->wpdb;
       $query = 'SELECT * FROM ' . $wpdb->projects;
 
-      $param = $wpdb->prepare($query);
-      $datas = $wpdb->get_results($param);
+      $datas = $wpdb->get_results($wpdb->prepare($query));
       if (!isset($datas[0])) return false;
 
       $result = [];
@@ -261,11 +259,18 @@ class Util {
     return false;
   }
 
+  public function viewProjectTopImage($postName) {
+    $path = '/images/project/' . $postName . '/top.jpg';
+    return $this->viewImage($path);
+  }
+  public function viewLiveTopImage($postName) {
+    $path = '/images/live/' . $postName . '/top.jpg';
+    return $this->viewImage($path);
+  }
   /**
    * 画像の存在確認を行い、存在すればその画像パス、存在しなければデフォルト画像のパスを返す
    */
-  public function viewProjectTopImage($postName) {
-    $path = '/images/project/' . $postName . '/top.jpg';
+  public function viewImage($path) {
     if (file_exists(get_template_directory() . $path)) {
       return get_template_directory_uri() . $path;
     } else {

@@ -30,7 +30,7 @@
                 <div class="bg-light2-gray" data-time="15:00">
                   <div class="col-1" style="">15:00</div>
                   <div class="col-11">
-                    <a href="<?= esc_url(home_url('/live/nazotoki/')); ?>"><img src="/wp-content/uploads/2021/08/フォト川柳_LIVE.jpg" alt="Image" style="height: 9rem"></a>
+                    <a href="<?= esc_url(home_url('/live/nazotoki/')); ?>"><img src="<?= $util->viewLiveTopImage('nazotoki'); ?>" alt="Image" style="height: 9rem"></a>
                   </div>
                 </div>
                 <div class="bg-light2-gray" data-time="15:05">
@@ -104,7 +104,7 @@
                 <div class="bg-light-gray" data-time="16:30">
                   <div class="col-1" style="">16:30</div>
                   <div class="col-11">
-                    <a href="<?= esc_url(home_url('/live/sinergycross0808/')); ?>"><img src="/wp-content/uploads/2021/08/シナジークロス_柴田_LIVE.jpg" alt="Image" style="height: 12rem"></a>
+                    <a href="<?= esc_url(home_url('/live/sinergycross0808/')); ?>"><img src="<?= $util->viewLiveTopImage('sinergycross0808'); ?>" alt="Image" style="height: 12rem"></a>
                   </div>
                 </div>
                 <div class="bg-light-gray" data-time="16:35">

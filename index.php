@@ -97,24 +97,26 @@ $the_query = new WP_Query([
   'orderby' => 'post__in',
 ]);
 ?>
+<?php $datas = $util->getLiveDetail(); ?>
 <?php if ($the_query->have_posts()): ?>
 <?php   while ($the_query->have_posts()) : $the_query->the_post(); ?>
-<?php     if (strpos(get_post_field('post_name', get_the_ID()), 'sinergy') !== false): ?>
-                <div class="project-frame w-100 mb-5" data-aos="fade-up" data-aos-delay="100">
+<?php     $postName = get_post_field('post_name', get_the_ID()); ?>
+<?php     if (strpos($postName, 'sinergy') !== false): ?>
+                <div class="live-list project-frame w-100 mb-5" data-aos="fade-up" data-aos-delay="100">
                   <h6 class="triangle"></h6>
                   <div class="row">
                     <div class="p-0 mx-0 mt-0 mb-3 col-12 col-md-6">
                       <div class="team-member text-center image mx-3 mb-4 mb-md-0 w-auto">
                         <a href="<?= get_permalink(); ?>" ontouchstart="">
-                          <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?: NO_IMAGE_URL ?>" alt="Image" class="img-fluid">
+                          <img src="<?= $util->viewLiveTopImage($postName); ?>" alt="Image" class="img-fluid">
                         </a>
                       </div>
                     </div>
                     <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                       <div class="ml-lg-3 ml-xl-3">
                         <div class="text-left mx-auto mb-3">
-                          <h4 class="font-weight-bold pb-2"><?php the_title(); ?></h4>
-                          <div><?php the_excerpt(); ?></div>
+                          <h4 class="font-weight-bold pb-2"><?= $datas[$postName]->title; ?></h4>
+                          <div class="description"><?= $datas[$postName]->description; ?></div>
                         </div>
                         <div class="text-center text-md-left mb-3">
                           <a href="<?= get_permalink(); ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">この配信を見る</button></a>

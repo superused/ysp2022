@@ -30,7 +30,7 @@
                 <div class="bg-light2-gray" data-time="15:00">
                   <div class="col-1" style="">15:00</div>
                   <div class="col-11">
-                    <a href="<?= esc_url(home_url('/live/opening/')); ?>"><img src="/wp-content/uploads/2021/08/オープニング_LIVE.jpg" alt="Image" style="height: 4rem"></a>
+                    <a href="<?= esc_url(home_url('/live/opening/')); ?>"><img src="<?= $util->viewLiveTopImage('opening'); ?>" alt="Image" style="height: 4rem"></a>
                   </div>
                 </div>
                 <div class="bg-light2-gray" data-time="15:05">
@@ -48,7 +48,7 @@
                 <div class="bg-light2-gray" data-time="15:20">
                   <div class="col-1" style="visibility: hidden;">15:20</div>
                   <div class="col-11">
-                    <a href="<?= esc_url(home_url('/live/quiz/')); ?>"><img src="/wp-content/uploads/2021/08/クイズ_LIVE.jpg" alt="Image" style="height: 8rem"></a>
+                    <a href="<?= esc_url(home_url('/live/quiz/')); ?>"><img src="<?= $util->viewLiveTopImage('quiz'); ?>" alt="Image" style="height: 8rem"></a>
                   </div>
                 </div>
                 <div class="bg-light2-gray" data-time="15:25">
@@ -106,7 +106,7 @@
                 <div class="bg-light-gray" data-time="16:30">
                   <div class="col-1" style="">16:30</div>
                   <div class="col-11">
-                    <a href="<?= esc_url(home_url('/live/sinergycross0807/')); ?>"><img src="/wp-content/uploads/2021/08/シナジークロス_SDGs_LIVE.jpg" alt="Image" style="height: 12rem"></a>
+                    <a href="<?= esc_url(home_url('/live/sinergycross0807/')); ?>"><img src="<?= $util->viewLiveTopImage('sinergycross0807'); ?>" alt="Image" style="height: 12rem"></a>
                   </div>
                 </div>
                 <div class="bg-light-gray" data-time="16:35">
