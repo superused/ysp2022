@@ -136,7 +136,7 @@ $datas = [
             <div class="site-section p-0 mb-4" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row result-list">
-                  <div class="senryu-100-data col-12 result-winner row justify-content-center mx-0 my-3 my-md-2 p-0 d-none">
+                  <div class="senryu-100-data col-12 result-winner other row justify-content-center mx-0 my-3 my-md-2 p-0 d-none">
                     <div class="col-12 text-left box-title pt-2 pb-1">
                       <h3 class="text-cyan font-weight-bold font-family-none mb-0"><span class="small text-body font-weight-bold mr-1">第</span><span class="ranking"><?=$i ?></span><span class="small text-body font-weight-bold ml-1">位</span></h3>
                     </div>
@@ -152,6 +152,25 @@ $datas = [
                 </div>
                 <div id="add-ranking" class="ranking text-center col-12 mt-5 mb-5" data-aos="fade-up" data-aos-delay="100">
                   <div href="#" class="arrow down circle" ontouchstart=""></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-100 pt-5"></div>
+            <div class="site-section result-winner senryu p-0 my-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 text-center box-title pt-2 pb-1">
+                    <h3 class="text-cyan font-weight-bold">受賞作品</h3>
+                  </div>
+                  <div class="text-center w-100 mx-auto box-body bg-white p-3">
+                    <div class="row px-3">
+                      <div class="w-100">ご覧になりたい方はこちらから</div>
+                    </div>
+                    <div class="text-center mt-3">
+                      <a href="<?= SENRYU_CONTEST_URL ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">作品を見る</button></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

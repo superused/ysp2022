@@ -3682,19 +3682,34 @@ div.news-area .owl-carousel {
  }
 .result-winner {
   border: 3px solid #00b9f2;
-  border-radius: 1rem;
+  border-radius: 2.5rem;
   background-color: #f6f1e2;
   padding: 1rem;
   position: relative;
 }
+.result-winner.other {
+  border-radius: 1.5rem;
+}
 .result-winner .box-title {
   background-color: #f6f1e2;
   border-bottom: 3px solid #00b9f2;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 2.5rem 2.5rem 0 0;
   color: #c6b891;
 }
+.result-winner.other .box-title {
+  border-radius: 1.5rem 1.5rem 0 0;
+}
 .result-winner .box-body {
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 2.5rem 2.5rem;
+}
+.result-winner.other .box-body {
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+.result-comment {
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  margin-bottom: 0.3rem;
 }
 .location-icon {
   width: 1rem;
@@ -3978,10 +3993,19 @@ div.news-area .owl-carousel {
   height: 100%;
   object-fit: cover;
 }
+.senryu-result {
+  padding: 1rem;
+}
+.senryu-result .row {
+  padding: 0 1rem;
+}
 .senryu-result h3 {
   font-weight: bold;
   padding: 0;
   margin: 0;
+  font-size: 1.3rem;
+}
+.senryu-result h3.top {
   width: 100%;
 }
 .senryu-result .number-of-votes {
@@ -3989,16 +4013,47 @@ div.news-area .owl-carousel {
   right: 1rem;
   z-index: 1;
 }
+.senryu-result .image-box {
+  width: 50%;
+}
+@media (max-width: 419.98px) {
+  .senryu-result h3 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 547.98px) {
+  .senryu-result .row {
+    padding: 1rem 2rem;
+  }
+  .senryu-result .image-box {
+    width: 40%;
+  }
+}
 @media (min-width: 767.98px) {
   .senryu-result h3 {
     width: auto;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+  }
+  .senryu-result h3.top {
+    width: auto;
+  }
+  .senryu-result .number-of-votes {
+    right: 1rem;
+    font-size: 1.1rem;
   }
 }
 @media (min-width: 991.98px) {
   .senryu-result h3 {
     width: auto;
     font-size: 1.75rem;
+  }
+  .senryu-result .image-box {
+    width: 30%;
+  }
+}
+@media (min-width: 1199.98px) {
+  .senryu-result .image-box {
+    width: 25%;
   }
 }
 .youtube {

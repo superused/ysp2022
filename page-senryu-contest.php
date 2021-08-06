@@ -36,8 +36,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
 <?php $count = 0; ?>
 <?php foreach ($datas as $key => $data): ?>
 <?php     $count++; ?>
-<?php     if ($count == 1 || $count == 2): ?>
-<?php         if ($count == 1): ?>
+<?php     if ($count == 1): ?>
             <div class="result-winner-image w-75 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
               <img src="<?= get_template_directory_uri(); ?>/images/result_winner.png" alt="Image" class="img-fluid">
             </div>
@@ -46,22 +45,35 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                 <div class="row">
                   <div class="col-12 text-center box-title pt-2 pb-1">
                     <h3 class="text-cyan font-weight-bold">最優秀賞</h3>
-                    <div class="font-weight-bold">～賞品～<br>ギフトカード（１万円分）<br>地域の特産カタログギフト</div>
+                    <div class="result-comment">～賞品～<br>ギフトカード（１万円分）<br>地域の特産カタログギフト</div>
                   </div>
-<?php         elseif ($count == 2): ?>
+                  <div class="senryu-result text-left mx-auto box-body bg-white">
+                    <h6 class="number-of-votes w-auto mt-2 font-family-none" data-aos="fade-up" data-aos-delay="100"><span class="font-weight-bold text-cyan bg-yellow py-1 px-2"><span class="font-weight-bold small">得票数 </span><span><?= $senryu[$key]['polla_votes']; ?></span><span class="font-weight-bold small">票</span></span></h6>
+                    <div class="row">
+                      <h3 class="top"><?= str_replace('|', '<br>', $data['senryu']); ?></h3>
+                      <div class="image-box p-0 mx-auto ml-md-auto mr-md-0">
+                        <img src="<?= !empty($data['image']) ? $data['image'] : NO_IMAGE_URL; ?>" class="img-fluid">
+                      </div>
+                      <div class="kakejiku-episode w-100"><?= $data['episode']; ?></div>
+                      <div class="kakejiku-name mt-2"><?= $data['name'] . " (" . $data['personal'] . ")"; ?></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+<?php     elseif ($count == 2): ?>
             <div class="site-section result-winner senryu p-0 mb-4" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
                   <div class="col-12 text-center box-title pt-2 pb-1">
                     <h3 class="text-cyan font-weight-bold">優秀賞</h3>
-                    <div class="font-weight-bold">～賞品～<br>ギフトカード（５千円分）<br>Peace designer オリジナルフェイスタオル</div>
+                    <div class="result-comment">～賞品～<br>ギフトカード（５千円分）<br>Peace designer オリジナルフェイスタオル</div>
                   </div>
-<?php         endif; ?>
-                  <div class="senryu-result text-left mx-auto box-body bg-white p-3">
-                    <div class="row px-3">
+                  <div class="senryu-result text-left mx-auto box-body bg-white">
+                    <h6 class="number-of-votes w-auto mt-2 font-family-none" data-aos="fade-up" data-aos-delay="100"><span class="font-weight-bold text-cyan bg-yellow py-1 px-2"><span class="font-weight-bold small">得票数 </span><span><?= $senryu[$key]['polla_votes']; ?></span><span class="font-weight-bold small">票</span></span></h6>
+                    <div class="row">
                       <h3><?= str_replace('|', '<br>', $data['senryu']); ?></h3>
-                      <h6 class="number-of-votes w-auto mt-2 font-family-none"><span class="font-weight-bold text-cyan bg-yellow p-1"><span class="font-weight-bold small">得票数 </span><span><?= $senryu[$key]['polla_votes']; ?></span><span class="font-weight-bold small">票</span></span></h6>
-                      <div class="w-50 p-0 mx-auto ml-md-auto mr-md-0">
+                      <div class="image-box p-0 ml-auto mr-0">
                         <img src="<?= !empty($data['image']) ? $data['image'] : NO_IMAGE_URL; ?>" class="img-fluid">
                       </div>
                       <div class="kakejiku-episode w-100"><?= $data['episode']; ?></div>
@@ -78,14 +90,14 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                 <div class="row">
                   <div class="col-12 text-center box-title pt-2 pb-1">
                     <h3 class="text-cyan font-weight-bold">佳作</h3>
-                    <div class="font-weight-bold">～賞品～<br>ギフトカード（500円分）</div>
+                    <div class="result-comment">～賞品～<br>ギフトカード（500円分）</div>
                   </div>
                   <div class="senryu-result text-left mx-auto box-body bg-white p-3">
 <?php         endif; ?>
-                    <div class="row px-3" data-aos="fade-up" data-aos-delay="100">
+                    <h6 class="number-of-votes w-auto mt-2 font-family-none" data-aos="fade-up" data-aos-delay="100"><span class="font-weight-bold text-cyan bg-yellow py-1 px-2"><span class="font-weight-bold small">得票数 </span><span><?= $senryu[$key]['polla_votes']; ?></span><span class="font-weight-bold small">票</span></span></h6>
+                    <div class="row" data-aos="fade-up" data-aos-delay="100">
                       <h3><?= str_replace('|', '<br>',$data['senryu']); ?></h3>
-                      <h6 class="number-of-votes w-auto mt-2 font-family-none"><span class="font-weight-bold text-cyan bg-yellow p-1"><span class="font-weight-bold small">得票数 </span><span><?= $senryu[$key]['polla_votes']; ?></span><span class="font-weight-bold small">票</span></span></h6>
-                      <div class="w-50 p-0 mx-auto ml-md-auto mr-md-0">
+                      <div class="image-box p-0 ml-auto mr-0">
                         <img src="<?= !empty($data['image']) ? $data['image'] : NO_IMAGE_URL; ?>" class="img-fluid">
                       </div>
                       <div class="kakejiku-episode w-100"><?= $data['episode']; ?></div>
