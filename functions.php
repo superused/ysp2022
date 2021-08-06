@@ -61,9 +61,12 @@ define('PHOTO_RESULT_100_IMG', get_template_directory_uri() . '/images/sidebar/p
 define('MOVIE_IMG', get_template_directory_uri() . '/images/sidebar/movie.jpg');
 define('MOVIE_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/' . (CONTEST_ENDED ? 'movie_result_s.jpg' : 'movie_s.jpg'));
 define('MOVIE_RESULT_IMG', get_template_directory_uri() . '/images/sidebar/movie_result.png');
-define('PROJECT_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/union.jpg');
-define('LIVE_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/live.jpg');
-define('CONTEST_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/contest.jpg');
+define('PROJECT_IMG', get_template_directory_uri() . '/images/sidebar/union.jpg');
+define('PROJECT_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/union_s.jpg');
+define('LIVE_IMG', get_template_directory_uri() . '/images/sidebar/live.jpg');
+define('LIVE_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/live_s.jpg');
+define('CONTEST_IMG', get_template_directory_uri() . '/images/sidebar/contest.jpg');
+define('CONTEST_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/contest_s.jpg');
 
 class Util {
   public $wpdb;

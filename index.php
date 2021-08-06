@@ -261,7 +261,7 @@ $the_query = new WP_Query([
           <div class="site-section-heading mx-3">
             <div class="contest-contents border-0 my-0">
               <div class="team-member contest-values questionnaire" data-aos="fade-up" data-aos-delay="100">
-                <a href="<?= QUESTIONNAIRE_URL; ?>"><img src="<?= get_template_directory_uri(); ?>/images/questionnaire.jpg" class="img-fluid"></a>
+                <a href="<?= QUESTIONNAIRE_URL; ?>"><img src="<?= get_template_directory_uri(); ?>/images/questionnaire_s.jpg" class="img-fluid"></a>
               </div>
             </div>
           </div>
