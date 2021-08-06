@@ -109,7 +109,7 @@ $datas = [
                 <div class="row">
                   <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="mx-auto">
-                      <h4 class="font-weight-bold text-cyan text-center ml-3 mr-3">ご応募いただいた皆さま<br>ありがとうございました！</h4>
+                      <h4 class="font-weight-bold text-cyan text-center ml-3 mr-3">つながり川柳コンテスト！<br>みんなで選んだ大賞発表！</h4>
                     </div>
                   </div>
                 </div>
