@@ -52,7 +52,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                     <div class="row">
                       <h3 class="top"><?= str_replace('|', '<br>', $data['senryu']); ?></h3>
                       <div class="image-box p-0 mx-auto ml-md-auto mr-md-0">
-                        <img src="<?= !empty($data['image']) ? $data['image'] : NO_IMAGE_URL; ?>" class="img-fluid">
+                        <img src="<?= !empty($data['image']) ? str_replace('.jpg', '-150x150.jpg', $data['image']) : NO_IMAGE_URL; ?>" class="img-fluid">
                       </div>
                       <div class="kakejiku-episode w-100"><?= $data['episode']; ?></div>
                       <div class="kakejiku-name mt-2"><?= $data['name'] . " (" . $data['personal'] . ")"; ?></div>
@@ -74,7 +74,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                     <div class="row">
                       <h3><?= str_replace('|', '<br>', $data['senryu']); ?></h3>
                       <div class="image-box p-0 ml-auto mr-0">
-                        <img src="<?= !empty($data['image']) ? $data['image'] : NO_IMAGE_URL; ?>" class="img-fluid">
+                        <img src="<?= !empty($data['image']) ? str_replace('.jpg', '-150x150.jpg', $data['image']) : NO_IMAGE_URL; ?>" class="img-fluid">
                       </div>
                       <div class="kakejiku-episode w-100"><?= $data['episode']; ?></div>
                       <div class="kakejiku-name mt-2"><?= $data['name'] . " (" . $data['personal'] . ")"; ?></div>
@@ -98,7 +98,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                     <div class="row" data-aos="fade-up" data-aos-delay="100">
                       <h3><?= str_replace('|', '<br>',$data['senryu']); ?></h3>
                       <div class="image-box p-0 ml-auto mr-0">
-                        <img src="<?= !empty($data['image']) ? $data['image'] : NO_IMAGE_URL; ?>" class="img-fluid">
+                        <img src="<?= !empty($data['image']) ? str_replace('.jpg', '-150x150.jpg', $data['image']) : NO_IMAGE_URL; ?>" class="img-fluid">
                       </div>
                       <div class="kakejiku-episode w-100"><?= $data['episode']; ?></div>
                       <div class="kakejiku-name mt-2"><?= $data['name'] . " (" . $data['personal'] . ")"; ?></div>

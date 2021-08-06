@@ -4015,6 +4015,7 @@ div.news-area .owl-carousel {
 }
 .senryu-result .image-box {
   width: 50%;
+  max-width: 150px;
 }
 @media (max-width: 419.98px) {
   .senryu-result h3 {
