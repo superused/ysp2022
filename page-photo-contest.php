@@ -35,7 +35,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
             <div class="site-section py-5" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <p class="text-left ml-3 mr-3">「地域の魅力」を感じるひとコマをテーマに何月何日まで募集をしました。応募された作品のなかから選抜されたものを掲載しています。素晴らしい作品をぜひ御覧ください。サムネイルをクリックすると作品の情報をご覧いただけます。（エピソードはクリックして確認）<br>それでは、結果発表です！</p>
+                  <p class="text-left mx-3">「地域の魅力」を感じるひとコマをテーマに7月4日まで募集しました。そして応募された作品のなかから、皆さんの投票でいよいよ最優秀賞が決定しました！<br>それでは、結果発表です！</p>
                 </div>
               </div>
             </div>

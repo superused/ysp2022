@@ -4,7 +4,7 @@
 <?php if (!isset($viewMovie) || $viewMovie): ?>
                 <div class="col-12 col-md-6 px-md-0">
                   <div class="mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="other-balloon balloon bottom border-cyan">ムービーコンテストの結果を見る</div>
+                    <div class="other-balloon balloon bottom border-cyan">ムービーの結果を見る</div>
                   </div>
                   <div class="m-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="team-member text-center image col-12 p-md-0">
@@ -16,7 +16,7 @@
 <?php if (!isset($viewPhoto) || $viewPhoto): ?>
                 <div class="col-12 col-md-6 px-md-0">
                   <div class="mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="other-balloon balloon bottom border-cyan"><?= CONTEST_ENDED ? 'フォトコンテストの結果を見る' : 'フォトに投票する'; ?></div>
+                    <div class="other-balloon balloon bottom border-cyan"><?= CONTEST_ENDED ? 'フォトの結果を見る' : 'フォトに投票する'; ?></div>
                   </div>
                   <div class="m-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="team-member text-center image col-12 p-md-0">
@@ -28,7 +28,7 @@
 <?php if (!isset($viewSenryu) || $viewSenryu): ?>
                 <div class="col-12 col-md-6 px-md-0">
                   <div class="mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="other-balloon balloon bottom border-cyan"><?= CONTEST_ENDED ? '川柳コンテストの結果を見る' : '川柳に投票する'; ?></div>
+                    <div class="other-balloon balloon bottom border-cyan"><?= CONTEST_ENDED ? '川柳の結果を見る' : '川柳に投票する'; ?></div>
                   </div>
                   <div class="m-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="team-member text-center image col-12 p-md-0">

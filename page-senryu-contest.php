@@ -20,7 +20,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                 <div class="row">
                   <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="mx-auto">
-                      <h4 class="font-weight-bold text-cyan text-center ml-3 mr-3">ご応募いただいた皆さま<br>ありがとうございました！</h4>
+                      <h4 class="font-weight-bold text-cyan text-center ml-3 mr-3">つながり川柳コンテスト！<br>みんなで選んだ大賞発表！</h4>
                     </div>
                   </div>
                 </div>
@@ -29,7 +29,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
             <div class="site-section py-5" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <p class="text-left ml-3 mr-3">「コロナ禍で気づいたこと」をテーマに五・七・五の川柳を募集しました！改めて気づいた家族や大切な人との繋がり、実際に経験したことなど、素敵な作品がたくさん寄せられました！<br>それでは、結果発表です！</p>
+                  <p class="text-left mx-3">「コロナ禍で気づいたこと」をテーマに五・七・五の川柳を7月4日まで募集しました！改めて気づいた家族や大切な人との繋がり、実際に経験したことなど、素敵な作品がたくさん寄せられました！<br>そして、皆さんの投票でつながり川柳大賞が決定しました！<br>それでは結果発表です！</p>
                 </div>
               </div>
             </div>
@@ -46,7 +46,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                 <div class="row">
                   <div class="col-12 text-center box-title pt-2 pb-1">
                     <h3 class="text-cyan font-weight-bold">最優秀賞</h3>
-                    <div class="font-weight-bold">～賞品～<br>ギフトカード（１万円分）<br>地域の特産品</div>
+                    <div class="font-weight-bold">～賞品～<br>ギフトカード（１万円分）<br>地域の特産カタログギフト</div>
                   </div>
 <?php         elseif ($count == 2): ?>
             <div class="site-section result-winner senryu p-0 mb-4" data-aos="fade-up" data-aos-delay="100">
@@ -54,7 +54,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                 <div class="row">
                   <div class="col-12 text-center box-title pt-2 pb-1">
                     <h3 class="text-cyan font-weight-bold">優秀賞</h3>
-                    <div class="font-weight-bold">～賞品～<br>ギフトカード（５千円分）<br>Pdフェスオリジナルフェイスタオル</div>
+                    <div class="font-weight-bold">～賞品～<br>ギフトカード（５千円分）<br>Peace designer オリジナルフェイスタオル</div>
                   </div>
 <?php         endif; ?>
                   <div class="senryu-result text-left mx-auto box-body bg-white p-3">
@@ -77,7 +77,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
               <div class="container">
                 <div class="row">
                   <div class="col-12 text-center box-title pt-2 pb-1">
-                    <h3 class="text-cyan font-weight-bold">入選</h3>
+                    <h3 class="text-cyan font-weight-bold">佳作</h3>
                     <div class="font-weight-bold">～賞品～<br>ギフトカード（500円分）</div>
                   </div>
                   <div class="senryu-result text-left mx-auto box-body bg-white p-3">
@@ -106,7 +106,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
               <div class="container">
                 <div class="row">
                   <div class="col-12 text-center box-title pt-2 pb-1">
-                    <h3 class="text-cyan font-weight-bold">第11位～第100位</h3>
+                    <h3 class="text-cyan font-weight-bold">11位～100位</h3>
                   </div>
                   <div class="text-center w-100 mx-auto box-body bg-white p-3">
                     <div class="row px-3">

@@ -85,7 +85,7 @@ $datas = [
                 <div class="row">
                   <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="mx-auto">
-                      <h4 class="font-weight-bold text-cyan text-center ml-3 mr-3">フォトコンテスト！<br>総合グランプリ発表！</h4>
+                      <h4 class="font-weight-bold text-cyan text-center ml-3 mr-3">ランク外の名作！<br>一挙ご紹介！！</h4>
                     </div>
                   </div>
                 </div>
@@ -94,15 +94,15 @@ $datas = [
             <div class="site-section py-5 mx-3" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
-                  <p class="text-left ml-3 mr-3">「地域の魅力」を感じるひとコマをテーマに何月何日まで募集をしました。応募された作品のなかから選抜されたものを掲載しています。素晴らしい作品をぜひ御覧ください。サムネイルをクリックすると作品の情報をご覧いただけます。（エピソードはクリックして確認）<br>それでは11位～70位、一気に見ていきましょう！</p>
+                  <p class="text-left mx-3">「地域の魅力」を感じるひとコマをテーマに7月4日まで募集しました。応募された作品には受賞作品の他にもたくさんの名作がありました。<br>それでは11位～70位、一気に見ていきましょう！<br><br>※写真をクリックすると作品の詳細をご覧いただけます。</p>
                 </div>
               </div>
             </div>
-            <div class="site-section beige py-3 project-frame" data-aos="fade-up" data-aos-delay="100">
+            <div class="site-section beige py-3 mb-4 project-frame" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
                   <div class="site-section-heading text-center w-border mx-auto col-12">
-                    <div class="rem1-3 font-weight-bold mt-3">その他作品</div>
+                    <div class="rem1-3 font-weight-bold mt-3">11位～70位作品</div>
                     <div class="contents-border short mb-2"></div>
                   </div>
                 </div>
@@ -123,6 +123,11 @@ $datas = [
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="site-section py-5 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="font-weight-bold rem1-5">受賞作品</div>
+              <p class="contents-border mb-4"></p>
+              <a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">作品を見る</button></a>
             </div>
             <div class="px-3 mx-3">
 <?php $viewPhoto = false; ?>
