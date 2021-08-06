@@ -147,15 +147,15 @@ $liveId = get_the_ID();
                 <div class="row">
                   <div class="site-section-heading w-border mx-auto col-12 px-md-0 px-lg-2 px-xl-3" data-aos="fade-up" data-aos-delay="100">
                     <div data-aos="fade-up" data-aos-delay="100">
-                      <div class="sidebar-title heading-bar color-cyan"><span class="pr-3">LIVEプログラム</span></div>
+                    <div class="sidebar-title heading-bar color-cyan"><span class="pr-3">LIVEプログラム&nbsp;<?= date('n/j', strtotime($datas[$field]->start_date)); ?></span></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="live-detail-timetable">
-<?php if (!empty($data->start_date)): ?>
-<?php   $date = date('Ymd', strtotime($data->start_date)); ?>
+<?php if (!empty($datas[$field]->start_date)): ?>
+<?php   $date = date('Ymd', strtotime($datas[$field]->start_date)); ?>
 <?php   if ($date == '20210807'): ?>
 <?php     include 'parts/timetable0807.php'; ?>
 <?php   elseif ($date == '20210808'): ?>
