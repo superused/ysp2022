@@ -4229,6 +4229,24 @@ button[data-date="20210809"] {
   left: 26%;
   max-width: 48%;
 }
+@media (max-width: 767.98px) {
+  .live-top-timetable .time-table .image a {
+    left: 21%;
+    max-width: 58%;
+  }
+}
+@media (max-width: 440.98px) {
+  .live-top-timetable .time-table .image a {
+    left: 17%;
+    max-width: 80%;
+  }
+}
+@media (min-width: 1199.98px) {
+  .live-top-timetable .time-table .image a {
+    left: 30%;
+    max-width: 40%;
+  }
+}
 .live-detail-timetable .time-table .image a {
   left: 20%;
   max-width: 60%;
@@ -4244,7 +4262,7 @@ button[data-date="20210809"] {
 }
 @media (max-width: 767.98px) {
   .archive-live {
-    overflow-x: hidden;
+    overflow: hidden;
   }
   .date-button button.btn.btn-lg {
     padding: 0.3rem 1.6rem;
