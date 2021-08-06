@@ -3821,6 +3821,9 @@ div.news-area .owl-carousel {
 .rem1-5 {
   font-size: 1.5rem;
 }
+.rem1-75 {
+  font-size: 1.75rem;
+}
 .rem2 {
   font-size: 2rem;
 }
@@ -4279,4 +4282,15 @@ button[data-date="20210809"] {
 }
 .x-small {
   font-size: 60%;
+}
+h1.color-cyan {
+  color: #00b9f2;
+}
+h1.rem1-75 {
+  font-size: 1.75rem;
+  transform: scale(1);
+}
+h1.rem1-5 {
+  font-size: 1.5rem;
+  transform: scale(1);
 }

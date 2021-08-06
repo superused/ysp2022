@@ -23,7 +23,7 @@ $liveId = get_the_ID();
             <div class="site-section w-border mx-auto">
               <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <div class="font-weight-bold">Peace Designer FES 2021</div>
-                <h4 class="font-weight-bold"><?= $data->title; ?></h4>
+                <h1 class="font-weight-bold rem1-5"><?= $data->title; ?></h1>
                 <p><?= strpos($field, 'sinergy') !== false ? 'S!NERGY CROSS' : ''; ?></p>
                 <div class="contents-border my-4 text-left w-50 ml-0"></div>
               </div>

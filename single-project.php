@@ -9,7 +9,7 @@ $data = $datas[$postName];
     <div class="site-section" data-aos="fade-up" data-aos-delay="100">
       <div class="container">
         <div class="row mx-auto text-center">
-          <h4 class="col-12 font-weight-bold"><?php the_title(); ?></h4>
+          <h1 class="col-12 font-weight-bold rem1-5"><?php the_title(); ?></h1>
           <div class="contents-border mt-3 mb-3"></div>
         </div>
       </div>

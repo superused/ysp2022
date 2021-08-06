@@ -12,7 +12,7 @@
         <div class="row">
           <div class="site-section-heading w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
             <div>
-              <h3 class="color-cyan font-weight-bold mb-2">LIVE スケジュール</h3>
+              <h1 class="color-cyan font-weight-bold mb-2 rem1-75">LIVE スケジュール</h1>
             </div>
           </div>
         </div>
