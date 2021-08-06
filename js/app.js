@@ -90,11 +90,11 @@ $(function() {
         }
       });
 
-      $(document).on('click', 'a[href^=#]', function() {
+      $(document).on('click', 'a[href^=#]:not([href=#])', function() {
         AOS.init({
           disable: true,
         });
-        const adjust = - $('.site-navbar').height();
+        const adjust = -$('.site-navbar').height();
         const speed = 1000; // スクロールの速度（ミリ秒）
         const href = $(this).attr("href"); // アンカーの値取得 リンク先（href）を取得して、hrefという変数に代入
         const target = $(href == "#" || href == "" ? 'html' : href); // 移動先を取得 リンク先(href）のidがある要素を探して、targetに代入
