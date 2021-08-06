@@ -96,26 +96,14 @@ $liveId = get_the_ID();
                   </div>
                 </div>
 <?php elseif ($field == 'peacedesignertalk'): ?>
-
-<?php $datas = $util->getProjectDetail(); ?>
-<?php
-$the_query = new WP_Query([
-  'post_type' => 'project',
-  'posts_per_page' => -1,
-  'orderby' => 'post__in',
-]);
-?>
-<?php   if ($the_query->have_posts()): ?>
-              <div class="row project-list">
-<?php     while ($the_query->have_posts()) : $the_query->the_post(); ?>
-<?php       $postName = get_post_field('post_name', get_the_ID()); ?>
-<?php         if (in_array($postName, ['shiga', 'tamatokyo', 'ehime'])): ?>
-<?php           include 'parts/project-frame.php'; ?>
-<?php         endif; ?>
-<?php     endwhile; ?>
-              </div>
-<?php   endif; ?>
-<?php $datas = $util->getLiveDetail(); ?>
+                <div class="row project-list">
+<?php   $datas = $util->getProjectDetail(); ?>
+<?php   foreach (['shiga', 'tamatokyo', 'ehime'] as $postName): ?>
+<?php     $data = $datas[$postName]; ?>
+<?php     include 'parts/project-frame.php'; ?>
+<?php   endforeach; ?>
+<?php   $datas = $util->getLiveDetail(); ?>
+                </div>
 <?php endif; ?>
 
               </div>
@@ -128,21 +116,13 @@ $the_query = new WP_Query([
                 <div class="sidebar-title heading-bar color-cyan mb-2 pr-3"><span class="pr-3">その他LIVE</span></div>
               </div>
               <div class="other-live-container">
-<?php
-$the_query = new WP_Query([
-  'post_type' => 'live',
-  'posts_per_page' => -1,
-  'post__not_in' => [$liveId],
-  'orderby' => 'post__in',
-]);
-?>
-<?php if ($the_query->have_posts()): ?>
-<?php   while ($the_query->have_posts()) : $the_query->the_post(); ?>
-<?php $postName = get_post_field('post_name', get_the_ID()); ?>
+<?php foreach ($datas as $data): ?>
+<?php   $postName = $data->post_name; ?>
+<?php   if ($postName != get_post_field('post_name', get_the_ID())): ?>
                   <div class="row">
                     <div class="p-0 px-3 pr-xl-1 pr-xl-0 mx-0 mt-0 mb-2 col-12 col-xl-6">
                       <div class="team-member text-center image mx-1 mb-md-0 w-auto">
-                        <a href="<?= get_permalink(); ?>" ontouchstart="">
+                        <a href="<?= esc_url(home_url('/live/' . $postName . '/')); ?>" ontouchstart="">
                             <img src="<?= $util->viewLiveTopImage($postName); ?>" alt="Image" class="img-fluid w-100">
                         </a>
                       </div>
@@ -150,16 +130,16 @@ $the_query = new WP_Query([
                     <div class="col-12 col-xl-6 pl-0">
                       <div class="text-left mx-auto mb-3 pl-3 pr-1 px-xl-0">
                         <h6 class="font-weight-bold mb-1"><?= $datas[$postName]->title; ?></h6>
-<?php       if ($datas[$postName]->subtitle): ?>
+<?php     if ($datas[$postName]->subtitle): ?>
                         <div class="font-weight-bold mb-1 small"><?= $datas[$postName]->subtitle; ?></div>
-<?php       endif; ?>
+<?php     endif; ?>
                         <div class="contents-border w-100 ml-0 my-1"></div>
                         <div class="small description"><?= $datas[$postName]->sentence; ?></div>
                       </div>
                     </div>
                   </div>
-<?php   endwhile; ?>
-<?php endif; ?>
+<?php   endif; ?>
+<?php endforeach; ?>
               </div>
             </div>
             <div class="site-section sidebar pb-0">

@@ -93,7 +93,7 @@ class Util {
     if (is_front_page()) {
       return SITE_TITLE;
     } else if (get_the_title()) {
-      return SITE_TITLE . '｜' . get_the_title();
+      return get_the_title() . '｜' . SITE_TITLE;
     }
     return SITE_TITLE;
   }
@@ -288,6 +288,11 @@ class Util {
     // 5分で1目盛り、1目盛り辺り2rem
     return (strtotime($data->end_date) - strtotime($data->start_date)) / 60 / 5 * 2.5;
   }
+  public function getRandomKeysWithoutPostName($datas, $postName, $num = 0) {
+    unset($datas[$postName]);
+    $rands = array_rand($datas, 4);
+    return $rands;
+  }
 }
 $util = new Util($wpdb, $post);
 
@@ -301,3 +306,13 @@ function iframe_in_div($the_content) {
   return $the_content;
 }
 add_filter('the_content','iframe_in_div');
+
+// All In One SEO の固定ページタイトルタグを特定のページのみ変更する
+function filter_aioseop_title_page( $title ) {
+    // 固定ページ sample のタイトル変更
+    if ( is_page('sample') ) {
+        $title = 'サンプルページ';
+    }
+    return $title;
+};
+add_filter( 'aioseop_title_page', 'filter_aioseop_title_page', 10, 1 );

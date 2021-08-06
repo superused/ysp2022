@@ -77,19 +77,12 @@ $data = $datas[$postName];
               <div class="container">
                 <h4 class="heading-bar color-cyan font-weight-bold pb-3" data-aos="fade-up" data-aos-delay="100"><span class="pr-3">活動紹介コーナー</span></h4>
                 <div class="row project-list">
-<?php
-$the_query = new WP_Query([
-  'post_type' => get_post_type(),
-  'posts_per_page' => 4,
-  'post__not_in' => [$post->ID],
-  'orderby' => 'rand',
-]);
-?>
-<?php if ($the_query->have_posts()): ?>
-<?php   while ($the_query->have_posts()) : $the_query->the_post(); ?>
-<?php     include 'parts/project-frame.php'; ?>
-<?php   endwhile; ?>
-<?php endif; ?>
+<?php $rands = $util->getRandomKeysWithoutPostName($datas, $postName, 4); ?>
+<?php foreach ($rands as $rand): ?>
+<?php   if (!isset($datas[$rand])) continue; ?>
+<?php   $data = $datas[$rand]; ?>
+<?php   include 'parts/project-frame.php'; ?>
+<?php endforeach; ?>
                 </div>
               </div>
             </div>

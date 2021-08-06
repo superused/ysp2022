@@ -29,18 +29,9 @@
               <div class="container">
                 <div class="row project-list">
 <?php $datas = $util->getProjectDetail(); ?>
-<?php
-$the_query = new WP_Query([
-  'post_type' => get_post_type(),
-  'posts_per_page' => -1,
-  'orderby' => 'post__in',
-]);
-?>
-<?php if ($the_query->have_posts()): ?>
-<?php   while ($the_query->have_posts()) : $the_query->the_post(); ?>
-<?php     include 'parts/project-frame.php'; ?>
-<?php   endwhile; ?>
-<?php endif; ?>
+<?php foreach ($datas as $data): ?>
+<?php   include 'parts/project-frame.php'; ?>
+<?php endforeach; ?>
                 </div>
               </div>
             </div>
