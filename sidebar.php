@@ -18,7 +18,9 @@ $postName = $post->post_name;
         </div>
 <?php endif; ?>
 <?php if ($postType != 'project'): ?>
+<?php   if ($postType != 'live'): ?>
         <div class="heading-bar color-gray mb-4" data-aos="fade-up" data-aos-delay="100"></div>
+<?php   endif; ?>
         <div data-aos="fade-up" data-aos-delay="100">
           <div class="team-member image col-12">
             <a href="<?= PROJECT_URL; ?>"><img src="<?= PROJECT_TITLE_IMG; ?>" alt="PROJECT" class="img-fluid"></a>
