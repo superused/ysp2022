@@ -13,7 +13,7 @@
         <div class="row">
           <div class="site-section-heading text-center w-border mx-auto col-xs-12 col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" data-aos-delay="100">
             <div class="mx-auto">
-              <h1 class="font-weight-bold text-center ml-3 mr-3 rem1-75">オンラインブース</h1>
+              <h1 class="font-weight-bold text-center ml-3 mr-3 rem1-75">プロジェクトリスト</h1>
               <div class="contents-border mt-1 mb-1"></div>
             </div>
           </div>
