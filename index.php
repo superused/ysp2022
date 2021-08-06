@@ -24,9 +24,9 @@
     <div id="peace-designer-fes" class="site-section">
       <div class="container">
         <div class="row">
-          <div class="site-section-heading text-center mb-2 w-border col-md-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
+          <div class="site-section-heading text-center mb-2 w-border col-12 mx-auto w-100" data-aos="fade-up" data-aos-delay="100">
             <h1 class="mb-4 top-subtitle">PEACE DESIGNER FES</h1>
-            <p class="text-left mt-md-4">「つながりが描く私たちの未来」をテーマに、日本の魅力を楽しく再発見できるオンラインフェス！</p>
+            <p class="text-left text-md-center my-md-4 py-md-2">「つながりが描く私たちの未来」をテーマに、日本の魅力を楽しく再発見できるオンラインフェス！</p>
             <a href="<?= CONCEPT_URL; ?>"><button class="btn btn-show mx-auto" ontouchstart="">もっと詳しく</button></a>
           </div>
         </div>
