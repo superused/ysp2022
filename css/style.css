@@ -3967,7 +3967,7 @@ div.news-area .owl-carousel {
     padding-left: 0.5rem;
   }
   .site-footer .container .footer-link-upper .footer-link-value+ .footer-link-value:before {
-    content: '│';
+    content: '｜';
     font-size: 1.2rem;
     padding-right: 1rem;
   }
