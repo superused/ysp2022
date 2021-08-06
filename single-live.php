@@ -28,7 +28,7 @@ $liveId = get_the_ID();
                 <div class="contents-border my-4 text-left w-50 ml-0"></div>
               </div>
               <div class="container" data-aos="fade-up" data-aos-delay="100">
-                <div><?= $data->description; ?></div>
+                <div><?= nl2br($data->description); ?></div>
               </div>
 <?php if ($data->sponsership && $data->sponsership_url): ?>
               <div class="container-fluid mt-3" data-aos="fade-up" data-aos-delay="100">
