@@ -140,7 +140,7 @@ $datas = [
 <?php         endif; ?>
 <?php     endif; ?>
 <?php endforeach; ?>
-<?php $viewPhoto = false; ?>
+<?php $viewMovie = false; ?>
 <?php include 'parts/other-contest.php'; ?>
           </div>
           <div class="col-12 col-md-4">
