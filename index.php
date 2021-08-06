@@ -71,8 +71,8 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div id="live" class="row events-row">
           <div class="col-md-6 col-lg-6 col-xl-6 col-xl-6 mb-lg-6 image">
-            <div class="event">
-              <img src="<?= LIVE_TITLE_IMG; ?>" alt="Image" class="img-fluid">
+            <div class="team-member event">
+              <a href="<?= LIVE_URL; ?>" ontouchstart=""><img src="<?= LIVE_TITLE_IMG; ?>" alt="Image" class="img-fluid"></a>
             </div>
           </div>
           <div class="site-section-heading nopadding w-border col-md-6 col-lg-6 col-lg-6 col-xl-6 mx-auto t" data-aos="fade-up" data-aos-delay="100">
@@ -138,8 +138,8 @@ $the_query = new WP_Query([
         <div class="row">
           <div id="project" class="row p-0 m-0">
             <div class="col-12 col-md-6 image" data-aos="fade-up" data-aos-delay="100">
-              <div class="event">
-                <img src="<?= PROJECT_TITLE_IMG; ?>" alt="Image" class="img-fluid">
+              <div class="team-member event">
+                <a href="<?= PROJECT_URL; ?>" ontouchstart=""><img src="<?= PROJECT_TITLE_IMG; ?>" alt="Image" class="img-fluid"></a>
               </div>
             </div>
             <div class="site-section-heading nopadding w-border col-12 col-md-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
@@ -148,7 +148,7 @@ $the_query = new WP_Query([
                 <span class="live-message-under">活動紹介コーナー</span>
                 <p>全国で活躍しているピースデザイナーたちの活動を紹介します！あなたの地域のピースデザイナー達の活躍を覗いてみませんか？</p>
                 <div class="text-center text-md-left">
-                  <a href="<?= PROJECT_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">詳しく見る</button></a>
+                  <a href="<?= PROJECT_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">一覧を見る</button></a>
                 </div>
               </div>
             </div>

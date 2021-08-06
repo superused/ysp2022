@@ -6,7 +6,7 @@ $data = $datas[$field];
 $liveId = get_the_ID();
 ?>
     <div></div>
-    <div class="site-section pt-0">
+    <div class="site-section py-0">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-8">

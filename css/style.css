@@ -4242,6 +4242,23 @@ button[data-date="20210809"] {
   border-color: #00b9f2;
   background-color: #00b9f2;
 }
+@media (max-width: 767.98px) {
+  .archive-live {
+    overflow-x: hidden;
+  }
+  .date-button button.btn.btn-lg {
+    padding: 0.3rem 1.6rem;
+    width: 5rem;
+    border-radius: 0.8rem;
+  }
+  .date-button button span {
+    font-size: 1.5rem;
+  }
+  .date-button button span.x-small {
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+}
 .x-small {
   font-size: 60%;
 }

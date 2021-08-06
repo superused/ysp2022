@@ -21,7 +21,7 @@
 
 <?php include 'parts/live-date-button.php'; ?>
 
-    <div class="site-section pt-0">
+    <div class="archive-live site-section py-0">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-8 p-0">
@@ -47,6 +47,9 @@
 <?php include 'parts/timetable0809.php'; ?>
             </div>
           </div>
+          <div class="d-md-none" style="width: 300%; margin: 0 -100px;">
+<?php include 'parts/live-date-button.php'; ?>
+          </div>
           <div class="col-12 col-md-4">
             <div class="site-section other-live-container pb-0">
               <div>
@@ -59,6 +62,7 @@
         </div>
       </div>
     </div>
-
+    <div class="d-none d-md-block">
 <?php include 'parts/live-date-button.php'; ?>
+    </div>
 <?php get_footer(); ?>
