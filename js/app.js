@@ -16,7 +16,7 @@ $(function() {
     this.contestVote();
     this.imageFull();
     this.footerBanner();
-    this.projectBuruburu();
+    // this.projectBuruburu();
     this.moveRecaptcha();
     this.senryu100Data();
     this.photo100Data();
@@ -88,6 +88,19 @@ $(function() {
             $('body').removeClass('offcanvas-menu');
           }
         }
+      });
+
+      $(document).on('click', 'a[href^=#]', function() {
+        AOS.init({
+          disable: true,
+        });
+        const adjust = - $('.site-navbar').height();
+        const speed = 1000; // スクロールの速度（ミリ秒）
+        const href = $(this).attr("href"); // アンカーの値取得 リンク先（href）を取得して、hrefという変数に代入
+        const target = $(href == "#" || href == "" ? 'html' : href); // 移動先を取得 リンク先(href）のidがある要素を探して、targetに代入
+        const position = target.offset().top + adjust; // 移動先を調整 idの要素の位置をoffset()で取得して、positionに代入
+        $('body,html').animate({scrollTop:position}, speed, 'swing'); // スムーススクロール linear（等速） or swing（変速）
+        return false;
       });
     },
     siteCarousel: function () {

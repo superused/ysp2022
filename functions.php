@@ -29,13 +29,13 @@ define('PHOTO_CONTEST_URL', esc_url(home_url('/photo-contest/')));
 define('PHOTO_RESULT_LIST_URL', esc_url(home_url('/photo-result-list/')));
 define('CONTACT_URL', esc_url(home_url('/contact/')));
 define('CONCEPT_URL', esc_url(home_url('/concept/')));
-define('LIVE_CONTENTS_URL', esc_url(home_url('/#live')));
-define('PROJECT_CONTENTS_URL', esc_url(home_url('/#project')));
-define('CONTEST_URL', esc_url(home_url('/#contest')));
-define('CONTENTS_LIST_URL', esc_url(home_url('/#contents-list')));
-define('SENRYU_URL', esc_url(home_url('/#senryu')));
-define('PHOTO_URL', esc_url(home_url('/#photo')));
-define('MOVIE_URL', esc_url(home_url('/#movie')));
+define('LIVE_CONTENTS_URL', '#live');
+define('PROJECT_CONTENTS_URL', '#project');
+define('CONTEST_URL', '#contest');
+define('CONTENTS_LIST_URL', '#contents-list');
+define('SENRYU_URL', '#senryu');
+define('PHOTO_URL', '#photo');
+define('MOVIE_URL', '#movie');
 define('FAVICON_URL', esc_url(home_url('favicon.ico')));
 
 // 連合会情報
