@@ -14,6 +14,7 @@
           </div>
           <div class="logo_bg">
             <img src="<?= get_template_directory_uri(); ?>/images/logo/online.png" class="logo-message-bottom" id="logo_3">
+            <img src="<?= get_template_directory_uri(); ?>/images/logo/online_pc.png" class="logo-message-bottom" id="logo_4">
           </div>
         </div>
       </div>

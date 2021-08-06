@@ -324,7 +324,7 @@ $(function() {
             $('#logo_1').show("blind", {direction: 'horizontal'}, speed, setHeight);
             setTimeout(function() {
               $('.top3').show('fade', {}, speed);
-              $('#logo_3').show("blind", {direction: 'horizontal'}, speed, setHeight);
+              $('#logo_3,#logo_4').show("blind", {direction: 'horizontal'}, speed, setHeight);
             }, speed);
             $('#logo_2').show("fade", {}, speed * 2, setHeight);
 
@@ -334,7 +334,7 @@ $(function() {
             //   $('#logo_1').hide("blind", {direction: 'right'}, speed);
             //   setTimeout(function() {
             //     $('.top3').hide('fade', {}, speed);
-            //     $('#logo_3').hide("blind", {direction: 'right'}, speed);
+            //     $('#logo_3,#logo_4').hide("blind", {direction: 'right'}, speed);
             //   }, speed);
             //   $('#logo_2').hide("fade", {}, speed * 2);
             // }, allViewTime + speed * 2);
