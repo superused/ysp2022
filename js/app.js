@@ -182,9 +182,9 @@ $(function() {
 
         const portrait = [
           [
-            'top_mobile1.jpg',
-            'top_mobile2.jpg',
-            'top_mobile3.jpg',
+            'top_mobile1_s.jpg',
+            'top_mobile2_s.jpg',
+            'top_mobile3_s.jpg',
           ],
           'moyou_top.png',
           'moyou_bottom.png',
