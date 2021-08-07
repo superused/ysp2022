@@ -2,7 +2,7 @@
 require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php';
 
 define('SENRYU_STATIC_VOTES', [
-  167,
+  168,
   86,
   83,
   78,
@@ -10,14 +10,14 @@ define('SENRYU_STATIC_VOTES', [
   68,
   75,
   64,
-  105,
+  106,
   201,
 ]);
 define('PHOTO_STATIC_VOTES', [
   263,
-  144,
-  131,
-  287,
+  145,
+  133,
+  289,
   99,
   97,
   100,

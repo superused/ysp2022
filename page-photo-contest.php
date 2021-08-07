@@ -129,7 +129,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
 <?php     endif; ?>
 <?php endforeach; ?>
             <div class="site-section py-5 text-center mx-auto" data-aos="fade-up" data-aos-delay="100">
-              <div class="font-weight-bold rem1-5">その他作品</div>
+              <div class="font-weight-bold rem1-5">11位～70位</div>
               <p class="contents-border mb-4"></p>
               <a href="<?= PHOTO_RESULT_LIST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">作品を見る</button></a>
             </div>
