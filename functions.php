@@ -38,12 +38,6 @@ define('PHOTO_URL', '#photo');
 define('MOVIE_URL', '#movie');
 define('FAVICON_URL', esc_url(home_url('favicon.ico')));
 
-// 連合会情報
-define('PROJECT_URL', 'https://www.yahoo.co.jp');
-define('PROJECT_ACTIVITY_FREQUENCY', '月2回');
-define('PROJECT_ACTIVITY_PLACE', '東京都世田谷区');
-define('PROJECT_MAIL', 'mail@mail.com');
-
 define('SITE_TITLE', 'PEACE DESIGNER FES｜2021.08.07~09 オンライン');
 
 // ニュースサムネイル デフォルト画像

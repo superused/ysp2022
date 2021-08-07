@@ -58,8 +58,8 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                   </div>
                   <div class="px-3 pb-4 pt-2 mx-auto">
                     <div class="width-fixmax">
-                      <div class="team-member mb-3">
-                        <a href="#" data-toggle="modal" data-target="#modal" ontouchstart=""><img src="<?= $data['photo']; ?>" class="photo_image img-fluid"></a>
+                      <div class="mb-3">
+                        <img src="<?= $data['photo']; ?>" class="photo_image img-fluid">
                       </div>
                       <div class="photo_episode"><?= nl2br(esc_html($data['episode'])); ?></div>
                       <div class="photo_name mt-2"><?= $data['name']; ?> さん</div>
@@ -84,8 +84,8 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                   </div>
                   <div class="px-3 pb-4 pt-2 mx-auto">
                     <div class="width-fixmax">
-                      <div class="team-member mb-3">
-                        <a href="#" data-toggle="modal" data-target="#modal" ontouchstart=""><img src="<?= $data['photo']; ?>" class="photo_image img-fluid"></a>
+                      <div class="mb-3">
+                        <img src="<?= $data['photo']; ?>" class="photo_image img-fluid">
                       </div>
                       <div class="photo_episode"><?= nl2br(esc_html($data['episode'])); ?></div>
                       <div class="photo_name mt-2"><?= $data['name']; ?> さん</div>
@@ -113,8 +113,8 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                       <div class="photo_title float-left font-weight-bold px-0 rem1-2"><?= $data['title']; ?></div>
                       <div class="float-right font-weight-bold small">得票数<span class="text-cyan rem1-3 ml-1"><?= $photo[$key]['polla_votes']; ?></span>票</div>
                       <div class="width-fixmax">
-                        <div class="team-member mb-3">
-                          <a href="#" data-toggle="modal" data-target="#modal" ontouchstart=""><img src="<?= $data['photo']; ?>" class="img-fluid photo_image"></a>
+                        <div class="mb-3">
+                          <img src="<?= $data['photo']; ?>" class="img-fluid photo_image">
                         </div>
                         <div class="photo_episode"><?= nl2br(esc_html($data['episode'])); ?></div>
                         <div class="photo_name mt-2"><?= $data['name']; ?> さん</div>
@@ -140,18 +140,6 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
             <?= get_sidebar();?>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div id="fixed-menu-move"></div>
-    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
-      <div class="modal-dialog text-white text-center" role="document">
-        <h4 class="photo_title font-weight-bold mb-3"></h4>
-        <div class="m-0 mb-4">
-          <img src="" class="photo_image w-100">
-        </div>
-        <div class="text-left mb-1 w-100"><span class="mr-3">ペンネーム</span><span class="photo_name"></span></div>
-        <div class="photo_episode text-left mb-3 w-100"></div>
       </div>
     </div>
 <?php else: ?>

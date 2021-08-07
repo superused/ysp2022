@@ -76,10 +76,10 @@ $datas = [
       </div>
     </div>
 
-    <div class="site-section pt-0">
+    <div class="site-section p-0">
       <div class="container px-0">
-        <div class="row">
-          <div class="col-12 col-md-8 px-0">
+        <div class="row p-0 m-0">
+          <div class="col-12 col-md-8">
             <div class="site-section pb-0">
               <div class="container">
                 <div class="row">
@@ -91,7 +91,7 @@ $datas = [
                 </div>
               </div>
             </div>
-            <div class="site-section py-5 mx-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="site-section py-5" data-aos="fade-up" data-aos-delay="100">
               <div class="container">
                 <div class="row">
                   <p class="text-left mx-3">「地域の魅力」を感じるひとコマをテーマに7月4日まで募集しました。応募された作品には受賞作品の他にもたくさんの名作がありました。<br>それでは11位～70位、一気に見ていきましょう！<br><br>※写真をクリックすると作品の詳細をご覧いただけます。</p>
@@ -99,7 +99,7 @@ $datas = [
               </div>
             </div>
             <div class="site-section beige py-3 mb-4 project-frame" data-aos="fade-up" data-aos-delay="100">
-              <div class="container">
+              <div class="container px-0">
                 <div class="row">
                   <div class="site-section-heading text-center w-border mx-auto col-12">
                     <div class="rem1-3 font-weight-bold mt-3">11位～70位作品</div>
@@ -129,7 +129,7 @@ $datas = [
               <p class="contents-border mb-4"></p>
               <a href="<?= PHOTO_CONTEST_URL; ?>" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">作品を見る</button></a>
             </div>
-            <div class="px-3 mx-3">
+            <div class="px-3 min-width-auto">
 <?php $viewPhoto = false; ?>
 <?php include 'parts/other-contest.php'; ?>
             </div>
@@ -143,12 +143,33 @@ $datas = [
     <div id="fixed-menu-move"></div>
     <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
       <div class="modal-dialog text-white text-center" role="document">
+        <div class="font-weight-bold my-3 rem2">第<span class="ranking"></span>位</div>
         <h4 class="photo_title font-weight-bold mb-3"></h4>
         <div class="m-0 mb-4">
           <img src="" class="photo_image w-100">
         </div>
         <div class="text-left mb-1 w-100"><span class="mr-3">ペンネーム</span><span class="photo_name"></span></div>
         <div class="photo_episode text-left mb-3 w-100"></div>
+      </div>
+      <div class="modal-fixbox left" data-type="fixbox">
+        <div class="d-flex">
+          <a href="#" class="d-flex align-items-center" data-action="prev" ontouchstart="">
+            <div class="font-weight-bold text-white text-nowrap rem1-1">< Prev</div>
+            <div class="image">
+              <img src="">
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="modal-fixbox right" data-type="fixbox">
+        <div class="d-flex">
+          <a href="#" class="d-flex align-items-center" data-action="next" ontouchstart="">
+            <div class="image">
+              <img src="">
+            </div>
+            <div class="font-weight-bold text-white text-nowrap rem1-1" ontouchstart="">Next ></div>
+          </a>
+        </div>
       </div>
     </div>
     <div class="json-data d-none"><?=json_encode($datas); ?></div>

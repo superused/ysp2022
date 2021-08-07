@@ -422,38 +422,98 @@ $(function() {
     photoView: function() {
       if (!$('.photo_button')[0]) return false;
       this.contestView();
-
-      // 詳細ボタンを押した際に表示項目を切り替える
-      $(document).on('click', '[data-type=content-block] [data-toggle=modal]', function() {
-        const content = $(this).parents('[data-type=content-block]'),
-          voteButton = content.find('button.vote'),
-          modal = $('#modal'),
-          selectors = [
+      const modal = $('#modal'),
+        fixBox = modal.find('[data-type=fixbox]'),
+        rankMin = 11,
+        rankMax = 70,
+        getImg = function(rank, thumbnailFlg) {
+          if (typeof(thumbnailFlg) == 'undefined') thumbnailFlg = false;
+          return $('[data-ranking=' + rank + ']').closest('[data-type=content-block]').find(thumbnailFlg ? '.photo_thumbnail' : '.photo_image').attr('src');
+        },
+        addLink = function(rank, prevFlg) {
+          if (typeof(prevFlg) == 'undefined') prevFlg= false;
+          fixBox.each(function() {
+            $(this).find('[data-action=' + (prevFlg ? 'prev' : 'next') + ']')
+              .addClass('show')
+              .attr('data-ranking-target', rank)
+              .find('img')
+              .attr('src', getImg(rank, true));
+          });
+        },
+        setPrevNext = function(ranking) {
+          fixBox.each(function() {
+            $(this).find('[data-action]').each(function() {
+              $(this).removeClass('show').removeAttr('data-ranking-target').find('img').attr('src', '');
+            });
+          });
+          if (ranking && ranking >= rankMin && ranking <= rankMax) {
+            if (ranking != rankMin) addLink(ranking - 1, true);
+            if (ranking != rankMax) addLink(ranking + 1);
+          }
+        },
+        modalView = function(content) {
+          const selectors = [
             '.photo_title',
             '.photo_name',
             '.photo_image',
             '.photo_episode',
+            '.ranking',
           ];
-        for (const i in selectors) {
-          const selector = selectors[i];
-          if (selector != '.photo_image') {
-            modal.find(selector).html(content.find(selector).html());
-          } else {
-            const src = content.find(selector).attr('src');
-            if (src) {
-              modal.find(selector).attr('src', src);
-            } else {
-              modal.find(selector).attr('src', content.find(selector).html());
+          for (const i in selectors) {
+            const selector = selectors[i];
+            const elem = modal.find(selector);
+            const contentElem = content.find(selector);
+            if (elem[0] && contentElem[0]) {
+              if (selector == '.ranking') {
+                const ranking = contentElem.attr('data-ranking');
+                if (ranking) elem.html(ranking);
+              } else if (selector == '.photo_image') {
+                const src = contentElem.attr('src');
+                if (src) {
+                  elem.attr('src', src);
+                } else {
+                  elem.attr('src', contentElem.html());
+                }
+              } else {
+                elem.html(contentElem.html());
+              }
             }
           }
+        };
+
+      // 詳細ボタンを押した際に表示項目を切り替える
+      $(document).on('click', '[data-type=content-block] [data-toggle=modal]', function() {
+        const $this = $(this),
+          content = $this.parents('[data-type=content-block]'),
+          voteButton = content.find('button.vote');
+        modalView(content);
+
+        const photo100 = $this.closest('.photo-100-data'),
+          rankingBox = content.find('[data-ranking]');
+        if (photo100[0] && rankingBox[0]) {
+          const ranking = parseInt(rankingBox.attr('data-ranking'));
+          setPrevNext(ranking);
         }
         const modalVoteButton = modal.find('button.vote');
-        modalVoteButton.attr('data-vote', voteButton.attr('data-vote'));
-        if (voteButton.prop('disabled')) {
-          modalVoteButton.prop('disabled', true).html('投票済');
-        } else {
-          modalVoteButton.prop('disabled', false).html('投票');
+        if (modalVoteButton[0]) {
+          modalVoteButton.attr('data-vote', voteButton.attr('data-vote'));
+          if (voteButton.prop('disabled')) {
+            modalVoteButton.prop('disabled', true).html('投票済');
+          } else {
+            modalVoteButton.prop('disabled', false).html('投票');
+          }
         }
+      });
+
+      $(document).on('click', '[data-ranking-target]', function() {
+        const $this = $(this),
+          ranking = parseInt($this.attr('data-ranking-target')),
+          content = $('[data-ranking=' + ranking + ']').closest('[data-type=content-block]');
+        if (content[0]) {
+          modalView(content);
+          setPrevNext(ranking);
+        }
+        return false;
       });
     },
 
@@ -631,7 +691,7 @@ $(function() {
             if (count >= maxCount) break;
             if (ranking != 0 && i != ranking + 1) continue;
             const clone = data.first().clone().removeClass('d-none');
-            clone.find('.ranking').html(i);
+            clone.find('.ranking').attr('data-ranking', i);
             clone.find('.photo_image').html(datas[i][0]);
             let arr = datas[i][0].split('.');
             let ext = '-150x150.' + arr.pop();

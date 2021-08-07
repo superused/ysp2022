@@ -1,4 +1,4 @@
-            <div id="other-contest" class="site-section mx-auto pb-0">
+            <div id="other-contest" class="site-section min-width-auto mx-auto pb-0">
               <h4 class="heading-bar color-cyan font-weight-bold mb-2" data-aos="fade-up" data-aos-delay="100"><span class="pr-3">その他コンテスト</span></h4>
               <div class="row text-center" data-aos="fade-up" data-aos-delay="100">
 <?php if (!isset($viewMovie) || $viewMovie): ?>
