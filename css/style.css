@@ -3595,6 +3595,14 @@ div.news-area .owl-carousel {
 .text-cyan {
   color: #00b9f2;
 }
+h1.text-cyan,
+h2.text-cyan,
+h3.text-cyan,
+h4.text-cyan,
+h5.text-cyan,
+h6.text-cyan {
+  color: #00b9f2;
+}
 .pickup-contents {
   border: 3px solid #00b9f2;
   background-color: #fff;

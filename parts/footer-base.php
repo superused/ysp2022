@@ -32,7 +32,15 @@
     <script src="<?= get_template_directory_uri(); ?>/js/jquery.countdown.min.js"></script>
     <script src="<?= get_template_directory_uri(); ?>/js/jquery.magnific-popup.min.js"></script>
     <script src="<?= get_template_directory_uri(); ?>/js/aos.js"></script>
-    <script src="<?= get_template_directory_uri(); ?>/js/app.min.js?20210807"></script>
+<?php
+    $date = '20210807';
+    if (CONTEST_ENDED) {
+      $date = '20210809';
+    } else if (CONTEST_LAST) {
+      $date = '20210808';
+    }
+?>
+    <script src="<?= get_template_directory_uri(); ?>/js/app.min.js?<?= $date; ?>"></script>
     <?php wp_footer();?>
   </body>
 </html>

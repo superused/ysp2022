@@ -1,9 +1,37 @@
 <?php
 require_once dirname(dirname(dirname(dirname(__FILE__)))) . '/wp-load.php';
 
+define('SENRYU_STATIC_VOTES', [
+  167,
+  86,
+  83,
+  78,
+  57,
+  68,
+  75,
+  64,
+  105,
+  201,
+]);
+define('PHOTO_STATIC_VOTES', [
+  263,
+  144,
+  131,
+  287,
+  99,
+  97,
+  100,
+  115,
+  84,
+  254,
+]);
 // コンテスト締切
+define('CONTEST_1', '2021-08-07 15:00:00');
 define('CONTEST_END_DATE', '2021-08-08 15:00:00');
+define('CONTEST_RESULT_DATE', '2021-08-09 09:00:00');
+define('CONTEST_LAST', strtotime(date('Y-m-d H:i:s')) >= strtotime(CONTEST_1));
 define('CONTEST_ENDED', strtotime(date('Y-m-d H:i:s')) >= strtotime(CONTEST_END_DATE));
+define('CONTEST_RESULT', strtotime(date('Y-m-d H:i:s')) >= strtotime(CONTEST_RESULT_DATE));
 
 // 外部サイトURL
 define('GOODS_SHOP_URL', 'https://peace-designer.stores.jp/'); // グッズショップ外部サイト
@@ -45,15 +73,15 @@ define('NO_IMAGE_URL', get_template_directory_uri() . '/images/noimage.png');
 
 // 背景画像
 define('SENRYU_IMG', get_template_directory_uri() . '/images/sidebar/senryu.jpg');
-define('SENRYU_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/' . (CONTEST_ENDED ? 'senryu_result_s.jpg' : 'senryu_s.jpg'));
+define('SENRYU_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/' . (CONTEST_RESULT ? 'senryu_result_s.jpg' : 'senryu_s.jpg'));
 define('SENRYU_RESULT_IMG', get_template_directory_uri() . '/images/sidebar/senryu_result.jpg');
 define('SENRYU_RESULT_100_IMG', get_template_directory_uri() . '/images/sidebar/senryu_result_100.jpg');
 define('PHOTO_IMG', get_template_directory_uri() . '/images/sidebar/photo.jpg');
-define('PHOTO_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/' . (CONTEST_ENDED ? 'photo_result_s.jpg' : 'photo_s.jpg'));
+define('PHOTO_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/' . (CONTEST_RESULT ? 'photo_result_s.jpg' : 'photo_s.jpg'));
 define('PHOTO_RESULT_IMG', get_template_directory_uri() . '/images/sidebar/photo_result.png');
 define('PHOTO_RESULT_100_IMG', get_template_directory_uri() . '/images/sidebar/photo_result_100.png');
 define('MOVIE_IMG', get_template_directory_uri() . '/images/sidebar/movie.jpg');
-define('MOVIE_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/' . (CONTEST_ENDED ? 'movie_result_s.jpg' : 'movie_s.jpg'));
+define('MOVIE_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/movie_result_s.jpg');
 define('MOVIE_RESULT_IMG', get_template_directory_uri() . '/images/sidebar/movie_result.png');
 define('PROJECT_IMG', get_template_directory_uri() . '/images/sidebar/union.jpg');
 define('PROJECT_TITLE_IMG', get_template_directory_uri() . '/images/sidebar/union_s.jpg');
@@ -229,10 +257,6 @@ class Util {
     return preg_replace($pattern, $replace, $str, 1);
   }
 
-  public function checkAfterDate($date) {
-    return date('YmdHis') >= date('YmdHis', strtotime($date));
-  }
-
   public function getProjectImages($name) {
     $dir = 'wp-content/themes/peacedesigner/images/project/' . $name . '/';
     $images = [];
@@ -286,6 +310,20 @@ class Util {
     unset($datas[$postName]);
     $rands = array_rand($datas, 4);
     return $rands;
+  }
+
+  public function staticVoteNumPhoto($photo) {
+    foreach ($photo as $key => $val) {
+      $photo[$key]['polla_votes'] = PHOTO_STATIC_VOTES[$key];
+    }
+    return $photo;
+  }
+
+  public function staticVoteNumSenryu($senryu) {
+    foreach ($senryu as $key => $val) {
+      $senryu[$key]['polla_votes'] = SENRYU_STATIC_VOTES[$key];
+    }
+    return $senryu;
   }
 }
 $util = new Util($wpdb, $post);

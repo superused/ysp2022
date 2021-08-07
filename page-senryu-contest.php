@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php if ($util->checkAfterDate(CONTEST_END_DATE)): ?>
+<?php if (CONTEST_RESULT): ?>
 <?php
 $senryu = $util->getContestDatasSort('senryu');
 $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
@@ -140,32 +140,15 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
         </div>
       </div>
     </div>
-
-    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="kakejiku_outer m-0 mt-4 mb-3 mx-auto">
-          <div class="kakejiku_inner">
-          </div>
-        </div>
-        <div class="kakejiku_episode col-10 mx-auto mt-4 mb-3 text-white font-weight-bold">
-        </div>
-        <div class="kakejiku_name col-10 mx-auto mt-3 mb-2 text-white font-weight-bold">
-        </div>
-        <input type="hidden" id="index" value="">
-        <div class="mx-auto text-center modal-content bg-transparent border-0">
-          <button class="vote mx-auto pl-4 pr-4 c-pointer" ontouchstart="">投票</button>
-        </div>
-      </div>
-    </div>
-    <div id="tohyo" class="d-none">
-      <?php the_content(); ?>
-    </div>
 <?php else: ?>
 <?php
 // $datas = [['senryu' => '', 'episode' => '', 'name' => '', 'personal' => '']];
 // アンケートの終了フラグを確認
 // var_dump($util->isContestOpen('senryu'));
 $senryu = $util->getContestDatas('senryu');
+if (CONTEST_LAST) {
+  $senryu = $util->staticVoteNumSenryu($senryu);
+}
 $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
 ?>
     <div class="site-section top-image pb-0" data-aos="fade-up" data-aos-delay="100">
@@ -185,6 +168,9 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                 <div class="row">
                   <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="mx-auto">
+<?php if (CONTEST_ENDED): ?>
+                      <h2 class="font-weight-bold text-left text-md-center small text-cyan mb-3">※結果は18時公開予定</h2>
+<?php endif; ?>
                       <h1 class="font-weight-bold text-left text-md-center small">あなたの投票で優勝が決まる！<br>あなたが選ぶつながり川柳大賞！</h1>
                     </div>
                   </div>
@@ -227,7 +213,11 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                         <button class="detail mx-auto w-100 text-nowrap c-pointer" data-toggle="modal" data-target="#modal" ontouchstart="">詳細</button>
                       </div>
                       <div class="col-6 pl-1 pr-1">
+<?php if (CONTEST_ENDED): ?>
+                        <button class="vote mx-auto w-100 text-nowrap c-pointer" disabled>投票</button>
+<?php else: ?>
                         <button class="vote mx-auto w-100 text-nowrap c-pointer" data-vote="<?= $senryu[$key]['polla_qid']; ?>" ontouchstart="">投票</button>
+<?php endif; ?>
                       </div>
                     </div>
                   </div>
@@ -263,12 +253,18 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
         </div>
         <input type="hidden" id="index" value="">
         <div class="mx-auto text-center modal-content bg-transparent border-0">
+<?php if (CONTEST_ENDED): ?>
+          <button class="vote mx-auto pl-4 pr-4 c-pointer" disabled>投票</button>
+<?php else: ?>
           <button class="vote mx-auto pl-4 pr-4 c-pointer" data-vote="" ontouchstart="">投票</button>
+<?php endif; ?>
         </div>
       </div>
     </div>
+<?php if (!CONTEST_ENDED): ?>
     <div id="tohyo" class="d-none">
       <?php the_content(); ?>
     </div>
+<?php endif; ?>
 <?php endif; ?>
 <?php get_footer(); ?>

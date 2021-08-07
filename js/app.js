@@ -410,7 +410,7 @@ $(function() {
         const modalVoteButton = modal.find('button.vote');
         modalVoteButton.attr('data-vote', voteButton.data('vote'));
         if (voteButton.prop('disabled')) {
-          modalVoteButton.prop('disabled', true).html('投票済');
+          modalVoteButton.prop('disabled', true).html(voteButton.text() == '投票' ? '投票' : '投票済');
         } else {
           modalVoteButton.prop('disabled', false).html('投票');
         }
@@ -526,7 +526,11 @@ $(function() {
           const qid = $(this).attr('data-vote');
           const poll = tohyo.find('div.wp-polls#polls-' + qid);
           if (!poll[0] || !poll.find('input[type=button][name=vote]')[0]) {
-            $(this).prop('disabled', true).text('投票済');
+            if (tohyo[0]) {
+              $(this).prop('disabled', true).text('投票済');
+            } else {
+              $(this).prop('disabled', true).text('投票');
+            }
           } else {
             flg = true;
           }
@@ -546,7 +550,10 @@ $(function() {
                 if (contentBlock[0]) {
                   const voteNumElem = contentBlock.find('.vote_num'),
                     voteNum = parseInt(voteNumElem.html());
-                  voteNumElem.html(voteNum + 1);
+                  /**
+                   * 投票した瞬間加算しなくする
+                   */
+                  // voteNumElem.html(voteNum + 1);
                 }
               });
             }

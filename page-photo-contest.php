@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php if ($util->checkAfterDate(CONTEST_END_DATE)): ?>
+<?php if (CONTEST_RESULT): ?>
 <?php
 $photo = $util->getContestDatasSort('photo');
 $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
@@ -26,7 +26,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                 <div class="row">
                   <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="mx-auto">
-                      <h4 class="font-weight-bold text-cyan text-center ml-3 mr-3">フォトコンテスト！<br>総合グランプリ発表！</h4>
+                      <h1 class="font-weight-bold text-cyan text-center small ml-3 mr-3">フォトコンテスト！<br>総合グランプリ発表！</h1>
                     </div>
                   </div>
                 </div>
@@ -149,6 +149,9 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
 // var_dump($util->isContestOpen('photo'));
 
 $photo = $util->getContestDatas('photo');
+if (CONTEST_LAST) {
+  $photo = $util->staticVoteNumPhoto($photo);
+}
 $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
 ?>
     <div class="site-section top-image pb-0" data-aos="fade-up" data-aos-delay="100">
@@ -168,7 +171,10 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                 <div class="row">
                   <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="mx-auto">
-                    <h1 class="font-weight-bold text-center ml-3 mr-3 small">あなたの投票で優勝が決まる！<br>『私の推し町』フォトコンテスト！</h1>
+<?php if (CONTEST_ENDED): ?>
+                    <h2 class="font-weight-bold text-center small text-cyan mb-3">※結果は18時公開予定</h2>
+<?php endif; ?>
+                    <h1 class="font-weight-bold text-center mx-3 small">あなたの投票で優勝が決まる！<br>『私の推し町』フォトコンテスト！</h1>
                     </div>
                   </div>
                 </div>
@@ -207,7 +213,11 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                             <div class="col-12 p-0">
                               <div class="ml-1 text-center mx-auto">
                                 <span class="rem0-8 text-right font-weight-bold m-0 p-0">得票数<span class="vote_num oswald rem1 text-cyan ml-2 mr-1"><?= $photo[$key]['polla_votes']; ?></span>票</span>
+<?php if (CONTEST_ENDED): ?>
+                                <button class="vote mx-auto m-0 p-0 w-100 text-nowrap" ontouchstart="" disabled>投票</button>
+<?php else: ?>
                                 <button class="vote mx-auto m-0 p-0 w-100 text-nowrap" ontouchstart="" data-vote="<?= $photo[$key]['polla_qid']; ?>">投票</button>
+<?php endif; ?>
                               </div>
                             </div>
                           </div>
@@ -247,12 +257,18 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
         <div class="text-left mb-1 w-100"><span class="mr-3">ペンネーム</span><span class="photo_name"></span></div>
         <div class="photo_episode text-left mb-3 w-100"></div>
         <div class="col-12 modal-content bg-transparent border-0">
+<?php if (CONTEST_ENDED): ?>
+          <button class="vote mx-auto m-1 pt-2 pb-2 pl-4 pr-4 text-nowrap" disabled>投票</button>
+<?php else: ?>
           <button class="vote mx-auto m-1 pt-2 pb-2 pl-4 pr-4 text-nowrap" data-vote="" ontouchstart="">投票</button>
+<?php endif; ?>
         </div>
       </div>
     </div>
+<?php if (!CONTEST_ENDED): ?>
     <div id="tohyo" class="d-none">
       <?php the_content(); ?>
     </div>
+<?php endif; ?>
 <?php endif; ?>
 <?php get_footer(); ?>
