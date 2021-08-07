@@ -34,7 +34,9 @@
     <script src="<?= get_template_directory_uri(); ?>/js/aos.js"></script>
 <?php
     $date = '20210807';
-    if (CONTEST_ENDED) {
+    if (CONTEST_RESULT) {
+      $date = '2021080902';
+    } else if (CONTEST_ENDED) {
       $date = '20210809';
     } else if (CONTEST_LAST) {
       $date = '20210808';
