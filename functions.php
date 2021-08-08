@@ -127,6 +127,7 @@ class Util {
     $wpdb = $this->wpdb;
 
     $poll_id = $this->getContestId($type);
+    if (!$poll_id) return [];
     // SQL文
     $query = "SELECT * FROM $wpdb->pollsa where polla_qid in (" . implode(",", $poll_id) . ")";
     // 結果を連想配列で取得
