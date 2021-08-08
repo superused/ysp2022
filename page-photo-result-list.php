@@ -154,7 +154,7 @@ $datas = [
       <div class="modal-fixbox left" data-type="fixbox">
         <div class="d-flex">
           <a href="#" class="d-flex align-items-center" data-action="prev" ontouchstart="">
-            <div class="font-weight-bold text-white text-nowrap rem1-1">< Prev</div>
+            <div class="font-weight-bold text-cyan text-nowrap rem1-1">< Prev</div>
             <div class="image">
               <img src="">
             </div>
@@ -167,7 +167,7 @@ $datas = [
             <div class="image">
               <img src="">
             </div>
-            <div class="font-weight-bold text-white text-nowrap rem1-1" ontouchstart="">Next ></div>
+            <div class="font-weight-bold text-cyan text-nowrap rem1-1" ontouchstart="">Next ></div>
           </a>
         </div>
       </div>
