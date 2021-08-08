@@ -126,7 +126,7 @@ $datas = [
               <div class="container">
                 <div class="row">
                   <div class="site-section-heading text-center mb-3 w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
-                    <h4 class="font-weight-bold">11位～100位作品</h4>
+                    <h4 class="font-weight-bold font-family-none">11位～100位作品</h4>
                     <div class="contents-border mt-1 mb-2"></div>
                   </div>
                 </div>

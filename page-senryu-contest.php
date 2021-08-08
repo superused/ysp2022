@@ -118,7 +118,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
               <div class="container">
                 <div class="row">
                   <div class="col-12 text-center box-title pt-2 pb-1">
-                    <h3 class="text-cyan font-weight-bold">11位～100位</h3>
+                    <h3 class="text-cyan font-weight-bold font-family-none">11位～100位</h3>
                   </div>
                   <div class="text-center w-100 mx-auto box-body bg-white p-3">
                     <div class="row px-3">
