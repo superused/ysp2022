@@ -51,8 +51,8 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                     <h6 class="number-of-votes w-auto mt-2 font-family-none" data-aos="fade-up" data-aos-delay="100"><span class="font-weight-bold text-cyan bg-yellow py-1 px-2"><span class="font-weight-bold small">得票数 </span><span><?= $senryu[$key]['polla_votes']; ?></span><span class="font-weight-bold small">票</span></span></h6>
                     <div class="row">
                       <h3 class="top"><?= str_replace('|', '<br>', $data['senryu']); ?></h3>
-                      <div class="image-box p-0 mx-auto ml-md-auto mr-md-0">
-                        <img src="<?= !empty($data['image']) ? str_replace('.jpg', '-150x150.jpg', $data['image']) : NO_IMAGE_URL; ?>" class="img-fluid">
+                      <div class="image-box top p-0 mx-auto ml-md-auto mr-md-0">
+                        <img src="<?= !empty($data['image']) ? $data['image'] : NO_IMAGE_URL; ?>" class="img-fluid">
                       </div>
                       <div class="kakejiku-episode w-100"><?= $data['episode']; ?></div>
                       <div class="kakejiku-name mt-2"><?= $data['name'] . " (" . $data['personal'] . ")"; ?></div>
@@ -169,7 +169,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                   <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="mx-auto">
 <?php if (CONTEST_ENDED): ?>
-                      <h2 class="font-weight-bold text-left text-md-center small text-cyan mb-3">※結果は18時公開予定</h2>
+                      <h2 class="font-weight-bold text-left text-md-center small text-cyan mb-3">※投票は受付終了<br>結果は18時公開予定</h2>
 <?php endif; ?>
                       <h1 class="font-weight-bold text-left text-md-center small">あなたの投票で優勝が決まる！<br>あなたが選ぶつながり川柳大賞！</h1>
                     </div>

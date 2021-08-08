@@ -512,6 +512,7 @@ $(function() {
         if (content[0]) {
           modalView(content);
           setPrevNext(ranking);
+          $('#modal').scrollTop(0);
         }
         return false;
       });
@@ -662,7 +663,7 @@ $(function() {
       if (data[0] && jsonElem[0]) {
         let ranking = 0;
         let count = 0;
-        const maxCount = 10;
+        const maxCount = 100;
         const parentElem = data.parent();
         const datas = JSON.parse(jsonElem.html());
         const fn = function() {
@@ -672,7 +673,7 @@ $(function() {
             const clone = data.first().clone().removeClass('d-none');
             clone.find('.ranking').html(i);
             clone.find('.senryu').html(datas[i][0]);
-            clone.find('.senryu-name').html(datas[i][1] + ' (' + datas[i][2] + ')');
+            clone.find('.senryu-name').html(datas[i][2] + ' (' + datas[i][1] + ')');
             parentElem.append(clone);
             ranking = parseInt(i);
             count++;

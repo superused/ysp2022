@@ -109,7 +109,7 @@ $datas = [
                 <div class="row">
                   <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="mx-auto">
-                      <h4 class="font-weight-bold text-cyan text-center ml-3 mr-3">つながり川柳コンテスト！<br>みんなで選んだ大賞発表！</h4>
+                      <h4 class="font-weight-bold text-cyan text-center ml-3 mr-3">つながり川柳コンテスト！<br>ランク外の名作公開！</h4>
                     </div>
                   </div>
                 </div>
@@ -126,7 +126,7 @@ $datas = [
               <div class="container">
                 <div class="row">
                   <div class="site-section-heading text-center mb-3 w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
-                    <h4 class="font-weight-bold">その他作品</h4>
+                    <h4 class="font-weight-bold">11位～100位作品</h4>
                     <div class="contents-border mt-1 mb-2"></div>
                   </div>
                 </div>
