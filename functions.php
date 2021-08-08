@@ -127,7 +127,6 @@ class Util {
     $wpdb = $this->wpdb;
 
     $poll_id = $this->getContestId($type);
-    if (!$poll_id) return [];
     // SQL文
     $query = "SELECT * FROM $wpdb->pollsa where polla_qid in (" . implode(",", $poll_id) . ")";
     // 結果を連想配列で取得
@@ -158,7 +157,7 @@ class Util {
     } else {
       $wpdb = $this->wpdb;
       // $contestData = $wpdb->get_results($wpdb->prepare( "SELECT * FROM $wpdb->pollsa WHERE polla_qid in (select polla_qid from $wpdb->pollsa a inner join $wpdb->pollsq q on q.pollq_id = a.pollq_id where polla_type = %s order by pollq_timestamp desc limit 1) order by polla_aid desc limit 1;", $type));
-      $contestData = $wpdb->get_results($wpdb->prepare("SELEcT * from $wpdb->pollsa a inner join $wpdb->pollsq q on q.pollq_id = a.polla_qid where polla_type = %s and pollq_active = 1;", $type));
+      $contestData = $wpdb->get_results($wpdb->prepare("SELEcT * from $wpdb->pollsa a inner join $wpdb->pollsq q on q.pollq_id = a.polla_qid where polla_type = %s;", $type));
       if (isset($contestData[0]->polla_qid)) {
         $result = [];
         foreach ($contestData as $d) {
