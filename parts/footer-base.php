@@ -39,7 +39,7 @@
     } else if (CONTEST_ENDED) {
       $date = '20210809';
     } else if (CONTEST_LAST) {
-      $date = '20210808';
+      $date = '2021080802';
     }
 ?>
     <script src="<?= get_template_directory_uri(); ?>/js/app.min.js?<?= $date; ?>"></script>
