@@ -172,7 +172,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $photo);
                   <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="mx-auto">
 <?php if (CONTEST_ENDED): ?>
-                    <h2 class="font-weight-bold text-center small text-cyan mb-3">※投票は受付終了<br>結果は18時公開予定</h2>
+                    <div><h2 class="font-weight-bold text-center small text-cyan mb-3">※投票は受付終了<br>結果は18時公開予定</h2></div>
 <?php endif; ?>
                     <h1 class="font-weight-bold text-center mx-3 small">あなたの投票で優勝が決まる！<br>『私の推し町』フォトコンテスト！</h1>
                     </div>

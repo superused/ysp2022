@@ -169,7 +169,7 @@ $datas = array_map(function($s) { return $s['polla_datas']; }, $senryu);
                   <div class="site-section-heading text-center w-border mx-auto col-12" data-aos="fade-up" data-aos-delay="100">
                     <div class="mx-auto">
 <?php if (CONTEST_ENDED): ?>
-                      <h2 class="font-weight-bold text-left text-md-center small text-cyan mb-3">※投票は受付終了<br>結果は18時公開予定</h2>
+                      <div><h2 class="font-weight-bold text-left text-md-center small text-cyan mb-3">※投票は受付終了<br>結果は18時公開予定</h2></div>
 <?php endif; ?>
                       <h1 class="font-weight-bold text-left text-md-center small">あなたの投票で優勝が決まる！<br>あなたが選ぶつながり川柳大賞！</h1>
                     </div>
