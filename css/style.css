@@ -21,7 +21,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oswald', sans-serif;
+  font-family: kinto-sans, sans-serif;
+  font-style: normal;
 }
 
 a {
@@ -4402,3 +4403,6 @@ h1.rem1-5 {
     right: 2rem;
   }
 }
+
+
+/* YSP */
