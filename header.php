@@ -35,9 +35,9 @@ $image = wp_get_attachment_image_src($image_id, 'full');
 <?php endif; ?>
 
     <link rel="shortcut icon" href="<?= FAVICON_URL;?>" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,500,600,700,800,900|Oswald:400,500,600,700">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/fonts/icomoon/style.css">
-
+    <link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/magnific-popup.css">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/jquery-ui.css">
@@ -82,101 +82,52 @@ $image = wp_get_attachment_image_src($image_id, 'full');
     <!-- ヘッダー共通処理 start -->
     <div class="site-wrap">
       <div class="site-navbar">
-        <div class="container-fluid px-3 py-0">
+        <div class="container px-3 py-0">
           <div class="row align-items-center">
-            <div class="col-8 col-md-2">
-              <div class="logo-header my-2">
+            <div class="col-2 px-0">
+              <div class="logo-header">
                 <a href="<?= home_url();?>">
-                  <img src="<?= get_template_directory_uri(); ?>/images/logo2.png" alt="PEACE DISIGNER FES" class="mx-auto">
+                  <img src="<?= get_template_directory_uri(); ?>/images/logo.jpg" alt="YSP-Japan" class="mx-auto">
                 </a>
               </div>
             </div>
-            <div class="col-4 col-md-10 p-md-0">
+            <div class="col-10 px-0">
               <nav class="site-navigation text-right text-md-right" role="navigation">
-
-                <div class="d-inline-block d-md-none ml-md-0 mr-auto p-0"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h2"></span></a></div>
-
-                <ul class="site-menu js-clone-nav d-none d-md-block">
+                <ul class="top-upper-menu">
+                  <li><a class="sns-link" href=""><i class="fa-brands fa-square-instagram fa-2x"></i></a></li>
+                  <li><a class="sns-link" href=""><i class="fa-brands fa-facebook fa-2x"></i></a></li>
+                  <li><a class="sns-link" href=""><i class="fa-brands fa-line fa-2x"></i></a></li>
                   <li>
-                    <a href="<?= HOME_URL;?>">
-                      <img src="<?= get_template_directory_uri(); ?>/images/icon_top.png">
-                      <div>TOPページ</div>
-                    </a>
-                  </li>
-                  <li class="has-children">
-                    <a href="javascript:void(0);"><img src="<?= get_template_directory_uri(); ?>/images/icon_contents.png"><div>コンテンツ</div></a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="<?= LIVE_URL;?>">
-                          <img src="<?= get_template_directory_uri(); ?>/images/icon_live.png">
-                          <div>LIVE</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="<?= PROJECT_URL;?>" class="inpage-link">
-                          <img src="<?= get_template_directory_uri(); ?>/images/icon_project.png">
-                          <div>プロジェクト</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="<?= MOVIE_CONTEST_URL;?>">
-                          <img src="<?= get_template_directory_uri(); ?>/images/icon_movie.png">
-                          <div>ムービーコンテスト</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="<?= PHOTO_CONTEST_URL;?>">
-                          <img src="<?= get_template_directory_uri(); ?>/images/icon_photo.png">
-                          <div>フォトコンテスト</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="<?= SENRYU_CONTEST_URL;?>">
-                          <img src="<?= get_template_directory_uri(); ?>/images/icon_senryu.png">
-                          <div>川柳コンテスト</div>
-                        </a>
-                      </li>
-                    </ul>
+                    <form class="search-box">
+                      <input type="text" placeholder="サイト内検索">
+                      <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                      </button>
+                    </form>
                   </li>
                   <li>
-                    <a href="<?= QUESTIONNAIRE_URL;?>" target="_blank">
-                      <img src="<?= get_template_directory_uri(); ?>/images/icon_present.png">
-                      <div>アンケート ＆ プレゼント</div>
-                    </a>
+                    <a href=""><button class="shop-button"><div class="d-flex align-items-center px-4"><i class="fa-solid fa-cart-shopping fa-lg mx-1"></i><span class="mx-1">Shop</span></div></button></a>
+                  </li>
+                </ul>
+                <ul class="top-lower-menu">
+                  <li class="site-menu">
+                    <div class="title">YSPとは</div>
+                    <div class="title-en">About us</div>
+                  </li>
+                  <li class="site-menu">
+                    <div class="title">セミナー・イベント</div>
+                    <div class="title-en">Workshop/Event</div>
+                  </li>
+                  <li class="site-menu">
+                    <div class="title">プロジェクト</div>
+                    <div class="title-en">Project</div>
+                  </li>
+                  <li class="site-menu">
+                    <div class="title">お問い合わせ</div>
+                    <div class="title-en">Contact us</div>
                   </li>
                   <li>
-                    <a href="<?= NEWS_URL;?>">
-                      <img src="<?= get_template_directory_uri(); ?>/images/icon_news.png">
-                      <div>最新情報</div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?= CONCEPT_URL;?>">
-                      <img src="<?= get_template_directory_uri(); ?>/images/icon_about.png">
-                      <div>Peace designer Fes とは</div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?= GOODS_SHOP_URL; ?>" target="_blank">
-                      <img src="<?= get_template_directory_uri(); ?>/images/icon_goods.png">
-                      <div>グッズショップ（外部サイト）</div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?= CONTACT_URL;?>">
-                      <img src="<?= get_template_directory_uri(); ?>/images/icon_contact.png">
-                      <div>お問い合わせ</div>
-                    </a>
-                  </li>
-                  <li class="d-md-none">
-                    <div class="site-mobile-menu-sns text-center font-weight-bold container-fluid">
-                      <div class="row justify-content-center align-items-center text-nowrap flex-nowrap py-2">
-                          <span class="m-3"><a href="<?= SNS_INSTAGRAM_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icon_instagram.png" alt="Image"></a></span>
-                          <span class="m-3"><a href="<?= SNS_LINE_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icon_line.png" alt="Image"></a></span>
-                          <span class="m-3"><a href="<?= SNS_YOUTUBE_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icon_youtube.png" alt="Image"></a></span>
-                        </div>
-                      </div>
-                    </div>
+                    <a href=""><button class="donation-button">寄付・支援</button></a>
                   </li>
                 </ul>
               </nav>
