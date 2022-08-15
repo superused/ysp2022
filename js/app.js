@@ -13,6 +13,17 @@ $(function() {
   "use strict";
 
   const siteBase = function() {
+    $('.slider').slick({
+      // autoplay:true, //自動スライド
+      speed: 600,
+      autoplaySpeed:4000, //スライドさせる間隔
+      dots:true, //ドットインジケーターを表示
+      lazyLoad:"progressive", //画像の遅延読み込み
+      arrows:true, //スライドの左右の矢印ボタンを非表示
+      adaptiveHeight: true,
+      infinite: true,
+    });
+
     this.siteMenuClone();
     this.siteCarousel();
     this.siteStellar();
@@ -104,6 +115,7 @@ $(function() {
         const speed = 1000;
         const href = $(this).attr("href");
         const target = $(href == "#" || href == "" ? 'html' : ('#' + href.split('#').pop()));
+        console.log(position)
         if (target[0]) {
           const position = target.offset().top + adjust;
           $('body,html').animate({scrollTop:position}, speed, 'swing');
@@ -773,5 +785,4 @@ $(function() {
     }
   };
   const base = new siteBase();
-
 });

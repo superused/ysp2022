@@ -4530,3 +4530,13 @@ h1.rem1-5 {
 .bg-cyan {
   background-color: #00c8f9;
 }
+.slider {
+  width: 100%;
+  height: 500px;
+  padding-inline-start: 0;
+}
+.slider video,
+.slider img {
+  width: 100%;
+  object-fit: cover;
+}

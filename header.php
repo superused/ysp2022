@@ -38,6 +38,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/fonts/icomoon/style.css">
     <link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/magnific-popup.css">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/jquery-ui.css">
@@ -93,6 +94,90 @@ $image = wp_get_attachment_image_src($image_id, 'full');
             </div>
             <div class="col-10 px-0">
               <nav class="site-navigation text-right text-md-right" role="navigation">
+                <div class="d-inline-block d-md-none ml-md-0 mr-auto p-0"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h2"></span></a></div>
+                <ul class="site-menu js-clone-nav d-none d-md-block">
+                  <li>
+                    <a href="<?= HOME_URL;?>">
+                      <img src="<?= get_template_directory_uri(); ?>/images/icon_top.png">
+                      <div>TOPページ</div>
+                    </a>
+                  </li>
+                  <li class="has-children">
+                    <a href="javascript:void(0);"><img src="<?= get_template_directory_uri(); ?>/images/icon_contents.png"><div>コンテンツ</div></a>
+                    <ul class="dropdown">
+                      <li>
+                        <a href="<?= LIVE_URL;?>">
+                          <img src="<?= get_template_directory_uri(); ?>/images/icon_live.png">
+                          <div>LIVE</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="<?= PROJECT_URL;?>" class="inpage-link">
+                          <img src="<?= get_template_directory_uri(); ?>/images/icon_project.png">
+                          <div>プロジェクト</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="<?= MOVIE_CONTEST_URL;?>">
+                          <img src="<?= get_template_directory_uri(); ?>/images/icon_movie.png">
+                          <div>ムービーコンテスト</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="<?= PHOTO_CONTEST_URL;?>">
+                          <img src="<?= get_template_directory_uri(); ?>/images/icon_photo.png">
+                          <div>フォトコンテスト</div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="<?= SENRYU_CONTEST_URL;?>">
+                          <img src="<?= get_template_directory_uri(); ?>/images/icon_senryu.png">
+                          <div>川柳コンテスト</div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="<?= QUESTIONNAIRE_URL;?>" target="_blank">
+                      <img src="<?= get_template_directory_uri(); ?>/images/icon_present.png">
+                      <div>アンケート ＆ プレゼント</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?= NEWS_URL;?>">
+                      <img src="<?= get_template_directory_uri(); ?>/images/icon_news.png">
+                      <div>最新情報</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?= CONCEPT_URL;?>">
+                      <img src="<?= get_template_directory_uri(); ?>/images/icon_about.png">
+                      <div>Peace designer Fes とは</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?= GOODS_SHOP_URL; ?>" target="_blank">
+                      <img src="<?= get_template_directory_uri(); ?>/images/icon_goods.png">
+                      <div>グッズショップ（外部サイト）</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?= CONTACT_URL;?>">
+                      <img src="<?= get_template_directory_uri(); ?>/images/icon_contact.png">
+                      <div>お問い合わせ</div>
+                    </a>
+                  </li>
+                  <li class="d-md-none">
+                    <div class="site-mobile-menu-sns text-center font-weight-bold container-fluid">
+                      <div class="row justify-content-center align-items-center text-nowrap flex-nowrap py-2">
+                          <span class="m-3"><a href="<?= SNS_INSTAGRAM_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icon_instagram.png" alt="Image"></a></span>
+                          <span class="m-3"><a href="<?= SNS_LINE_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icon_line.png" alt="Image"></a></span>
+                          <span class="m-3"><a href="<?= SNS_YOUTUBE_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icon_youtube.png" alt="Image"></a></span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+
                 <ul class="top-upper-menu">
                   <li><a class="sns-link" href=""><i class="fa-brands fa-square-instagram fa-2x"></i></a></li>
                   <li><a class="sns-link" href=""><i class="fa-brands fa-facebook fa-2x"></i></a></li>

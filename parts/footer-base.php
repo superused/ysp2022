@@ -33,17 +33,8 @@
     <script src="<?= get_template_directory_uri(); ?>/js/jquery.magnific-popup.min.js"></script>
     <script src="<?= get_template_directory_uri(); ?>/js/aos.js"></script>
     <script src="<?= get_template_directory_uri(); ?>/js/fonts.js"></script>
-<?php
-    $date = '20210807';
-    if (CONTEST_RESULT) {
-      $date = '2021080902';
-    } else if (CONTEST_ENDED) {
-      $date = '20210809';
-    } else if (CONTEST_LAST) {
-      $date = '2021080802';
-    }
-?>
-    <script src="<?= get_template_directory_uri(); ?>/js/app.min.js?<?= $date; ?>"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="<?= get_template_directory_uri(); ?>/js/app.js"></script>
     <?php wp_footer();?>
   </body>
 </html>
