@@ -22,6 +22,8 @@ $(function() {
       arrows:true, //スライドの左右の矢印ボタンを非表示
       adaptiveHeight: true,
       infinite: true,
+      prevArrow: '<span class="prev-arrow">＜</span>',
+      nextArrow: '<span class="next-arrow">＞</span>',
     });
 
     this.siteMenuClone();
@@ -366,7 +368,7 @@ $(function() {
         // TOP以外のページの画像の表示でヘッダーのバーの高さに画像のpaddingをあわせる
         const topTarget = $('.site-mobile-menu').next();
         const height = $('.site-navbar').height();
-        topTarget.css('padding-top', height + 'px').show();
+        // topTarget.css('padding-top', height + 'px').show();
 
         // LIVE詳細ページで動画をスマホ版では固定表示、PC版では固定解除
         const adjustLiveDetail = $('#adjust-live-detail');

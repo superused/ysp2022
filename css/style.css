@@ -4540,3 +4540,22 @@ h1.rem1-5 {
   width: 100%;
   object-fit: cover;
 }
+.slider .prev-arrow {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 1rem);
+  font-size: 2rem;
+  color: #fff;
+  z-index: 1000;
+  cursor: pointer;
+}
+.slider .next-arrow {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 1rem);
+  font-size: 2rem;
+  color: #fff;
+  z-index: 1000;
+  cursor: pointer;
+}
+/*--スライダーの位置とサイズ調整--*/
