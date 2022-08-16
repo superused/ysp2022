@@ -33,7 +33,7 @@
     <script src="<?= get_template_directory_uri(); ?>/js/jquery.magnific-popup.min.js"></script>
     <script src="<?= get_template_directory_uri(); ?>/js/aos.js"></script>
     <script src="<?= get_template_directory_uri(); ?>/js/fonts.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="<?= get_template_directory_uri(); ?>/js/app.js"></script>
     <?php wp_footer();?>
   </body>
