@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <ul class="slider">
-  <li><a href="#"><video src="<?= get_template_directory_uri(); ?>/images/katariba.mp4" autoplay loop muted></a></li>
   <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/3-1.jpg"></a></li>
+  <li><a href="#"><video src="<?= get_template_directory_uri(); ?>/images/katariba.mp4" autoplay loop muted></a></li>
   <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/3-2.jpg"></a></li>
+  <li><a href="#"><video src="<?= get_template_directory_uri(); ?>/images/sample.mp4" autoplay loop muted></a></li>
   <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/3-3.jpg"></a></li>
 </ul>
-
 
 <?php include 'parts/news-slider.php'; ?>
 

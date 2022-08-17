@@ -4543,7 +4543,7 @@ h1.rem1-5 {
 .slider .prev-arrow {
   position: absolute;
   left: 0;
-  top: calc(50% - 1rem);
+  top: calc(50% - 2rem);
   font-size: 2rem;
   color: #fff;
   z-index: 1000;
@@ -4552,10 +4552,12 @@ h1.rem1-5 {
 .slider .next-arrow {
   position: absolute;
   right: 0;
-  top: calc(50% - 1rem);
+  top: calc(50% - 2rem);
   font-size: 2rem;
   color: #fff;
   z-index: 1000;
   cursor: pointer;
 }
-/*--スライダーの位置とサイズ調整--*/
+.slick-slide {
+  height: 500px !important;
+}

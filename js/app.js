@@ -11,10 +11,18 @@ if (location.href.indexOf('#') < 0) {
 }
 $(function() {
   "use strict";
+  const videos = (() => {
+    const slides = []
+    $('.slider li').each((idx, elm) => {
+      const video = $(elm).find('video')[0]
+      if (video) slides[idx] = video
+    })
+    return slides
+  })()
 
   const siteBase = function() {
     $('.slider').slick({
-      // autoplay:true, //自動スライド
+      autoplay:true, //自動スライド
       speed: 600,
       autoplaySpeed:4000, //スライドさせる間隔
       dots:true, //ドットインジケーターを表示
@@ -25,6 +33,12 @@ $(function() {
       prevArrow: '<span class="prev-arrow">＜</span>',
       nextArrow: '<span class="next-arrow">＞</span>',
     });
+    $('.slider').on('beforeChange', (slick, currentSlide, idx) => {
+      if (videos[idx]) videos[idx].pause()
+    })
+    $('.slider').on('afterChange', (slick, currentSlide, idx) => {
+      if (videos[idx]) videos[idx].play()
+    })
 
     this.siteMenuClone();
     this.siteCarousel();
