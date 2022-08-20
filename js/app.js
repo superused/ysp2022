@@ -22,22 +22,32 @@ $(function() {
 
   const siteBase = function() {
     $('.slider').slick({
-      autoplay:true, //自動スライド
+      autoplay: true, //自動スライド
       speed: 600,
-      autoplaySpeed:4000, //スライドさせる間隔
-      dots:true, //ドットインジケーターを表示
-      lazyLoad:"progressive", //画像の遅延読み込み
-      arrows:true, //スライドの左右の矢印ボタンを非表示
+      autoplaySpeed: 4000, //スライドさせる間隔
+      dots: true, //ドットインジケーターを表示
+      lazyLoad: "progressive", //画像の遅延読み込み
+      arrows: true, //スライドの左右の矢印ボタンを非表示
       adaptiveHeight: true,
       infinite: true,
-      prevArrow: '<span class="prev-arrow">＜</span>',
-      nextArrow: '<span class="next-arrow">＞</span>',
+      prevArrow: '<span class="arrow prev">＜</span>',
+      nextArrow: '<span class="arrow next">＞</span>',
     });
     $('.slider').on('beforeChange', (slick, currentSlide, idx) => {
       if (videos[idx]) videos[idx].pause()
     })
     $('.slider').on('afterChange', (slick, currentSlide, idx) => {
       if (videos[idx]) videos[idx].play()
+    })
+    $('.site-navbar .site-navigation ul.top-lower-menu li.site-menu:first').on('mouseenter', e => {
+      const ratio = parseInt(($(e.target).offset().left + ($(e.target).outerWidth() / 2)) / $(window).width() * 100 + 1)
+      $('.menu-detail').css('transform-origin', ratio + '% top').addClass('animate')
+    })
+    $(document).on('mouseover', e => {
+      const menuDetail = $('.menu-detail')
+      if (menuDetail.css('display') !== 'none' && !$(e.target).closest('.site-navbar .site-navigation ul.top-lower-menu, .menu-detail')[0]) {
+        menuDetail.removeClass('animate')
+      }
     })
 
     this.siteMenuClone();

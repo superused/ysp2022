@@ -220,6 +220,28 @@ $image = wp_get_attachment_image_src($image_id, 'full');
             </div>
           </div>
         </div>
+        <div class="menu-detail">
+          <div class="container position-relative px-3 py-0 h-100">
+            <div class="row h-100 align-items-center">
+              <div class="col-4 site-cover-menu">
+                <div class="left-menu">
+                  <a href="">1ページで分かるYSP</a>
+                </div>
+              </div>
+              <div class="col-8 row site-cover-menu">
+                <div class="col-4 right-menu">
+                  <a href="">団体概要</a>
+                </div>
+                <div class="col-4 right-menu">
+                  <a href="">会長挨拶</a>
+                </div>
+                <div class="col-4 right-menu">
+                  <a href="">News Letter</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

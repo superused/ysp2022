@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 <ul class="slider">
-  <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/3-1.jpg"></a></li>
+  <li><a href="#"><div><p class="font-weight-bold">やりがい<br><span class="batsu"></span><br>地域活性化</p><button class="btn btn-slider">1ページで分かるYSP</button><img src="<?= get_template_directory_uri(); ?>/images/3-1.jpg"></div></a></li>
+  <li><a href="#"><div><button class="btn btn-slider cyan">プロジェクトを見る</button><video src="<?= get_template_directory_uri(); ?>/images/top.mp4" autoplay loop muted></video></div></a></li>
   <li><a href="#"><video src="<?= get_template_directory_uri(); ?>/images/katariba.mp4" autoplay loop muted></a></li>
   <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/3-2.jpg"></a></li>
   <li><a href="#"><video src="<?= get_template_directory_uri(); ?>/images/sample.mp4" autoplay loop muted></a></li>
   <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/3-3.jpg"></a></li>
 </ul>
-
 <?php include 'parts/news-slider.php'; ?>
 
     <div id="peace-designer-fes" class="site-section">
