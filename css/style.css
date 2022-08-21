@@ -4612,32 +4612,38 @@ h1.rem1-5 {
   color: white;
   font-size: 0.8rem;
 }
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
 
-.btn.btn-slider {
-  background-color: transparent;
-  color: #fff;
+.btn.btn-normal {
   max-width: 300px;
   width: 100%;
   padding: 0.8rem 0.8rem 0.8rem 0;
   font-weight: bold;
   border-radius: 2rem;
+}
+.btn.btn-normal:after {
+  position: absolute;
+  content: "＞";
+  margin-left: 0.3rem;
+  font-weight: normal;
+}
+
+.btn.btn-normal.btn-slider {
+  background-color: transparent;
+  color: #fff;
   border: 1px solid #fff;
   z-index: 1;
 }
-.btn.btn-slider.cyan {
+.btn.btn-normal.btn-slider.cyan {
   background-color: #fff;
   color: #00c8f9;
   border: 3px solid #fff;
 }
-.btn.btn-slider.cyan:hover {
+.btn.btn-normal.btn-slider.cyan:hover {
   background-color: #00c8f9;
   color: #fff;
-}
-.btn.btn-slider:after {
-  position: absolute;
-  content: "＞";
-  margin-left: 0.4rem;
-  font-weight: normal;
 }
 
 .batsu {
@@ -4750,4 +4756,77 @@ h1.rem1-5 {
 }
 .site-navbar .menu-detail .site-cover-menu a:hover {
   color: #00c8f9;
+}
+
+#introduce .mainimg {
+  width: 100%;
+}
+#introduce .contents-box {
+  position: relative;
+}
+#introduce .contents-box .contents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#introduce .contents-box .contents .title {
+  position: relative;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  width: 70%;
+  margin: 0 auto 1.5rem;
+}
+#introduce .contents-box .contents .text {
+  position: relative;
+  font-weight: bold;
+  line-height: 1.7rem;
+}
+#introduce .contents-box .contents .icon {
+  width: 8rem;
+}
+
+.underline-cyan {
+  border-bottom: 3px solid #00c8f9;
+  font-weight: bold;
+  margin: 1rem 1rem 0.5rem;
+  position: absolute;
+}
+
+.btn.btn-normal.cyan {
+  color: #00c8f9;
+  background-color: #fff;
+  border: 1px solid #00c8f9;
+}
+.btn.btn-normal.cyan:hover {
+  color: #fff;
+  background-color: #00c8f9;
+}
+.circle-bg {
+  width: 3rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  -moz-border-radius: 1.5rem / 1.6rem;
+  -webkit-border-radius: 1.5rem / 1.6rem;
+  border-radius: 1.5rem / 1.6rem;
+  position: absolute;
+}
+.circle-bg.gray {
+  margin-top: 3.8rem;
+  background: #f3f3f3;
+  right: 8rem;
+}
+.circle-bg.white {
+  margin-top: 5.7rem;
+  background: #ffffff;
+  right: 3.6rem;
+}
+
+#activity {
+  background-color: #f3f3f3;
 }

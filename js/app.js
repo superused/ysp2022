@@ -24,7 +24,7 @@ $(function() {
     $('.slider').slick({
       autoplay: true, //自動スライド
       speed: 600,
-      autoplaySpeed: 4000, //スライドさせる間隔
+      autoplaySpeed: 3000, //スライドさせる間隔
       dots: true, //ドットインジケーターを表示
       lazyLoad: "progressive", //画像の遅延読み込み
       arrows: true, //スライドの左右の矢印ボタンを非表示
@@ -39,13 +39,16 @@ $(function() {
     $('.slider').on('afterChange', (slick, currentSlide, idx) => {
       if (videos[idx]) videos[idx].play()
     })
+    // YSPとはマウスオン時にサブメニューを表示させる
     $('.site-navbar .site-navigation ul.top-lower-menu li.site-menu:first').on('mouseenter', e => {
+      // ズームイン表示のスタート位置の%表示
       const ratio = parseInt(($(e.target).offset().left + ($(e.target).outerWidth() / 2)) / $(window).width() * 100 + 1)
       $('.menu-detail').css('transform-origin', ratio + '% top').addClass('animate')
     })
+    // 範囲外にサブメニューを表示させる
     $(document).on('mouseover', e => {
       const menuDetail = $('.menu-detail')
-      if (menuDetail.css('display') !== 'none' && !$(e.target).closest('.site-navbar .site-navigation ul.top-lower-menu, .menu-detail')[0]) {
+      if (menuDetail.css('display') !== 'none' && !$(e.target).closest('.site-navbar')[0]) {
         menuDetail.removeClass('animate')
       }
     })

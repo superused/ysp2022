@@ -1,13 +1,35 @@
 <?php get_header(); ?>
 <ul class="slider">
-  <li><a href="#"><div><p class="font-weight-bold">やりがい<br><span class="batsu"></span><br>地域活性化</p><button class="btn btn-slider">1ページで分かるYSP</button><img src="<?= get_template_directory_uri(); ?>/images/3-1.jpg"></div></a></li>
-  <li><a href="#"><div><button class="btn btn-slider cyan">プロジェクトを見る</button><video src="<?= get_template_directory_uri(); ?>/images/top.mp4" autoplay loop muted></video></div></a></li>
+  <li><a href="#"><div><p class="font-weight-bold">やりがい<br><span class="batsu"></span><br>地域活性化</p><button class="btn btn-normal btn-slider">1ページで分かるYSP</button><img src="<?= get_template_directory_uri(); ?>/images/3-1.jpg"></div></a></li>
+  <li><a href="#"><div><button class="btn btn-normal btn-slider cyan">プロジェクトを見る</button><video src="<?= get_template_directory_uri(); ?>/images/top.mp4" autoplay loop muted></video></div></a></li>
   <li><a href="#"><video src="<?= get_template_directory_uri(); ?>/images/katariba.mp4" autoplay loop muted></a></li>
   <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/3-2.jpg"></a></li>
   <li><a href="#"><video src="<?= get_template_directory_uri(); ?>/images/sample.mp4" autoplay loop muted></a></li>
   <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/3-3.jpg"></a></li>
 </ul>
-<?php include 'parts/news-slider.php'; ?>
+    <div id="introduce" class="site-section">
+      <div class="contents-box">
+        <img src="<?= get_template_directory_uri(); ?>/images/omoi_noword.jpg" class="mainimg">
+        <div class="contents">
+          <div class="text">
+            <h2 class="title underline-cyan">想いを紡ぎ、社会を彩る</h2>
+            <p>やりたいこと×地域活性化を掛け合わせると、<br>どんな社会ができるだろう。<br>YSP-Japanはセミナーやプロジェクトを通して、<br>自分の可能性を発見し、<br>社会の魅力や課題を解決する若者を育み、<br>応援しています。</p>
+            <div class="mb-3"><img src="<?= get_template_directory_uri(); ?>/images/icon.jpg" class="icon"></div>
+            <button class="btn btn-normal cyan">1ページで分かるYSP-Japan</button>
+          </div>
+        </div>
+      </div>
+      <div class="circle-bg gray"></div>
+      <div class="circle-bg white"></div>
+    </div>
+
+    <div id="activity" class="site-section">
+      <div class="container">
+        <div class="" style="background-image: url(<?= get_template_directory_uri(); ?>/images/logo_title.png)">
+活動紹介
+        </div>
+      </div>
+    </div>
 
     <div id="peace-designer-fes" class="site-section">
       <div class="container">
