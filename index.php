@@ -1,34 +1,216 @@
 <?php get_header(); ?>
 <ul class="slider">
-  <li><a href="#"><div><p class="font-weight-bold">やりがい<br><span class="batsu"></span><br>地域活性化</p><button class="btn btn-normal btn-slider">1ページで分かるYSP</button><img src="<?= get_template_directory_uri(); ?>/images/3-1.jpg"></div></a></li>
-  <li><a href="#"><div><button class="btn btn-normal btn-slider cyan">プロジェクトを見る</button><video src="<?= get_template_directory_uri(); ?>/images/top.mp4" autoplay loop muted></video></div></a></li>
-  <li><a href="#"><video src="<?= get_template_directory_uri(); ?>/images/katariba.mp4" autoplay loop muted></a></li>
-  <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/3-2.jpg"></a></li>
-  <li><a href="#"><video src="<?= get_template_directory_uri(); ?>/images/sample.mp4" autoplay loop muted></a></li>
-  <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/3-3.jpg"></a></li>
+  <li><a href="#"><div><p class="font-weight-bold">やりがい<br><span class="batsu"></span><br>地域活性化</p><button class="btn btn-normal btn-slider">1ページで分かるYSP</button><img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg"></div></a></li>
+  <li><a href="#"><div><button class="btn btn-normal btn-slider cyan">プロジェクトを見る</button><video src="<?= get_template_directory_uri(); ?>/images/ysp/top.mp4" autoplay loop muted></video></div></a></li>
+  <li><a href="#"><video src="<?= get_template_directory_uri(); ?>/images/ysp/katariba.mp4" autoplay loop muted></a></li>
+  <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/ysp/3-2.jpg"></a></li>
+  <li><a href="#"><video src="<?= get_template_directory_uri(); ?>/images/ysp/sample.mp4" autoplay loop muted></a></li>
+  <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/ysp/3-3.jpg"></a></li>
 </ul>
     <div id="introduce" class="site-section">
       <div class="contents-box">
-        <img src="<?= get_template_directory_uri(); ?>/images/omoi_noword.jpg" class="mainimg">
+        <img src="<?= get_template_directory_uri(); ?>/images/ysp/omoi_noword.jpg" class="mainimg">
         <div class="contents">
           <div class="text">
             <h2 class="title underline-cyan">想いを紡ぎ、社会を彩る</h2>
             <p>やりたいこと×地域活性化を掛け合わせると、<br>どんな社会ができるだろう。<br>YSP-Japanはセミナーやプロジェクトを通して、<br>自分の可能性を発見し、<br>社会の魅力や課題を解決する若者を育み、<br>応援しています。</p>
-            <div class="mb-3"><img src="<?= get_template_directory_uri(); ?>/images/icon.jpg" class="icon"></div>
+            <div class="mb-3"><img src="<?= get_template_directory_uri(); ?>/images/ysp/icon.jpg" class="icon"></div>
             <button class="btn btn-normal cyan">1ページで分かるYSP-Japan</button>
           </div>
         </div>
       </div>
-      <div class="circle-bg gray"></div>
-      <div class="circle-bg white"></div>
     </div>
 
     <div id="activity" class="site-section">
+      <div class="circle-bg gray"></div>
+      <div class="circle-bg white"></div>
       <div class="container">
-        <div class="" style="background-image: url(<?= get_template_directory_uri(); ?>/images/logo_title.png)">
-活動紹介
+        <div class="title-icon">活動紹介</div>
+        <div class="title-second">What we do</div>
+        <p class="text-center mb-5">YSPは一人一人の青年が持つ力ややりがいを大切にしながら<br>全国各地で地域に密着したプロジェクト活動を行っています。</p>
+        <div class="row my-4">
+          <div class="col-md-6 activity-link team-member">
+            <div class="box">
+              <a href="">
+                <div class="image">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/smile-jyuku.png" class="overlap">
+                </div>
+                <div class="contents">
+                  <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                  <div class="catch">塾に行けない子たちのために</div>
+                  <div class="name">スマイル塾</div>
+                  <div class="check"><button class="btn btn-normal cyan small">チェック</button></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 activity-link team-member">
+            <div class="box">
+              <a href="">
+                <div class="image">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/smile-jyuku.png" class="overlap">
+                </div>
+                <div class="contents">
+                  <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                  <div class="catch">塾に行けない子たちのために</div>
+                  <div class="name">スマイル塾</div>
+                  <div class="check"><button class="btn btn-normal cyan small">チェック</button></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 activity-link team-member">
+            <div class="box">
+              <a href="">
+                <div class="image">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/smile-jyuku.png" class="overlap">
+                </div>
+                <div class="contents">
+                  <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                  <div class="catch">塾に行けない子たちのために</div>
+                  <div class="name">スマイル塾</div>
+                  <div class="check"><button class="btn btn-normal cyan small">チェック</button></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 activity-link team-member">
+            <div class="box">
+              <a href="">
+                <div class="image">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/smile-jyuku.png" class="overlap">
+                </div>
+                <div class="contents">
+                  <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                  <div class="catch">塾に行けない子たちのために</div>
+                  <div class="name">スマイル塾</div>
+                  <div class="check"><button class="btn btn-normal cyan small">チェック</button></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center"><button class="btn btn-normal cyan">プロジェクトをもっと見る</button></div>
+      </div>
+      <div class="circle-bg gray bottom"></div>
+      <div class="circle-bg white bottom"></div>
+    </div>
+
+    <div id="voice" class="site-section">
+      <div class="container px-0">
+        <div class="title-icon">メンバー／地域の声</div>
+        <div class="title-second">Voice</div>
+        <ul class="voice-slider py-3">
+          <li>
+            <div class="box project-frame">
+              <div class="row m-0 pb-3 align-items-center">
+              <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+              <div class="mark-cyan px-2 mx-2 rounded">地域の方の声1</div>
+              <div class="location"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+              </div>
+              <p class="m-0">YSPの活動をきっかけに、子供たちや地域の方々との様々な関わりの場を持つことができています。楽しい時間をありがとうございます。</p>
+            </div>
+          </li>
+          <li>
+            <div class="box project-frame">
+              <div class="row m-0 pb-3 align-items-center">
+              <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+              <div class="mark-cyan px-2 mx-2 rounded">地域の方の声2</div>
+              <div class="location"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+              </div>
+              <p class="m-0">YSPの活動をきっかけに、子供たちや地域の方々との様々な関わりの場を持つことができています。楽しい時間をありがとうございます。</p>
+            </div>
+          </li>
+          <li>
+            <div class="box project-frame">
+              <div class="row m-0 pb-3 align-items-center">
+              <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+              <div class="mark-cyan px-2 mx-2 rounded">地域の方の声3</div>
+              <div class="location"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+              </div>
+              <p class="m-0">YSPの活動をきっかけに、子供たちや地域の方々との様々な関わりの場を持つことができています。楽しい時間をありがとうございます。</p>
+            </div>
+          </li>
+          <li>
+            <div class="box project-frame">
+              <div class="row m-0 pb-3 align-items-center">
+              <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+              <div class="mark-cyan px-2 mx-2 rounded">地域の方の声4</div>
+              <div class="location"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+              </div>
+              <p class="m-0">YSPの活動をきっかけに、子供たちや地域の方々との様々な関わりの場を持つことができています。楽しい時間をありがとうございます。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="take-action" class="site-section">
+      <div class="container px-0">
+        <div class="title-icon">参加・支援する</div>
+        <div class="title-second">Take action</div>
+        <div class="row">
+          <div class="col-md-6 p-4 text-center">
+            <div class="box">
+              <a href="" class="text-black">
+                <div class="small text-cyan font-weight-bold">Let's join us</div>
+                <div class="font-weight-bold pb-1 mb-4">一緒に活動しませんか？</div>
+                <div class="team-member image mb-4">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                </div>
+                <div class="small font-weight-bold mb-4">仲間と共にあなたの住む町をより良くしよう！</div>
+                <div class="check"><button class="btn btn-normal cyan">詳しく見る</button></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 p-4 text-center">
+            <div class="box">
+              <a href="" class="text-black">
+                <div class="small text-cyan font-weight-bold">Let's join us</div>
+                <div class="font-weight-bold pb-1 mb-4">一緒に活動しませんか？</div>
+                <div class="team-member image mb-4">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                </div>
+                <div class="small font-weight-bold mb-4">仲間と共にあなたの住む町をより良くしよう！</div>
+                <div class="check"><button class="btn btn-normal cyan">詳しく見る</button></div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+
+    <div id="magazine" class="site-section">
+      <div class="circle-bg gray"></div>
+      <div class="circle-bg white"></div>
+      <div class="container">
+        <div class="title-icon">Peace designer</div>
+        <div class="title-second">Magazine</div>
+        <p class="text-center mb-5">Peace designerのインタビューやライフスタイルを<br>お届けするWebマガジン</p>
+        <div class="row my-4">
+          <div class="col-md-6 activity-link team-member-small">
+            <div class="box">
+              <a href="">
+                <div class="image bg-peacedesigner">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="w-100">
+                </div>
+                <div class="contents">
+                  <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                  <div class="catch">塾に行けない子たちのために</div>
+                  <div class="name">スマイル塾</div>
+                  <div class="check"><button class="btn btn-normal cyan small">チェック</button></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="circle-bg gray bottom"></div>
+      <div class="circle-bg white bottom"></div>
     </div>
 
     <div id="peace-designer-fes" class="site-section">

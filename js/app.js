@@ -30,8 +30,8 @@ $(function() {
       arrows: true, //スライドの左右の矢印ボタンを非表示
       adaptiveHeight: true,
       infinite: true,
-      prevArrow: '<span class="arrow prev">＜</span>',
-      nextArrow: '<span class="arrow next">＞</span>',
+      prevArrow: '<span class="slick-arrow prev">＜</span>',
+      nextArrow: '<span class="slick-arrow next">＞</span>',
     });
     $('.slider').on('beforeChange', (slick, currentSlide, idx) => {
       if (videos[idx]) videos[idx].pause()
@@ -39,6 +39,15 @@ $(function() {
     $('.slider').on('afterChange', (slick, currentSlide, idx) => {
       if (videos[idx]) videos[idx].play()
     })
+    $('.voice-slider').slick({
+      slidesToShow: 2,
+      dots: true, //ドットインジケーターを表示
+      arrows: true, //スライドの左右の矢印ボタンを非表示
+      adaptiveHeight: true,
+      infinite: true,
+      prevArrow: '<span class="slick-arrow prev text-black">＜</span>',
+      nextArrow: '<span class="slick-arrow next text-black">＞</span>',
+    });
     // YSPとはマウスオン時にサブメニューを表示させる
     $('.site-navbar .site-navigation ul.top-lower-menu li.site-menu:first').on('mouseenter', e => {
       // ズームイン表示のスタート位置の%表示

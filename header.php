@@ -24,12 +24,12 @@ $image = wp_get_attachment_image_src($image_id, 'full');
 <?php   elseif (preg_match( '/<img.*?src=(["\'])(.+?)\1.*?>/i', $post->post_content, $imgurl ) && !is_archive()): //アイキャッチ以外の画像がある場合 ?>
     <meta property="og:image" content="<?= $imgurl[2]; ?>">
 <?php   else: //画像が1つも無い場合 ?>
-    <meta property="og:image" content="<?= get_template_directory_uri(); ?>/images/ogp.jpg" />
+    <meta property="og:image" content="<?= get_template_directory_uri(); ?>/images/ysp/ogp.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 <?php   endif; ?>
 <?php else: //ホーム・カテゴリーページなど ?>
-    <meta property="og:image" content="<?= get_template_directory_uri(); ?>/images/ogp.jpg" />
+    <meta property="og:image" content="<?= get_template_directory_uri(); ?>/images/ysp/ogp.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 <?php endif; ?>
@@ -49,13 +49,13 @@ $image = wp_get_attachment_image_src($image_id, 'full');
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/style.css?20210809">
     <style>
 .site-blocks-cover.overlay.top {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/logo/bg/dummy.png');
+    background-image: url('<?= get_template_directory_uri(); ?>/images/ysp/logo/bg/dummy.png');
 }
 .site-blocks-cover.overlay.top.top2 {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/logo/moyou_top.png');
+    background-image: url('<?= get_template_directory_uri(); ?>/images/ysp/logo/moyou_top.png');
 }
 .site-blocks-cover.overlay.top.top3 {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/logo/moyou_bottom.png');
+    background-image: url('<?= get_template_directory_uri(); ?>/images/ysp/logo/moyou_bottom.png');
 }
 @media (min-width: 767.98px) {
   .site-blocks-cover.overlay.top {
@@ -72,10 +72,10 @@ $image = wp_get_attachment_image_src($image_id, 'full');
   }
 }
 .kakejiku_outer {
-  background-image: url('<?= get_template_directory_uri(); ?>/images/washi_green.png');
+  background-image: url('<?= get_template_directory_uri(); ?>/images/ysp/washi_green.png');
 }
 .kakejiku_inner {
-  background-image: url('<?= get_template_directory_uri(); ?>/images/washi_white.png');
+  background-image: url('<?= get_template_directory_uri(); ?>/images/ysp/washi_white.png');
 }
     </style>
     <?php wp_head();?>
@@ -89,7 +89,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
             <div class="col-2 px-0">
               <div class="logo-header">
                 <a href="<?= home_url();?>">
-                  <img src="<?= get_template_directory_uri(); ?>/images/logo.jpg" alt="YSP-Japan" class="mx-auto">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/logo.jpg" alt="YSP-Japan" class="mx-auto">
                 </a>
               </div>
             </div>
@@ -99,40 +99,40 @@ $image = wp_get_attachment_image_src($image_id, 'full');
                 <ul class="site-menu js-clone-nav d-none d-md-block">
                   <li>
                     <a href="<?= HOME_URL;?>">
-                      <img src="<?= get_template_directory_uri(); ?>/images/icon_top.png">
+                      <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_top.png">
                       <div>TOPページ</div>
                     </a>
                   </li>
                   <li class="has-children">
-                    <a href="javascript:void(0);"><img src="<?= get_template_directory_uri(); ?>/images/icon_contents.png"><div>コンテンツ</div></a>
+                    <a href="javascript:void(0);"><img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_contents.png"><div>コンテンツ</div></a>
                     <ul class="dropdown">
                       <li>
                         <a href="<?= LIVE_URL;?>">
-                          <img src="<?= get_template_directory_uri(); ?>/images/icon_live.png">
+                          <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_live.png">
                           <div>LIVE</div>
                         </a>
                       </li>
                       <li>
                         <a href="<?= PROJECT_URL;?>" class="inpage-link">
-                          <img src="<?= get_template_directory_uri(); ?>/images/icon_project.png">
+                          <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_project.png">
                           <div>プロジェクト</div>
                         </a>
                       </li>
                       <li>
                         <a href="<?= MOVIE_CONTEST_URL;?>">
-                          <img src="<?= get_template_directory_uri(); ?>/images/icon_movie.png">
+                          <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_movie.png">
                           <div>ムービーコンテスト</div>
                         </a>
                       </li>
                       <li>
                         <a href="<?= PHOTO_CONTEST_URL;?>">
-                          <img src="<?= get_template_directory_uri(); ?>/images/icon_photo.png">
+                          <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_photo.png">
                           <div>フォトコンテスト</div>
                         </a>
                       </li>
                       <li>
                         <a href="<?= SENRYU_CONTEST_URL;?>">
-                          <img src="<?= get_template_directory_uri(); ?>/images/icon_senryu.png">
+                          <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_senryu.png">
                           <div>川柳コンテスト</div>
                         </a>
                       </li>
@@ -140,40 +140,40 @@ $image = wp_get_attachment_image_src($image_id, 'full');
                   </li>
                   <li>
                     <a href="<?= QUESTIONNAIRE_URL;?>" target="_blank">
-                      <img src="<?= get_template_directory_uri(); ?>/images/icon_present.png">
+                      <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_present.png">
                       <div>アンケート ＆ プレゼント</div>
                     </a>
                   </li>
                   <li>
                     <a href="<?= NEWS_URL;?>">
-                      <img src="<?= get_template_directory_uri(); ?>/images/icon_news.png">
+                      <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_news.png">
                       <div>最新情報</div>
                     </a>
                   </li>
                   <li>
                     <a href="<?= CONCEPT_URL;?>">
-                      <img src="<?= get_template_directory_uri(); ?>/images/icon_about.png">
+                      <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_about.png">
                       <div>Peace designer Fes とは</div>
                     </a>
                   </li>
                   <li>
                     <a href="<?= GOODS_SHOP_URL; ?>" target="_blank">
-                      <img src="<?= get_template_directory_uri(); ?>/images/icon_goods.png">
+                      <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_goods.png">
                       <div>グッズショップ（外部サイト）</div>
                     </a>
                   </li>
                   <li>
                     <a href="<?= CONTACT_URL;?>">
-                      <img src="<?= get_template_directory_uri(); ?>/images/icon_contact.png">
+                      <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_contact.png">
                       <div>お問い合わせ</div>
                     </a>
                   </li>
                   <li class="d-md-none">
                     <div class="site-mobile-menu-sns text-center font-weight-bold container-fluid">
                       <div class="row justify-content-center align-items-center text-nowrap flex-nowrap py-2">
-                          <span class="m-3"><a href="<?= SNS_INSTAGRAM_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icon_instagram.png" alt="Image"></a></span>
-                          <span class="m-3"><a href="<?= SNS_LINE_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icon_line.png" alt="Image"></a></span>
-                          <span class="m-3"><a href="<?= SNS_YOUTUBE_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/icon_youtube.png" alt="Image"></a></span>
+                          <span class="m-3"><a href="<?= SNS_INSTAGRAM_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_instagram.png" alt="Image"></a></span>
+                          <span class="m-3"><a href="<?= SNS_LINE_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_line.png" alt="Image"></a></span>
+                          <span class="m-3"><a href="<?= SNS_YOUTUBE_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_youtube.png" alt="Image"></a></span>
                       </div>
                     </div>
                   </li>
@@ -252,7 +252,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
             <div class="col-8 col-md-2">
               <div class="logo-header my-2">
                 <a href="<?= home_url();?>">
-                  <img src="<?= get_template_directory_uri(); ?>/images/logo2.png" alt="PEACE DISIGNER FES" class="mx-auto">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/logo2.png" alt="PEACE DISIGNER FES" class="mx-auto">
                 </a>
               </div>
             </div>
