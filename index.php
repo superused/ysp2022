@@ -12,36 +12,17 @@ function onYouTubePlayerAPIReady() {
     width: '640',
     videoId: 'Be6eiPIHcjI',
     events: {
-      'onReady': onPlayerReady,
-      // 'onStateChange': onPlayerStateChange,
-      // 'onError': onPlayerError
+      'onReady': () => {
+        document.querySelector('.chart-line').addEventListener('click', playStart);
+        document.querySelector('.transition_scale').addEventListener('click', playStart);
+      }
     }
   });
 }
-// function onPlayerReady(event) {
-//   console.log('ready')
-//   // console.log(event);
-//   // let playButton = document.getElementById("play");
-//   // console.log(playButton);
-//   // let el = document.getElementsByClassName("videoWrapper");
-//   // playButton.addEventListener("click", function () {
-//   //   console.log('click')
-//   //   player.playVideo();
-//   //   playButton.style.display ="none";
-//   //   el[0].classList.add("pv");
-//   // });
-// }
-
-// プレイヤが準備できたら呼び出される
-function onPlayerReady(event) {
-  console.log('start');
-
-  document.querySelector('.transition_scale').addEventListener('click', event => {
-  console.log('click')
-    console.log(player)
-    player.playVideo();
-    document.querySelector('.poster_list').remove()
-  })
+function playStart() {
+  player.playVideo();
+  document.querySelector('.poster_list').remove();
+  document.querySelector('.chart-line').remove();
 }
 
 </script>
@@ -377,12 +358,12 @@ function onPlayerReady(event) {
   <iframe id="ytPlayer" allowfullscreen="1" allow="autoplay; encrypted-media" title="YouTube video player" src="https://www.youtube.com/embed/Be6eiPIHcjI?enablejsapi=1&origin=http%3A%2F%2Flocalhost" width="640" height="390" frameborder="0"></iframe>
   <ul class="poster_list">
     <li class="current">
-     <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="transition_scale" oncontextmenu="return false">
-     <span class="playicon"></span>
+      <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="transition_scale" oncontextmenu="return false">
+      <span class="playicon"></span>
     </li>
-    <li class="chart-line">abbbb</li>
   </ul>
 </div>
+<div class="chart-line"><p>Play Movie</p></div>
           <div class="position-absolute vertical-rl small font-weight-bold">動画で分かるYSP-Japan</div>
           <div class="movie-article"></div>
         </div>

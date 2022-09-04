@@ -5156,10 +5156,40 @@ h1.rem1-5 {
   font-weight: 900;
 }
 .chart-line {
-  width: 300px;
-  height: 300px;
+  width: 7rem;
+  height: 8.55rem;
+  position: absolute;
+  z-index: 1000;
+  left: calc(13rem + 50%);
+  top: 50%;
   border-bottom: 0.1rem solid #000;
 }
+.chart-line p {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+/* グラフ */
+.chart-line::before {
+	content: "";
+	position: absolute;
+	width: 13rem;
+	height: 10rem;
+  border-bottom: 0.1rem solid #000;
+  bottom: 0;
+	transform: rotate(35deg);
+  left: -9rem;
+  top: -4.3rem;
+  cursor: pointer;
+}
+/* YT-trap end */
 /* YT-trap end */
 .line_chart {
 	font-size: 100px;
