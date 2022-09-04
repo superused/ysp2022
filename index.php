@@ -1,4 +1,50 @@
 <?php get_header(); ?>
+<script>
+var tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/iframe_api';
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+function onYouTubePlayerAPIReady() {
+  player = new YT.Player('ytPlayer', {
+    height: '390',
+    width: '640',
+    videoId: 'Be6eiPIHcjI',
+    events: {
+      'onReady': onPlayerReady,
+      // 'onStateChange': onPlayerStateChange,
+      // 'onError': onPlayerError
+    }
+  });
+}
+// function onPlayerReady(event) {
+//   console.log('ready')
+//   // console.log(event);
+//   // let playButton = document.getElementById("play");
+//   // console.log(playButton);
+//   // let el = document.getElementsByClassName("videoWrapper");
+//   // playButton.addEventListener("click", function () {
+//   //   console.log('click')
+//   //   player.playVideo();
+//   //   playButton.style.display ="none";
+//   //   el[0].classList.add("pv");
+//   // });
+// }
+
+// プレイヤが準備できたら呼び出される
+function onPlayerReady(event) {
+  console.log('start');
+
+  document.querySelector('.transition_scale').addEventListener('click', event => {
+  console.log('click')
+    console.log(player)
+    player.playVideo();
+    document.querySelector('.poster_list').remove()
+  })
+}
+
+</script>
 <ul class="slider">
   <li><a href="#"><div><p class="font-weight-bold">やりがい<br><span class="batsu"></span><br>地域活性化</p><button class="btn btn-normal btn-slider">1ページで分かるYSP</button><img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg"></div></a></li>
   <li><a href="#"><div><button class="btn btn-normal btn-slider cyan">プロジェクトを見る</button><video src="<?= get_template_directory_uri(); ?>/images/ysp/top.mp4" autoplay loop muted></video></div></a></li>
@@ -29,8 +75,8 @@
         <div class="title-second">What we do</div>
         <p class="text-center mb-5">YSPは一人一人の青年が持つ力ややりがいを大切にしながら<br>全国各地で地域に密着したプロジェクト活動を行っています。</p>
         <div class="row my-4">
-          <div class="col-md-6 activity-link team-member">
-            <div class="box">
+          <div class="col-md-6 activity-link">
+            <div class="box team-member">
               <a href="">
                 <div class="image">
                   <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
@@ -45,8 +91,8 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6 activity-link team-member">
-            <div class="box">
+          <div class="col-md-6 activity-link">
+            <div class="box team-member">
               <a href="">
                 <div class="image">
                   <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
@@ -61,8 +107,8 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6 activity-link team-member">
-            <div class="box">
+          <div class="col-md-6 activity-link">
+            <div class="box team-member">
               <a href="">
                 <div class="image">
                   <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
@@ -77,8 +123,8 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6 activity-link team-member">
-            <div class="box">
+          <div class="col-md-6 activity-link">
+            <div class="box team-member">
               <a href="">
                 <div class="image">
                   <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
@@ -94,7 +140,7 @@
             </div>
           </div>
         </div>
-        <div class="text-center"><button class="btn btn-normal cyan">プロジェクトをもっと見る</button></div>
+        <div class="text-center"><a href=""><button class="btn btn-normal cyan">プロジェクトをもっと見る</button></a></div>
       </div>
       <div class="circle-bg gray bottom"></div>
       <div class="circle-bg white bottom"></div>
@@ -153,13 +199,13 @@
       <div class="container px-0">
         <div class="title-icon">参加・支援する</div>
         <div class="title-second">Take action</div>
-        <div class="row">
-          <div class="col-md-6 p-4 text-center">
-            <div class="box">
+        <div class="row mx-0">
+          <div class="col-md-6 link">
+            <div class="box team-member overflow-auto">
               <a href="" class="text-black">
-                <div class="small text-cyan font-weight-bold">Let's join us</div>
+                <div class="small text-cyan font-weight-bold">let's join us</div>
                 <div class="font-weight-bold pb-1 mb-4">一緒に活動しませんか？</div>
-                <div class="team-member image mb-4">
+                <div class="image mb-4">
                   <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
                 </div>
                 <div class="small font-weight-bold mb-4">仲間と共にあなたの住む町をより良くしよう！</div>
@@ -167,12 +213,12 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6 p-4 text-center">
-            <div class="box">
+          <div class="col-md-6 link">
+            <div class="box team-member overflow-auto">
               <a href="" class="text-black">
-                <div class="small text-cyan font-weight-bold">Let's join us</div>
+                <div class="small text-cyan font-weight-bold">let's join us</div>
                 <div class="font-weight-bold pb-1 mb-4">一緒に活動しませんか？</div>
-                <div class="team-member image mb-4">
+                <div class="image mb-4">
                   <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
                 </div>
                 <div class="small font-weight-bold mb-4">仲間と共にあなたの住む町をより良くしよう！</div>
@@ -192,25 +238,155 @@
         <div class="title-second">Magazine</div>
         <p class="text-center mb-5">Peace designerのインタビューやライフスタイルを<br>お届けするWebマガジン</p>
         <div class="row my-4">
-          <div class="col-md-6 activity-link team-member-small">
-            <div class="box">
-              <a href="">
-                <div class="image bg-peacedesigner">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="w-100">
+          <div class="col-md-6 activity-link px-md-2 px-lg-3 mb-2">
+            <a href="" class="box team-member-small h-100">
+              <div class="image bg-peacedesigner">
+                <img src="<?= get_template_directory_uri(); ?>/images/ysp/note.jpg">
+              </div>
+                <div class="article">Article<br>vol.1</div>
+              <div class="text-black p-4">
+                <div class="font-weight-bold my-3">Peace designerの公式noteはじめます！</div>
+                <div class="small my-3">はじめまして！Peace designerのnote編集部、Kokiです。この度は読んでくれるみなさんの毎日を…</div>
+                <div class="small">Peace designer Magazine></div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 activity-link row mx-auto px-md-0 px-lg-3">
+            <div class="col-md-6 px-2 pb-2">
+              <a href="" class="box team-member">
+                <div class="image overflow-hidden">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <div class="article">Article<br>vol.1</div>
                 </div>
-                <div class="contents">
-                  <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
-                  <div class="catch">塾に行けない子たちのために</div>
-                  <div class="name">スマイル塾</div>
-                  <div class="check"><button class="btn btn-normal cyan small">チェック</button></div>
+                <div class="text-black p-2">
+                  <div class="font-weight-bold my-3 my-md-2 my-lg-3 small">【訪問医療・織田亮インタビュー】<br>「最後に先生に出会えてよかった」患者さんに最後まで寄り添う</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 px-2 pb-2">
+              <a href="" class="box team-member">
+                <div class="image overflow-hidden">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <div class="article">Article<br>vol.1</div>
+                </div>
+                <div class="text-black p-2">
+                  <div class="font-weight-bold my-3 my-md-2 my-lg-3 small">【訪問医療・織田亮インタビュー】<br>「最後に先生に出会えてよかった」患者さんに最後まで寄り添う</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 px-2 pb-2">
+              <a href="" class="box team-member">
+                <div class="image overflow-hidden">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <div class="article">Article<br>vol.1</div>
+                </div>
+                <div class="text-black p-2">
+                  <div class="font-weight-bold my-3 my-md-2 my-lg-3 small">【訪問医療・織田亮インタビュー】<br>「最後に先生に出会えてよかった」患者さんに最後まで寄り添う</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 px-2 pb-2">
+              <a href="" class="box team-member">
+                <div class="image overflow-hidden">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <div class="article">Article<br>vol.1</div>
+                </div>
+                <div class="text-black p-2">
+                  <div class="font-weight-bold my-3 my-md-2 mb-lg-3 small">【訪問医療・織田亮インタビュー】<br>「最後に先生に出会えてよかった」患者さんに最後まで寄り添う</div>
                 </div>
               </a>
             </div>
           </div>
         </div>
       </div>
+      <div class="text-center"><a href=""><button class="btn btn-normal cyan">もっと見る</button></a></div>
       <div class="circle-bg gray bottom"></div>
       <div class="circle-bg white bottom"></div>
+    </div>
+
+    <div id="news" class="site-section">
+      <div class="container px-0">
+        <div class="title-icon">YSPからのお知らせ</div>
+        <div class="title-second">News</div>
+        <div class="row mx-0 my-5">
+          <div class="col-md-4 link">
+            <div class="box team-member overflow-auto">
+              <a href="" class="text-black">
+                <div class="image mb-4 overflow-hidden">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                </div>
+                <div class="px-4 pb-4 px-md-2 pb-md-2 px-lg-4 pb-lg-4">
+                  <div class="font-weight-bold text-center mb-3">【東濃】クリーンウォーキング</div>
+                  <div class="location">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span class="align-baseline mr-2">2021.05.08</span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="align-baseline font-weight-bold">YSP多摩東京</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 link">
+            <div class="box team-member overflow-auto">
+              <a href="" class="text-black">
+                <div class="image mb-4 overflow-hidden">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                </div>
+                <div class="px-4 pb-4 px-md-2 pb-md-2 px-lg-4 pb-lg-4">
+                  <div class="font-weight-bold text-center mb-3">【東濃】クリーンウォーキング</div>
+                  <div class="location">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span class="align-baseline mr-2">2021.05.08</span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="align-baseline font-weight-bold">YSP多摩東京</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 link">
+            <div class="box team-member overflow-auto">
+              <a href="" class="text-black">
+                <div class="image mb-4 overflow-hidden">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                </div>
+                <div class="px-4 pb-4 px-md-2 pb-md-2 px-lg-4 pb-lg-4">
+                  <div class="font-weight-bold text-center mb-3">【東濃】クリーンウォーキング</div>
+                  <div class="location">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span class="align-baseline mr-2">2021.05.08</span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="align-baseline font-weight-bold">YSP多摩東京</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center"><a href=""><button class="btn btn-normal cyan">詳しく見る</button></a></div>
+    </div>
+
+    <div id="movie" class="site-section position-relative">
+      <div class="container px-0">
+        <div class="movie-frame">
+          <div class="small font-weight-bold">紹介動画</div>
+
+<div class="youtube_area">
+  <iframe id="ytPlayer" allowfullscreen="1" allow="autoplay; encrypted-media" title="YouTube video player" src="https://www.youtube.com/embed/Be6eiPIHcjI?enablejsapi=1&origin=http%3A%2F%2Flocalhost" width="640" height="390" frameborder="0"></iframe>
+  <ul class="poster_list">
+    <li class="current">
+     <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="transition_scale" oncontextmenu="return false">
+     <span class="playicon"></span>
+    </li>
+    <li class="chart-line">abbbb</li>
+  </ul>
+</div>
+          <div class="position-absolute vertical-rl small font-weight-bold">動画で分かるYSP-Japan</div>
+          <div class="movie-article"></div>
+        </div>
+      </div>
     </div>
 
     <div id="peace-designer-fes" class="site-section">

@@ -2340,10 +2340,11 @@ button {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
 }
+/*
 .team-member:before,
 .team-member-small:before {
   position: absolute;
@@ -2361,6 +2362,7 @@ button {
   -o-transition: .3s all ease;
   transition: .3s all ease;
 }
+*/
 .team-member .text {
   top: 50%;
   text-align: center;
@@ -2402,6 +2404,11 @@ button {
   opacity: 1;
   visibility: visible;
   z-index: 4;
+}
+.team-member:hover .btn.cyan, .team-member:focus .btn.cyan, .team-member:active .btn.cyan,
+.team-member-small:hover .btn.cyan, .team-member-small:focus .btn.cyan, .team-member-small:active .btn.cyan {
+  color: #fff;
+  background-color: #00c8f9;
 }
 
 .social-icon span {
@@ -2464,7 +2471,7 @@ figure figcaption {
   font-size: .8rem;
   font-style: italic;
 }
-
+/*
 .comment-form-wrap {
   clear: both;
 }
@@ -2955,14 +2962,14 @@ div.notice-bar .notice-contents {
 .kakejiku_button {
   width: 135px;
 }
-/* 写真コンテストの説明を３行以上の場合省く処理
+
 [data-type=content-block] .photo_episode {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-*/
+
 button.detail {
   background-color: #fff;
   border: 3px solid #00b9f2;
@@ -3168,7 +3175,7 @@ button.vote:disabled {
 .balloon {
   position: relative;
   background-color: #ffffff;
-  display: inline-block; /* 横幅を自動で変更 */
+  display: inline-block; 
   border: 2px solid #d5d5d5;
 }
 .balloon.left::before{
@@ -3857,14 +3864,14 @@ h6.text-cyan {
 .veu_socialSet.veu_socialSet-position-after.veu_contentAddSection {
   display: none;
 }
-/* IE非対応 表示 */
+
 .ie_alert{
   position: fixed;
   top: 0%;
   left: 0%;
   width: 100%;
   height: 100%;
-  background: rgb(103, 183, 239); /* rgba未対応の古いIE用 */
+  background: rgb(103, 183, 239); 
   background: rgba(103, 183, 239, 0.95);
   text-align: center;
   padding: 10% 0;
@@ -4409,7 +4416,7 @@ h1.rem1-5 {
     right: 2rem;
   }
 }
-
+*/
 
 /* YSP */
 @media (min-width: 1200px) {
@@ -4989,12 +4996,202 @@ h1.rem1-5 {
   font-size: 0.8rem;
 }
 
+#take-action .box {
+  overflow: visible;
+}
 #take-action .box .image {
   box-shadow: 0.3rem 0.3rem 0 #00c8f9;
   font-weight: bold;
 }
+#take-action .link {
+  padding: 1.5rem;
+  text-align: center;
+}
+#take-action .link .image {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
 
 #magazine .box .image.bg-peacedesigner {
+  overflow: hidden;
   color: transparent;
   background: linear-gradient(30deg, #ec675d 0%,#da796b 25%,#ab9785 50%,#67ad98 75%,#2ab6a0 100%);
+  display: flex;
+  justify-content: center;
+  height: 50%;
+}
+#magazine .box .image.bg-peacedesigner img {
+  max-width: 529px;
+}
+@media (min-width: 767.98px) {
+  #magazine .box .image.bg-peacedesigner img {
+    max-width: 529px;
+  }
+}
+@media (min-width: 991.98px) {
+  #magazine .box .image.bg-peacedesigner img {
+    max-width: 529px;
+  }
+}
+#magazine .box .article {
+  background-color: #000;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  margin-top: -2.2rem;
+  line-height: 1.5rem;
+  padding: 0.7rem;
+}
+#magazine .activity-link.row {
+}
+#magazine .activity-link.row .box .article {
+  font-size: 0.5rem;
+  margin-top: -1.1rem;
+  line-height: 0.75rem;
+  padding: 0.35rem;
+}
+.movie-frame {
+  margin: 0 auto;
+  max-width: 560px;
+}
+.movie-frame .iframe {
+    position: relative;
+    max-width: 560px;
+    max-height: 315px;
+    padding-bottom: 56.25%; /* アスペクト比16:9の場合 */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 2rem; /* YouTubeの下に余白をつける */
+}
+.movie-frame .iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.vertical-rl {
+  writing-mode: vertical-rl;
+}
+.movie-frame .vertical-rl {
+  margin-left: -1.2rem;
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  bottom: 8.5rem;
+}
+.movie-article {
+  position: absolute;
+}
+
+/* YT-trap start */
+.youtube_area {
+  position: relative;
+  width: 100%;
+  padding: 56.3% 0 0;
+  overflow: hidden;
+}
+.youtube_area #ytPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100.5%;
+  height: 100.5%;
+}
+.youtube_area .poster_list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 100;
+}
+.youtube_area .poster_list li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  overflow: hidden;
+}
+.youtube_area .poster_list li.current {
+  display: block;
+}
+.youtube_area .poster_list li .transition_scale {
+  width: 100.5%;
+  height: 100%;
+}
+.youtube_area .poster_list li .playicon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 2rem;
+  height: 2rem;
+}
+.youtube_area .poster_list li .playicon {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  cursor: pointer;
+  font-size: 4rem;
+  width: 4rem;
+  height: 4rem;
+  color: #000;
+}
+.youtube_area .poster_list li .playicon:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  content: "\f144";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.chart-line {
+  width: 300px;
+  height: 300px;
+  border-bottom: 0.1rem solid #000;
+}
+/* YT-trap end */
+.line_chart {
+	font-size: 100px;
+	position: relative;
+	margin-top: 0.2em;
+	width: 1.5em;
+	height: 1.1em;
+	border-left: 0.1em solid #39a9d6;
+	border-bottom: 0.1em solid #39a9d6;
+}
+/* グラフ */
+.line_chart::before {
+	content: "";
+	position: absolute;
+	top: 0.5em;
+	left: 0.3em;
+	width: 0.1em;
+	height: 0.6em;
+	background-color: #39a9d6;
+	box-shadow: 0.4em -0.6em 0 0 #39a9d6;
+	-webkit-transform: rotate(53deg);
+	transform: rotate(53deg);
+}
+/* グラフ */
+.line_chart::after {
+	content: "";
+	position: absolute;
+	top: 0.535em;
+	left: 0.65em;
+	width: 0.1em;
+	height: 0.5em;
+	background-color: #39a9d6;
+	-webkit-transform: rotate(-38deg);
+	transform: rotate(-38deg);
 }
