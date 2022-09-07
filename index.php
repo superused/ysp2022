@@ -355,7 +355,7 @@ function playStart() {
           <div class="small font-weight-bold">紹介動画</div>
           <div class="team-member float-none overflow-visible">
             <div class="youtube_area">
-              <iframe id="ytPlayer" allowfullscreen="1" allow="autoplay; encrypted-media" title="YouTube video player" src="https://www.youtube.com/embed/Be6eiPIHcjI?enablejsapi=1&origin=http%3A%2F%2Flocalhost" width="640" height="390" frameborder="0"></iframe>
+              <iframe id="ytPlayer" allowfullscreen="1" allow="autoplay; encrypted-media" title="YouTube video player" src="https://www.youtube.com/embed/Be6eiPIHcjI?enablejsapi=1&origin=http%3A%2F%2Flocalhost"></iframe>
               <ul class="poster_list">
                 <li class="current">
                   <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="transition_scale" oncontextmenu="return false">
@@ -437,7 +437,7 @@ function playStart() {
         </div>
         <div class="container p-0">
            <div class="row align-items-center">
-             <div class="col-md-3">
+             <div class="col-9 col-md-3 mx-auto">
                <a href="/"><img src="<?= get_template_directory_uri(); ?>/images/ysp/logo_footer.png" class="w-100"></a>
              </div>
              <div class="col-md-6">

@@ -5194,6 +5194,19 @@ h1.rem1-5 {
   top: -2.8rem;
   cursor: pointer;
 }
+@media (max-width: 767.98px) {
+  .chart-line {
+    top: calc(10rem + 50%);
+    left: calc(2rem + 50%);
+    width: 7rem;
+  }
+  .chart-line::before {
+    transform: rotate(80deg);
+    top: -3rem;
+    left: -4.7rem;
+    width: 8rem;
+  }
+}
 /* YT-trap end */
 /* YT-trap end */
 .line_chart {
@@ -5307,4 +5320,12 @@ h1.rem1-5 {
 }
 .footer-line-bottom {
   border-bottom: #777777 1px solid;
+}
+@media (max-width: 767.98px) {
+  .footer-line-bottom {
+    max-width: none;
+  }
+  .footer-line-bottom .row {
+    margin: 0 2rem;
+  }
 }
