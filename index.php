@@ -436,20 +436,23 @@ function playStart() {
           </div>
         </div>
         <div class="container p-0">
-           <div class="row align-items-center">
-             <div class="col-9 col-md-3 mx-auto">
-               <a href="/"><img src="<?= get_template_directory_uri(); ?>/images/ysp/logo_footer.png" class="w-100"></a>
+           <div class="row text-center align-items-center mx-0 mb-5 mb-md-4">
+             <div class="footer-image col-md-3 p-0 pb-2 pb-md-0 text-md-left mx-auto mx-md-0">
+               <a href="/"><img src="<?= get_template_directory_uri(); ?>/images/ysp/logo_footer.png" class="footer-logo w-100"></a>
              </div>
-             <div class="col-md-6">
+             <div class="footer-sns col-md-6">
                <ul class="h-100 m-0 p-0">
-                 <li class="d-inline h-100 mx-2"><a href="" class="d-inline-flex align-items-center h-100"><i class="fa-brands fa-facebook fa-2x"></i><span class="small font-weight-bold mx-2">Facebook</span></a></li>
-                 <li class="d-inline h-100 mx-2"><a href="" class="d-inline-flex align-items-center h-100"><i class="fa-brands fa-square-instagram fa-2x"></i><span class="small font-weight-bold mx-2">Instagram</span></a></li>
-                 <li class="d-inline h-100 mx-2"><a href="" class="d-inline-flex align-items-center h-100"><i class="fa-brands fa-line fa-2x"></i><span class="small font-weight-bold mx-2">LINE</span></a></li>
+                 <li class="d-inline h-100 mx-3 mx-md-2"><a href="" class="d-inline-flex align-items-center h-100"><i class="fa-brands fa-facebook fa-2x"></i><span class="small font-weight-bold d-none d-md-block mx-2">Facebook</span></a></li>
+                 <li class="d-inline h-100 mx-3 mx-md-2"><a href="" class="d-inline-flex align-items-center h-100"><i class="fa-brands fa-square-instagram fa-2x"></i><span class="small font-weight-bold d-none d-md-block mx-2">Instagram</span></a></li>
+                 <li class="d-inline h-100 mx-3 mx-md-2"><a href="" class="d-inline-flex align-items-center h-100"><i class="fa-brands fa-line fa-2x"></i><span class="small font-weight-bold d-none d-md-block mx-2">LINE</span></a></li>
                </ul>
              </div>
-             <div class="col-md-3">
+             <div class="footer-contact col-md-3 p-0 pb-2 pb-md-0">
                <button class="btn btn-normal mark-cyan rounded">お問い合わせ</button>
              </div>
+           </div>
+           <div class="w-100 text-center pt-3">
+             <span>Copyright © YSP-Japan All Rights Reserved</span>
            </div>
         </div>
       </div>
