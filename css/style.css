@@ -4869,6 +4869,24 @@ h1.rem1-5 {
   margin-top: 3.8rem;
   left: 3.6rem;
 }
+@media (max-width: 767.98px) {
+  .circle-bg.gray {
+    margin-top: -5.1rem;
+    right: 6rem;
+  }
+  .circle-bg.white {
+    margin-top: -3.3rem;
+    right: 1.6rem;
+  }
+  .circle-bg.gray.bottom {
+    margin-top: 1.9rem;
+    left: 6rem;
+  }
+  .circle-bg.white.bottom {
+    margin-top: 0.1rem;
+    left: 1.6rem;
+  }
+}
 
 .bg-lightgray {
   background-color: #f3f3f3;
