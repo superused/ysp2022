@@ -5266,8 +5266,6 @@ h1.rem1-5 {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
 }
 .footer-link-circle.right {
   width: 100%;
@@ -5298,6 +5296,25 @@ h1.rem1-5 {
     margin-left: 0.8rem;
   }
 }
+@media (max-width: 767.98px) {
+  .footer-link-circle {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 3rem;
+    line-height: 2rem;
+  }
+  .footer-link-circle a:not(.pankuzu-next):before {
+    margin-left: -2.2rem;
+  }
+  .footer-link-circle.right.magazine {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .footer-link-circle.right a:before {
+    left: auto;
+    font-size: 1.2rem;
+  }
+}
 .footer-link-circle.right.movie a:before {
   content: "\f03d";
 }
@@ -5321,7 +5338,26 @@ h1.rem1-5 {
 .footer-line-bottom {
   border-bottom: #777777 1px solid;
 }
+@media (max-width: 991.98px) {
+  .footer-link-circle.bg-white .pankuzu-next {
+    margin-left: -2.5rem;
+  }
+  .footer-link-circle.bg-white .pankuzu-next:before {
+    margin-right: 1.9rem;
+  }
+}
 @media (max-width: 767.98px) {
+  .pankuzu-next,
+  .footer-link-circle.bg-white .pankuzu-next {
+    margin-left: -1.8rem;
+  }
+  .pankuzu-next:before,
+  .footer-link-circle.bg-white .pankuzu-next:before {
+    margin-right: 1.2rem;
+  }
+  .footer-line-left {
+    border-left: none;
+  }
   .footer-line-bottom {
     max-width: none;
   }
@@ -5332,6 +5368,11 @@ h1.rem1-5 {
     position: absolute;
     left: 0;
     margin-top: 11rem;
+  }
+}
+@media (max-width: 399.98px) {
+  .footer-line-bottom .row {
+    margin: 0;
   }
 }
 .footer-logo {

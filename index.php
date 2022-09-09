@@ -389,10 +389,10 @@ function playStart() {
           <a href="" class="font-weight-bold text-black">Menu</a>
           <div class="row">
             <ul class="col-md-8 mb-5">
-              <li class="footer-link-circle">
-                <a href="">YSPとは<span class="small font-weight-bold ml-1">- 1ページで分かるYSP -</span></a>
-                <a href="" class="pankuzu-next">団体概要</a>
-                <a href="" class="pankuzu-next">会長挨拶</a>
+              <li class="footer-link-circle d-md-table">
+                <div class="d-md-table-cell"><a href="">YSPとは<span class="small font-weight-bold ml-1">- 1ページで分かるYSP -</span></a></div>
+                <div class="d-md-table-cell"><a href="" class="pankuzu-next">団体概要</a></div>
+                <div class="d-md-table-cell"><a href="" class="pankuzu-next">会長挨拶</a></div>
               </li>
               <li class="footer-link-circle">
                 <a href="">セミナー・イベント</a>
@@ -400,13 +400,13 @@ function playStart() {
               <li class="footer-link-circle">
                 <a href="">プロジェクト</a>
               </li>
-              <li class="footer-link-circle bg-white">
-                <a href="">ご寄付・ご支援TOP</a>
-                <a href="" class="pankuzu-next">社会を彩る「毎月の支援」</a>
-                <a href="" class="pankuzu-next">今すぐ応援「今回の支援」</a>
+              <li class="footer-link-circle bg-white d-lg-table">
+                <div class="d-lg-table-cell"><a href="">ご寄付・ご支援TOP</a></div>
+                <div class="d-lg-table-cell"><a href="" class="pankuzu-next">社会を彩る「毎月の支援」</a></div>
+                <div class="d-lg-table-cell"><a href="" class="pankuzu-next">今すぐ応援「今回の支援」</a></div>
               </li>
             </ul>
-            <ul class="col-md-4 footer-line-left text-center font-weight-bold mb-5">
+            <ul class="col-md-4 footer-line-left text-left text-md-center font-weight-bold mb-5">
               <li class="footer-link-circle right shop">
                 <a href="">
                   <span>Shop</span>
@@ -418,9 +418,9 @@ function playStart() {
                 </a>
               </li>
               <li class="footer-link-circle right magazine">
-                <a href="">
-                  <div>Webマガジン</div>
-                  <div class="small font-weight-bold">Peace designer Magazine</div>
+                <a href="" class="d-table d-md-block">
+                  <div class="d-table-cell d-md-block pr-2 pr-md-0">Webマガジン</div>
+                  <div class="small font-weight-bold d-table-cell d-md-block">Peace designer Magazine</div>
                 </a>
               </li>
               <li class="footer-link-normal">
