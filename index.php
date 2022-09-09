@@ -380,15 +380,15 @@ function playStart() {
 
     <div class="site-section top-footer">
       <div class="bg-cyan py-4">
-        <div class="container p-0">
+        <div class="container">
           <a href="" class="font-weight-bold text-white">TOP</a>
         </div>
       </div>
       <div class="bg-lightgray py-4">
         <div class="container p-0 mb-4 footer-line-bottom">
-          <a href="" class="font-weight-bold text-black">Menu</a>
+          <a href="" class="font-weight-bold px-3 text-black d-none d-md-block">Menu</a>
           <div class="row">
-            <ul class="col-md-8 mb-5">
+            <ul class="col-md-8 mb-3 mb-md-5">
               <li class="footer-link-circle d-md-table">
                 <div class="d-md-table-cell"><a href="">YSPとは<span class="small font-weight-bold ml-1">- 1ページで分かるYSP -</span></a></div>
                 <div class="d-md-table-cell"><a href="" class="pankuzu-next">団体概要</a></div>

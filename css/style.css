@@ -5297,11 +5297,14 @@ h1.rem1-5 {
   }
 }
 @media (max-width: 767.98px) {
+  .footer-link-normal {
+    line-height: 2.5rem;
+  }
   .footer-link-circle {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 3rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
   }
   .footer-link-circle a:not(.pankuzu-next):before {
     margin-left: -2.2rem;
@@ -5362,12 +5365,17 @@ h1.rem1-5 {
     max-width: none;
   }
   .footer-line-bottom .row {
-    margin: 0 2rem;
+    display: block;
+    max-width: 540px;
+    margin: 0 auto;
   }
   .footer-sns {
     position: absolute;
     left: 0;
     margin-top: 11rem;
+  }
+  .site-section.top-footer a{
+    display: block;
   }
 }
 @media (max-width: 399.98px) {
