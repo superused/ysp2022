@@ -5366,6 +5366,17 @@ h1.rem1-5 {
   }
   .footer-line-bottom .row {
     display: block;
+    margin: 0;
+  }
+  .menu-left li {
+    border-bottom: 1px solid #d2d2d2;
+    padding: 0 1rem;
+  }
+  .menu-left li .footer-link-circle {
+    max-width: 510px;
+    margin: 0 auto;
+  }
+  .menu-right {
     max-width: 540px;
     margin: 0 auto;
   }
@@ -5385,4 +5396,28 @@ h1.rem1-5 {
 }
 .footer-logo {
   max-width: 11rem;
+}
+.donate {
+  position: absolute;
+  margin-top: -8.5rem;
+}
+.footer-link-circle.blank {
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 991.98px) {
+  .donate {
+    margin-top: -11.5rem;
+  }
+  .footer-link-circle.blank {
+    margin-bottom: 4.5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .donate {
+    margin-top: 0;
+    position: relative;
+  }
+  .footer-link-circle.blank {
+    display: none;
+  }
 }

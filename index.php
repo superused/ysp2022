@@ -388,25 +388,28 @@ function playStart() {
         <div class="container p-0 mb-4 footer-line-bottom">
           <a href="" class="font-weight-bold px-3 text-black d-none d-md-block">Menu</a>
           <div class="row">
-            <ul class="col-md-8 mb-3 mb-md-5">
-              <li class="footer-link-circle d-md-table">
+            <ul class="menu-left col-md-8 mb-3 mb-md-5 px-0 px-md-3">
+              <li>
+              <div class="footer-link-circle d-md-table">
                 <div class="d-md-table-cell"><a href="">YSPとは<span class="small font-weight-bold ml-1">- 1ページで分かるYSP -</span></a></div>
                 <div class="d-md-table-cell"><a href="" class="pankuzu-next">団体概要</a></div>
                 <div class="d-md-table-cell"><a href="" class="pankuzu-next">会長挨拶</a></div>
+              </div>
               </li>
-              <li class="footer-link-circle">
-                <a href="">セミナー・イベント</a>
+              <li>
+              <div class="footer-link-circle">
+                <div><a href="">セミナー・イベント</a></div>
+              </div>
               </li>
-              <li class="footer-link-circle">
-                <a href="">プロジェクト</a>
+              <li>
+              <div class="footer-link-circle">
+                <div><a href="">プロジェクト</a></div>
+              </div>
               </li>
-              <li class="footer-link-circle bg-white d-lg-table">
-                <div class="d-lg-table-cell"><a href="">ご寄付・ご支援TOP</a></div>
-                <div class="d-lg-table-cell"><a href="" class="pankuzu-next">社会を彩る「毎月の支援」</a></div>
-                <div class="d-lg-table-cell"><a href="" class="pankuzu-next">今すぐ応援「今回の支援」</a></div>
+              <li class="footer-link-circle blank">
               </li>
             </ul>
-            <ul class="col-md-4 footer-line-left text-left text-md-center font-weight-bold mb-5">
+            <ul class="menu-right col-md-4 footer-line-left text-left text-md-center font-weight-bold mb-3 mb-md-5">
               <li class="footer-link-circle right shop">
                 <a href="">
                   <span>Shop</span>
@@ -423,16 +426,29 @@ function playStart() {
                   <div class="small font-weight-bold d-table-cell d-md-block">Peace designer Magazine</div>
                 </a>
               </li>
-              <li class="footer-link-normal">
-                <a href="">サイトポリシー</a>
-              </li>
-              <li class="footer-link-normal">
-                <a href="">個人情報保護方針</a>
-              </li>
-              <li class="footer-link-normal">
-                <a href="">特定商取引法に基づく表示</a>
-              </li>
             </ul>
+          </div>
+          <div class="donate container p-0">
+            <div class="row">
+              <ul class="col-md-8 mb-3 mb-md-5">
+                <li class="footer-link-circle bg-white rounded d-lg-table">
+                  <div class="d-lg-table-cell"><a href="">ご寄付・ご支援TOP</a></div>
+                  <div class="d-lg-table-cell"><a href="" class="pankuzu-next">社会を彩る「毎月の支援」</a></div>
+                  <div class="d-lg-table-cell"><a href="" class="pankuzu-next">今すぐ応援「今回の支援」</a></div>
+                </li>
+              </ul>
+              <ul class="menu-right col-md-4 mb-5">
+                <li class="footer-link-normal">
+                  <a href="">サイトポリシー</a>
+                </li>
+                <li class="footer-link-normal">
+                  <a href="">個人情報保護方針</a>
+                </li>
+                <li class="footer-link-normal">
+                  <a href="">特定商取引法に基づく表示</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="container p-0">
