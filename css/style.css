@@ -3391,7 +3391,7 @@ div.news-area .owl-carousel {
   }
 }
 .fixed-button {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -3401,12 +3401,8 @@ div.news-area .owl-carousel {
   align-content: flex-end;
 }
 .fixed-menu .fixed-button-content .contents {
-  margin: 0.2rem 0.2rem 0;
-  padding: 0.2rem 0.7rem;
-  background-color: #00b9f2;
   border: 1px solid #fff;
   border-bottom: 0;
-  border-radius: 0.5rem 0.5rem 0 0;
 }
 .fixed-button-present {
   position: absolute;
