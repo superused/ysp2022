@@ -2474,6 +2474,7 @@ figure figcaption {
   font-size: .8rem;
   font-style: italic;
 }
+/* ここから */
 /*
 .comment-form-wrap {
   clear: both;
@@ -3371,6 +3372,7 @@ div.news-area .owl-carousel {
   left: 0.7rem;
   border-left: 0.8rem solid #fff;
 }
+*/
 .fixed-menu {
   position: fixed;
   width: 100%;
@@ -3450,7 +3452,7 @@ div.news-area .owl-carousel {
   transform: translate(-50%,-50%) rotate(-45deg);
 }
 
-
+/*
 .contents-list-link {
   top: 0;
   left: 0;
@@ -4419,8 +4421,7 @@ h1.rem1-5 {
     right: 2rem;
   }
 }
-*/
-
+/* ここまで */
 /* YSP */
 @media (min-width: 1200px) {
   .container {
@@ -4832,7 +4833,9 @@ h1.rem1-5 {
   margin: 1rem 1rem 0.5rem;
   position: absolute;
 }
-
+.text-cyan {
+  color: #00c8f9;
+}
 .btn.cyan {
   color: #00c8f9;
   background-color: transparent;
@@ -4893,7 +4896,7 @@ h1.rem1-5 {
 }
 #activity .activity-link,
 #magazine .activity-link {
-  padding: 1.3rem 1.5rem;
+  padding: 1.3rem 0;
 }
 #activity .activity-link .box,
 #magazine .activity-link .box {
@@ -5044,6 +5047,31 @@ h1.rem1-5 {
   justify-content: center;
   height: 50%;
 }
+/*
+@media (max-width: 767.98px) {
+  #magazine .activity-link {
+    padding: 1.3rem 2.7rem;
+  }
+}
+@media (max-width: 482.98px) {
+  #magazine .activity-link {
+    padding: 1.3rem 1.5rem;
+  }
+  #magazine .box .image.bg-peacedesigner {
+    height: 46%;
+  }
+}
+@media (max-width: 405.98px) {
+  #magazine .box .image.bg-peacedesigner {
+    height: 40%;
+  }
+}
+@media (max-width: 375.98px) {
+  #magazine .box .image.bg-peacedesigner {
+    height: 37%;
+  }
+}
+*/
 #magazine .box .image.bg-peacedesigner img {
   max-width: 529px;
 }
@@ -5084,11 +5112,11 @@ h1.rem1-5 {
     position: relative;
     max-width: 560px;
     max-height: 315px;
-    padding-bottom: 56.25%; /* アスペクト比16:9の場合 */
+    padding-bottom: 56.25%;
     padding-top: 30px;
     height: 0;
     overflow: hidden;
-    margin-bottom: 2rem; /* YouTubeの下に余白をつける */
+    margin-bottom: 2rem;
 }
 .movie-frame .iframe iframe {
     position: absolute;
@@ -5104,13 +5132,17 @@ h1.rem1-5 {
   margin-left: -1.2rem;
   writing-mode: vertical-rl;
   white-space: nowrap;
-  bottom: 8.5rem;
+  bottom: 6.5rem;
+}
+@media (max-width: 767.98px) {
+  .movie-frame .vertical-rl {
+    bottom: 3rem;
+  }
 }
 .movie-article {
   position: absolute;
 }
 
-/* YT-trap start */
 .youtube_area {
   position: relative;
   width: 100%;
@@ -5199,7 +5231,6 @@ h1.rem1-5 {
   text-align: center;
   cursor: pointer;
 }
-/* グラフ */
 .chart-line::before {
   content: "";
   position: absolute;
@@ -5225,8 +5256,19 @@ h1.rem1-5 {
     width: 8rem;
   }
 }
-/* YT-trap end */
-/* YT-trap end */
+@media (max-width: 429.98px) {
+  .chart-line {
+    top: calc(7.5rem + 50%);
+    left: calc(2rem + 50%);
+    width: 7rem;
+  }
+  .chart-line::before {
+    transform: rotate(80deg);
+    top: -3rem;
+    left: -4.7rem;
+    width: 8rem;
+  }
+}
 .line_chart {
 	font-size: 100px;
 	position: relative;
@@ -5236,7 +5278,6 @@ h1.rem1-5 {
 	border-left: 0.1em solid #39a9d6;
 	border-bottom: 0.1em solid #39a9d6;
 }
-/* グラフ */
 .line_chart::before {
 	content: "";
 	position: absolute;
@@ -5249,7 +5290,6 @@ h1.rem1-5 {
 	-webkit-transform: rotate(53deg);
 	transform: rotate(53deg);
 }
-/* グラフ */
 .line_chart::after {
 	content: "";
 	position: absolute;

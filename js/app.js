@@ -47,6 +47,12 @@ $(function() {
       infinite: true,
       prevArrow: '<span class="slick-arrow prev text-black">＜</span>',
       nextArrow: '<span class="slick-arrow next text-black">＞</span>',
+      responsive:[{
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        }
+      }],
     });
     // YSPとはマウスオン時にサブメニューを表示させる
     $('.site-navbar .site-navigation ul.top-lower-menu li.site-menu:first').on('mouseenter', e => {

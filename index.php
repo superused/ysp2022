@@ -55,8 +55,8 @@ function playStart() {
         <div class="title-icon">活動紹介</div>
         <div class="title-second">What we do</div>
         <p class="text-center mb-5">YSPは一人一人の青年が持つ力ややりがいを大切にしながら<br>全国各地で地域に密着したプロジェクト活動を行っています。</p>
-        <div class="row my-4">
-          <div class="col-md-6 activity-link">
+        <div class="row my-4 px-3">
+          <div class="col-md-6 activity-link px-md-4">
             <div class="box team-member">
               <a href="">
                 <div class="image">
@@ -72,7 +72,7 @@ function playStart() {
               </a>
             </div>
           </div>
-          <div class="col-md-6 activity-link">
+          <div class="col-md-6 activity-link px-md-4">
             <div class="box team-member">
               <a href="">
                 <div class="image">
@@ -88,7 +88,7 @@ function playStart() {
               </a>
             </div>
           </div>
-          <div class="col-md-6 activity-link">
+          <div class="col-md-6 activity-link px-md-4">
             <div class="box team-member">
               <a href="">
                 <div class="image">
@@ -104,7 +104,7 @@ function playStart() {
               </a>
             </div>
           </div>
-          <div class="col-md-6 activity-link">
+          <div class="col-md-6 activity-link px-md-4">
             <div class="box team-member">
               <a href="">
                 <div class="image">
@@ -135,9 +135,13 @@ function playStart() {
           <li>
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
-              <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
-              <div class="mark-cyan px-2 mx-2 rounded">地域の方の声1</div>
-              <div class="location"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                <div>
+                <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+                </div>
+                <div class="d-lg-inline-flex">
+                <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">地域の方の声1</div>
+                <div class="location px-2 px-lg-0"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                </div>
               </div>
               <p class="m-0">YSPの活動をきっかけに、子供たちや地域の方々との様々な関わりの場を持つことができています。楽しい時間をありがとうございます。</p>
             </div>
@@ -145,9 +149,13 @@ function playStart() {
           <li>
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
-              <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
-              <div class="mark-cyan px-2 mx-2 rounded">地域の方の声2</div>
-              <div class="location"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                <div>
+                <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+                </div>
+                <div class="d-lg-inline-flex">
+                <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">地域の方の声2</div>
+                <div class="location px-2 px-lg-0"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                </div>
               </div>
               <p class="m-0">YSPの活動をきっかけに、子供たちや地域の方々との様々な関わりの場を持つことができています。楽しい時間をありがとうございます。</p>
             </div>
@@ -155,9 +163,13 @@ function playStart() {
           <li>
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
-              <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
-              <div class="mark-cyan px-2 mx-2 rounded">地域の方の声3</div>
-              <div class="location"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                <div>
+                <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+                </div>
+                <div class="d-lg-inline-flex">
+                <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">地域の方の声3</div>
+                <div class="location px-2 px-lg-0"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                </div>
               </div>
               <p class="m-0">YSPの活動をきっかけに、子供たちや地域の方々との様々な関わりの場を持つことができています。楽しい時間をありがとうございます。</p>
             </div>
@@ -165,9 +177,13 @@ function playStart() {
           <li>
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
-              <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
-              <div class="mark-cyan px-2 mx-2 rounded">地域の方の声4</div>
-              <div class="location"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                <div>
+                <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+                </div>
+                <div class="d-lg-inline-flex">
+                <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">地域の方の声4</div>
+                <div class="location px-2 px-lg-0"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                </div>
               </div>
               <p class="m-0">YSPの活動をきっかけに、子供たちや地域の方々との様々な関わりの場を持つことができています。楽しい時間をありがとうございます。</p>
             </div>
@@ -184,7 +200,7 @@ function playStart() {
           <div class="col-md-6 link">
             <div class="box team-member overflow-auto">
               <a href="" class="text-black">
-                <div class="small text-cyan font-weight-bold">let's join us</div>
+                <div class="small text-cyan font-weight-bold">Let's join us</div>
                 <div class="font-weight-bold pb-1 mb-4">一緒に活動しませんか？</div>
                 <div class="image mb-4">
                   <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
@@ -197,7 +213,7 @@ function playStart() {
           <div class="col-md-6 link">
             <div class="box team-member overflow-auto">
               <a href="" class="text-black">
-                <div class="small text-cyan font-weight-bold">let's join us</div>
+                <div class="small text-cyan font-weight-bold">Let's join us</div>
                 <div class="font-weight-bold pb-1 mb-4">一緒に活動しませんか？</div>
                 <div class="image mb-4">
                   <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
@@ -218,7 +234,7 @@ function playStart() {
         <div class="title-icon">Peace designer</div>
         <div class="title-second">Magazine</div>
         <p class="text-center mb-5">Peace designerのインタビューやライフスタイルを<br>お届けするWebマガジン</p>
-        <div class="row my-4">
+        <div class="row my-4 px-3">
           <div class="col-md-6 activity-link px-md-2 px-lg-3 mb-2">
             <a href="" class="box team-member-small h-100">
               <div class="image bg-peacedesigner">
@@ -350,7 +366,7 @@ function playStart() {
     </div>
 
     <div id="movie" class="site-section position-relative">
-      <div class="container px-0">
+      <div class="container px-md-0">
         <div class="movie-frame">
           <div class="small font-weight-bold">紹介動画</div>
           <div class="team-member float-none overflow-visible">
