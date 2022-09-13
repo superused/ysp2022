@@ -36,15 +36,17 @@ function playStart() {
 </ul>
     <div id="introduce" class="site-section">
       <div class="contents-box">
-        <img src="<?= get_template_directory_uri(); ?>/images/ysp/omoi_noword.jpg" class="mainimg">
+        <img src="<?= get_template_directory_uri(); ?>/images/ysp/omoi_noword.jpg" class="mainimg d-none d-md-block">
+        <img src="<?= get_template_directory_uri(); ?>/images/ysp/omoi_noword_sp.jpg" class="mainimg d-md-none">
         <div class="contents">
           <div class="text">
             <h2 class="title underline-cyan">想いを紡ぎ、社会を彩る</h2>
             <p>やりたいこと×地域活性化を掛け合わせると、<br>どんな社会ができるだろう。<br>YSP-Japanはセミナーやプロジェクトを通して、<br>自分の可能性を発見し、<br>社会の魅力や課題を解決する若者を育み、<br>応援しています。</p>
             <div class="mb-3"><img src="<?= get_template_directory_uri(); ?>/images/ysp/icon.jpg" class="icon"></div>
-            <button class="btn btn-normal cyan">1ページで分かるYSP-Japan</button>
+            <button class="btn btn-normal cyan mx-auto d-none d-md-block">1ページで分かるYSP-Japan</button>
           </div>
         </div>
+        <div class="d-md-none text-center"><button class="btn btn-normal cyan">1ページで分かるYSP-Japan</button></div>
       </div>
     </div>
 
@@ -54,7 +56,7 @@ function playStart() {
       <div class="container">
         <div class="title-icon">活動紹介</div>
         <div class="title-second">What we do</div>
-        <p class="text-center mb-5">YSPは一人一人の青年が持つ力ややりがいを大切にしながら<br>全国各地で地域に密着したプロジェクト活動を行っています。</p>
+        <p class="text-center mb-5">YSPは一人一人の青年が持つ力や<br class="d-md-none">やりがいを大切にしながら<br>全国各地で地域に密着した<br class="d-md-none">プロジェクト活動を行っています。</p>
         <div class="row my-4 px-3">
           <div class="col-md-6 activity-link px-md-4">
             <div class="box team-member">
