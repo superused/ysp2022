@@ -86,100 +86,17 @@ $image = wp_get_attachment_image_src($image_id, 'full');
     <div class="site-wrap">
       <div class="site-navbar">
         <div class="container px-3 py-0">
-          <div class="row align-items-center">
-            <div class="col-2 px-0">
+          <div class="row align-items-center flex-nowrap">
+            <div class="col-md-1 col-lg-2 px-0">
               <div class="logo-header">
                 <a href="<?= home_url();?>">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/logo.jpg" alt="YSP-Japan" class="mx-auto">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/logo.jpg" alt="YSP-Japan" class="mx-auto d-none d-md-block">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/logo_sp.jpg" alt="YSP-Japan" class="mx-auto d-md-none">
                 </a>
               </div>
             </div>
-            <div class="col-10 px-0">
+            <div class="d-none d-md-block col-md-11 col-lg-10 px-0">
               <nav class="site-navigation text-right text-md-right" role="navigation">
-                <div class="d-inline-block d-md-none ml-md-0 mr-auto p-0"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h2"></span></a></div>
-                <ul class="site-menu js-clone-nav d-none d-md-block">
-                  <li>
-                    <a href="<?= HOME_URL;?>">
-                      <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_top.png">
-                      <div>TOPページ</div>
-                    </a>
-                  </li>
-                  <li class="has-children">
-                    <a href="javascript:void(0);"><img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_contents.png"><div>コンテンツ</div></a>
-                    <ul class="dropdown">
-                      <li>
-                        <a href="<?= LIVE_URL;?>">
-                          <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_live.png">
-                          <div>LIVE</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="<?= PROJECT_URL;?>" class="inpage-link">
-                          <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_project.png">
-                          <div>プロジェクト</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="<?= MOVIE_CONTEST_URL;?>">
-                          <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_movie.png">
-                          <div>ムービーコンテスト</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="<?= PHOTO_CONTEST_URL;?>">
-                          <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_photo.png">
-                          <div>フォトコンテスト</div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="<?= SENRYU_CONTEST_URL;?>">
-                          <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_senryu.png">
-                          <div>川柳コンテスト</div>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="<?= QUESTIONNAIRE_URL;?>" target="_blank">
-                      <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_present.png">
-                      <div>アンケート ＆ プレゼント</div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?= NEWS_URL;?>">
-                      <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_news.png">
-                      <div>最新情報</div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?= CONCEPT_URL;?>">
-                      <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_about.png">
-                      <div>Peace designer Fes とは</div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?= GOODS_SHOP_URL; ?>" target="_blank">
-                      <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_goods.png">
-                      <div>グッズショップ（外部サイト）</div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?= CONTACT_URL;?>">
-                      <img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_contact.png">
-                      <div>お問い合わせ</div>
-                    </a>
-                  </li>
-                  <li class="d-md-none">
-                    <div class="site-mobile-menu-sns text-center font-weight-bold container-fluid">
-                      <div class="row justify-content-center align-items-center text-nowrap flex-nowrap py-2">
-                          <span class="m-3"><a href="<?= SNS_INSTAGRAM_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_instagram.png" alt="Image"></a></span>
-                          <span class="m-3"><a href="<?= SNS_LINE_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_line.png" alt="Image"></a></span>
-                          <span class="m-3"><a href="<?= SNS_YOUTUBE_URL; ?>" target="_blank"><img src="<?= get_template_directory_uri(); ?>/images/ysp/icon_youtube.png" alt="Image"></a></span>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-
                 <ul class="top-upper-menu">
                   <li><a class="sns-link" href=""><i class="fa-brands fa-square-instagram fa-2x"></i></a></li>
                   <li><a class="sns-link" href=""><i class="fa-brands fa-facebook fa-2x"></i></a></li>
@@ -197,23 +114,31 @@ $image = wp_get_attachment_image_src($image_id, 'full');
                   </li>
                 </ul>
                 <ul class="top-lower-menu">
-                  <li class="site-menu">
-                    <div class="title">YSPとは</div>
-                    <div class="title-en">About us</div>
+                  <li class="site-menu pb-3">
+                    <a href="">
+                      <p class="title">YSPとは</p>
+                      <p class="title-en">About us</p>
+                    </a>
                   </li>
-                  <li class="site-menu">
-                    <div class="title">セミナー・イベント</div>
-                    <div class="title-en">Workshop/Event</div>
+                  <li class="site-menu mb-3">
+                    <a href="">
+                      <p class="title">セミナー・イベント</p>
+                      <p class="title-en">Workshop/Event</p>
+                    </a>
                   </li>
-                  <li class="site-menu">
-                    <div class="title">プロジェクト</div>
-                    <div class="title-en">Project</div>
+                  <li class="site-menu mb-3">
+                    <a href="">
+                      <p class="title">プロジェクト</p>
+                      <p class="title-en">Project</p>
+                    </a>
                   </li>
-                  <li class="site-menu">
-                    <div class="title">お問い合わせ</div>
-                    <div class="title-en">Contact us</div>
+                  <li class="site-menu mb-3">
+                    <a href="">
+                      <p class="title">お問い合わせ</p>
+                      <p class="title-en">Contact us</p>
+                    </a>
                   </li>
-                  <li>
+                  <li class="pb-3">
                     <a href=""><button class="donation-button">寄付・支援</button></a>
                   </li>
                 </ul>
@@ -246,26 +171,37 @@ $image = wp_get_attachment_image_src($image_id, 'full');
       </div>
     </div>
 
-    <div class="site-mobile-menu">
+    <div class="site-mobile-menu bg-cyan">
       <div class="site-mobile-menu-header">
-        <div class="container-fluid px-3 py-0">
-          <div class="row align-items-center">
-            <div class="col-8 col-md-2">
-              <div class="logo-header my-2">
-                <a href="<?= home_url();?>">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/logo2.png" alt="PEACE DISIGNER FES" class="mx-auto">
-                </a>
-              </div>
+        <div class="container-fluid p-0">
+          <div class="row align-items-center justify-content-between m-3">
+            <div>
+                <span class="text-white mx-3">MENU</span>
             </div>
-            <div class="col-4 col-md-10 p-md-0 site-mobile-menu-close text-right">
-              <span class="icon-close2 js-menu-toggle text-cyan"></span>
+            <div>
+              <ul class="d-flex text-right m-0">
+                <li><a class="text-white mx-3" href=""><i class="fa-brands fa-square-facebook fa-2x"></i></a></li>
+                <li><a class="text-white mx-3" href=""><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+                <li><a class="text-white mx-3" href=""><i class="fa-brands fa-line fa-2x"></i></a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="site-mobile-menu-body">
+      <div class="site-mobile-menu-body bg-lightgray">
       </div>
     </div> <!-- .site-mobile-menu -->
+<?php if(is_front_page()): ?>
+    <div id="loading">
+      <div class="site-section vh-center">
+        <div class="container">
+          <img src="<?= get_template_directory_uri(); ?>/images/ysp/loading.gif" alt="loading" class="mx-auto w-100">
+          <div id="loading_text"></div>
+        </div>
+      </div>
+    </div>
+<?php endif; ?>
+    <div style="height:5rem;"></div>
 
     <!-- ヘッダー共通処理 end -->
 <?php if ($util->is_IE()): ?>

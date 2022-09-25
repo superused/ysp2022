@@ -54,19 +54,53 @@ $(function() {
         }
       }],
     });
+
+    const siteMenuFirst = $('.site-navbar .site-navigation ul.top-lower-menu li.site-menu:first');
+    const siteMenuNotFirst = $('.site-navbar .site-navigation ul.top-lower-menu li.site-menu:not(:first-child)');
     // YSPとはマウスオン時にサブメニューを表示させる
-    $('.site-navbar .site-navigation ul.top-lower-menu li.site-menu:first').on('mouseenter', e => {
+    siteMenuFirst.on('mouseenter', e => {
       // ズームイン表示のスタート位置の%表示
-      const ratio = parseInt(($(e.target).offset().left + ($(e.target).outerWidth() / 2)) / $(window).width() * 100 + 1)
+      const target = $(e.target).closest('.site-menu');
+      target.addClass('bg-lightgray');
+      const ratio = parseInt((target.offset().left + (target.outerWidth() / 2)) / $(window).width() * 100 + 1)
       $('.menu-detail').css('transform-origin', ratio + '% top').addClass('animate')
-    })
+    });
+
     // 範囲外にサブメニューを表示させる
     $(document).on('mouseover', e => {
       const menuDetail = $('.menu-detail')
       if (menuDetail.css('display') !== 'none' && !$(e.target).closest('.site-navbar')[0]) {
         menuDetail.removeClass('animate')
+        siteMenuFirst.closest('.site-menu').removeClass('bg-lightgray');
       }
-    })
+    });
+    siteMenuNotFirst.on('mouseover', e => {
+      const menuDetail = $('.menu-detail')
+      menuDetail.removeClass('animate')
+      siteMenuFirst.closest('.site-menu').removeClass('bg-lightgray');
+    });
+
+    new ProgressBar.Line(loading_text, {
+      easing: 'linear',//アニメーション効果linear、easeIn、easeOut、easeInOutが指定可能
+     // duration: 1000,//時間指定(1000＝1秒)
+      strokeWidth: 3,//進捗ゲージの太さ
+      color: '#00c8f9',//進捗ゲージのカラー
+      trailWidth: 3,//ゲージベースの線の太さ
+      trailColor: '#f5f5f5',//ゲージベースの線のカラー
+      text: {//テキストの形状を直接指定
+        style: {
+          margin: '0.5rem',
+          color: '#000',
+          'font-weight': 'bold',
+        },
+      },
+      step: (state, bar) => {
+        bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
+      }
+    }).animate(1, () => {//バーを描画する割合を指定します 1.0 なら100%まで描画します
+      $("#loading").fadeOut();
+    });
+
 
     this.siteMenuClone();
     this.siteCarousel();
@@ -86,6 +120,9 @@ $(function() {
   };
   siteBase.prototype = {
     siteMenuClone: function() {
+      const footerMenu = $('.footer-menu').clone();
+      $('.site-mobile-menu-body').append(footerMenu);
+
       $('.js-clone-nav').each(function() {
         const $this = $(this);
         $this.clone().attr('class', 'site-nav-wrap').prependTo('.site-mobile-menu-body');

@@ -34,10 +34,16 @@
             </a>
           </div>
           <div class="fixed-button-content bg-cyan">
-            <a href="<?= LIVE_URL; ?>" ontouchstart="">
+            <a href="#" ontouchstart="" class="site-menu-toggle js-menu-toggle toggle-menu-all">
               <div class="contents">
                 <img src="<?= get_template_directory_uri(); ?>/images/ysp/hamburger.png" class="w-75 p-1">
                 <div class="text text-white">ALL</div>
+              </div>
+            </a>
+            <a href="#" ontouchstart="" onclick="" class="site-mobile-menu-close toggle-menu-close">
+              <div class="contents">
+                <img src="<?= get_template_directory_uri(); ?>/images/ysp/batsu.png" class="w-75 p-1">
+                <div class="text text-white">CLOSE</div>
               </div>
             </a>
           </div>
