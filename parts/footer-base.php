@@ -93,6 +93,7 @@
         </div>
       </div>
     </footer>
+    <a class="page_top" href="#" ontouchstart=""><span></span></a>
 
     <script src="<?= get_template_directory_uri(); ?>/js/jquery-3.3.1.min.js"></script>
     <script src="<?= get_template_directory_uri(); ?>/js/jquery-migrate-3.0.1.min.js"></script>
@@ -107,6 +108,10 @@
     <script src="<?= get_template_directory_uri(); ?>/js/fonts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="<?= get_template_directory_uri(); ?>/js/app.js"></script>
+<script>
+$(function(){
+});
+</script>
     <?php wp_footer();?>
   </body>
 </html>

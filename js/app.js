@@ -101,11 +101,20 @@ $(function() {
       $("#loading").fadeOut();
     });
 
+    $('.page_top').click(e => {
+      $('html, body').animate({scrollTop: 0}, 500);
+      e.preventDefault();
+      return false;
+    })
+
+    // facebook plugin
+    this.facebookPluginView();
+
 
     this.siteMenuClone();
     this.siteCarousel();
     this.siteStellar();
-    this.initTopView();
+    // this.initTopView();
     this.senryuView();
     this.photoView();
     this.contestVote();
@@ -119,6 +128,41 @@ $(function() {
     this.liveTimeSchedule();
   };
   siteBase.prototype = {
+    facebookPluginView: () => {
+      const facebookPlugin = $('#facebook-plugin');
+      let timer = false;
+      let firstWidth = facebookPlugin.parent().width();
+      let maxWidth = 500;
+
+      const fbiframe_timeout = (firstFlg) => {
+        const width = facebookPlugin.parent().width();
+        if (firstFlg || ((firstWidth < maxWidth || width < maxWidth) && width != firstWidth)) {
+          fbiframe_reload();
+          firstWidth = width;
+        }
+      };
+
+      const fbiframe_reload = () => {
+        const url = new URL(facebookPlugin.attr('data-src'));
+        let width = Math.trunc(facebookPlugin.parent().width());
+        if (width > maxWidth) width = maxWidth;
+        url.searchParams.set('width', width);
+        facebookPlugin.attr({
+          src: url.toString(),
+          'data-src': url.toString(),
+          width: width,
+        });
+      };
+
+      $(window).resize(function() {
+        if (timer !== false) {
+          clearTimeout(timer);
+        }
+        timer = setTimeout(fbiframe_timeout, 500);
+      });
+
+      fbiframe_timeout(true);
+    },
     siteMenuClone: function() {
       const footerMenu = $('.footer-menu').clone();
       $('.site-mobile-menu-body').append(footerMenu);
@@ -289,189 +333,6 @@ $(function() {
         hideDistantElements: false,
         scrollProperty: 'scroll'
       });
-    },
-    // TOPのアニメーション表示
-    initTopView: function() {
-      // TOP画面の場合
-      if ($('.site-blocks-cover.overlay.top')[0]) {
-
-        const portrait = [
-          [
-            'top_mobile1_s.jpg',
-            'top_mobile2_s.jpg',
-            'top_mobile3_s.jpg',
-          ],
-          'moyou_top.png',
-          'moyou_bottom.png',
-        ];
-        const square = [
-          [
-            'top_pc1.jpg',
-            'top_pc2.jpg',
-            'top_pc3.jpg',
-          ],
-          'moyou_tb_top.png',
-          'moyou_tb_bottom.png',
-        ]
-        const landscape = [
-          [
-            'top_pc1.jpg',
-            'top_pc2.jpg',
-            'top_pc3.jpg',
-          ],
-          'moyou_pc_top.png',
-          'moyou_pc_bottom.png',
-        ];
-        const topAnimeElem = [
-          $('.site-blocks-cover.overlay.bg'),
-          $('.site-blocks-cover.overlay.top2'),
-          $('.site-blocks-cover.overlay.top3'),
-        ];
-        let topAnime = [];
-        let imgType = 1;
-        let interval = null;
-
-        const setHeight = function() {
-          const target = $(this);
-          target.closest('.logo_bg').css('height', target.height());
-        };
-
-        const resize = function() {
-          const w =  $(window),
-            wd = w.width(),
-            hg = w.height(),
-            rate = hg / wd,
-            topImage = $('.site-blocks-cover.overlay.top');
-
-          $('.logo_bg img').each(setHeight);
-
-          let minRate = 1;
-          let changed = false;
-
-          if (0.67 <= rate && rate <= 1.33) {
-            if (!topAnime.length || imgType != 2) changed = true;
-            imgType = 2;
-            // TOP画像の高さを再指定
-            topImage.height(minRate > rate ? (wd * minRate) : hg);
-          } else if (wd < hg) {
-            if (!topAnime.length || imgType != 1) changed = true;
-            imgType = 1;
-            minRate = 3840 / 2560;
-            // TOP画像の高さを再指定
-            topImage.height(minRate > rate ? hg : (wd * minRate));
-          } else {
-            if (!topAnime.length || imgType != 3) changed = true;
-            imgType = 3;
-            minRate = 2560 / 3840;
-            // TOP画像の高さを再指定
-            topImage.height(minRate > rate ? (wd * minRate) : hg);
-          }
-
-          // ロゴの表示位置
-          topImage.find('.container .row').css('margin-top', (hg * 0.35) + 'px');
-
-          if (changed) {
-            if (imgType == 1) {
-              topAnime = portrait;
-            } else if (imgType == 2) {
-              topAnime = square;
-            } else {
-              topAnime = landscape;
-            }
-            let index;
-            for (const i in topAnime) {
-              let topAnimeImg = topAnime[i];
-              if (Array.isArray(topAnimeImg)) {
-                index = Math.floor(Math.random() * topAnimeImg.length);
-                topAnimeImg = topAnimeImg[index];
-              }
-              const split = topAnimeElem[i].css('background-image').split('"');
-              split[1] = split[1].split('/').slice(0, -1).concat(topAnimeImg).join('/');
-              topAnimeElem[i].css('background-image', split.join('"'));
-            }
-
-            if (interval) {
-              clearInterval(interval);
-              interval = null;
-            }
-            // フェード切り替え
-            interval = setInterval(function() {
-              index = index == topAnime[0].length - 1 ? 0 : index + 1;
-              const nextImg = topAnime[0][index],
-                target = $('.site-blocks-cover.overlay.bg').last(),
-                split = target.css('background-image').split('"'),
-                clone = target.css('opacity', 1).clone();
-              target.after(clone);
-              split[1] = split[1].split('/').slice(0, -1).concat(nextImg).join('/');
-              clone.css('background-image', split.join('"')).hide();
-              clone.show('fade', {}, 2000, function() {
-                $('.site-blocks-cover.overlay.bg').first().remove();
-              });
-            }, 8000);
-          }
-        };
-        $(window).on('resize', resize);
-        resize();
-
-        const speed = 500; // 1動作の時間(ms) （少ないほうが速い）
-        const delay = speed * 5; // アニメーション開始までの待ち時間(ms)
-        const allViewTime = speed * 6; // アニメーション全表示の時間(ms)
-        const animation = function() {
-          for (const i in topAnimeElem) {
-            topAnimeElem[i].addClass('show');
-          }
-          // アニメーション開始
-          setTimeout(function() {
-            $('.top2').show("fade", {}, speed);
-            $('#logo_1').show("blind", {direction: 'horizontal'}, speed, setHeight);
-            setTimeout(function() {
-              $('.top3').show('fade', {}, speed);
-              $('#logo_3,#logo_4').show("blind", {direction: 'horizontal'}, speed, setHeight);
-            }, speed);
-            $('#logo_2').show("fade", {}, speed * 2, setHeight);
-
-            // 消す処理
-            // setTimeout(function() {
-            //   $('.top2').hide('fade', {}, speed);
-            //   $('#logo_1').hide("blind", {direction: 'right'}, speed);
-            //   setTimeout(function() {
-            //     $('.top3').hide('fade', {}, speed);
-            //     $('#logo_3,#logo_4').hide("blind", {direction: 'right'}, speed);
-            //   }, speed);
-            //   $('#logo_2').hide("fade", {}, speed * 2);
-            // }, allViewTime + speed * 2);
-          }, delay);
-        };
-        animation();
-      } else {
-        // TOP以外のページの画像の表示でヘッダーのバーの高さに画像のpaddingをあわせる
-        const topTarget = $('.site-mobile-menu').next();
-        const height = $('.site-navbar').height();
-        // topTarget.css('padding-top', height + 'px').show();
-
-        // LIVE詳細ページで動画をスマホ版では固定表示、PC版では固定解除
-        const adjustLiveDetail = $('#adjust-live-detail');
-        if (adjustLiveDetail[0]) {
-          const adjust = function() {
-            adjustLiveDetail.css('padding-top', ($('.site-section.live-detail').outerHeight()) + 'px');
-          };
-          $(window).resize(adjust);
-          adjust();
-        }
-
-        const otherLive = $('.other-live');
-        if (otherLive[0]) {
-          const adjustLive = function() {
-            if ($(window).outerWidth() >= 768) {
-              otherLive.css('height', $('.site-section.live-detail').outerHeight() + 'px');
-            } else {
-              otherLive.css('height', '');
-            }
-          }
-          $(window).resize(adjustLive);
-          adjustLive();
-        }
-      }
     },
     contestView: function() {
       const fixedMenu = $('#fixed-menu');

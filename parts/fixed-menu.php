@@ -1,6 +1,7 @@
     <div id="fixed-menu" class="site-section fixed-menu zindex-tooltip m-0 p-0">
       <div class="container-fluid m-0 p-0">
         <div class="fixed-button">
+          <a class="page_top sp" href="#" ontouchstart=""><span></span></a>
           <div class="fixed-button-content">
             <a href="<?= LIVE_URL; ?>" ontouchstart="">
               <div class="contents">

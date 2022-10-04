@@ -98,9 +98,9 @@ $image = wp_get_attachment_image_src($image_id, 'full');
             <div class="d-none d-md-block col-md-11 col-lg-10 px-0">
               <nav class="site-navigation text-right text-md-right" role="navigation">
                 <ul class="top-upper-menu">
-                  <li><a class="sns-link" href=""><i class="fa-brands fa-square-instagram fa-2x"></i></a></li>
-                  <li><a class="sns-link" href=""><i class="fa-brands fa-facebook fa-2x"></i></a></li>
-                  <li><a class="sns-link" href=""><i class="fa-brands fa-line fa-2x"></i></a></li>
+                  <li><a class="sns-link" href=""><i class="colored fa-brands fa-square-instagram fa-2x"></i></a></li>
+                  <li><a class="sns-link" href=""><i class="colored fa-brands fa-facebook fa-2x"></i></a></li>
+                  <li><a class="sns-link" href=""><i class="colored fa-brands fa-line fa-2x"></i></a></li>
                   <li>
                     <form class="search-box">
                       <input type="text" placeholder="サイト内検索">
@@ -170,6 +170,8 @@ $image = wp_get_attachment_image_src($image_id, 'full');
         </div>
       </div>
     </div>
+    <div class="circle-bg header"></div>
+    <div class="circle-bg header-bottom"></div>
 
     <div class="site-mobile-menu bg-cyan">
       <div class="site-mobile-menu-header">
@@ -201,7 +203,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
       </div>
     </div>
 <?php endif; ?>
-    <div style="height:5rem;"></div>
+    <div class="navbar-space"></div>
 
     <!-- ヘッダー共通処理 end -->
 <?php if ($util->is_IE()): ?>

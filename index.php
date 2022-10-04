@@ -13,7 +13,6 @@ function onYouTubePlayerAPIReady() {
     videoId: 'Be6eiPIHcjI',
     events: {
       'onReady': () => {
-  console.log('onready')
         document.querySelector('.chart-line').addEventListener('click', playStart);
         document.querySelector('.transition_scale').addEventListener('click', playStart);
       }
@@ -25,8 +24,8 @@ function playStart() {
   player.playVideo();
   document.querySelector('.poster_list').remove();
   document.querySelector('.chart-line').remove();
+  document.querySelector('.movie-logo').remove();
 }
-
 </script>
 <ul class="slider">
   <li><a href="#"><div><p class="font-weight-bold">やりがい<br><span class="batsu"></span><br>地域活性化</p><button class="btn btn-normal btn-slider">1ページで分かるYSP</button><img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg"></div></a></li>
@@ -38,12 +37,12 @@ function playStart() {
 </ul>
     <div id="introduce" class="site-section">
       <div class="contents-box">
-        <img src="<?= get_template_directory_uri(); ?>/images/ysp/omoi_noword.jpg" class="mainimg d-none d-md-block">
-        <img src="<?= get_template_directory_uri(); ?>/images/ysp/omoi_noword_sp.jpg" class="mainimg d-md-none">
+        <img src="<?= get_template_directory_uri(); ?>/images/ysp/omoi_noword.png" class="mainimg d-none d-md-block">
+        <img src="<?= get_template_directory_uri(); ?>/images/ysp/omoi_noword_sp.png" class="mainimg d-md-none">
         <div class="contents">
           <div class="text">
             <h2 class="title underline-cyan">想いを紡ぎ、社会を彩る</h2>
-            <p>やりたいこと×地域活性化を掛け合わせると、<br>どんな社会ができるだろう。<br>YSP-Japanはセミナーやプロジェクトを通して、<br>自分の可能性を発見し、<br>社会の魅力や課題を解決する若者を育み、<br>応援しています。</p>
+            <p>やりたいこと✕地域活性化を掛け合わせると、<br>どんな社会ができるだろう。<br>YSP-Japanはセミナーやプロジェクトを通して、<br>自分の可能性を発見し、<br>社会の魅力や課題を解決する若者を育み、<br>応援しています。</p>
             <div class="mb-3"><img src="<?= get_template_directory_uri(); ?>/images/ysp/peace_black.png" class="icon"></div>
             <button class="btn btn-normal cyan mx-auto d-none d-md-block">1ページで分かるYSP-Japan</button>
           </div>
@@ -58,20 +57,23 @@ function playStart() {
       <div class="container">
         <div class="title-icon">活動紹介</div>
         <div class="title-second">What we do</div>
-        <p class="text-center mb-5">YSPは一人一人の青年が持つ力や<br class="d-md-none">やりがいを大切にしながら<br>全国各地で地域に密着した<br class="d-md-none">プロジェクト活動を行っています。</p>
+        <p class="font-weight-bold text-center mb-5">YSPは一人一人の青年が持つ力や<br class="d-md-none">やりがいを大切にしながら<br>全国各地で地域に密着した<br class="d-md-none">プロジェクト活動を行っています。</p>
         <div class="row my-4 px-3">
           <div class="col-md-6 activity-link px-md-4">
             <div class="box team-member">
               <a href="">
                 <div class="image">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/smile-jyuku.png" class="overlap">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/project_tamatokyo.jpg" class="img-fluid">
+                  <div class="overlap">
+                    <img src="<?= get_template_directory_uri(); ?>/images/ysp/activity-study-support.png">
+                    <div class="activity-title">Study-support</div>
+                  </div>
                 </div>
                 <div class="contents">
                   <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
                   <div class="catch">塾に行けない子たちのために</div>
                   <div class="name">スマイル塾</div>
-                  <div class="check"><button class="btn btn-normal cyan small">チェック</button></div>
+                  <div class="check"><button class="btn btn-normal cyan small-btn">チェック</button></div>
                 </div>
               </a>
             </div>
@@ -80,14 +82,17 @@ function playStart() {
             <div class="box team-member">
               <a href="">
                 <div class="image">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/smile-jyuku.png" class="overlap">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/project_miyagi.jpg" class="img-fluid">
+                  <div class="overlap">
+                    <img src="<?= get_template_directory_uri(); ?>/images/ysp/activity-special-skill.png">
+                    <div class="activity-title">Special Skill</div>
+                  </div>
                 </div>
                 <div class="contents">
-                  <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
-                  <div class="catch">塾に行けない子たちのために</div>
-                  <div class="name">スマイル塾</div>
-                  <div class="check"><button class="btn btn-normal cyan small">チェック</button></div>
+                  <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>宮城</span></div>
+                  <div class="catch">得意な写真を活かして地域を盛り上げる</div>
+                  <div class="name">nono style</div>
+                  <div class="check"><button class="btn btn-normal cyan small-btn">チェック</button></div>
                 </div>
               </a>
             </div>
@@ -96,14 +101,17 @@ function playStart() {
             <div class="box team-member">
               <a href="">
                 <div class="image">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/smile-jyuku.png" class="overlap">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/project_ehime.jpg" class="img-fluid">
+                  <div class="overlap">
+                    <img src="<?= get_template_directory_uri(); ?>/images/ysp/activity-activation.png">
+                    <div class="activity-title">activation</div>
+                  </div>
                 </div>
                 <div class="contents">
-                  <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
-                  <div class="catch">塾に行けない子たちのために</div>
-                  <div class="name">スマイル塾</div>
-                  <div class="check"><button class="btn btn-normal cyan small">チェック</button></div>
+                  <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP愛媛</span></div>
+                  <div class="catch">少子高齢化の進む町を元気に</div>
+                  <div class="name">二神島活性化プロジェクト</div>
+                  <div class="check"><button class="btn btn-normal cyan small-btn">チェック</button></div>
                 </div>
               </a>
             </div>
@@ -112,14 +120,17 @@ function playStart() {
             <div class="box team-member">
               <a href="">
                 <div class="image">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/smile-jyuku.png" class="overlap">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/project_nishisaitama.jpg" class="img-fluid">
+                  <div class="overlap">
+                    <img src="<?= get_template_directory_uri(); ?>/images/ysp/activity-cleaning-activity.png">
+                    <div class="activity-title">Cleaning Activity</div>
+                  </div>
                 </div>
                 <div class="contents">
-                  <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
-                  <div class="catch">塾に行けない子たちのために</div>
-                  <div class="name">スマイル塾</div>
-                  <div class="check"><button class="btn btn-normal cyan small">チェック</button></div>
+                  <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP西埼玉</span></div>
+                  <div class="catch">私たちの住む町を綺麗な場所に</div>
+                  <div class="name">One Heartクリーンアッププロジェクト</div>
+                  <div class="check"><button class="btn btn-normal cyan small-btn">チェック</button></div>
                 </div>
               </a>
             </div>
@@ -140,11 +151,11 @@ function playStart() {
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
-                <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
                 </div>
                 <div class="d-lg-inline-flex">
-                <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">地域の方の声1</div>
-                <div class="location px-2 px-lg-0"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                  <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">地域の方の声</div>
+                  <div class="location px-2 px-lg-0"><i class="fa-solid fa-location-dot"></i><span>山口県</span></div>
                 </div>
               </div>
               <p class="m-0">YSPの活動をきっかけに、子供たちや地域の方々との様々な関わりの場を持つことができています。楽しい時間をありがとうございます。</p>
@@ -154,42 +165,42 @@ function playStart() {
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
-                <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
                 </div>
                 <div class="d-lg-inline-flex">
-                <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">地域の方の声2</div>
-                <div class="location px-2 px-lg-0"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                  <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">活動メンバーの声</div>
+                  <div class="location px-2 px-lg-0"><i class="fa-solid fa-location-dot"></i><span>千葉県</span></div>
                 </div>
               </div>
-              <p class="m-0">YSPの活動をきっかけに、子供たちや地域の方々との様々な関わりの場を持つことができています。楽しい時間をありがとうございます。</p>
+              <p class="m-0">活動を続けていると、ゴミを捨てる人が減って街がきれいになっていることを感じます。近所のかたにも「ご苦労様。ありがとう」と声をかけていただき、やりがいになっています。</p>
             </div>
           </li>
           <li>
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
-                <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
                 </div>
                 <div class="d-lg-inline-flex">
-                <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">地域の方の声3</div>
-                <div class="location px-2 px-lg-0"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                  <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">地域の方の声</div>
+                  <div class="location px-2 px-lg-0"><i class="fa-solid fa-location-dot"></i><span>宮城県</span></div>
                 </div>
               </div>
-              <p class="m-0">YSPの活動をきっかけに、子供たちや地域の方々との様々な関わりの場を持つことができています。楽しい時間をありがとうございます。</p>
+              <p class="m-0">学生たちが商店街の活性化のために、得意なカメラで商品の撮影やモデルとなってお店を紹介してくれたことがとても嬉しかったです。</p>
             </div>
           </li>
           <li>
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
-                <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
                 </div>
                 <div class="d-lg-inline-flex">
-                <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">地域の方の声4</div>
-                <div class="location px-2 px-lg-0"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
+                  <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">活動メンバーの声</div>
+                  <div class="location px-2 px-lg-0"><i class="fa-solid fa-location-dot"></i><span>愛媛県</span></div>
                 </div>
               </div>
-              <p class="m-0">YSPの活動をきっかけに、子供たちや地域の方々との様々な関わりの場を持つことができています。楽しい時間をありがとうございます。</p>
+              <p class="m-0">農家の方々のお手伝いで、ミカンの収穫をしました！普段自分達が食べている作物も、一つ一つ大切に育てられているんだと食べ物の大切さを実感しました。</p>
             </div>
           </li>
         </ul>
@@ -206,24 +217,28 @@ function playStart() {
               <a href="" class="text-black">
                 <div class="small text-cyan font-weight-bold">Let's join us</div>
                 <div class="font-weight-bold pb-1 mb-4">一緒に活動しませんか？</div>
-                <div class="image mb-4">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                <div class="image mb-1">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/YSPへGo.png" class="img-fluid">
                 </div>
-                <div class="small font-weight-bold mb-4">仲間と共にあなたの住む町をより良くしよう！</div>
-                <div class="check"><button class="btn btn-normal cyan">詳しく見る</button></div>
+                <div class="m-4">
+                  <div class="small font-weight-bold mb-4 lh-2">仲間と共にあなたの住む町をより良くしよう！</div>
+                  <div class="check"><button class="btn btn-normal cyan small-btn">詳しく見る</button></div>
+                </div>
               </a>
             </div>
           </div>
           <div class="col-md-6 link">
             <div class="box team-member overflow-auto">
               <a href="" class="text-black">
-                <div class="small text-cyan font-weight-bold">Let's join us</div>
-                <div class="font-weight-bold pb-1 mb-4">一緒に活動しませんか？</div>
-                <div class="image mb-4">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                <div class="small text-cyan font-weight-bold">Support us</div>
+                <div class="font-weight-bold pb-1 mb-4">応援してください！</div>
+                <div class="image mb-1">
+                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/YSPへGo.png" class="img-fluid">
                 </div>
-                <div class="small font-weight-bold mb-4">仲間と共にあなたの住む町をより良くしよう！</div>
-                <div class="check"><button class="btn btn-normal cyan">詳しく見る</button></div>
+                <div class="m-4">
+                  <div class="small font-weight-bold mb-4 lh-1">ご支援を通して、各地の活動を共に<br>作ることができます。応援をよろしくお願いします。</div>
+                  <div class="check"><button class="btn btn-normal cyan small-btn">詳しく見る</button></div>
+                </div>
               </a>
             </div>
           </div>
@@ -237,7 +252,7 @@ function playStart() {
       <div class="container">
         <div class="title-icon">Peace designer</div>
         <div class="title-second">Magazine</div>
-        <p class="text-center mb-5">Peace designerのインタビューやライフスタイルを<br>お届けするWebマガジン</p>
+        <p class="font-weight-bold text-center mb-5">Peace designerのインタビューやライフスタイルを<br>お届けするWebマガジン</p>
         <div class="row my-4 px-3">
           <div class="col-md-6 activity-link px-md-2 px-lg-3 mb-2">
             <a href="" class="box team-member-small h-100">
@@ -385,7 +400,6 @@ function playStart() {
             </div>
             <div class="chart-line"><p>Play Movie</p></div>
             <div class="movie-logo">
-              <img src="<?= get_template_directory_uri(); ?>/images/ysp/Movie.png" class="w-100">
             </div>
           </div>
           <div class="position-absolute vertical-rl small font-weight-bold">動画で分かるYSP-Japan</div>
@@ -399,4 +413,32 @@ function playStart() {
         <img src="<?= get_template_directory_uri(); ?>/images/ysp/peace_cyan.png">
       </div>
     </div>
+    <div id="sns-plugin" class="site-section">
+      <div class="container px-0">
+        <div class="row mx-0">
+          <div class="col-12 col-md-4 px-md-2 text-center mb-5">
+            <div class="w-100"></div>
+            <div class="d-flex justify-content-center align-items-center mb-2">
+              <i class="colored fa-brands fa-facebook fa-2x"></i>
+              <span class="h6 font-weight-bold m-2">Facebook</span>
+            </div>
+            <iframe id="facebook-plugin" src="" data-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=500&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=581009629454542" width="500" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          </div>
+          <div class="col-12 col-md-4 px-md-2 text-center mb-5">
+            <div class="d-flex justify-content-center align-items-center mb-2">
+              <i class="colored fa-brands fa-square-instagram fa-2x"></i>
+              <span class="h6 font-weight-bold m-2">Instagram</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 px-md-2 text-center mb-5">
+            <div class="d-flex justify-content-center align-items-center mb-2">
+              <i class="colored fa-brands fa-line fa-2x"></i>
+              <span class="h6 font-weight-bold m-2">LINE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div id="fb-root"></div>
+<script id="fbid" async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v15.0&appId=581009629454542&autoLogAppEvents=1" nonce="a5H3pzKi"></script>
 <?php get_footer(); ?>
