@@ -24,12 +24,12 @@ $image = wp_get_attachment_image_src($image_id, 'full');
 <?php   elseif (preg_match( '/<img.*?src=(["\'])(.+?)\1.*?>/i', $post->post_content, $imgurl ) && !is_archive()): //アイキャッチ以外の画像がある場合 ?>
     <meta property="og:image" content="<?= $imgurl[2]; ?>">
 <?php   else: //画像が1つも無い場合 ?>
-    <meta property="og:image" content="<?= get_template_directory_uri(); ?>/images/ysp/ogp.jpg" />
+    <meta property="og:image" content="<?= IMG_DIR; ?>/ogp.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 <?php   endif; ?>
 <?php else: //ホーム・カテゴリーページなど ?>
-    <meta property="og:image" content="<?= get_template_directory_uri(); ?>/images/ysp/ogp.jpg" />
+    <meta property="og:image" content="<?= IMG_DIR; ?>/ogp.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 <?php endif; ?>
@@ -48,50 +48,19 @@ $image = wp_get_attachment_image_src($image_id, 'full');
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/aos.css">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/style.css?20210809">
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css2/app.css">
-    <style>
-.site-blocks-cover.overlay.top {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/ysp/logo/bg/dummy.png');
-}
-.site-blocks-cover.overlay.top.top2 {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/ysp/logo/moyou_top.png');
-}
-.site-blocks-cover.overlay.top.top3 {
-    background-image: url('<?= get_template_directory_uri(); ?>/images/ysp/logo/moyou_bottom.png');
-}
-@media (min-width: 767.98px) {
-  .site-blocks-cover.overlay.top {
-    background-size: cover;
-    background-position: 50%;
-  }
-  .site-blocks-cover.overlay.top.top2 {
-    background-size: cover;
-    background-position: 50%;
-  }
-  .site-blocks-cover.overlay.top.top3 {
-    background-size: cover;
-    background-position: 50%;
-  }
-}
-.kakejiku_outer {
-  background-image: url('<?= get_template_directory_uri(); ?>/images/ysp/washi_green.png');
-}
-.kakejiku_inner {
-  background-image: url('<?= get_template_directory_uri(); ?>/images/ysp/washi_white.png');
-}
-    </style>
     <?php wp_head();?>
   </head>
   <body>
     <!-- ヘッダー共通処理 start -->
     <div class="site-wrap">
-      <div class="site-navbar">
+      <div class="site-navbar<?php if(is_front_page()): ?> top<?php endif; ?>">
         <div class="container px-3 py-0">
           <div class="row align-items-center flex-nowrap">
             <div class="col-md-1 col-lg-2 px-0">
               <div class="logo-header">
                 <a href="<?= home_url();?>">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/logo.jpg" alt="YSP-Japan" class="mx-auto d-none d-md-block">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/logo_sp.jpg" alt="YSP-Japan" class="mx-auto d-md-none">
+                  <img src="<?= IMG_DIR; ?>/logo.jpg" alt="YSP-Japan" class="mx-auto d-none d-md-block">
+                  <img src="<?= IMG_DIR; ?>/logo_sp.jpg" alt="YSP-Japan" class="mx-auto d-md-none">
                 </a>
               </div>
             </div>
@@ -151,7 +120,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
             <div class="row h-100 align-items-center">
               <div class="col-4 site-cover-menu">
                 <div class="left-menu">
-                  <a href="">1ページで分かるYSP</a>
+                  <a href="<?= ABOUT_URL; ?>">1ページで分かるYSP</a>
                 </div>
               </div>
               <div class="col-8 row site-cover-menu">
@@ -170,8 +139,10 @@ $image = wp_get_attachment_image_src($image_id, 'full');
         </div>
       </div>
     </div>
+<?php if(is_front_page()): ?>
     <div class="circle-bg header"></div>
     <div class="circle-bg header-bottom"></div>
+<?php endif; ?>
 
     <div class="site-mobile-menu bg-cyan">
       <div class="site-mobile-menu-header">
@@ -197,13 +168,13 @@ $image = wp_get_attachment_image_src($image_id, 'full');
     <div id="loading">
       <div class="site-section vh-center">
         <div class="container">
-          <img src="<?= get_template_directory_uri(); ?>/images/ysp/loading.gif" alt="loading" class="mx-auto w-100">
+          <img src="<?= IMG_DIR; ?>/loading.gif" alt="loading" class="mx-auto w-100">
           <div id="loading_text"></div>
         </div>
       </div>
     </div>
 <?php endif; ?>
-    <div class="navbar-space"></div>
+    <div class="navbar-space<?php if(is_front_page()): ?> top<?php endif; ?>"></div>
 
     <!-- ヘッダー共通処理 end -->
 <?php if ($util->is_IE()): ?>

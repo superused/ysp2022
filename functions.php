@@ -43,7 +43,13 @@ define('SNS_LINE_URL', 'https://lin.ee/sAjXedp');
 define('SNS_YOUTUBE_URL', 'https://www.youtube.com/channel/UC9_j943rPgN0a5R55id3V9A');
 
 // URL群
+define('IMG_DIR', get_template_directory_uri() . '/images/ysp');
 define('HOME_URL', esc_url(home_url('/')));
+define('ABOUT_URL', esc_url(home_url('/about')));
+
+
+
+
 define('NEWS_URL', esc_url(home_url('/news/')));
 define('LIVE_URL', esc_url(home_url('/live/')));
 define('LIVE_DETAIL_URL', esc_url(home_url('/live-detail/')));

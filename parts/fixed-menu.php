@@ -5,7 +5,7 @@
           <div class="fixed-button-content">
             <a href="<?= LIVE_URL; ?>" ontouchstart="">
               <div class="contents">
-                <img src="<?= get_template_directory_uri(); ?>/images/ysp/logo_circle.png" class="w-75 p-1">
+                <img src="<?= IMG_DIR; ?>/logo_circle.png" class="w-75 p-1">
                 <div class="text">TOP</div>
               </div>
             </a>
@@ -13,7 +13,7 @@
           <div class="fixed-button-content">
             <a href="<?= LIVE_URL; ?>" ontouchstart="">
               <div class="contents">
-                <img src="<?= get_template_directory_uri(); ?>/images/ysp/ticket-star.png" class="w-75 p-1">
+                <img src="<?= IMG_DIR; ?>/ticket-star.png" class="w-75 p-1">
                 <div class="text">プロジェクト</div>
               </div>
             </a>
@@ -21,7 +21,7 @@
           <div class="fixed-button-content">
             <a href="<?= LIVE_URL; ?>" ontouchstart="">
               <div class="contents">
-                <img src="<?= get_template_directory_uri(); ?>/images/ysp/search.png" class="w-75 p-1">
+                <img src="<?= IMG_DIR; ?>/search.png" class="w-75 p-1">
                 <div class="text">問い合わせ</div>
               </div>
             </a>
@@ -29,7 +29,7 @@
           <div class="fixed-button-content bg-orange">
             <a href="<?= LIVE_URL; ?>" ontouchstart="">
               <div class="contents">
-                <img src="<?= get_template_directory_uri(); ?>/images/ysp/donate.png" class="w-75 p-1">
+                <img src="<?= IMG_DIR; ?>/donate.png" class="w-75 p-1">
                 <div class="text text-white">寄付する</div>
               </div>
             </a>
@@ -37,13 +37,13 @@
           <div class="fixed-button-content bg-cyan">
             <a href="#" ontouchstart="" class="site-menu-toggle js-menu-toggle toggle-menu-all">
               <div class="contents">
-                <img src="<?= get_template_directory_uri(); ?>/images/ysp/hamburger.png" class="w-75 p-1">
+                <img src="<?= IMG_DIR; ?>/hamburger.png" class="w-75 p-2">
                 <div class="text text-white">ALL</div>
               </div>
             </a>
             <a href="#" ontouchstart="" onclick="" class="site-mobile-menu-close toggle-menu-close">
               <div class="contents">
-                <img src="<?= get_template_directory_uri(); ?>/images/ysp/batsu.png" class="w-75 p-1">
+                <img src="<?= IMG_DIR; ?>/batsu.png" class="w-75 p-1">
                 <div class="text text-white">CLOSE</div>
               </div>
             </a>

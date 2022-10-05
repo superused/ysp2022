@@ -28,26 +28,26 @@ function playStart() {
 }
 </script>
 <ul class="slider">
-  <li><a href="#"><div><p class="font-weight-bold">やりがい<br><span class="batsu"></span><br>地域活性化</p><button class="btn btn-normal btn-slider">1ページで分かるYSP</button><img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg"></div></a></li>
-  <li><a href="#"><div><button class="btn btn-normal btn-slider cyan">プロジェクトを見る</button><video src="<?= get_template_directory_uri(); ?>/images/ysp/top.mp4" autoplay loop muted></video></div></a></li>
-  <li><a href="#"><video src="<?= get_template_directory_uri(); ?>/images/ysp/katariba.mp4" autoplay loop muted></a></li>
-  <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/ysp/3-2.jpg"></a></li>
-  <li><a href="#"><video src="<?= get_template_directory_uri(); ?>/images/ysp/sample.mp4" autoplay loop muted></a></li>
-  <li><a href="#"><img src="<?= get_template_directory_uri(); ?>/images/ysp/3-3.jpg"></a></li>
+  <li><a href="<?= ABOUT_URL; ?>"><div><p class="font-weight-bold">やりがい<br><span class="batsu"></span><br>地域活性化</p><button class="btn btn-normal btn-slider">1ページで分かるYSP</button><img src="<?= IMG_DIR; ?>/3-1.jpg"></div></a></li>
+  <li><a href="#"><div><button class="btn btn-normal btn-slider cyan">プロジェクトを見る</button><video src="<?= IMG_DIR; ?>/top.mp4" autoplay loop muted></video></div></a></li>
+  <li><a href="#"><video src="<?= IMG_DIR; ?>/katariba.mp4" autoplay loop muted></a></li>
+  <li><a href="#"><img src="<?= IMG_DIR; ?>/3-2.jpg"></a></li>
+  <li><a href="#"><video src="<?= IMG_DIR; ?>/sample.mp4" autoplay loop muted></a></li>
+  <li><a href="#"><img src="<?= IMG_DIR; ?>/3-3.jpg"></a></li>
 </ul>
     <div id="introduce" class="site-section">
       <div class="contents-box">
-        <img src="<?= get_template_directory_uri(); ?>/images/ysp/omoi_noword.png" class="mainimg d-none d-md-block">
-        <img src="<?= get_template_directory_uri(); ?>/images/ysp/omoi_noword_sp.png" class="mainimg d-md-none">
+        <img src="<?= IMG_DIR; ?>/omoi_noword.png" class="mainimg d-none d-md-block">
+        <img src="<?= IMG_DIR; ?>/omoi_noword_sp.png" class="mainimg d-md-none">
         <div class="contents">
           <div class="text">
             <h2 class="title underline-cyan">想いを紡ぎ、社会を彩る</h2>
-            <p>やりたいこと✕地域活性化を掛け合わせると、<br>どんな社会ができるだろう。<br>YSP-Japanはセミナーやプロジェクトを通して、<br>自分の可能性を発見し、<br>社会の魅力や課題を解決する若者を育み、<br>応援しています。</p>
-            <div class="mb-3"><img src="<?= get_template_directory_uri(); ?>/images/ysp/peace_black.png" class="icon"></div>
-            <button class="btn btn-normal cyan mx-auto d-none d-md-block">1ページで分かるYSP-Japan</button>
+            <p class="mb-5">やりたいこと✕地域活性化を掛け合わせると、<br>どんな社会ができるだろう。<br>YSP-Japanはセミナーやプロジェクトを通して、<br>自分の可能性を発見し、<br>社会の魅力や課題を解決する若者を育み、<br>応援しています。</p>
+            <div class="mb-5"><img src="<?= IMG_DIR; ?>/peace_black.png" class="icon"></div>
+            <a href="<?= ABOUT_URL; ?>"><button class="btn btn-normal cyan mx-auto d-none d-md-block">1ページで分かるYSP-Japan</button></a>
           </div>
         </div>
-        <div class="d-md-none text-center"><button class="btn btn-normal cyan">1ページで分かるYSP-Japan</button></div>
+        <div class="d-md-none text-center"><a href="<?= ABOUT_URL; ?>"><button class="btn btn-normal cyan">1ページで分かるYSP-Japan</button></a></div>
       </div>
     </div>
 
@@ -63,9 +63,9 @@ function playStart() {
             <div class="box team-member">
               <a href="">
                 <div class="image">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/project_tamatokyo.jpg" class="img-fluid">
+                  <img src="<?= IMG_DIR; ?>/project_tamatokyo.jpg" class="img-fluid">
                   <div class="overlap">
-                    <img src="<?= get_template_directory_uri(); ?>/images/ysp/activity-study-support.png">
+                    <img src="<?= IMG_DIR; ?>/activity-study-support.png">
                     <div class="activity-title">Study-support</div>
                   </div>
                 </div>
@@ -82,9 +82,9 @@ function playStart() {
             <div class="box team-member">
               <a href="">
                 <div class="image">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/project_miyagi.jpg" class="img-fluid">
+                  <img src="<?= IMG_DIR; ?>/project_miyagi.jpg" class="img-fluid">
                   <div class="overlap">
-                    <img src="<?= get_template_directory_uri(); ?>/images/ysp/activity-special-skill.png">
+                    <img src="<?= IMG_DIR; ?>/activity-special-skill.png">
                     <div class="activity-title">Special Skill</div>
                   </div>
                 </div>
@@ -101,9 +101,9 @@ function playStart() {
             <div class="box team-member">
               <a href="">
                 <div class="image">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/project_ehime.jpg" class="img-fluid">
+                  <img src="<?= IMG_DIR; ?>/project_ehime.jpg" class="img-fluid">
                   <div class="overlap">
-                    <img src="<?= get_template_directory_uri(); ?>/images/ysp/activity-activation.png">
+                    <img src="<?= IMG_DIR; ?>/activity-activation.png">
                     <div class="activity-title">activation</div>
                   </div>
                 </div>
@@ -120,9 +120,9 @@ function playStart() {
             <div class="box team-member">
               <a href="">
                 <div class="image">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/project_nishisaitama.jpg" class="img-fluid">
+                  <img src="<?= IMG_DIR; ?>/project_nishisaitama.jpg" class="img-fluid">
                   <div class="overlap">
-                    <img src="<?= get_template_directory_uri(); ?>/images/ysp/activity-cleaning-activity.png">
+                    <img src="<?= IMG_DIR; ?>/activity-cleaning-activity.png">
                     <div class="activity-title">Cleaning Activity</div>
                   </div>
                 </div>
@@ -151,7 +151,7 @@ function playStart() {
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+                  <img src="<?= IMG_DIR; ?>/person1.png">
                 </div>
                 <div class="d-lg-inline-flex">
                   <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">地域の方の声</div>
@@ -165,7 +165,7 @@ function playStart() {
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+                  <img src="<?= IMG_DIR; ?>/person1.png">
                 </div>
                 <div class="d-lg-inline-flex">
                   <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">活動メンバーの声</div>
@@ -179,7 +179,7 @@ function playStart() {
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+                  <img src="<?= IMG_DIR; ?>/person1.png">
                 </div>
                 <div class="d-lg-inline-flex">
                   <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">地域の方の声</div>
@@ -193,7 +193,7 @@ function playStart() {
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/person1.png">
+                  <img src="<?= IMG_DIR; ?>/person1.png">
                 </div>
                 <div class="d-lg-inline-flex">
                   <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">活動メンバーの声</div>
@@ -218,7 +218,7 @@ function playStart() {
                 <div class="small text-cyan font-weight-bold">Let's join us</div>
                 <div class="font-weight-bold pb-1 mb-4">一緒に活動しませんか？</div>
                 <div class="image mb-1">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/YSPへGo.png" class="img-fluid">
+                  <img src="<?= IMG_DIR; ?>/YSPへGo.png" class="img-fluid">
                 </div>
                 <div class="m-4">
                   <div class="small font-weight-bold mb-4 lh-2">仲間と共にあなたの住む町をより良くしよう！</div>
@@ -233,7 +233,7 @@ function playStart() {
                 <div class="small text-cyan font-weight-bold">Support us</div>
                 <div class="font-weight-bold pb-1 mb-4">応援してください！</div>
                 <div class="image mb-1">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/YSPへGo.png" class="img-fluid">
+                  <img src="<?= IMG_DIR; ?>/YSPへGo.png" class="img-fluid">
                 </div>
                 <div class="m-4">
                   <div class="small font-weight-bold mb-4 lh-1">ご支援を通して、各地の活動を共に<br>作ることができます。応援をよろしくお願いします。</div>
@@ -257,13 +257,13 @@ function playStart() {
           <div class="col-md-6 activity-link px-md-2 px-lg-3 mb-2">
             <a href="" class="box team-member-small h-100">
               <div class="image bg-peacedesigner">
-                <img src="<?= get_template_directory_uri(); ?>/images/ysp/note.jpg">
+                <img src="<?= IMG_DIR; ?>/note.jpg">
               </div>
                 <div class="article">Article<br>vol.1</div>
               <div class="text-black p-4">
                 <div class="font-weight-bold my-3">Peace designerの公式noteはじめます！</div>
                 <div class="small my-3">はじめまして！Peace designerのnote編集部、Kokiです。この度は読んでくれるみなさんの毎日を…</div>
-                <div class="small">Peace designer Magazine></div>
+                <div class="small magazine-border">Peace designer Magazine></div>
               </div>
             </a>
           </div>
@@ -271,7 +271,7 @@ function playStart() {
             <div class="col-md-6 px-2 pb-2">
               <a href="" class="box team-member">
                 <div class="image overflow-hidden">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <img src="<?= IMG_DIR; ?>/3-1.jpg" class="img-fluid">
                   <div class="article">Article<br>vol.1</div>
                 </div>
                 <div class="text-black p-2">
@@ -282,7 +282,7 @@ function playStart() {
             <div class="col-md-6 px-2 pb-2">
               <a href="" class="box team-member">
                 <div class="image overflow-hidden">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <img src="<?= IMG_DIR; ?>/3-1.jpg" class="img-fluid">
                   <div class="article">Article<br>vol.1</div>
                 </div>
                 <div class="text-black p-2">
@@ -293,7 +293,7 @@ function playStart() {
             <div class="col-md-6 px-2 pb-2">
               <a href="" class="box team-member">
                 <div class="image overflow-hidden">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <img src="<?= IMG_DIR; ?>/3-1.jpg" class="img-fluid">
                   <div class="article">Article<br>vol.1</div>
                 </div>
                 <div class="text-black p-2">
@@ -304,7 +304,7 @@ function playStart() {
             <div class="col-md-6 px-2 pb-2">
               <a href="" class="box team-member">
                 <div class="image overflow-hidden">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <img src="<?= IMG_DIR; ?>/3-1.jpg" class="img-fluid">
                   <div class="article">Article<br>vol.1</div>
                 </div>
                 <div class="text-black p-2">
@@ -329,7 +329,7 @@ function playStart() {
             <div class="box team-member overflow-auto">
               <a href="" class="text-black">
                 <div class="image mb-4 overflow-hidden">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <img src="<?= IMG_DIR; ?>/3-1.jpg" class="img-fluid">
                 </div>
                 <div class="px-4 pb-4 px-md-2 pb-md-2 px-lg-4 pb-lg-4">
                   <div class="font-weight-bold text-center mb-3">【東濃】クリーンウォーキング</div>
@@ -347,7 +347,7 @@ function playStart() {
             <div class="box team-member overflow-auto">
               <a href="" class="text-black">
                 <div class="image mb-4 overflow-hidden">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <img src="<?= IMG_DIR; ?>/3-1.jpg" class="img-fluid">
                 </div>
                 <div class="px-4 pb-4 px-md-2 pb-md-2 px-lg-4 pb-lg-4">
                   <div class="font-weight-bold text-center mb-3">【東濃】クリーンウォーキング</div>
@@ -365,7 +365,7 @@ function playStart() {
             <div class="box team-member overflow-auto">
               <a href="" class="text-black">
                 <div class="image mb-4 overflow-hidden">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="img-fluid">
+                  <img src="<?= IMG_DIR; ?>/3-1.jpg" class="img-fluid">
                 </div>
                 <div class="px-4 pb-4 px-md-2 pb-md-2 px-lg-4 pb-lg-4">
                   <div class="font-weight-bold text-center mb-3">【東濃】クリーンウォーキング</div>
@@ -393,7 +393,7 @@ function playStart() {
               <iframe id="ytPlayer" allowfullscreen="1" allow="autoplay; encrypted-media" title="YouTube video player" src="https://www.youtube.com/embed/Be6eiPIHcjI?enablejsapi=1&origin=http%3A%2F%2Flocalhost"></iframe>
               <ul class="poster_list">
                 <li class="current">
-                  <img src="<?= get_template_directory_uri(); ?>/images/ysp/3-1.jpg" class="transition_scale" oncontextmenu="return false">
+                  <img src="<?= IMG_DIR; ?>/3-1.jpg" class="transition_scale" oncontextmenu="return false">
                   <span class="playicon"></span>
                 </li>
               </ul>
@@ -408,9 +408,9 @@ function playStart() {
     </div>
     <div class="site-section">
       <div class="container logo3">
-        <img src="<?= get_template_directory_uri(); ?>/images/ysp/peace_cyan.png">
-        <img src="<?= get_template_directory_uri(); ?>/images/ysp/peace_cyan.png">
-        <img src="<?= get_template_directory_uri(); ?>/images/ysp/peace_cyan.png">
+        <img src="<?= IMG_DIR; ?>/peace_cyan.png">
+        <img src="<?= IMG_DIR; ?>/peace_cyan.png">
+        <img src="<?= IMG_DIR; ?>/peace_cyan.png">
       </div>
     </div>
     <div id="sns-plugin" class="site-section">

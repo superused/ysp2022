@@ -74,7 +74,7 @@
         <div class="container p-0">
            <div class="row text-center align-items-center mx-0 mb-5 mb-md-4">
              <div class="footer-image col-md-3 p-0 pb-2 pb-md-0 text-md-left mx-auto mx-md-0">
-               <a href="/"><img src="<?= get_template_directory_uri(); ?>/images/ysp/logo_footer.png" class="footer-logo w-100"></a>
+               <a href="/"><img src="<?= IMG_DIR; ?>/logo_footer.png" class="footer-logo w-100"></a>
              </div>
              <div class="footer-sns text-md-left col-md-6">
                <ul class="h-100 m-0 p-0">
