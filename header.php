@@ -137,12 +137,12 @@ $image = wp_get_attachment_image_src($image_id, 'full');
             </div>
           </div>
         </div>
+<?php if(is_front_page()): ?>
+        <div class="circle-bg header"></div>
+        <div class="circle-bg header-bottom"></div>
+<?php endif; ?>
       </div>
     </div>
-<?php if(is_front_page()): ?>
-    <div class="circle-bg header"></div>
-    <div class="circle-bg header-bottom"></div>
-<?php endif; ?>
 
     <div class="site-mobile-menu bg-cyan">
       <div class="site-mobile-menu-header">

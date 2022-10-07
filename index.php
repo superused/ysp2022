@@ -47,13 +47,13 @@ function playStart() {
             <a href="<?= ABOUT_URL; ?>"><button class="btn btn-normal cyan mx-auto d-none d-md-block">1ページで分かるYSP-Japan</button></a>
           </div>
         </div>
-        <div class="d-md-none text-center"><a href="<?= ABOUT_URL; ?>"><button class="btn btn-normal cyan">1ページで分かるYSP-Japan</button></a></div>
+        <div class="d-md-none text-center my-3"><a href="<?= ABOUT_URL; ?>"><button class="btn btn-normal cyan">1ページで分かるYSP-Japan</button></a></div>
       </div>
     </div>
 
-    <div id="activity" class="site-section bg-lightgray">
-      <div class="circle-bg gray"></div>
-      <div class="circle-bg white"></div>
+    <div id="activity" class="site-section bg-lightgray my-6">
+      <div class="circle-bg gray start"></div>
+      <div class="circle-bg white start"></div>
       <div class="container">
         <div class="title-icon">活動紹介</div>
         <div class="title-second">What we do</div>
@@ -138,8 +138,8 @@ function playStart() {
         </div>
         <div class="text-center"><a href=""><button class="btn btn-normal cyan">プロジェクトをもっと見る</button></a></div>
       </div>
-      <div class="circle-bg gray bottom"></div>
-      <div class="circle-bg white bottom"></div>
+      <div class="circle-bg gray end"></div>
+      <div class="circle-bg white end"></div>
     </div>
 
     <div id="voice" class="site-section">
@@ -247,8 +247,8 @@ function playStart() {
     </div>
 
     <div id="magazine" class="site-section bg-lightgray">
-      <div class="circle-bg gray"></div>
-      <div class="circle-bg white"></div>
+      <div class="circle-bg gray start"></div>
+      <div class="circle-bg white start"></div>
       <div class="container">
         <div class="title-icon">Peace designer</div>
         <div class="title-second">Magazine</div>
@@ -316,8 +316,8 @@ function playStart() {
         </div>
       </div>
       <div class="text-center"><a href=""><button class="btn btn-normal cyan">もっと見る</button></a></div>
-      <div class="circle-bg gray bottom"></div>
-      <div class="circle-bg white bottom"></div>
+      <div class="circle-bg gray end"></div>
+      <div class="circle-bg white end"></div>
     </div>
 
     <div id="news" class="site-section">

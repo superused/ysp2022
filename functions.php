@@ -332,6 +332,7 @@ class Util {
     return $senryu;
   }
 }
+if (!isset($post)) $post = null;
 $util = new Util($wpdb, $post);
 
 add_theme_support('post-thumbnails');
