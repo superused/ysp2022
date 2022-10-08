@@ -435,6 +435,10 @@ function playStart() {
               <i class="colored fa-brands fa-line fa-2x"></i>
               <span class="h6 font-weight-bold m-2">LINE</span>
             </div>
+            <div>
+            <img src="<?= IMG_DIR; ?>/lineqr/M_gainfriends_qr.png" class="w-50 mb-3">
+            </div>
+            <a href="https://lin.ee/L06C7bH" target="_blank"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
           </div>
         </div>
       </div>
