@@ -46,6 +46,8 @@ define('SNS_YOUTUBE_URL', 'https://www.youtube.com/channel/UC9_j943rPgN0a5R55id3
 define('IMG_DIR', get_template_directory_uri() . '/images/ysp');
 define('HOME_URL', esc_url(home_url('/')));
 define('ABOUT_URL', esc_url(home_url('/about')));
+define('OUTLINE_URL', esc_url(home_url('/outline')));
+define('MESSAGE_URL', esc_url(home_url('/message')));
 
 
 

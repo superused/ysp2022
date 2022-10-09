@@ -21,12 +21,19 @@
       </div>
     </div>
 
-    <div class="site-section site-section-sm">
+    <div class="site-section site-section-sm pb-0">
       <div class="container p-md-0">
         <div class="row m-0">
           <div class="col-12 p-0">
-            <div class="title underline-cyan">想いを紡ぎ、社会を彩る</div>
+            <div class="title underline-cyan mb-0">想いを紡ぎ、社会を彩る</div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section site-section-sm">
+      <div class="container p-md-0">
+        <div class="row m-0">
           <div class="col-12 col-md-5 p-0">
             <div class="title-second">Vision</div>
             <div class="d-flex justify-content-center">
@@ -416,7 +423,7 @@
       <div class="container p-md-0">
         <div class="row m-0">
           <div class="col-12 col-md-9 p-0 team-member">
-            <a href="#"><img src="<?= IMG_DIR; ?>/banner_outline.jpg" class="w-100 mx-auto"></a>
+            <a href="<?= OUTLINE_URL; ?>"><img src="<?= IMG_DIR; ?>/banner_outline.jpg" class="w-100 mx-auto"></a>
           </div>
         </div>
       </div>
@@ -426,7 +433,7 @@
       <div class="container p-md-0">
         <div class="row m-0">
           <div class="col-12 col-md-9 p-0 ml-auto team-member">
-            <a href="#"><img src="<?= IMG_DIR; ?>/banner_message.jpg" class="w-100 mx-auto"></a>
+            <a href="<?= MESSAGE_URL; ?>"><img src="<?= IMG_DIR; ?>/banner_message.jpg" class="w-100 mx-auto"></a>
           </div>
         </div>
       </div>

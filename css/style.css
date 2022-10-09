@@ -5252,7 +5252,7 @@ h1.rem1-5 {
   font-weight: 900;
   font-style: italic;
   letter-spacing: 1px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .btn.btn-normal.small-btn {
@@ -6282,4 +6282,153 @@ h1.rem1-5 {
   border-radius: 0;
   -webkit-mask-image: radial-gradient(0.55rem 0.58rem at calc(50% - 0.2rem) 0.7rem , transparent 100%, black 100%);
   mask-image: radial-gradient(0.55rem 0.58rem at calc(50% - 0.2rem) 0.7rem , transparent 100%, black 100%);
+}
+img.circle-img-icon {
+  border-radius: 50%;
+  width: 8rem;
+}
+.outline > div {
+  border-top: #8f8f8f 1px solid;
+  font-weight: bold;
+}
+.outline > div:last-child {
+  border-bottom: #8f8f8f 1px solid;
+}
+.outline .text {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+.outline .text.title {
+  line-height: 4.5rem;
+  text-align: center;
+}
+@media (max-width: 767.98px) {
+  .outline .text.title {
+    line-height: 1.2rem;
+    text-align: left;
+  }
+}
+.w-max-content {
+  width: max-content !important;
+}
+
+#contact {
+  font-size: 0.9rem;
+}
+
+.cyan-wrap {
+  position: relative;
+  border: solid 0.2rem #00c8f9;
+  background-color: #fff;
+}
+.cyan-wrap::before,
+.cyan-wrap::after {
+  position: absolute;
+  content: '';
+  background-color: #fff;
+}
+.cyan-wrap::before {
+  top: -0.2rem;
+  bottom: -0.2rem;
+  left: 0.5rem;
+  right: 0.5rem;
+}
+.cyan-wrap::after {
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: -0.2rem;
+  right: -0.2rem;
+}
+.cyan-wrap p {
+  position: relative;
+  z-index: 1;
+  font-size: 0.8rem;
+}
+@media (max-width: 767.98px) {
+  .cyan-wrap p {
+    font-size: 0.9rem;
+  }
+}
+.contact-form-content .row {
+  border-top: #a0a0a0 0.1rem solid;
+  font-weight: bold;
+  align-items: center;
+  margin: 0;
+  padding: 1.5rem 1rem;
+}
+.contact-form-content .row:last-child {
+  border-bottom: #a0a0a0 0.1rem solid;
+}
+.contact-form-content .row .title {
+  width: 30%;
+  line-height: 1rem;
+}
+.contact-form-content .row .title .name {
+  margin-right: 1rem;
+}
+.contact-form-content .text {
+  margin: 0;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+.contact-form-content .text span.sei,
+.contact-form-content .text span.mei {
+  width: 45%;
+}
+.contact-form-content .text span:before {
+  margin-left: -1.5rem;
+  position: absolute;
+  padding: 0.6rem 0;
+}
+.contact-form-content .text span.sei:before {
+  content: '姓';
+}
+.contact-form-content .text span.mei:before {
+  content: '名';
+}
+.contact-form-content input,
+.contact-form-content textarea {
+  width: 100%;
+}
+.contact-form-content .required {
+  background-color: #ff3737;
+  color: white;
+  font-weight: normal;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+}
+.contact-form-content input,
+.contact-form-content textarea {
+  border: #a0a0a0 2px solid;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f3f3f3;
+}
+.contact-form-content textarea {
+  height: 10rem;
+}
+@media (max-width: 767.98px) {
+  .contact-form-content .row {
+    padding: 1.5rem 0 2rem;
+  }
+  .contact-form-content .row .title {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact-form-content .text {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .contact-form-content .text span.sei,
+  .contact-form-content .text span.mei {
+    width: calc(100% - 2rem);
+  }
+  .contact-form-content .required {
+    padding: 0.2rem 1rem;
+  }
 }
