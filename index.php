@@ -151,7 +151,7 @@ function playStart() {
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
-                  <img src="<?= IMG_DIR; ?>/person1.png">
+                  <img src="<?= IMG_DIR; ?>/voice_face/man_1.png">
                 </div>
                 <div class="d-lg-inline-flex">
                   <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">地域の方の声</div>
@@ -165,7 +165,7 @@ function playStart() {
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
-                  <img src="<?= IMG_DIR; ?>/person1.png">
+                  <img src="<?= IMG_DIR; ?>/voice_face/man_2.png">
                 </div>
                 <div class="d-lg-inline-flex">
                   <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">活動メンバーの声</div>
@@ -179,7 +179,7 @@ function playStart() {
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
-                  <img src="<?= IMG_DIR; ?>/person1.png">
+                  <img src="<?= IMG_DIR; ?>/voice_face/woman_1.png">
                 </div>
                 <div class="d-lg-inline-flex">
                   <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">地域の方の声</div>
@@ -193,7 +193,7 @@ function playStart() {
             <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
-                  <img src="<?= IMG_DIR; ?>/person1.png">
+                  <img src="<?= IMG_DIR; ?>/voice_face/woman_2.png">
                 </div>
                 <div class="d-lg-inline-flex">
                   <div class="mark-cyan px-2 mx-2 mb-2 mb-lg-0 rounded">活動メンバーの声</div>

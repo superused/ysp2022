@@ -21,39 +21,52 @@ $(function() {
   })()
 
   const siteBase = function() {
-    $('.slider').slick({
-      autoplay: true, //自動スライド
-      speed: 600,
-      autoplaySpeed: 3000, //スライドさせる間隔
-      dots: true, //ドットインジケーターを表示
-      lazyLoad: "progressive", //画像の遅延読み込み
-      arrows: true, //スライドの左右の矢印ボタンを非表示
-      adaptiveHeight: true,
-      infinite: true,
-      prevArrow: '<span class="slick-arrow prev">＜</span>',
-      nextArrow: '<span class="slick-arrow next">＞</span>',
-    });
-    $('.slider').on('beforeChange', (slick, currentSlide, idx) => {
-      if (videos[idx]) videos[idx].pause()
-    })
-    $('.slider').on('afterChange', (slick, currentSlide, idx) => {
-      if (videos[idx]) videos[idx].play()
-    })
-    $('.voice-slider').slick({
-      slidesToShow: 2,
-      dots: true, //ドットインジケーターを表示
-      arrows: true, //スライドの左右の矢印ボタンを非表示
-      adaptiveHeight: true,
-      infinite: true,
-      prevArrow: '<span class="slick-arrow prev text-black">＜</span>',
-      nextArrow: '<span class="slick-arrow next text-black">＞</span>',
-      responsive:[{
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        }
-      }],
-    });
+    const slider = $('.slider');
+    if (slider[0]) {
+      slider.slick({
+        autoplay: true, //自動スライド
+        speed: 600,
+        autoplaySpeed: 3000, //スライドさせる間隔
+        dots: true, //ドットインジケーターを表示
+        lazyLoad: "progressive", //画像の遅延読み込み
+        arrows: true, //スライドの左右の矢印ボタンを非表示
+        adaptiveHeight: true,
+        infinite: true,
+        prevArrow: '<span class="slick-arrow prev">＜</span>',
+        nextArrow: '<span class="slick-arrow next">＞</span>',
+      });
+      slider.on('beforeChange', (slick, currentSlide, idx) => {
+        if (videos[idx]) videos[idx].pause()
+      })
+      slider.on('afterChange', (slick, currentSlide, idx) => {
+        if (videos[idx]) videos[idx].play()
+      })
+    }
+    const voiceSlider = $('.voice-slider')
+    if (voiceSlider[0]) {
+      voiceSlider.slick({
+        slidesToShow: 2,
+        dots: false, //ドットインジケーターを表示
+        arrows: true, //スライドの左右の矢印ボタンを非表示
+        adaptiveHeight: true,
+        infinite: true,
+        prevArrow: '<span class="slick-arrow prev text-black">＜</span>',
+        nextArrow: '<span class="slick-arrow next text-black">＞</span>',
+        responsive:[{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+          }
+        }],
+      });
+      const vsp = voiceSlider.find('p');
+      const vsResize = () => {
+        vsp.css('height', '');
+        setTimeout(() => vsp.height(vsp.toArray().reduce((p, c) => Math.max(p, $(c).height()), 0)));
+      };
+      $(window).resize(vsResize);
+      vsResize();
+    }
 
     const siteMenuFirst = $('.site-navbar .site-navigation ul.top-lower-menu li.site-menu:first');
     const siteMenuNotFirst = $('.site-navbar .site-navigation ul.top-lower-menu li.site-menu:not(:first-child)');
@@ -80,35 +93,56 @@ $(function() {
       siteMenuFirst.closest('.site-menu').removeClass('bg-lightgray');
     });
 
-    new ProgressBar.Line(loading_text, {
-      easing: 'linear',//アニメーション効果linear、easeIn、easeOut、easeInOutが指定可能
-     // duration: 1000,//時間指定(1000＝1秒)
-      strokeWidth: 3,//進捗ゲージの太さ
-      color: '#00c8f9',//進捗ゲージのカラー
-      trailWidth: 3,//ゲージベースの線の太さ
-      trailColor: '#f5f5f5',//ゲージベースの線のカラー
-      text: {//テキストの形状を直接指定
-        style: {
-          margin: '0.5rem',
-          color: '#000',
-          'font-weight': 'bold',
+    if (typeof loading_text != 'undefined') {
+      new ProgressBar.Line(loading_text, {
+        easing: 'linear',//アニメーション効果linear、easeIn、easeOut、easeInOutが指定可能
+        // duration: 1000,//時間指定(1000＝1秒)
+        strokeWidth: 3,//進捗ゲージの太さ
+        color: '#00c8f9',//進捗ゲージのカラー
+        trailWidth: 3,//ゲージベースの線の太さ
+        trailColor: '#f5f5f5',//ゲージベースの線のカラー
+        text: {//テキストの形状を直接指定
+          style: {
+            margin: '0.5rem',
+            color: '#000',
+            'font-weight': 'bold',
+          },
         },
-      },
-      step: (state, bar) => {
-        bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
-      }
-    }).animate(1, () => {//バーを描画する割合を指定します 1.0 なら100%まで描画します
-      $("#loading").fadeOut();
-    });
+        step: (state, bar) => {
+          bar.setText(Math.round(bar.value() * 100) + ' %'); //テキストの数値
+        }
+      }).animate(1, () => {//バーを描画する割合を指定します 1.0 なら100%まで描画します
+        $("#loading").fadeOut();
+      });
+    }
 
     $('.page_top').click(e => {
       $('html, body').animate({scrollTop: 0}, 500);
       e.preventDefault();
       return false;
-    })
+    });
 
     // facebook plugin
     this.facebookPluginView();
+
+    $('.support .tabs a').click(e => {
+      const target = $(e.target);
+      const type = target.data('type');
+      let reverse;
+
+      if (type == 'once') reverse = 'monthly';
+      else if (type == 'monthly') reverse = 'once';
+
+      if (reverse) {
+        const support = target.closest('.support');
+        support.find('[data-view=' + reverse + ']').hide();
+        support.find('[data-view=' + type + ']').css('display', '');
+        support.find('[data-type=' + reverse + ']').removeClass('active');
+        support.find('[data-type=' + type + ']').addClass('active').css('display', '');
+      }
+      e.preventDefault();
+      return false;
+    });
 
 
     this.siteMenuClone();
@@ -130,6 +164,8 @@ $(function() {
   siteBase.prototype = {
     facebookPluginView: () => {
       const facebookPlugin = $('#facebook-plugin');
+      if (!facebookPlugin[0]) return false;
+
       let timer = false;
       let firstWidth = facebookPlugin.parent().width();
       let maxWidth = 500;
