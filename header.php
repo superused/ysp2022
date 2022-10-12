@@ -84,7 +84,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
                 </ul>
                 <ul class="top-lower-menu">
                   <li class="site-menu pb-3">
-                    <a href="">
+                    <a href="<?= ABOUT_URL; ?>">
                       <p class="title">YSPとは</p>
                       <p class="title-en">About us</p>
                     </a>
@@ -102,13 +102,13 @@ $image = wp_get_attachment_image_src($image_id, 'full');
                     </a>
                   </li>
                   <li class="site-menu mb-3">
-                    <a href="">
+                    <a href="<?= CONTACT_URL; ?>">
                       <p class="title">お問い合わせ</p>
                       <p class="title-en">Contact us</p>
                     </a>
                   </li>
                   <li class="pb-3">
-                    <a href=""><button class="donation-button">寄付・支援</button></a>
+                    <a href="<?= SUPPORT_URL; ?>"><button class="donation-button">寄付・支援</button></a>
                   </li>
                 </ul>
               </nav>
@@ -125,10 +125,10 @@ $image = wp_get_attachment_image_src($image_id, 'full');
               </div>
               <div class="col-8 row site-cover-menu">
                 <div class="col-4 right-menu">
-                  <a href="">団体概要</a>
+                  <a href="<?= OUTLINE_URL; ?>">団体概要</a>
                 </div>
                 <div class="col-4 right-menu">
-                  <a href="">会長挨拶</a>
+                  <a href="<?= MESSAGE_URL; ?>">会長挨拶</a>
                 </div>
                 <div class="col-4 right-menu">
                   <a href="">News Letter</a>
@@ -180,7 +180,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
 <?php if ($util->is_IE()): ?>
     <div class="ie_alert">
       <h2><b>ご利用の環境はサポートされておりません</b></h2>
-      <p>PD-FESでは、あなたがご利用中のブラウザ<b>Internet Explorer</b>は、サポートされておりません。<br>お手数ですが以下のブラウザからアクセス頂きますよう、お願い致します。</p>
+      <p>YSP-Japanでは、あなたがご利用中のブラウザ<b>Internet Explorer</b>は、サポートされておりません。<br>お手数ですが以下のブラウザからアクセス頂きますよう、お願い致します。</p>
       <p><b>Google Chrome / Microsoft Edge</p>
       <a href="https://www.google.co.jp/chrome/index.html" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">Google Chromeをダウンロード</button></a>
       <a href="https://www.microsoft.com/ja-jp/edge" ontouchstart=""><button class="btn btn-show mx-auto" ontouchstart="">Microsoft Edgeをダウンロード</button></a>

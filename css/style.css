@@ -6274,12 +6274,16 @@ img.circle-img-icon.top {
 .cyan-wrap p {
   position: relative;
   z-index: 1;
-  font-size: 0.8rem;
+  font-size: 80%;
 }
 @media (max-width: 767.98px) {
   .cyan-wrap p {
     font-size: 0.9rem;
   }
+}
+.contact-form-content {
+  background-color: #fff;
+  margin-bottom: 3rem;
 }
 .contact-form-content .row {
   border-top: #a0a0a0 0.1rem solid;
@@ -6288,14 +6292,21 @@ img.circle-img-icon.top {
   margin: 0;
   padding: 1.5rem 1rem;
 }
+.contact-form-content .row:first-child {
+  border-top: none;
+}
 .contact-form-content .row:last-child {
   border-bottom: #a0a0a0 0.1rem solid;
 }
 .contact-form-content .row .title {
   width: 30%;
   line-height: 1rem;
+  display: flex;
+  align-items: center;
+  text-align: left;
 }
 .contact-form-content .row .title .name {
+  line-height: 3.6rem;
   margin-right: 1rem;
 }
 .contact-form-content .text {
@@ -6304,6 +6315,9 @@ img.circle-img-icon.top {
   display: flex;
   justify-content: space-between;
 }
+.contact-form-content .text span {
+  position: relative;
+}
 .contact-form-content .text span.sei,
 .contact-form-content .text span.mei {
   width: 45%;
@@ -6311,7 +6325,8 @@ img.circle-img-icon.top {
 .contact-form-content .text span:before {
   margin-left: -1.5rem;
   position: absolute;
-  padding: 0.6rem 0;
+  line-height: 1.2rem;
+  top: calc(50% - 0.6rem);
 }
 .contact-form-content .text span.sei:before {
   content: '姓';
@@ -6320,6 +6335,7 @@ img.circle-img-icon.top {
   content: '名';
 }
 .contact-form-content input,
+.contact-form-content select,
 .contact-form-content textarea {
   width: 100%;
 }
@@ -6331,11 +6347,18 @@ img.circle-img-icon.top {
   border-radius: 0.3rem;
 }
 .contact-form-content input,
+.contact-form-content select,
 .contact-form-content textarea {
-  border: #a0a0a0 2px solid;
+  border: #a0a0a0 0.1rem solid;
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
+  line-height: 2.6rem;
   background-color: #f3f3f3;
+  margin: 0.4rem 0;
+}
+.contact-form-content select {
+  -webkit-appearance: none;
+  appearance: none;
 }
 .contact-form-content textarea {
   height: 10rem;
@@ -6401,7 +6424,7 @@ img.circle-img-icon.top {
   margin: 0 1.5rem;
   padding: 1rem 1rem 1.5rem;
   background-color: #fff;
-  width: 30%;
+  width: 35%;
   min-width: 9.5rem;
   position: relative;
   color: #000;
@@ -6484,6 +6507,7 @@ img.circle-img-icon.top {
 }
 .support .pay-type-comment {
   font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 .support .col-12:first-child:after {
   content: '';
@@ -6494,7 +6518,7 @@ img.circle-img-icon.top {
   border-right: 2px solid #e7e7e7;
 }
 .support .cards {
-  height: 3.5rem;
+  height: 4.5rem;
   margin: 0 auto 0.5rem;
   display: flex;
   justify-content: center;
@@ -6503,20 +6527,23 @@ img.circle-img-icon.top {
 .support .cards > div {
   padding: 0 0.5rem;
 }
+.support .row.cards {
+  max-width: 20rem;
+}
 @media (max-width: 767.98px) {
   #ability .title,
   #ability .text {
     margin-left: 0;
     margin-right: 0;
   }
+  .support .tabs {
+    justify-content: space-evenly;
+  }
   .support .tabs .tab {
     margin: 0 0.25rem;
   }
   .support .col-12:first-child:after {
     display: none;
-  }
-  .support .row.cards {
-    max-width: 20rem;
   }
   .support .contents {
     font-size: 0.9rem;
@@ -6691,4 +6718,253 @@ img.circle-img-icon.top {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+}
+
+#debit .cyan-wrap,
+#transfer .cyan-wrap {
+  text-align: left;
+}
+@media (min-width: 767.98px) {
+  #debit .cyan-wrap,
+  #transfer .cyan-wrap {
+    border: none;
+    text-align: center;
+  }
+}
+
+.application {
+  display: flex;
+}
+.application .process {
+  background-color: #7fe3fc;
+  color: #fff;
+  width: calc(33.33% - 2.5rem);
+  height: 2.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  position: relative;
+}
+.application .process:before,
+.application .process:after {
+  content: '';
+  width: 0;
+  height: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+.application .process:before{
+  border-left: 1.25rem solid transparent;
+  border-top: 1.25rem solid #7fe3fc;
+  border-bottom: 1.25rem solid #7fe3fc;
+  left: -1.25rem;
+}
+.application .process:after {
+  border-left: 1.25rem solid #7fe3fc;
+  border-top: 1.25rem solid transparent;
+  border-bottom: 1.25rem solid transparent;
+  right: -1.25rem;
+}
+.application .process.active {
+  background-color: #00c8f9;
+}
+.application .process.active:before {
+  border-top-color: #00c8f9;
+  border-bottom-color: #00c8f9;
+}
+.application .process.active:after {
+  border-left-color: #00c8f9;
+}
+.application .process:first-child,
+.application .process:last-child {
+  width: calc(33.33% - 1.25rem);
+}
+.application .process:first-child {
+  margin-left: 0;
+}
+.application .process:last-child {
+  margin-right: 0;
+}
+.application .process:first-child:before,
+.application .process:last-child:after {
+  border: none;
+}
+.form-title {
+  background-color: #e5f9fe;
+  color: #00c8f9;
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  text-align: left;
+  padding-left: 1.4rem;
+}
+.form-title:before {
+  content: '';
+  width: 0.4rem;
+  height: 100%;
+  background-color: #00c8f9;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contact-form-content .text.vertical {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form-content .row {
+  position: relative;
+}
+#debit .contact-form-content .text input:not([type=radio]),
+#transfer .contact-form-content .text input:not([type=radio]),
+#debit .contact-form-content .text select,
+#transfer .contact-form-content .text select {
+  margin-left: 5rem;
+  width: calc(100% - 5rem);
+}
+#debit .contact-form-content .text span:before,
+#transfer .contact-form-content .text span:before {
+  margin: 0;
+}
+.contact-form-content .text .horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-form-content .text .postcode,
+.contact-form-content .text .pref,
+.contact-form-content .text .address1 {
+  width: calc(50% - 0.6rem);
+}
+.contact-form-content .text span.postcode:before {
+  content: '郵便番号';
+}
+.contact-form-content .text span.pref:before {
+  content: '都道府県';
+}
+.contact-form-content .text span.pref:before {
+  content: '都道府県';
+}
+.contact-form-content .text span.address1:before {
+  content: '市区町村';
+}
+.contact-form-content .text span.address2:before {
+  content: '番地';
+}
+.contact-form-content .text span.address3:before {
+  content: '建物名など';
+}
+.contact-form-content .text span.mail_confirm:before {
+  content: '確認用';
+}
+.contact-form-content .row {
+  text-align: left;
+}
+.contact-form-content label {
+  display: flex;
+  align-items: center;
+  line-height: 3.6rem;
+}
+.contact-form-content label input[type=radio] {
+  margin-right: 1rem;
+  width: auto;
+}
+.contact-form-content .receipt .title .name {
+  line-height: 1.5rem;
+}
+.contact-form-content .receipt .text {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.contact-form-content .receipt .text label {
+  width: auto;
+  margin-right: 1.5rem;
+}
+@media (max-width: 767.98px) {
+  .contact-form-content .form-title {
+    font-size: 0.9rem;
+    line-height: 2rem;
+    height: 2rem;
+    padding-left: 1rem;
+  }
+  .contact-form-content .form-title:before {
+    width: 0.2rem;
+  }
+  .application .process {
+    width: calc(33.33% - 1.5rem);
+    height: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin: 0 0.75rem;
+  }
+  .application .process:before{
+    border-width: 0.75rem 0 0.75rem 0.75rem;
+    left: -0.75rem;
+  }
+  .application .process:after {
+    border-width: 0.75rem 0 0.75rem 0.75rem;
+    right: -0.75rem;
+  }
+  .application .process:first-child,
+  .application .process:last-child {
+    width: calc(33.33% - 0.75rem);
+  }
+  #debit .contact-form-content .row .title .name,
+  #transfer .contact-form-content .row .title .name {
+    position: absolute;
+    top: calc(50% + 0.7rem);
+    left: 0;
+    transform: translate(0, -50%);
+  }
+  #debit .contact-form-content .row .title,
+  #transfer .contact-form-content .row .title {
+    justify-content: flex-end;
+  }
+  #debit .contact-form-content .text:not(.vertical) input:not([type=radio]),
+  #debit .contact-form-content .text.vertical > input:not([type=radio]),
+  #debit .contact-form-content .text:not(.vertical) select,
+  #transfer .contact-form-content .text:not(.vertical) input:not([type=radio]),
+  #transfer .contact-form-content .text.vertical > input:not([type=radio]),
+  #transfer .contact-form-content .text:not(.vertical) select {
+    width: calc(75% - 5rem);
+  }
+  #debit .contact-form-content .text.vertical span,
+  #transfer .contact-form-content .text.vertical span {
+    width: 75%;
+  }
+  .contact-form-content label {
+    width: 70%;
+  }
+  .contact-form-content label.other {
+    margin-right: 1rem;
+    width: auto;
+  }
+  .contact-form-content label span {
+    white-space: nowrap;
+  }
+  .contact-form-content .text .horizontal {
+    display: block;
+    width: 75%;
+  }
+  .contact-form-content.support-detail .text .horizontal {
+    width: 70%;
+  }
+  .contact-form-content.support-detail .text .horizontal {
+    display: flex;
+  }
+  #transfer .contact-form-content.support-detail .text .horizontal input:not([type=radio]) {
+    width: 7rem;
+    margin-left: 0;
+  }
+  #transfer .contact-form-content .text .horizontal span {
+    width: auto;
+  }
+  .contact-form-content .receipt .text {
+    width: calc(40% + 12rem);
+    justify-content: flex-end;
+  }
 }

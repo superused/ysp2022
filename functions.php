@@ -45,9 +45,13 @@ define('SNS_YOUTUBE_URL', 'https://www.youtube.com/channel/UC9_j943rPgN0a5R55id3
 // URL群
 define('IMG_DIR', get_template_directory_uri() . '/images/ysp');
 define('HOME_URL', esc_url(home_url('/')));
-define('ABOUT_URL', esc_url(home_url('/about')));
-define('OUTLINE_URL', esc_url(home_url('/outline')));
-define('MESSAGE_URL', esc_url(home_url('/message')));
+define('ABOUT_URL', esc_url(home_url('/about/')));
+define('OUTLINE_URL', esc_url(home_url('/outline/')));
+define('MESSAGE_URL', esc_url(home_url('/message/')));
+define('CONTACT_URL', esc_url(home_url('/contact/')));
+define('SUPPORT_URL', esc_url(home_url('/support/')));
+define('DEBIT_URL', esc_url(home_url('/debit/')));
+define('TRANSFER_URL', esc_url(home_url('/transfer/')));
 
 
 
@@ -63,7 +67,7 @@ define('SENRYU_RESULT_LIST_URL', esc_url(home_url('/senryu-result-list/')));
 define('MOVIE_CONTEST_URL', esc_url(home_url('/movie-contest/')));
 define('PHOTO_CONTEST_URL', esc_url(home_url('/photo-contest/')));
 define('PHOTO_RESULT_LIST_URL', esc_url(home_url('/photo-result-list/')));
-define('CONTACT_URL', esc_url(home_url('/contact/')));
+// define('CONTACT_URL', esc_url(home_url('/contact/')));
 define('CONCEPT_URL', esc_url(home_url('/concept/')));
 define('LIVE_CONTENTS_URL', '#live');
 define('PROJECT_CONTENTS_URL', '#project');

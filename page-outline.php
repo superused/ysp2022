@@ -62,24 +62,7 @@
       </div>
     </div>
 
-    <div class="site-section site-section-sm">
-      <div class="container p-md-0">
-        <div class="row m-0">
-          <div class="col-12 col-md-9 p-0 team-member">
-            <a href="<?= ABOUT_URL; ?>"><img src="<?= IMG_DIR; ?>/banner_about.jpg" class="w-100 mx-auto"></a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="site-section site-section-sm mb-6">
-      <div class="container p-md-0">
-        <div class="row m-0">
-          <div class="col-12 col-md-9 p-0 ml-auto team-member">
-            <a href="<?= MESSAGE_URL; ?>"><img src="<?= IMG_DIR; ?>/banner_message.jpg" class="w-100 mx-auto"></a>
-          </div>
-        </div>
-      </div>
-    </div>
+<?php include 'parts/bottom-menu.php'; ?>
 
 <?php get_footer('nomargin'); ?>
