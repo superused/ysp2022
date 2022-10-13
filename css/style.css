@@ -1,28 +1,3 @@
-@font-face {
-  font-family: 'Futura';
-  src: url('../fonts/futura/Futura Book font.ttf') format('truetype');
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'Futura';
-  src: url('../fonts/futura/Futura Medium font.ttf') format('truetype');
-  font-weight: 500;
-}
-@font-face {
-  font-family: 'Futura';
-  src: url('../fonts/futura/Futura Bold.ttf') format('truetype');
-  font-weight: bold;
-}
-@font-face {
-  font-family: 'Futura';
-  src: url('../fonts/futura/Futura Extra Black font.ttf') format('truetype');
-  font-weight: 900;
-}
-@font-face {
-  font-family: 'HuiFont';
-  src: url('../fonts/HuiFont29.ttf') format('truetype');
-  font-weight: normal;
-}
 /* Base */
 html {
   touch-action: manipulation;
@@ -7108,7 +7083,7 @@ img.circle-img-icon.md {
   font-weight: bold;
 }
 .fukidashi .text {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .type1 .fukidashi:before {
   left: calc(10% - 1rem);

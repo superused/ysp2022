@@ -33,10 +33,46 @@ $image = wp_get_attachment_image_src($image_id, 'full');
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 <?php endif; ?>
-
     <link rel="shortcut icon" href="<?= FAVICON_URL;?>" />
+    <style>
+    @font-face {
+      font-family: 'Futura';
+      src: url('../fonts/futura/Futura Book font.ttf') format('truetype');
+      font-weight: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Futura';
+      src: url('../fonts/futura/Futura Medium font.ttf') format('truetype');
+      font-weight: 500;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Futura';
+      src: url('../fonts/futura/Futura Bold.ttf') format('truetype');
+      font-weight: bold;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Futura';
+      src: url('../fonts/futura/Futura Extra Black font.ttf') format('truetype');
+      font-weight: 900;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'HuiFont';
+      src: url('../fonts/HuiFont29.ttf') format('truetype');
+      font-weight: normal;
+      font-display: swap;
+    }
+    </style>
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/fonts/icomoon/style.css">
     <link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet">
+    <link rel="preload" as="font" href="<?= get_template_directory_uri(); ?>/fonts/futura/Futura Book font.ttf" crossorigin />
+    <link rel="preload" as="font" href="<?= get_template_directory_uri(); ?>/fonts/futura/Futura Medium font.ttf" crossorigin />
+    <link rel="preload" as="font" href="<?= get_template_directory_uri(); ?>/fonts/futura/Futura Bold.ttf" crossorigin />
+    <link rel="preload" as="font" href="<?= get_template_directory_uri(); ?>/fonts/futura/Futura Extra Black font.ttf" crossorigin />
+    <link rel="preload" as="font" href="<?= get_template_directory_uri(); ?>/fonts/futura/HuiFont29.ttf" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
