@@ -5,13 +5,18 @@
 }
 @font-face {
   font-family: 'Futura';
-  src: url('../fonts/futura/Futura Heavy font.ttf') format('truetype');
+  src: url('../fonts/futura/Futura Bold.ttf') format('truetype');
   font-weight: bold;
 }
 @font-face {
   font-family: 'Futura';
   src: url('../fonts/futura/Futura Extra Black font.ttf') format('truetype');
   font-weight: 900;
+}
+@font-face {
+  font-family: 'HuiFont';
+  src: url('../fonts/HuiFont29.ttf') format('truetype');
+  font-weight: normal;
 }
 /* Base */
 html {
@@ -5164,14 +5169,17 @@ h1.rem1-5 {
   background-size: contain;
   text-align: center;
   line-height: 2rem;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: bold;
   margin-bottom: 1rem;
+}
+.title-icon.normal {
+  font-size: 0.9rem;
 }
 .title-second {
   font-size: 1.2rem;
   text-align: center;
-  font-weight: 900;
+  font-weight: bold;
   font-style: italic;
   letter-spacing: 1px;
   margin-bottom: 3rem;
@@ -5179,6 +5187,10 @@ h1.rem1-5 {
 
 .btn.btn-normal.small-btn {
   padding: 0.5rem 0.5rem 0.5rem 0;
+}
+.btn.btn-normal.a-small-btn {
+  padding: 0.25rem 3.5rem 0.25rem 3rem;
+  width: max-content;
 }
 .btn.btn-normal.x-small-btn {
   max-width: none;
@@ -5189,6 +5201,10 @@ h1.rem1-5 {
   padding-right: 2rem;
 }
 @media (max-width: 767.98px) {
+  .title-icon {
+    line-height: 3rem;
+    font-size: 0.8rem;
+  }
   .btn.btn-normal.small-btn {
     padding: 0.8rem 0.8rem 0.8rem 0;
   }
@@ -6966,5 +6982,260 @@ img.circle-img-icon.top {
   .contact-form-content .receipt .text {
     width: calc(40% + 12rem);
     justify-content: flex-end;
+  }
+}
+.search-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-bottom: #d2d2d2 0.1rem solid;
+  line-height: 2.5rem;
+}
+.search-title:before {
+  content: '\f002';
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 0.5rem;
+}
+.search-contents {
+  font-size: 0.9rem;
+  padding-top: 2rem;
+  background-image: url(../images/ysp/japan.png);
+  background-repeat: no-repeat;
+  background-position: 100% -4rem;
+}
+.search-contents .region {
+  font-weight: bold;
+  margin: 0.7rem 0.5rem;
+  width: 3rem;
+  text-align: right;
+}
+.search-contents .row {
+  margin: 0;
+}
+.search-contents .row .contents {
+  width: calc(100% - 4rem);
+}
+.btn.search-btn {
+  border: 0.1rem solid #00c8f9;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0;
+  margin: 0.5rem 0.1rem;
+  width: 5rem;
+  color: #00c8f9;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.btn.search-btn.long {
+  width: 8rem;
+}
+.btn.search-btn:hover {
+  background-color: #00c8f9;
+  color: #fff;
+}
+@media (max-width: 767.98px) {
+  .btn.search-btn {
+    width: 4rem;
+  }
+}
+.voice-box {
+  display: flex;
+  margin: 2rem 0;
+}
+.voice-box .content {
+  display: flex;
+  width: 50%;
+}
+.voice-box .content img {
+  width: 9rem;
+}
+.voice-box .content.type1 {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.voice-box .content.type2 {
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+.voice-box .content.type1 .image {
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+.voice-box .content.type2 .image {
+  margin-top: 4rem;
+  margin-bottom: 0;
+}
+.voice-box .content.type1 .fukidashi {
+  margin-right: -25%;
+}
+.voice-box .content.type2 .fukidashi {
+  margin-left: -25%;
+}
+.fukidashi {
+  position: relative;
+  background-color: #fff;
+  display: inline-block;
+  border: 0.2rem solid #00c8f9;
+  border-radius: 2rem;
+  padding: 1rem 2.5rem;
+  font-family: 'HuiFont';
+  font-weight: bold;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.fukidashi:before,
+.fukidashi:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 1rem solid transparent;
+  border-left: 1rem solid transparent;
+}
+.fukidashi .small {
+  font-weight: bold;
+}
+.fukidashi .text {
+  font-size: 1rem;
+}
+.type1 .fukidashi:before {
+  left: calc(10% - 1rem);
+  top: -2.5rem;
+  border-bottom: 2.5rem solid #00c8f9;
+}
+.type1 .fukidashi:after {
+  left: calc(10% - 1rem);
+  top: -2rem;
+  border-bottom: 2.5rem solid #ffffff;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.type2 .fukidashi:before {
+  right: calc(10% - 1rem);
+  bottom: -2.5rem;
+  border-top: 2.5rem solid #00c8f9;
+}
+.type2 .fukidashi:after {
+  right: calc(10% - 1rem);
+  bottom: -2rem;
+  border-top: 2.5rem solid #ffffff;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.fukidashi:hover {
+  background-color: #00c8f9;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+  -webkit-transform: scale(1.05, 1.25);
+  transform: scale(1.05, 1.25);
+}
+.type1 .fukidashi:hover:after {
+  border-top-color: #00c8f9;
+  border-bottom-color: #00c8f9;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.type2 .fukidashi:hover:after {
+  border-top-color: #00c8f9;
+  border-bottom-color: #00c8f9;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+}
+@media (max-width: 767.98px) {
+  .voice-box {
+    flex-direction: column;
+  }
+  .voice-box .content.type1 {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: -9rem;
+  }
+  .voice-box .content.type2 {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+  .voice-box .content.type1 .image {
+    margin-bottom: 0;
+  }
+  .voice-box .content.type2 .image {
+    margin-top: 0;
+  }
+  .voice-box .content.type1 .fukidashi {
+    margin: 0 auto 4rem;
+    width: 95%;
+  }
+  .voice-box .content.type2 .fukidashi {
+    margin: 4rem auto 0;
+    width: 95%;
+  }
+  .fukidashi {
+    border-width: 0.4rem;
+    border-radius: 4rem;
+  }
+  .type1 .fukidashi:before {
+    left: 3rem;
+    top: auto;
+    bottom: -2.7rem;
+    border-top: 2.5rem solid #00c8f9;
+    border-bottom: none;
+  }
+  .type1 .fukidashi:after {
+    left: 3rem;
+    top: auto;
+    bottom: -1.7rem;
+    border-top: 2.5rem solid #ffffff;
+    border-bottom: none;
+  }
+  .type2 .fukidashi:before {
+    right: 3rem;
+    top: -2.7rem;
+    bottom: auto;
+    border-top: none;
+    border-bottom: 2.5rem solid #00c8f9;
+  }
+  .type2 .fukidashi:after {
+    right: 3rem;
+    top: -1.7rem;
+    bottom: auto;
+    border-top: none;
+    border-bottom: 2.5rem solid #ffffff;
+  }
+}
+.piece_bw {
+  background-image: url(../images/ysp/peace_black_white.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  left: calc(50% - 1.5rem);
+  margin-top: -1.5rem;
+}
+.col-2_4 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+#recent-report .row > div {
+  padding: 0 0.5rem;
+}
+@media (min-width: 767.98px) {
+  .col-md-2_4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+@media (max-width: 767.98px) {
+  #recent-report .row > div {
+    padding: 0 1rem;
   }
 }

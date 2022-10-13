@@ -20,7 +20,7 @@
                   <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP多摩東京</span></div>
                   <div class="catch">塾に行けない子たちのために</div>
                   <div class="name">スマイル塾</div>
-                  <div class="check"><button class="btn btn-normal cyan small-btn">チェック</button></div>
+                  <div class="check"><button class="btn btn-normal cyan a-small-btn">チェック</button></div>
                 </div>
               </a>
             </div>
@@ -39,7 +39,7 @@
                   <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>宮城</span></div>
                   <div class="catch">得意な写真を活かして地域を盛り上げる</div>
                   <div class="name">nono style</div>
-                  <div class="check"><button class="btn btn-normal cyan small-btn">チェック</button></div>
+                  <div class="check"><button class="btn btn-normal cyan a-small-btn">チェック</button></div>
                 </div>
               </a>
             </div>
@@ -58,7 +58,7 @@
                   <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP愛媛</span></div>
                   <div class="catch">少子高齢化の進む町を元気に</div>
                   <div class="name">二神島活性化プロジェクト</div>
-                  <div class="check"><button class="btn btn-normal cyan small-btn">チェック</button></div>
+                  <div class="check"><button class="btn btn-normal cyan a-small-btn">チェック</button></div>
                 </div>
               </a>
             </div>
@@ -77,7 +77,7 @@
                   <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP西埼玉</span></div>
                   <div class="catch">私たちの住む町を綺麗な場所に</div>
                   <div class="name">One Heartクリーンアッププロジェクト</div>
-                  <div class="check"><button class="btn btn-normal cyan small-btn">チェック</button></div>
+                  <div class="check"><button class="btn btn-normal cyan a-small-btn">チェック</button></div>
                 </div>
               </a>
             </div>
