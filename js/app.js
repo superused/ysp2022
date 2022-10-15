@@ -28,7 +28,7 @@ $(function() {
         speed: 600,
         autoplaySpeed: 3000, //スライドさせる間隔
         dots: true, //ドットインジケーターを表示
-        lazyLoad: "progressive", //画像の遅延読み込み
+        lazyLoad: 'progressive', //画像の遅延読み込み
         arrows: true, //スライドの左右の矢印ボタンを非表示
         adaptiveHeight: true,
         infinite: true,
@@ -42,7 +42,7 @@ $(function() {
         if (videos[idx]) videos[idx].play()
       })
     }
-    const voiceSlider = $('.voice-slider')
+    const voiceSlider = $('.voice-slider');
     if (voiceSlider[0]) {
       voiceSlider.slick({
         slidesToShow: 2,
@@ -66,6 +66,26 @@ $(function() {
       };
       $(window).resize(vsResize);
       vsResize();
+    }
+    const smallSlider = $('.small-slider');
+    if (smallSlider[0]) {
+      smallSlider.slick({
+        slidesToShow: 1,
+        lazyLoad: 'progressive', //画像の遅延読み込み
+        arrows: true, //スライドの左右の矢印ボタンを非表示
+        adaptiveHeight: true,
+        infinite: true,
+        centerMode: true,
+        prevArrow: '<span class="slick-arrow prev">＜</span>',
+        nextArrow: '<span class="slick-arrow next">＞</span>',
+        centerPadding: '30%',
+        responsive:[{
+          breakpoint: 992,
+          settings: {
+            centerPadding: '15%',
+          }
+        }],
+      });
     }
 
     const siteMenuFirst = $('.site-navbar .site-navigation ul.top-lower-menu li.site-menu:first');
