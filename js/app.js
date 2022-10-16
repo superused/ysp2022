@@ -50,8 +50,8 @@ $(function() {
         arrows: true, //スライドの左右の矢印ボタンを非表示
         adaptiveHeight: true,
         infinite: true,
-        prevArrow: '<span class="slick-arrow prev text-black">＜</span>',
-        nextArrow: '<span class="slick-arrow next text-black">＞</span>',
+        prevArrow: '<span class="slick-arrow prev text-black"><</span>',
+        nextArrow: '<span class="slick-arrow next text-black">></span>',
         responsive:[{
           breakpoint: 768,
           settings: {
@@ -76,8 +76,8 @@ $(function() {
         adaptiveHeight: true,
         infinite: true,
         centerMode: true,
-        prevArrow: '<span class="slick-arrow prev">＜</span>',
-        nextArrow: '<span class="slick-arrow next">＞</span>',
+        prevArrow: '<span class="slick-arrow circle prev"><</span>',
+        nextArrow: '<span class="slick-arrow circle next">></span>',
         centerPadding: '30%',
         responsive:[{
           breakpoint: 992,
