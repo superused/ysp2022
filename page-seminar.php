@@ -89,7 +89,96 @@
             </div>
             </a>
           </div>
+          <div class="box team-member overflow-auto bg-white">
+            <a href="#">
+            <div class="image">
+              <img src="<?= IMG_DIR; ?>/seminar/3-3.jpg" class="img-fluid">
+              <div class="title">3.S!NERGY</div>
+              <div class="circle-bg overlap bottom"></div>
+              <div class="circle-bg inner white bottom"></div>
+            </div>
+            <div class="content">
+              <div class="mb-5">S!NERGY（シナジー）は、地域社会や世界をワクワクさせたい若者たちのプレゼン・イベントです。若者たちの頂点として、一番ワクワクする『アイデア』と『熱量』を持つ若者たちが、社会を帰るアイデアや活動をプレゼンします。2016年初開催依頼、累計観客動員数は13,000名、Youtube総再生回数は約5万回を達成しています。各地でのイベントで開催されているほか、年１回全国大会の「S!NERGY」を開催しています。</div>
+              <div class="text-center"><button class="btn btn-normal cyan small-btn">詳しく見る</button></div>
+            </div>
+            </a>
+          </div>
+          <div class="box team-member overflow-auto bg-white">
+            <a href="#">
+            <div class="image">
+              <img src="<?= IMG_DIR; ?>/seminar/3-4.jpg" class="img-fluid">
+              <div class="title">4.ユースリーダーシップフォーラム</div>
+              <div class="circle-bg overlap bottom"></div>
+              <div class="circle-bg inner white bottom"></div>
+            </div>
+            <div class="content">
+              <div>ユースリーダーシップフォーラムは有識者の先生から、取り組んでこられた社会問題について問題点やその想い、そして解決方法に向けて学びます。フォーラムは不定期で開催しています。</div>
+              <div class="border-line"></div>
+              <div class="row">
+                <div class="title">・対象</div>
+                <div class="description">高校生以上</div>
+              </div>
+              <div class="row">
+                <div class="title">・料金</div>
+                <div class="description">無料</div>
+              </div>
+              <div class="row">
+                <div class="title">・開催</div>
+                <div class="description">奇数月 (1, 3, 5, 7, 9, 11)月に開催</div>
+              </div>
+              <div class="row my-4">セミナーの情報は随時「Peace designer」のLINEでお伝えしていますので、ぜひLINEよりとも題追加をよろしくお願いいたします。</div>
+              <div class="text-center"><button class="btn btn-normal cyan small-btn">詳しく見る</button></div>
+            </div>
+            </a>
+          </div>
+          <div class="box team-member overflow-auto bg-white">
+            <a href="#">
+            <div class="image">
+              <img src="<?= IMG_DIR; ?>/seminar/3-5.jpg" class="img-fluid">
+              <div class="title">5.全国各地で青年イベントを開催</div>
+              <div class="circle-bg overlap bottom"></div>
+              <div class="circle-bg inner white bottom"></div>
+            </div>
+            <div class="content">
+              <div>YSPでは各地域で活動する青年たちが中心となって、自分たちの住む街の魅力を伝えたり、街をよりよくするアイデアを発信したりするイベントやフェスを開催してえます。</div>
+            </div>
+            </a>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <div id="seminar-event-report" class="site-section site-section-sm">
+      <div class="container">
+        <div class="title-icon normal mb-6">セミナー・イベント最新リポート</div>
+        <div>
+          <div class="row">
+            <div class="col-12 col-md-5">
+            <img src="<?= IMG_DIR; ?>/seminar/2-5.jpg" class="img-fluid">
+            </div>
+            <div class="col-12 col-md-7">
+              <div class="cyan-badge">イベント</div>
+              <div class="text">【2021/1/1開催】「S!NERGY2021」サウナで世界平和</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-5">
+            <img src="<?= IMG_DIR; ?>/seminar/2-2.jpg" class="img-fluid">
+            </div>
+            <div class="col-12 col-md-7">
+              <div class="cyan-badge">セミナー</div>
+              <div class="text">【2021/1/1オンライン開催】「今日から始める！仕事のできる人がやってる４つの方法」</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section site-section-sm">
+      <div class="container text-center">
+        <div class="title-icon normal mb-6">お問い合わせ/講師依頼</div>
+        <div class="mb-3">セミナーやイベントに関するお問い合わせや講師依頼は以下のお問い合わせフォームよりお願いします。</div>
+        <div><a href="<?= CONTACT_URL; ?>" class="btn btn-normal cyan">お問い合わせページへ</a></div>
       </div>
     </div>
 <?php get_footer(); ?>

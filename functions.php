@@ -52,6 +52,8 @@ define('CONTACT_URL', esc_url(home_url('/contact/')));
 define('SUPPORT_URL', esc_url(home_url('/support/')));
 define('DEBIT_URL', esc_url(home_url('/debit/')));
 define('TRANSFER_URL', esc_url(home_url('/transfer/')));
+define('PRIVACY_URL', esc_url(home_url('/privacy/')));
+define('LAW_URL', esc_url(home_url('/law/')));
 
 
 

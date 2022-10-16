@@ -6247,25 +6247,71 @@ img.circle-img-icon.md {
   width: 16rem;
   height: 16rem;
 }
-.outline > div {
+.outline .row {
   border-top: #8f8f8f 1px solid;
-  font-weight: bold;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
-.outline > div:last-child {
+.outline .row:last-child {
   border-bottom: #8f8f8f 1px solid;
 }
 .outline .text {
   font-size: 0.8rem;
+  font-weight: bold;
   line-height: 1.2rem;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 82%;
+  flex: 0 0 82%;
+  max-width: 82%;
 }
 .outline .text.title {
-  line-height: 4.5rem;
+  font-weight: bold;
   text-align: center;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 18%;
+  flex: 0 0 18%;
+  max-width: 18%;
+}
+.privacy .outline .row {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.privacy .outline .text,
+.privacy .outline .text.title {
+  text-align: left;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.privacy .outline .text.title {
+  color: #00c8f9;
+  margin-bottom: 1rem;
 }
 @media (max-width: 767.98px) {
+  .outline .row {
+    margin: 0;
+    padding: 1rem;
+  }
+  .outline .text {
+    font-weight: normal;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
   .outline .text.title {
-    line-height: 1.2rem;
     text-align: left;
+    margin-bottom: 0.5rem;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .privacy .outline .row {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 .w-max-content {
@@ -7497,7 +7543,7 @@ img.circle-img-icon.md {
 }
 #seminar-events .box {
   box-shadow: 0px 2px 5px 1px #cdcdcd;
-  margin: 0 1rem;
+  margin: 0 1rem 1.5rem;
 }
 #seminar-events .box a {
   color: #000;
@@ -7517,6 +7563,7 @@ img.circle-img-icon.md {
   width: 100%;
   max-width: 540px;
   margin: 0 auto;
+  letter-spacing: 0.1rem;
 }
 
 #seminar-events .box .content {
@@ -7543,7 +7590,39 @@ img.circle-img-icon.md {
   margin-bottom: 1.45rem;
   width: 100%;
 }
+
+.cyan-badge {
+  background-color: #00c8f9;
+  color: #fff;
+  width: 8rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  margin-bottom: 1.5rem;
+}
+#seminar-event-report .row {
+  margin: 0;
+  border-top: 0.1rem solid #8f8f8f;
+  padding: 1.5rem 1.5rem 0;
+}
+#seminar-event-report .row:last-child {
+  border-bottom: 0.1rem solid #8f8f8f;
+}
+#seminar-event-report .row > div {
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
+}
+#seminar-event-report .row .text {
+  font-weight: bold;
+}
+.policy .read {
+  line-height: 2.5rem;
+  font-weight: bold;
+}
 @media (max-width: 767.98px) {
+  #seminar-events .box {
+    box-shadow: 0px 2px 5px 1px #cdcdcd;
+    margin: 0 1rem 5rem;
+  }
   #seminar-events .circle-bg.overlap.bottom {
     height: 1.27rem;
   }
@@ -7564,10 +7643,18 @@ img.circle-img-icon.md {
     transform: none;
   }
   #seminar-events .box .content {
-    padding: 1rem;
+    padding: 1rem 1rem 2rem;
   }
   .border-line {
     height: 1.05rem;
     margin-bottom: 0.95rem;
+  }
+  #seminar-event-report .row > div {
+    padding: 0;
+  }
+
+  .policy .read {
+    line-height: 1.5rem;
+    font-weight: normal;
   }
 }

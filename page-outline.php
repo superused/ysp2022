@@ -24,17 +24,17 @@
         <div class="title-icon">団体概要</div>
         <div class="title-second">Outline</div>
         <div class="outline">
-            <div class="row align-items-center py-2 py-md-0">
-              <div class="text title col-12 col-md-2">名称</div>
-              <div class="text col-12 col-md-10">IAYSP-Japan (Internal Association of Youth and Students for Peace)<br>日本名：世界平和青年学生連合<br>略称：YSP-Japan</div>
+            <div class="row">
+              <div class="text title">名称</div>
+              <div class="text">IAYSP-Japan (Internal Association of Youth and Students for Peace)<br>日本名：世界平和青年学生連合<br>略称：YSP-Japan</div>
             </div>
-            <div class="row align-items-center py-2 py-md-0">
-              <div class="text title col-12 col-md-2">本部</div>
-              <div class="text col-12 col-md-10">〒160-0022&nbsp;東京都新宿区新宿5-13-2&nbsp;成約ビル2階</div>
+            <div class="row">
+              <div class="text title">本部</div>
+              <div class="text">〒160-0022&nbsp;東京都新宿区新宿5-13-2&nbsp;成約ビル2階</div>
             </div>
-            <div class="row align-items-center py-2 py-md-0">
-              <div class="text title col-12 col-md-2">設立</div>
-              <div class="text col-12 col-md-10">2017年5月17日</div>
+            <div class="row">
+              <div class="text title">設立</div>
+              <div class="text">2017年5月17日</div>
             </div>
         </div>
       </div>
