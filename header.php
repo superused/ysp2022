@@ -40,7 +40,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
     <link rel="preload" as="font" href="<?= get_template_directory_uri(); ?>/fonts/futura/Futura Medium font.ttf" crossorigin />
     <link rel="preload" as="font" href="<?= get_template_directory_uri(); ?>/fonts/futura/Futura Bold.ttf" crossorigin />
     <link rel="preload" as="font" href="<?= get_template_directory_uri(); ?>/fonts/futura/Futura Extra Black font.ttf" crossorigin />
-    <link rel="preload" as="font" href="<?= get_template_directory_uri(); ?>/fonts/futura/HuiFont29.ttf" crossorigin />
+    <link rel="preload" as="font" href="<?= get_template_directory_uri(); ?>/fonts/HuiFont29.ttf" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
@@ -71,9 +71,9 @@ $image = wp_get_attachment_image_src($image_id, 'full');
             <div class="d-none d-md-block col-md-11 col-lg-10 px-0">
               <nav class="site-navigation text-right text-md-right" role="navigation">
                 <ul class="top-upper-menu">
-                  <li><a class="sns-link" href=""><i class="colored fa-brands fa-square-instagram fa-2x"></i></a></li>
-                  <li><a class="sns-link" href=""><i class="colored fa-brands fa-facebook fa-2x"></i></a></li>
-                  <li><a class="sns-link" href=""><i class="colored fa-brands fa-line fa-2x"></i></a></li>
+                  <li><a class="sns-link" href="<?= SNS_INSTAGRAM_URL; ?>"><i class="colored fa-brands fa-square-instagram fa-2x"></i></a></li>
+                  <li><a class="sns-link" href="<?= SNS_FACEBOOK_URL; ?>"><i class="colored fa-brands fa-facebook fa-2x"></i></a></li>
+                  <li><a class="sns-link" href="<?= SNS_LINE_URL; ?>"><i class="colored fa-brands fa-line fa-2x"></i></a></li>
                   <li>
                     <form class="search-box">
                       <input type="text" placeholder="サイト内検索">
@@ -83,7 +83,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
                     </form>
                   </li>
                   <li>
-                    <a href=""><button class="shop-button"><div class="d-flex align-items-center px-4"><i class="fa-solid fa-cart-shopping fa-lg mx-1"></i><span class="mx-1">Shop</span></div></button></a>
+                    <a href="<?= SHOP_URL; ?>"><button class="shop-button"><div class="d-flex align-items-center px-4"><i class="fa-solid fa-cart-shopping fa-lg mx-1"></i><span class="mx-1">Shop</span></div></button></a>
                   </li>
                 </ul>
                 <ul class="top-lower-menu">
@@ -94,13 +94,13 @@ $image = wp_get_attachment_image_src($image_id, 'full');
                     </a>
                   </li>
                   <li class="site-menu mb-3">
-                    <a href="">
+                    <a href="<?= SEMINAR_URL; ?>">
                       <p class="title">セミナー・イベント</p>
                       <p class="title-en">Workshop/Event</p>
                     </a>
                   </li>
                   <li class="site-menu mb-3">
-                    <a href="">
+                    <a href="<?= PROJECT_URL; ?>">
                       <p class="title">プロジェクト</p>
                       <p class="title-en">Project</p>
                     </a>
@@ -135,7 +135,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
                   <a href="<?= MESSAGE_URL; ?>">会長挨拶</a>
                 </div>
                 <div class="col-4 right-menu">
-                  <a href="">News Letter</a>
+                  <a href="<?= NEWS_URL; ?>">News Letter</a>
                 </div>
               </div>
             </div>
@@ -157,9 +157,9 @@ $image = wp_get_attachment_image_src($image_id, 'full');
             </div>
             <div>
               <ul class="d-flex text-right m-0">
-                <li><a class="text-white mx-3" href=""><i class="fa-brands fa-square-facebook fa-2x"></i></a></li>
-                <li><a class="text-white mx-3" href=""><i class="fa-brands fa-instagram fa-2x"></i></a></li>
-                <li><a class="text-white mx-3" href=""><i class="fa-brands fa-line fa-2x"></i></a></li>
+                <li><a class="text-white mx-3" href="<?= SNS_FACEBOOK_URL; ?>"><i class="fa-brands fa-square-facebook fa-2x"></i></a></li>
+                <li><a class="text-white mx-3" href="<?= SNS_INSTAGRAM_URL; ?>"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+                <li><a class="text-white mx-3" href="<?= SNS_LINE_URL; ?>"><i class="fa-brands fa-line fa-2x"></i></a></li>
               </ul>
             </div>
           </div>

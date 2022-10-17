@@ -3,7 +3,7 @@
         <div class="fixed-button">
           <a class="page_top sp" href="#" ontouchstart=""><span></span></a>
           <div class="fixed-button-content">
-            <a href="<?= LIVE_URL; ?>" ontouchstart="">
+            <a href="<?= HOME_URL; ?>" ontouchstart="">
               <div class="contents">
                 <img src="<?= IMG_DIR; ?>/logo_circle.png" class="w-75 p-1">
                 <div class="text">TOP</div>
@@ -11,7 +11,7 @@
             </a>
           </div>
           <div class="fixed-button-content">
-            <a href="<?= LIVE_URL; ?>" ontouchstart="">
+            <a href="<?= PROJECT_URL; ?>" ontouchstart="">
               <div class="contents">
                 <img src="<?= IMG_DIR; ?>/ticket-star.png" class="w-75 p-1">
                 <div class="text">プロジェクト</div>
@@ -19,7 +19,7 @@
             </a>
           </div>
           <div class="fixed-button-content">
-            <a href="<?= LIVE_URL; ?>" ontouchstart="">
+            <a href="<?= CONTACT_URL; ?>" ontouchstart="">
               <div class="contents">
                 <img src="<?= IMG_DIR; ?>/search.png" class="w-75 p-1">
                 <div class="text">問い合わせ</div>
@@ -27,7 +27,7 @@
             </a>
           </div>
           <div class="fixed-button-content bg-orange">
-            <a href="<?= LIVE_URL; ?>" ontouchstart="">
+            <a href="<?= SUPPORT_URL; ?>" ontouchstart="">
               <div class="contents">
                 <img src="<?= IMG_DIR; ?>/donate.png" class="w-75 p-1">
                 <div class="text text-white">寄付する</div>

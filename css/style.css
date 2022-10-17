@@ -4645,12 +4645,15 @@ h1.rem1-5 {
 
 .slider li a img,
 .slider li a video {
-  /* 暫定 */
+  /* 暫定
   height: 500px;
+*/
 }
-
 .slick-dots {
   bottom: 1.5rem;
+  width: max-content;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .slick-dots li.slick-active button:before {
   opacity: 1;
@@ -4691,22 +4694,29 @@ h1.rem1-5 {
 .btn.btn-normal.btn-slider {
   background-color: transparent;
   color: #fff;
-  border: 1px solid #fff;
+  border: 0.2rem solid #fff;
   z-index: 1;
 }
 .btn.btn-normal.btn-slider.cyan {
   background-color: #fff;
   color: #00c8f9;
-  border: 3px solid #fff;
+  border: 0.2rem solid #fff;
 }
 .btn.btn-normal.btn-slider:hover {
   background-color: #00c8f9;
-  border: 3px solid #fff;
+  border: 0.2rem solid #fff;
   color: #fff;
 }
 .btn.mark-cyan:hover {
   opacity: 0.6;
 }
+.slider li a:hover .btn-slider,
+.slider li a:hover .btn-slider.cyan {
+  background-color: #00c8f9;
+  border: 0.2rem solid #fff;
+  color: #fff;
+}
+
 
 .batsu {
   padding: 0 1rem;
@@ -5362,16 +5372,16 @@ h1.rem1-5 {
     max-width: 529px;
   }
 }
-#magazine .box .article {
+#magazine .activity-link.row .box .article {
   background-color: #000;
-  font-size: 1rem;
   color: #fff;
   font-weight: bold;
   position: absolute;
   left: 0;
-  margin-top: -2.2rem;
-  line-height: 1.5rem;
-  padding: 0.7rem;
+  font-size: 0.5rem;
+  margin-top: -1.1rem;
+  line-height: 0.75rem;
+  padding: 0.5rem;
 }
 #magazine .box .magazine-border {
   width: max-content;
@@ -5381,11 +5391,19 @@ h1.rem1-5 {
 }
 #magazine .activity-link.row {
 }
-#magazine .activity-link.row .box .article {
-  font-size: 0.5rem;
-  margin-top: -1.1rem;
-  line-height: 0.75rem;
-  padding: 0.35rem;
+#magazine .activity-link.row.main .box .article {
+  font-size: 1rem;
+  margin-top: -2.2rem;
+  line-height: 1.5rem;
+  padding: 0.7rem;
+}
+#magazine .activity-link.row .box .item {
+  background-color: #fff;
+  color: #000;
+  padding: 0.5rem;
+}
+#magazine .activity-link.row.main .box .item {
+  padding: 1.5rem;
 }
 .movie-frame {
   margin: 0 auto;
@@ -7768,4 +7786,10 @@ img.circle-img-icon.md {
   .recent-report .items .item a {
     padding: 0.5rem 0;
   }
+}
+.footer-menu a {
+  display: block;
+}
+.font-weight-500 {
+  font-weight: 500;
 }

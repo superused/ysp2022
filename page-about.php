@@ -237,7 +237,7 @@
       <div class="container sm text-center p-md-0">
         <div class="title-icon">動画で見るYSP-Japan</div>
         <div class="title-second">Movie</div>
-        <iframe id="ytPlayer" allowfullscreen="1" allow="autoplay; encrypted-media" title="YouTube video player" src="https://www.youtube.com/embed/Be6eiPIHcjI?enablejsapi=1&origin=http%3A%2F%2Flocalhost"></iframe>
+        <iframe id="ytPlayer" allowfullscreen="1" allow="autoplay; encrypted-media" src="<?= YOUTUBE_EMBED; ?>"></iframe>
         <div class="text-center"><a href="#"><button class="btn btn-normal free cyan">Peace designer Youtubeチャンネルへ</button></a></div>
       </div>
     </div>

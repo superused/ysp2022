@@ -39,45 +39,82 @@ define('QUESTIONNAIRE_URL', 'https://forms.gle/Gn4N6tGe1cv3LFBq8'); // アンケ
 
 // SNS
 define('SNS_INSTAGRAM_URL', 'https://instagram.com/peace_designer_fes');
-define('SNS_LINE_URL', 'https://lin.ee/sAjXedp');
-define('SNS_YOUTUBE_URL', 'https://www.youtube.com/channel/UC9_j943rPgN0a5R55id3V9A');
+define('SNS_LINE_URL', 'https://lin.ee/L06C7bH');
+define('SNS_FACEBOOK_URL', '');
+define('YOUTUBE_ID', 'Be6eiPIHcjI');
+define('YOUTUBE_EMBED', 'https://www.youtube.com/embed/' . YOUTUBE_ID . '?enablejsapi=1');
 
 // URL群
 define('IMG_DIR', get_template_directory_uri() . '/images/ysp');
 define('HOME_URL', esc_url(home_url('/')));
+// 1ページでわかるYSP
 define('ABOUT_URL', esc_url(home_url('/about/')));
+// 団体概要
 define('OUTLINE_URL', esc_url(home_url('/outline/')));
+// 会長挨拶
 define('MESSAGE_URL', esc_url(home_url('/message/')));
+// お問い合わせ
 define('CONTACT_URL', esc_url(home_url('/contact/')));
+// お問い合わせ完了
+define('CONTACT_COMPLETE_URL', esc_url(home_url('/contact-complete/')));
+// 寄付・支援
 define('SUPPORT_URL', esc_url(home_url('/support/')));
+// 毎月の支援
 define('DEBIT_URL', esc_url(home_url('/debit/')));
+// 毎月の支援 - 確認
+define('DEBIT_CONFIRM_URL', esc_url(home_url('/debit-confirm/')));
+// 毎月の支援 - 完了
+define('DEBIT_COMPLETE_URL', esc_url(home_url('/debit-complete/')));
+// 今回の支援
 define('TRANSFER_URL', esc_url(home_url('/transfer/')));
+// 今回の支援 - 確認
+define('TRANSFER_CONFIRM_URL', esc_url(home_url('/transfer-confirm/')));
+// 今回の支援 - 完了
+define('TRANSFER_COMPLETE_URL', esc_url(home_url('/transfer-complete/')));
+// 個人情報保護方針
 define('PRIVACY_URL', esc_url(home_url('/privacy/')));
+// 特定商取引法に基づく表示（会費）
 define('LAW_URL', esc_url(home_url('/law/')));
+// サイトポリシー
+define('POLICY_URL', esc_url(home_url('/policy/')));
+// セミナー・イベント
+define('SEMINAR_URL', esc_url(home_url('/seminar/')));
 
-
-
-
-define('NEWS_URL', esc_url(home_url('/news/')));
-define('LIVE_URL', esc_url(home_url('/live/')));
-define('LIVE_DETAIL_URL', esc_url(home_url('/live-detail/')));
+// プロジェクトトップ
 define('PROJECT_URL', esc_url(home_url('/project/')));
-define('PROJECT_REGION_URL', esc_url(home_url('/project-region/')));
-define('PROJECT_ACTIVITY_URL', esc_url(home_url('/project-activity/')));
-define('SENRYU_CONTEST_URL', esc_url(home_url('/senryu-contest/')));
-define('SENRYU_RESULT_LIST_URL', esc_url(home_url('/senryu-result-list/')));
-define('MOVIE_CONTEST_URL', esc_url(home_url('/movie-contest/')));
-define('PHOTO_CONTEST_URL', esc_url(home_url('/photo-contest/')));
-define('PHOTO_RESULT_LIST_URL', esc_url(home_url('/photo-result-list/')));
+// TODO:ニュースレター
+define('NEWS_URL', '');
+
+// TODO: Peace designer Magazine
+define('MAGAZINE_URL', '');
+
+// SHOP
+define('SHOP_URL', 'https://peace-designer.stores.jp/'); // グッズショップ外部サイト
+
+// 紹介動画
+define('INTRODUCE_MOVIE', 'https://youtu.be/Be6eiPIHcjI');
+
+
+// define('NEWS_URL', esc_url(home_url('/news/')));
+// define('LIVE_URL', esc_url(home_url('/live/')));
+// define('LIVE_DETAIL_URL', esc_url(home_url('/live-detail/')));
+// define('PROJECT_URL', esc_url(home_url('/project/')));
+// define('PROJECT_REGION_URL', esc_url(home_url('/project-region/')));
+// define('PROJECT_ACTIVITY_URL', esc_url(home_url('/project-activity/')));
+// define('SENRYU_CONTEST_URL', esc_url(home_url('/senryu-contest/')));
+// define('SENRYU_RESULT_LIST_URL', esc_url(home_url('/senryu-result-list/')));
+// define('MOVIE_CONTEST_URL', esc_url(home_url('/movie-contest/')));
+// define('PHOTO_CONTEST_URL', esc_url(home_url('/photo-contest/')));
+// define('PHOTO_RESULT_LIST_URL', esc_url(home_url('/photo-result-list/')));
 // define('CONTACT_URL', esc_url(home_url('/contact/')));
-define('CONCEPT_URL', esc_url(home_url('/concept/')));
-define('LIVE_CONTENTS_URL', '#live');
-define('PROJECT_CONTENTS_URL', '#project');
-define('CONTEST_URL', esc_url(home_url('/#contest')));
-define('CONTENTS_LIST_URL', esc_url(home_url('#contents-list')));
-define('SENRYU_URL', '#senryu');
-define('PHOTO_URL', '#photo');
-define('MOVIE_URL', '#movie');
+// define('CONCEPT_URL', esc_url(home_url('/concept/')));
+// define('LIVE_CONTENTS_URL', '#live');
+// define('PROJECT_CONTENTS_URL', '#project');
+// define('CONTEST_URL', esc_url(home_url('/#contest')));
+// define('CONTENTS_LIST_URL', esc_url(home_url('#contents-list')));
+// define('SENRYU_URL', '#senryu');
+// define('PHOTO_URL', '#photo');
+// define('MOVIE_URL', '#movie');
 define('FAVICON_URL', esc_url(home_url('favicon.ico')));
 
 define('SITE_TITLE', 'PEACE DESIGNER FES｜2021.08.07~09 オンライン');

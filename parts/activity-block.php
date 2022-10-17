@@ -83,7 +83,7 @@
             </div>
           </div>
         </div>
-        <div class="text-center"><a href=""><button class="btn btn-normal cyan">プロジェクトをもっと見る</button></a></div>
+        <div class="text-center"><a href="<?= PROJECT_URL; ?>"><button class="btn btn-normal cyan">プロジェクトをもっと見る</button></a></div>
       </div>
       <div class="circle-bg gray end"></div>
       <div class="circle-bg white end"></div>

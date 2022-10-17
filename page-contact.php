@@ -85,4 +85,9 @@
           <?php the_content(); ?>
       </div>
     </div>
+<script>
+document.addEventListener('wpcf7mailsent', () => {
+  location.href = '<?= CONTACT_COMPLETE_URL; ?>';
+}, false);
+</script>
 <?php get_footer('nomargin'); ?>
