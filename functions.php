@@ -309,7 +309,7 @@ class Util {
   }
 
   public function getProjectImages($name) {
-    $dir = 'wp-content/themes/peacedesigner/images/project/' . $name . '/';
+    $dir = 'wp-content/themes/ysp2022/images/ysp/project/' . $name . '/';
     $images = [];
     if (is_dir($dir) && $dh = opendir($dir)) {
       while (($file = readdir($dh)) !== false) {
