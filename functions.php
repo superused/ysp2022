@@ -286,15 +286,11 @@ class Util {
 
       $result = [];
       foreach ($datas as $data) {
-        if ($data->sns_json) {
-          $data->sns_json = json_decode($data->sns_json, true);
-        } else {
-          $data->sns_json = [];
+        foreach (['voice1', 'voice2'] as $name) {
+          $data->$name = $data->$name ? json_decode($data->$name, true) : [];
         }
-        if ($data->data) $data->data = json_decode($data->data, true);
-        $result[$data->post_name] = $data;
+        $result[$data->project_code] = $data;
       }
-
       $this->projectDetail = $result;
     }
     return $this->projectDetail;
@@ -400,3 +396,32 @@ function filter_aioseop_title_page( $title ) {
     return $title;
 };
 add_filter( 'aioseop_title_page', 'filter_aioseop_title_page', 10, 1 );
+
+add_filter( 'wpcf7_validate_email', 'wpcf7_validate_email_filter_extend', 11, 2 );
+add_filter( 'wpcf7_validate_email*', 'wpcf7_validate_email_filter_extend', 11, 2 );
+function wpcf7_validate_email_filter_extend( $result, $tag ) {
+    $type = $tag['type'];
+    $name = $tag['name'];
+    $_POST[$name] = trim(strtr((string)$_POST[$name], "n", " "));
+    if ('email' == $type || 'email*' == $type) {
+        if (preg_match('/(.*)_confirm$/', $name, $matches)) {
+            $target_name = $matches[1];
+            if ($_POST[$name] != $_POST[$target_name]) {
+                if (method_exists($result, 'invalidate')) {
+                    $result->invalidate( $tag,"確認用のメールアドレスが一致していません");
+                } else {
+                    $result['valid'] = false;
+                    $result['reason'][$name] = '確認用のメールアドレスが一致していません';
+                }
+            }
+        }
+    }
+    return $result;
+}
+add_filter( 'wpcf7_validate', 'wpcf7_validate_other_support', 11, 2 );
+function wpcf7_validate_other_support( $result, $tags ) {
+    if (isset($_POST['support']) && isset($_POST['support_other']) && $_POST['support'] == 'その他' && empty($_POST['support_other'])) {
+        $result->invalidate( 'support_other', '「その他」は金額を入力してください。' );
+    }
+    return $result;
+}

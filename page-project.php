@@ -17,44 +17,10 @@
         <div class="title-icon">注目のプロジェクトを探す</div>
         <div class="title-second">Project</div>
         <div class="row my-4 px-3">
-          <div class="col-md-6 activity-link px-md-4">
-            <div class="box team-member">
-              <a href="">
-                <div class="image">
-                  <img src="<?= IMG_DIR; ?>/project_miyagi.jpg" class="img-fluid">
-                  <div class="overlap">
-                    <img src="<?= IMG_DIR; ?>/activity-special-skill.png">
-                    <div class="activity-title">Special Skill</div>
-                  </div>
-                </div>
-                <div class="contents">
-                  <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>宮城</span></div>
-                  <div class="catch">得意な写真を活かして地域を盛り上げる</div>
-                  <div class="name">nono style</div>
-                  <div class="check"><button class="btn btn-normal cyan a-small-btn">チェック</button></div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-6 activity-link px-md-4">
-            <div class="box team-member">
-              <a href="">
-                <div class="image">
-                  <img src="<?= IMG_DIR; ?>/project_ehime.jpg" class="img-fluid">
-                  <div class="overlap">
-                    <img src="<?= IMG_DIR; ?>/activity-cleaning-activity.png">
-                    <div class="activity-title">Cleaning Activity</div>
-                  </div>
-                </div>
-                <div class="contents">
-                  <div class="location mt-4 mb-3"><i class="fa-solid fa-location-dot"></i><span>YSP群馬</span></div>
-                  <div class="catch">他団体と交流しながら環境保全</div>
-                  <div class="name">ゴミ拾いリレー</div>
-                  <div class="check"><button class="btn btn-normal cyan a-small-btn">チェック</button></div>
-                </div>
-              </a>
-            </div>
-          </div>
+<?php $datas = $util->getProjectDetail(); ?>
+<?php foreach ($datas as $data): ?>
+<?php   include 'parts/project-frame.php'; ?>
+<?php endforeach; ?>
         </div>
       </div>
       <div class="circle-bg gray end"></div>

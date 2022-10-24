@@ -1,6 +1,11 @@
+<?php
+$postName = get_post_field('post_name', get_the_ID());
+$datas = $util->getProjectDetail();
+$data = $datas[$postName];
+?>
 <?php get_header(); ?>
     <div class="container-pc mb-5">
-      <img src="<?= IMG_DIR; ?>/project/1-宮城.jpg" class="mx-auto w-100">
+      <img src="<?= IMG_DIR; ?>/project/<?= $data->project_code; ?>/top.jpg" class="mx-auto w-100">
     </div>
 
     <div class="site-section site-section-sm">
@@ -9,28 +14,28 @@
         <div class="project-title">
           <div class="project-id">
             <div class="word">PROJECT</div>
-            <div class="number">01</div>
+            <div class="number"><?= substr('0' . $data->project_id, -2); ?></div>
           </div>
           <div class="title">NONOSTYLE</div>
         </div>
         <div class="project container md">
-          <p class="explain">NONOSTYLEは、カメラやアートなどを趣味に持つ青年の「自分たちが住んでいる宮城県を盛り上げていきたい」という思いから構成されたデザインプロジェクトチームです。<br>宮城県のお店やタレントといった地域のために頑張る方々を、より多くの人に認知してもらうために無償で撮影を行い、写真を提供しています。またNONOSTYLE自身のインスタグラムでは撮影した写真や、若手の学生クリエイターと共同で制作した作品を投稿するといった情報発信を行っています。</p>
+          <p class="explain"><?= $data->text1; ?></p>
           <div class="profile">
             <div class="row">
               <div class="title"><span>団体名</span></div>
-              <div class="text">nonostyle</div>
+              <div class="text"><?= $data->name; ?></div>
             </div>
             <div class="row">
               <div class="title"><span>開催場所</span></div>
-              <div class="text">宮城県のカメラスタジオ、地元団体の活動場所</div>
+              <div class="text"><?= $data->place; ?></div>
             </div>
             <div class="row">
               <div class="title"><span>リンク</span></div>
-              <div class="text">https://instagram.com/n0n0style</div>
+              <div class="text"><?= $data->link; ?></div>
             </div>
             <div class="row">
               <div class="title"><span>問い合わせ</span></div>
-              <div class="text">instagramよりDMください！<br>https://instagram.com/n0n0style<br>メールアドレス<br>miyagi.nonostyle@gmail.com</div>
+              <div class="text"><?= nl2br($data->contact); ?></div>
             </div>
           </div>
         </div>
@@ -42,7 +47,7 @@
       <div class="circle-bg white start"></div>
       <div class="container">
         <div class="title-icon normal mb-5">活動の成果</div>
-        <p class="font-weight-bold small">現在までに170回以上の撮影活動を行っています。お店屋さんの紹介撮影やお笑い劇場といったイベント撮影活動においては1～3人、背景紙を使った個性あふれる写真撮影においては8～9人で撮影活動を行っています。<br>撮影した写真は、お店の広告写真や活動紹介として幅広く使われています。また、今まで撮影させていただいたお店屋さんやタレント、服飾学生と協力し、コラボ作品の撮影や宮城県の魅力を認知してもらうために、YSP宮城主催のマルシェを開催しました。</p>
+        <p class="font-weight-bold small"><?= $data->text2; ?></p>
       </div>
       <div class="circle-bg gray end"></div>
       <div class="circle-bg white end"></div>
@@ -51,37 +56,35 @@
     <div class="site-section site-section-sm">
       <div class="container p-md-0">
         <div class="title-icon normal mb-5">参加者の声</div>
-        <div class="project-voice rb">
+<?php foreach ($data->voice1 as $k1 => $v1): ?>
+        <div class="project-voice <?= $k1 % 2 == 0 ? 'rb' : 'lt'; ?>">
           <div class="image">
             <img src="<?= IMG_DIR; ?>/voice_face/woman_3.png">
           </div>
           <div class="fukidashi">
             <div class="text">
-              <div>服飾を学んでいる専門学生や、美容に関心のある学生とコラボしての作品撮影を行っています。後送段階から打ち合わせを重ね、撮影小物などもみんなで一緒に作っています。交流しながら撮影できているのが嬉しいです。学生との交流は、社会人の私にとっても非常に刺激となりました。また、撮影した作品を喜んでくれることもやりがいの1つです。これからもコミュニケーションをよくとっていきながら、活動の幅が広がればと思います。</div>
+              <div><?= $v1; ?></div>
             </div>
           </div>
         </div>
+<?php endforeach; ?>
         <div class="title-icon normal mb-5">地域の方の声</div>
-        <div class="project-voice lt">
+<?php foreach ($data->voice2 as $k2 => $v2): ?>
+        <div class="project-voice <?= $k2 % 2 == 1 ? 'rb' : 'lt'; ?>">
           <div class="image">
+<?php if ($k2 % 2 == 0): ?>
             <img src="<?= IMG_DIR; ?>/voice_face/man_office.png">
-          </div>
-          <div class="fukidashi">
-            <div class="text">
-              <div>より多くの人たちに自分たちを知ってもらうきっかけをつくるためにはかっこいい写真が必要でした。『nonostyle』の活動を知り、社会貢献活動に意欲的で感心しています。とても躍動感ある写真を撮っていただき助かっています。（企業の方）</div>
-            </div>
-          </div>
-        </div>
-        <div class="project-voice rb">
-          <div class="image">
+<?php else: ?>
             <img src="<?= IMG_DIR; ?>/voice_face/man_shop.png">
+<?php endif; ?>
           </div>
           <div class="fukidashi">
             <div class="text">
-              <div>自分たちが楽しんで写真を撮っているし、その想いを社会貢献に繋げたいと頑張っていることが素晴らしいと思います。（お店の方）</div>
+              <div><?= $v2; ?></div>
             </div>
           </div>
         </div>
+<?php endforeach; ?>
       </div>
     </div>
 
@@ -93,7 +96,7 @@
             <img src="<?= IMG_DIR; ?>/reverend_han.jpg" class="circle-img-icon md mb-2">
           </div>
           <div class="col-12 col-md-7">
-            <p class="font-weight-bold small">「私自身、宮城で育ってきたはずなのに、宮城のことを全然知らなかった」というのがプロジェクトをはじめたきっかけでした。<br>元々カメラ好きのメンバーで集まっていた、ただのサークル活動が、さまざまな方と関わる中で、デザインプロジェクトチームとして変わっていきました。<br>活動する中で、宮城に活躍する方々や地元をどうしたら盛り上げていけるか、名産品や観光地、震災復興などに対して真剣に向き合う方々と出会い、私たちがカメラという手段で地域の頑張っている人たちを応援し、サポートしていきたいと強く思うようになりました。<br>そこで情報発信という部分が重要だと考え、それができるための素材撮りを現在も続けています！<br>最近では、私たち自身も、今まで地域の方々からたくさん学ばせてもらい、サポートしていただいていたのだと、強く実感しています！<br>宮城の方々の優しさやこだわりを、もっとたくさんの方々にこれから知ってもらいたいです！<br>「お手伝いします！　私たちができる地域デザイン」<br>この言葉を大切にして、これからを頑張っていきます！！！</p>
+            <p class="font-weight-bold small"><?= $data->text3; ?></p>
           </div>
         </div>
       </div>

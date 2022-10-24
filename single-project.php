@@ -1,96 +1,130 @@
 <?php
 $postName = get_post_field('post_name', get_the_ID());
-$images = $util->getProjectImages($postName);
 $datas = $util->getProjectDetail();
 $data = $datas[$postName];
 ?>
 <?php get_header(); ?>
-    <div></div>
-    <div class="site-section" data-aos="fade-up" data-aos-delay="100">
-      <div class="container">
-        <div class="row mx-auto text-center">
-          <h1 class="col-12 font-weight-bold rem1-5"><?php the_title(); ?></h1>
-          <div class="contents-border mt-3 mb-3"></div>
+    <div class="container-pc mb-5">
+      <img src="<?= IMG_DIR; ?>/project/<?= $data->project_code; ?>/top.jpg" class="mx-auto w-100">
+    </div>
+
+    <div class="site-section site-section-sm">
+      <div class="container p-md-0">
+        <div class="title-icon normal mb-6">活動紹介</div>
+        <div class="project-title">
+          <div class="project-id">
+            <div class="word">PROJECT</div>
+            <div class="number"><?= substr('0' . $data->project_id, -2); ?></div>
+          </div>
+          <div class="title"><?= strtoupper($data->name); ?></div>
+        </div>
+        <div class="project container md">
+          <p class="explain"><?= $data->text1; ?></p>
+          <div class="profile">
+            <div class="row">
+              <div class="title"><span>団体名</span></div>
+              <div class="text"><?= $data->name; ?></div>
+            </div>
+            <div class="row">
+              <div class="title"><span>開催場所</span></div>
+              <div class="text"><?= $data->place; ?></div>
+            </div>
+            <div class="row">
+              <div class="title"><span>リンク</span></div>
+              <div class="text"><?= $data->link; ?></div>
+            </div>
+            <div class="row">
+              <div class="title"><span>問い合わせ</span></div>
+              <div class="text"><?= nl2br($data->contact); ?></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="site-section top-image pb-0" data-aos="fade-up" data-aos-delay="100">
+    <div class="site-section bg-lightgray my-6">
+      <div class="circle-bg gray start"></div>
+      <div class="circle-bg white start"></div>
       <div class="container">
-        <div class="row px-3 justify-content-center">
-           <div class="youtube">
-             <iframe src="https://www.youtube.com/embed/<?= $data->youtube_id; ?>" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-           </div>
-        </div>
+        <div class="title-icon normal mb-5">活動の成果</div>
+        <p class="font-weight-bold small"><?= $data->text2; ?></p>
       </div>
+      <div class="circle-bg gray end"></div>
+      <div class="circle-bg white end"></div>
     </div>
 
-    <div class="site-section pt-0">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-8">
-            <div class="site-section w-border mx-auto">
-              <div class="container">
-              <div data-aos="fade-up" data-aos-delay="100"><?= nl2br($data->description); ?></div>
-                <div class="row mt-4">
-<?php foreach ($images as $image): ?>
-                  <div class="col-6 p-0" data-aos="fade-up" data-aos-delay="100">
-                    <img src="<?= get_template_directory_uri(); ?>/images/project/<?= $postName; ?>/<?= $image; ?>" alt="Image" class="img-fluid p-2">
-                  </div>
+    <div class="site-section site-section-sm">
+      <div class="container p-md-0">
+        <div class="title-icon normal mb-5">参加者の声</div>
+<?php foreach ($data->voice1 as $k1 => $v1): ?>
+        <div class="project-voice <?= $k1 % 2 == 0 ? 'rb' : 'lt'; ?>">
+          <div class="image">
+            <img src="<?= IMG_DIR; ?>/voice_face/woman_3.png">
+          </div>
+          <div class="fukidashi">
+            <div class="text">
+              <div><?= $v1; ?></div>
+            </div>
+          </div>
+        </div>
 <?php endforeach; ?>
-                </div>
-              </div>
-            </div>
-<?php if ($data->sns_json || $data->frequency || $data->place): ?>
-            <div class="site-section w-border beige mx-auto text-break p-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="container p-0">
-<?php   foreach ($data->sns_json as $type => $url): ?>
-<?php     if (strtolower($type) !== 'mail'): ?>
-                  <div class="mt-2"><?= $type; ?></div>
-                  <div class="contents-border text-left short m-0 mb-2"></div>
-<?php       if (preg_match('(https?://[-_.!~*\'()a-zA-Z0-9;/?:@&=+$,%#]+)', $url)): // URL文字列かどうか ?>
-                  <p><a href="<?= $url; ?>" target="_blank"><?= $url; ?></a></p>
-<?php       else: ?>
-                  <p><?= $url; ?></p>
-<?php       endif; ?>
-<?php     endif; ?>
-<?php   endforeach; ?>
-<?php   if ($data->frequency): ?>
-                  <div class="mt-2">活動頻度</div>
-                  <div class="contents-border text-left short m-0 mb-2"></div>
-                  <p><?= nl2br($data->frequency); ?></p>
-<?php   endif; ?>
-<?php   if ($data->place): ?>
-                  <div class="mt-2">活動場所</div>
-                  <div class="contents-border text-left short m-0 mb-2"></div>
-                  <p><img src="<?= get_template_directory_uri(); ?>/images/icon_location.png" alt="Image" class="img-fluid location-icon mb-1"><?= nl2br($data->place); ?></p>
-<?php   endif; ?>
-<?php   if (isset($data->sns_json['Mail'])): ?>
-                  <div class="mt-2">Mail</div>
-                  <div class="contents-border text-left short m-0 mb-2"></div>
-                  <p><?= $data->sns_json['Mail']; ?></p>
-<?php   endif; ?>
-              </div>
-            </div>
+        <div class="title-icon normal mb-5">地域の方の声</div>
+<?php foreach ($data->voice2 as $k2 => $v2): ?>
+        <div class="project-voice <?= $k2 % 2 == 1 ? 'rb' : 'lt'; ?>">
+          <div class="image">
+<?php if ($k2 % 2 == 0): ?>
+            <img src="<?= IMG_DIR; ?>/voice_face/man_office.png">
+<?php else: ?>
+            <img src="<?= IMG_DIR; ?>/voice_face/man_shop.png">
 <?php endif; ?>
-            <div class="site-section w-border mx-auto pb-0 mt-4">
-              <div class="container">
-                <h4 class="heading-bar color-cyan font-weight-bold pb-3" data-aos="fade-up" data-aos-delay="100"><span class="pr-3">活動紹介コーナー</span></h4>
-                <div class="row project-list">
-<?php $rands = $util->getRandomKeysWithoutPostName($datas, $postName, 4); ?>
-<?php foreach ($rands as $rand): ?>
-<?php   if (!isset($datas[$rand])) continue; ?>
-<?php   $data = $datas[$rand]; ?>
-<?php   include 'parts/project-frame.php'; ?>
-<?php endforeach; ?>
-                </div>
-              </div>
+          </div>
+          <div class="fukidashi">
+            <div class="text">
+              <div><?= $v2; ?></div>
             </div>
           </div>
-          <div class="col-12 col-md-4">
-            <?= get_sidebar();?>
+        </div>
+<?php endforeach; ?>
+      </div>
+    </div>
+
+    <div class="site-section site-section-sm">
+      <div class="container">
+        <div class="title-icon normal mb-6">代表者メッセージ</div>
+        <div class="row m-0">
+          <div class="col-12 col-md-5 text-center">
+            <img src="<?= IMG_DIR; ?>/reverend_han.jpg" class="circle-img-icon md mb-2">
+          </div>
+          <div class="col-12 col-md-7">
+            <p class="font-weight-bold small"><?= $data->text3; ?></p>
           </div>
         </div>
       </div>
     </div>
-<?php get_footer(); ?>
+
+    <div class="site-section site-section-sm">
+      <div class="container">
+        <div class="title-icon normal mb-6">Photo Gallery</div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-4 px-3 mb-4 text-center">
+            <img src="<?= IMG_DIR; ?>/reverend_han.jpg" class="w-100">
+          </div>
+          <div class="col-12 col-md-4 px-3 mb-4 text-center">
+            <img src="<?= IMG_DIR; ?>/reverend_han.jpg" class="w-100">
+          </div>
+          <div class="col-12 col-md-4 px-3 mb-4 text-center">
+            <img src="<?= IMG_DIR; ?>/reverend_han.jpg" class="w-100">
+          </div>
+          <div class="col-12 col-md-4 px-3 mb-4 text-center">
+            <img src="<?= IMG_DIR; ?>/reverend_han.jpg" class="w-100">
+          </div>
+          <div class="col-12 col-md-4 px-3 mb-4 text-center">
+            <img src="<?= IMG_DIR; ?>/reverend_han.jpg" class="w-100">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<?php get_footer('nomargin'); ?>

@@ -164,6 +164,29 @@ $(function() {
       return false;
     });
 
+    const supportOther = $('input[name=support_other]');
+    if (supportOther[0]) {
+      supportOther.attr({
+        inputmode: 'numeric',
+        pattern: '^[1-9][0-9]*$',
+      })
+      supportOther.each((idx, target) => {
+        const tgt = $(target)
+        tgt.on('input', () => {
+          const reg = /[^0-9]/g;
+          let val = tgt.val()
+          if (reg.test(val)) {
+            tgt.val(val.replace(reg,''));
+            val = tgt.val()
+          }
+          if (val.length >= 2) {
+            tgt.val(val.replace(/^0*/, ''))
+            if (tgt.val().length == 0) tgt.val(0)
+          }
+        });
+      });
+    }
+
 
     this.siteMenuClone();
     this.siteCarousel();
