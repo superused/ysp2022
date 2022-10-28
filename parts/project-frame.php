@@ -4,9 +4,18 @@
                 <div class="image">
                   <img src="<?= IMG_DIR; ?>/project_<?= $data->project_code; ?>.jpg" class="img-fluid">
                   <div class="overlap">
-<?php if ($data->project_name == 'miyagi'): ?>
+<?php if ($data->project_name == 'tamatokyo'): ?>
+                    <img src="<?= IMG_DIR; ?>/activity-study-support.png">
+                    <div class="activity-title">Study-support</div>
+<?php elseif ($data->project_name == 'miyagi'): ?>
                     <img src="<?= IMG_DIR; ?>/activity-special-skill.png">
                     <div class="activity-title">Special Skill</div>
+<?php elseif ($data->project_name == 'ehime'): ?>
+                    <img src="<?= IMG_DIR; ?>/activity-activation.png">
+                    <div class="activity-title">activation</div>
+<?php elseif ($data->project_name == 'nishisaitama'): ?>
+                    <img src="<?= IMG_DIR; ?>/activity-cleaning-activity.png">
+                    <div class="activity-title">Cleaning Activity</div>
 <?php elseif ($data->project_name == 'gunma'): ?>
                     <img src="<?= IMG_DIR; ?>/activity-cleaning-activity.png">
                     <div class="activity-title">Cleaning Activity</div>

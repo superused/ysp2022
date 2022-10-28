@@ -41,13 +41,14 @@ define('QUESTIONNAIRE_URL', 'https://forms.gle/Gn4N6tGe1cv3LFBq8'); // アンケ
 define('SNS_INSTAGRAM_URL', 'https://instagram.com/peace_designer_fes');
 define('SNS_LINE_URL', 'https://lin.ee/L06C7bH');
 define('SNS_FACEBOOK_URL', '');
-define('YOUTUBE_ID', 'Be6eiPIHcjI');
+define('YOUTUBE_INTRODUCE_ID', 'Be6eiPIHcjI');
 define('YOUTUBE_EMBED', 'https://www.youtube.com/embed/' . YOUTUBE_ID . '?enablejsapi=1');
 
 // URL群
 define('IMG_DIR', get_template_directory_uri() . '/images/ysp');
 define('HOME_URL', esc_url(home_url('/')));
 // 1ページでわかるYSP
+//
 define('ABOUT_URL', esc_url(home_url('/about/')));
 // 団体概要
 define('OUTLINE_URL', esc_url(home_url('/outline/')));
