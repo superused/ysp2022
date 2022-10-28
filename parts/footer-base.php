@@ -84,7 +84,7 @@
                </ul>
              </div>
              <div class="footer-contact col-md-3 p-0 pb-2 pb-md-0">
-               <button class="btn btn-normal mark-cyan rounded">お問い合わせ</button>
+               <a href="<?= CONTACT_URL; ?>" class="btn btn-normal mark-cyan rounded">お問い合わせ</a>
              </div>
            </div>
            <div class="w-100 text-center pt-3">

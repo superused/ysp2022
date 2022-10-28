@@ -84,7 +84,7 @@ define('SEMINAR_URL', esc_url(home_url('/seminar/')));
 // プロジェクトトップ
 define('PROJECT_URL', esc_url(home_url('/project/')));
 // TODO:ニュースレター
-define('NEWS_URL', '');
+define('NEWS_URL', esc_url(home_url('/report/')));
 
 // TODO: Peace designer Magazine
 define('MAGAZINE_URL', '');
