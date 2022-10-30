@@ -9,7 +9,7 @@ if (isset($urls[$slug])) unset($urls[$slug]);
 ?>
 <?php foreach ($urls as $key => $url): ?>
 <?php $flg = $key === array_key_last($urls); ?>
-    <div class="site-section site-section-sm<?= $flg ? ' mb-6' : '' ?>">
+    <div class="site-section site-section-sm<?= $flg ? ' mb-6' : '' ?> fadeup">
       <div class="container p-md-0">
         <div class="row m-0">
           <div class="col-12 col-md-9 p-0 team-member<?= $flg ? ' ml-auto' : '' ?>">

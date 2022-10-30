@@ -56,7 +56,8 @@ $data = $datas[$postName];
     <div class="site-section site-section-sm">
       <div class="container p-md-0">
         <div class="title-icon normal mb-5">参加者の声</div>
-<?php foreach ($data->voice1 as $k1 => $v1): ?>
+<?php if ($data->voice1): ?>
+<?php   foreach ($data->voice1 as $k1 => $v1): ?>
         <div class="project-voice <?= $k1 % 2 == 0 ? 'rb' : 'lt'; ?>">
           <div class="image">
             <img src="<?= IMG_DIR; ?>/voice_face/woman_3.png">
@@ -67,16 +68,18 @@ $data = $datas[$postName];
             </div>
           </div>
         </div>
-<?php endforeach; ?>
+<?php   endforeach; ?>
+<?php endif; ?>
+<?php if ($data->voice2): ?>
         <div class="title-icon normal mb-5">地域の方の声</div>
-<?php foreach ($data->voice2 as $k2 => $v2): ?>
+<?php   foreach ($data->voice2 as $k2 => $v2): ?>
         <div class="project-voice <?= $k2 % 2 == 1 ? 'rb' : 'lt'; ?>">
           <div class="image">
-<?php if ($k2 % 2 == 0): ?>
+<?php     if ($k2 % 2 == 0): ?>
             <img src="<?= IMG_DIR; ?>/voice_face/man_office.png">
-<?php else: ?>
+<?php     else: ?>
             <img src="<?= IMG_DIR; ?>/voice_face/man_shop.png">
-<?php endif; ?>
+<?php     endif; ?>
           </div>
           <div class="fukidashi">
             <div class="text">
@@ -84,16 +87,18 @@ $data = $datas[$postName];
             </div>
           </div>
         </div>
-<?php endforeach; ?>
+<?php   endforeach; ?>
+<?php endif; ?>
       </div>
     </div>
 
+<?php if ($data->text3): ?>
     <div class="site-section site-section-sm">
       <div class="container">
         <div class="title-icon normal mb-6">代表者メッセージ</div>
         <div class="row m-0">
           <div class="col-12 col-md-5 text-center">
-            <img src="<?= IMG_DIR; ?>/reverend_han.jpg" class="circle-img-icon md mb-2">
+            <img src="<?= IMG_DIR; ?>/project/<?= $data->project_code; ?>/leader.jpg" class="circle-img-icon md mb-2">
           </div>
           <div class="col-12 col-md-7">
             <p class="font-weight-bold small"><?= $data->text3; ?></p>
@@ -101,29 +106,22 @@ $data = $datas[$postName];
         </div>
       </div>
     </div>
-
+<?php endif; ?>
+<?php $images = $util->getProjectImages($data->project_code); ?>
+<?php if (count($images)): ?>
     <div class="site-section site-section-sm">
       <div class="container">
         <div class="title-icon normal mb-6">Photo Gallery</div>
         <div class="row justify-content-center">
-          <div class="col-12 col-md-4 px-3 mb-4 text-center">
-            <img src="<?= IMG_DIR; ?>/reverend_han.jpg" class="w-100">
+<?php   foreach ($images as $image): ?>
+          <div class="thumbnail col-12 col-md-4 px-3 mb-4 text-center">
+            <img src="<?= $image; ?>" class="w-100">
           </div>
-          <div class="col-12 col-md-4 px-3 mb-4 text-center">
-            <img src="<?= IMG_DIR; ?>/reverend_han.jpg" class="w-100">
-          </div>
-          <div class="col-12 col-md-4 px-3 mb-4 text-center">
-            <img src="<?= IMG_DIR; ?>/reverend_han.jpg" class="w-100">
-          </div>
-          <div class="col-12 col-md-4 px-3 mb-4 text-center">
-            <img src="<?= IMG_DIR; ?>/reverend_han.jpg" class="w-100">
-          </div>
-          <div class="col-12 col-md-4 px-3 mb-4 text-center">
-            <img src="<?= IMG_DIR; ?>/reverend_han.jpg" class="w-100">
-          </div>
+<?php   endforeach; ?>
         </div>
       </div>
     </div>
+<?php endif; ?>
 
 
 

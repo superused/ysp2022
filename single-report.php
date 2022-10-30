@@ -7,7 +7,14 @@
             <div class="subtitle">
               <div class="tags">
                 <span class="title">タグ　　：</span>
-                <span class="tag"><?php the_tags(); ?></span>
+<?php
+$terms = get_the_terms(get_the_id(), 'report_tags');
+foreach ($terms as $term):
+?>
+                <span class="tag"><?= $term->name; ?></span>
+<?php
+endforeach;
+?>
               </div>
               <div class="date"><?php the_time('Y年m月d日'); ?></div>
             </div>

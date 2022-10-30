@@ -85,7 +85,7 @@
                 <div class="description">奇数月 (1, 3, 5, 7, 9, 11)月に開催</div>
               </div>
               <div class="row my-4">セミナーの情報は随時「Peace designer」のLINEでお伝えしていますので、ぜひLINEよりとも題追加をよろしくお願いいたします。</div>
-              <div class="text-center"><button class="btn btn-normal cyan small-btn">詳しく見る</button></div>
+              <div class="text-center"><a href="<?= LINE_URL; ?>" class="btn btn-normal cyan small-btn">詳しく見る</a></div>
             </div>
             </a>
           </div>

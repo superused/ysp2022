@@ -45,10 +45,11 @@ define('YOUTUBE_INTRODUCE_ID', 'Be6eiPIHcjI');
 define('YOUTUBE_EMBED', 'https://www.youtube.com/embed/' . YOUTUBE_ID . '?enablejsapi=1');
 
 // URL群
-define('IMG_DIR', get_template_directory_uri() . '/images/ysp');
+define('IMG_DIR_PATH', '/images/ysp');
+define('IMG_DIR', get_template_directory_uri() . IMG_DIR_PATH);
 define('HOME_URL', esc_url(home_url('/')));
+
 // 1ページでわかるYSP
-//
 define('ABOUT_URL', esc_url(home_url('/about/')));
 // 団体概要
 define('OUTLINE_URL', esc_url(home_url('/outline/')));
@@ -86,8 +87,13 @@ define('PROJECT_URL', esc_url(home_url('/project/')));
 // TODO:ニュースレター
 define('NEWS_URL', esc_url(home_url('/report/')));
 
-// TODO: Peace designer Magazine
-define('MAGAZINE_URL', '');
+// Magazine
+define('MAGAZINE_URL', 'https://note.com/peace_designer/');
+define('MAGAZINE_1', 'https://note.com/peace_designer/n/nbb0ec335348a');
+define('MAGAZINE_2', 'https://note.com/peace_designer/n/n7d2575dd757e');
+define('MAGAZINE_3', 'https://note.com/peace_designer/n/ne1d53632e714');
+define('MAGAZINE_4', 'https://note.com/peace_designer/n/n0d60ad665aa3');
+define('MAGAZINE_5', 'https://note.com/peace_designer/n/neb4beb63648f');
 
 // SHOP
 define('SHOP_URL', 'https://peace-designer.stores.jp/'); // グッズショップ外部サイト
@@ -306,12 +312,13 @@ class Util {
   }
 
   public function getProjectImages($name) {
-    $dir = 'wp-content/themes/ysp2022/images/ysp/project/' . $name . '/';
+    $project_dir = '/project/' . $name . '/';
+    $dir = get_template_directory() . IMG_DIR_PATH . $project_dir;
     $images = [];
     if (is_dir($dir) && $dh = opendir($dir)) {
       while (($file = readdir($dh)) !== false) {
-        if (filetype($dir . $file) == 'file' && $file != 'top.jpg') {
-          $images[] = $file;
+        if (filetype($dir . $file) == 'file' && !in_array($file, ['top.jpg', 'main.jpg', 'leader.jpg'])) {
+          $images[] = IMG_DIR . $project_dir . $file;
         }
       }
       closedir($dh);

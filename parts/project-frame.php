@@ -1,7 +1,7 @@
           <div class="col-md-6 activity-link px-md-4">
-            <div class="box team-member">
-              <a href="">
-                <div class="image">
+            <div class="box team-member fadeup">
+              <a href="<?= PROJECT_URL . '/' . $data->project_name; ?>">
+                <div class="image thumbnail">
                   <img src="<?= IMG_DIR; ?>/project_<?= $data->project_code; ?>.jpg" class="img-fluid">
                   <div class="overlap">
 <?php if ($data->project_name == 'tamatokyo'): ?>

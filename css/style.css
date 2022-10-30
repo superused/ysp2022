@@ -4585,6 +4585,12 @@ h1.rem1-5 {
   width: 100%;
   object-fit: cover;
 }
+@media (max-width: 767.98px) {
+  .slider video,
+  .slider img {
+    height: 100vh;
+  }
+}
 .slick-initialized {
   min-width: 320px;
 }
@@ -5175,6 +5181,10 @@ h1.rem1-5 {
 .bg-lightgray {
   background-color: #f3f3f3;
 }
+#magazine .activity-link a {
+  display: block;
+  height: 100%;
+}
 #activity .activity-link,
 #magazine .activity-link {
   padding: 1.3rem 0;
@@ -5373,7 +5383,19 @@ h1.rem1-5 {
   background: linear-gradient(30deg, #ec675d 0%,#da796b 25%,#ab9785 50%,#67ad98 75%,#2ab6a0 100%);
   display: flex;
   justify-content: center;
+  width: 100%;
   height: 50%;
+  aspect-ratio: 16 / 9;
+}
+@media (min-width: 767.98px) {
+  #magazine .box .image.bg-peacedesigner img {
+    width: auto;
+  }
+}
+@media (min-width: 991.98px) {
+  #magazine .box .image.bg-peacedesigner img {
+    width: 100%;
+  }
 }
 /*
 @media (max-width: 767.98px) {
@@ -5420,9 +5442,9 @@ h1.rem1-5 {
   position: absolute;
   left: 0;
   font-size: 0.5rem;
-  margin-top: -1.1rem;
-  line-height: 0.75rem;
+  margin-top: -1.4rem;
   padding: 0.5rem;
+  line-height: 0.9rem;
 }
 #magazine .box .magazine-border {
   width: max-content;
@@ -7883,8 +7905,92 @@ img.circle-img-icon.md {
   }
 }
 .footer-menu a {
-  display: block;
+  display: block !important;
 }
 .font-weight-500 {
   font-weight: 500;
+}
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+ul.search-result {
+}
+ul.search-result li {
+}
+ul.search-result li a {
+  display: block;
+  padding: 1rem;
+  border-top: 0.1rem solid #999;
+}
+ul.search-result li:last-child a {
+  border-bottom: 0.1rem solid #999;
+}
+ul.search-result li a:hover {
+  background-color: #f0f0f0;
+}
+@media (max-width: 767.98px) {
+  ul.search-result {
+    padding-left: 0.5rem;
+  }
+}
+
+.pager .pagination {
+   margin: 2.5rem 0 4rem;
+   justify-content: center;
+}
+.pager .nav-links {
+   display: flex;
+}
+.pager .pagination .page-numbers {
+   display: inline-block;
+   margin-right: 0.5rem;
+   padding: 0.5rem 1rem;
+   color: #000;
+   border-radius: 0.1rem;
+   box-shadow: 0 0.1rem 0.1rem #999;
+   background: #fff;
+}
+.pager .pagination .current {
+   padding: 0.5rem 1rem;
+   background: #00c8f9;
+   color: #fff;
+}
+.pager .pagination .prev,
+.pager .pagination .next {
+   background: transparent;
+   box-shadow: none;
+   color: #00c8f9;
+}
+.pager .pagination .dots {
+   background: transparent;
+   box-shadow: none;
+}
+.search-result .box {
+  box-shadow: 0px 2px 5px 1px #cdcdcd;
+  padding: 2rem;
+}
+.search-result .title {
+  font-size: 1rem;
+  font-weight: bold;
+  border-bottom: 0.1rem solid #00c8f9;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+.fadeup {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity .8s, transform .8s;
+}
+.fadeup.inview {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: .1s;
+}
+.site-mobile-menu .fadeup {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: .1s;
 }

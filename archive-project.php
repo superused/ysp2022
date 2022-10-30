@@ -34,49 +34,49 @@
           <div class="row">
             <div class="region">東日本</div>
             <div class="contents">
-              <a href="#" class="btn search-btn">宮城</a>
+              <a href="<?= PROJECT_URL . 'miyagi/'; ?>" class="btn search-btn">宮城</a>
             </div>
           </div>
           <div class="row">
             <div class="region">関東</div>
             <div class="contents">
-              <a href="#" class="btn search-btn">群馬</a>
-              <a href="#" class="btn search-btn">西埼玉</a>
-              <a href="#" class="btn search-btn">多摩東京</a>
-              <a href="#" class="btn search-btn">神奈川</a>
+              <a href="<?= PROJECT_URL . 'gunma/'; ?>" class="btn search-btn">群馬</a>
+              <a href="<?= PROJECT_URL . 'nishisaitama/'; ?>" class="btn search-btn">西埼玉</a>
+              <a href="<?= PROJECT_URL . 'tamatokyo/'; ?>" class="btn search-btn">多摩東京</a>
+              <a href="<?= PROJECT_URL . 'kanagawa/'; ?>" class="btn search-btn">神奈川</a>
             </div>
           </div>
           <div class="row">
             <div class="region">中日本</div>
             <div class="contents">
-              <a href="#" class="btn search-btn">岐阜</a>
-              <a href="#" class="btn search-btn">南愛知</a>
+              <a href="<?= PROJECT_URL . 'gifu/'; ?>" class="btn search-btn">岐阜</a>
+              <a href="<?= PROJECT_URL . 'minamiaichi/'; ?>" class="btn search-btn">南愛知</a>
             </div>
           </div>
           <div class="row">
             <div class="region">西日本</div>
             <div class="contents">
-              <a href="#" class="btn search-btn">滋賀</a>
-              <a href="#" class="btn search-btn">北大阪</a>
-              <a href="#" class="btn search-btn">南大阪</a>
-              <a href="#" class="btn search-btn">鳥取</a>
-              <a href="#" class="btn search-btn">西広島</a>
-              <a href="#" class="btn search-btn">岩国</a>
-              <a href="#" class="btn search-btn">愛媛</a>
+              <a href="<?= PROJECT_URL . 'shiga/'; ?>" class="btn search-btn">滋賀</a>
+              <a href="<?= PROJECT_URL . 'kitaosaka/'; ?>" class="btn search-btn">北大阪</a>
+              <a href="<?= PROJECT_URL . 'minamiosaka/'; ?>" class="btn search-btn">南大阪</a>
+              <a href="<?= PROJECT_URL . 'tottori/'; ?>" class="btn search-btn">鳥取</a>
+              <a href="<?= PROJECT_URL . 'nishihiroshima/'; ?>" class="btn search-btn">西広島</a>
+              <a href="<?= PROJECT_URL . 'iwakuni/'; ?>" class="btn search-btn">岩国</a>
+              <a href="<?= PROJECT_URL . 'ehime/'; ?>" class="btn search-btn">愛媛</a>
             </div>
           </div>
           <div class="row">
             <div class="region">九州</div>
             <div class="contents">
-              <a href="#" class="btn search-btn">宮崎</a>
-              <a href="#" class="btn search-btn">長崎</a>
+              <a href="<?= PROJECT_URL . 'miyazaki/'; ?>" class="btn search-btn">宮崎</a>
+              <a href="<?= PROJECT_URL . 'nagasaki/'; ?>" class="btn search-btn">長崎</a>
             </div>
           </div>
           <div class="row">
             <div class="region">海外</div>
             <div class="contents">
-              <a href="#" class="btn search-btn long">インドネシア</a>
-              <a href="#" class="btn search-btn long">カンボジア</a>
+              <a href="<?= PROJECT_URL . 'indonesia/'; ?>" class="btn search-btn long">インドネシア</a>
+              <a href="<?= PROJECT_URL . 'cambodia/'; ?>" class="btn search-btn long">カンボジア</a>
             </div>
           </div>
         </div>

@@ -1,14 +1,3 @@
-if (location.href.indexOf('#') < 0) {
-  AOS.init({
-    duration: 800,
-    easing: 'slide',
-    once: true
-  });
-} else {
-  AOS.init({
-    disable: true,
-  });
-}
 $(function() {
   "use strict";
   const videos = (() => {
@@ -143,7 +132,7 @@ $(function() {
     });
 
     // facebook plugin
-    this.facebookPluginView();
+    // this.facebookPluginView();
 
     $('.support .tabs a').click(e => {
       const target = $(e.target);
@@ -187,22 +176,26 @@ $(function() {
       });
     }
 
+    $('.fadeup').on('inview', function() {
+      const t = $(this);
+      if (!t.hasClass('inview')) t.addClass('inview');
+    });
 
     this.siteMenuClone();
-    this.siteCarousel();
-    this.siteStellar();
+    // this.siteCarousel();
+    // this.siteStellar();
     // this.initTopView();
-    this.senryuView();
-    this.photoView();
-    this.contestVote();
-    this.imageFull();
-    this.footerBanner();
+    // this.senryuView();
+    // this.photoView();
+    // this.contestVote();
+    // this.imageFull();
+    // this.footerBanner();
     // this.projectBuruburu();
     this.moveRecaptcha();
-    this.senryu100Data();
-    this.photo100Data();
+    // this.senryu100Data();
+    // this.photo100Data();
     this.slideShow();
-    this.liveTimeSchedule();
+    // this.liveTimeSchedule();
   };
   siteBase.prototype = {
     facebookPluginView: () => {
@@ -312,9 +305,6 @@ $(function() {
       });
 
       $(document).on('click', 'a[href*=#]:not([href=#])', function() {
-        AOS.init({
-          disable: true,
-        });
         const adjust = -$('.site-navbar').height();
         const speed = 1000;
         const href = $(this).attr("href");
@@ -403,16 +393,16 @@ $(function() {
         });
       }
     },
-    siteStellar: function() {
-      $(window).stellar({
-        responsive: true,
-        parallaxBackgrounds: true,
-        parallaxElements: true,
-        horizontalScrolling: false,
-        hideDistantElements: false,
-        scrollProperty: 'scroll'
-      });
-    },
+    // siteStellar: function() {
+    //   $(window).stellar({
+    //     responsive: true,
+    //     parallaxBackgrounds: true,
+    //     parallaxElements: true,
+    //     horizontalScrolling: false,
+    //     hideDistantElements: false,
+    //     scrollProperty: 'scroll'
+    //   });
+    // },
     contestView: function() {
       const fixedMenu = $('#fixed-menu');
       if (!$('#modal')[0] || !$('#fixed-menu-move')[0]) return false;
@@ -644,7 +634,6 @@ $(function() {
         if (elem && elem[0]) {
           const navHeight = $('.site-navbar').height();
           const scrollTop = elem.offset().top;
-          elem.removeAttr('data-aos data-aos-delay').removeClass('aos-unit aos-animate');
 
           // ワープしてブルブルさせる
           setTimeout(function() {

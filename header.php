@@ -71,17 +71,12 @@ $image = wp_get_attachment_image_src($image_id, 'full');
             <div class="d-none d-md-block col-md-11 col-lg-10 px-0">
               <nav class="site-navigation text-right text-md-right" role="navigation">
                 <ul class="top-upper-menu">
+<?php /*
                   <li><a class="sns-link" href="<?= SNS_INSTAGRAM_URL; ?>"><i class="colored fa-brands fa-square-instagram fa-2x"></i></a></li>
                   <li><a class="sns-link" href="<?= SNS_FACEBOOK_URL; ?>"><i class="colored fa-brands fa-facebook fa-2x"></i></a></li>
+ */ ?>
                   <li><a class="sns-link" href="<?= SNS_LINE_URL; ?>"><i class="colored fa-brands fa-line fa-2x"></i></a></li>
-                  <li>
-                    <form class="search-box">
-                      <input type="text" placeholder="サイト内検索">
-                      <button type="submit">
-                        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-                      </button>
-                    </form>
-                  </li>
+                  <li><?php get_search_form(); ?></li>
                   <li>
                     <a href="<?= SHOP_URL; ?>"><button class="shop-button"><div class="d-flex align-items-center px-4"><i class="fa-solid fa-cart-shopping fa-lg mx-1"></i><span class="mx-1">Shop</span></div></button></a>
                   </li>
