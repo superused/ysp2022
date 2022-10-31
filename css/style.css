@@ -5387,6 +5387,25 @@ h1.rem1-5 {
   height: 50%;
   aspect-ratio: 16 / 9;
 }
+@media (max-width: 479.98px) {
+  #magazine .activity-link.first a {
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  #magazine .activity-link .slide-view a .image {
+    width: 50%;
+    float: left;
+    margin-bottom: 2rem;
+  }
+  #magazine .activity-link .slide-view a .item {
+    width: 50%;
+    float: left;
+  }
+  #magazine .activity-link .small {
+    font-size: 0.9rem;
+  }
+}
 @media (min-width: 767.98px) {
   #magazine .box .image.bg-peacedesigner img {
     width: auto;
@@ -5701,6 +5720,9 @@ h1.rem1-5 {
   padding: 2rem 0 2rem 4rem;
   line-height: 1.5rem;
   font-weight: 900;
+}
+.footer-link-circle a {
+  display: block;
 }
 .footer-link-circle a:not(.pankuzu-next):before {
   position: absolute;
@@ -7905,7 +7927,7 @@ img.circle-img-icon.md {
   }
 }
 .footer-menu a {
-  display: block !important;
+  display: block;
 }
 .font-weight-500 {
   font-weight: 500;
@@ -7982,12 +8004,17 @@ ul.search-result li a:hover {
 .fadeup {
   opacity: 0;
   transform: translateY(2rem);
-  transition: opacity .8s, transform .8s;
+  transition: opacity 1s, transform 1s;
 }
 .fadeup.inview {
   opacity: 1;
   transform: translateY(0);
   transition-delay: .1s;
+}
+.site-wrap.fadeup,
+.site-wrap.fadeup.inview {
+  transform: inherit;
+  transition: inherit;
 }
 .site-mobile-menu .fadeup {
   opacity: 1;

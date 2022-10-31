@@ -32,7 +32,7 @@ function playStart() {
   <li><a href="<?= PROJECT_URL; ?>"><div><button class="btn btn-normal btn-slider cyan">プロジェクトを見る</button><img src="<?= IMG_DIR; ?>/first_view2_sp.png" class="d-md-none"><img src="<?= IMG_DIR; ?>/first_view2.png" class="d-none d-md-block"></div></a></li>
   <li><a href="<?= SUPPORT_URL; ?>"><div><button class="btn btn-normal btn-slider cyan">寄付する</button><img src="<?= IMG_DIR; ?>/YSP_support_sp.jpg" class="d-md-none"><img src="<?= IMG_DIR; ?>/YSP_support.jpg" class="d-none d-md-block"></div></a></li>
 </ul>
-    <div id="introduce" class="site-section">
+    <div id="introduce" class="site-section fadeup">
       <div class="contents-box">
         <img src="<?= IMG_DIR; ?>/omoi_noword.png" class="mainimg d-none d-md-block fadeup">
         <img src="<?= IMG_DIR; ?>/omoi_noword_sp.png" class="mainimg d-md-none fadeup">
@@ -50,13 +50,13 @@ function playStart() {
 
 <?php include 'parts/activity-block.php'; ?>
 
-    <div id="voice" class="site-section">
+    <div id="voice" class="site-section fadeup">
       <div class="container px-0">
         <div class="title-icon fadeup">メンバー／地域の声</div>
         <div class="title-second fadeup">Voice</div>
-        <ul class="voice-slider py-3">
+        <ul class="voice-slider py-3 fadeup">
           <li>
-            <div class="box project-frame fadeup">
+            <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
                   <img src="<?= IMG_DIR; ?>/voice_face/man_1.png">
@@ -70,7 +70,7 @@ function playStart() {
             </div>
           </li>
           <li>
-            <div class="box project-frame fadeup">
+            <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
                   <img src="<?= IMG_DIR; ?>/voice_face/man_2.png">
@@ -84,7 +84,7 @@ function playStart() {
             </div>
           </li>
           <li>
-            <div class="box project-frame fadeup">
+            <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
                   <img src="<?= IMG_DIR; ?>/voice_face/woman_1.png">
@@ -98,7 +98,7 @@ function playStart() {
             </div>
           </li>
           <li>
-            <div class="box project-frame fadeup">
+            <div class="box project-frame">
               <div class="row m-0 pb-3 align-items-center">
                 <div>
                   <img src="<?= IMG_DIR; ?>/voice_face/woman_2.png">
@@ -115,7 +115,7 @@ function playStart() {
       </div>
     </div>
 
-    <div id="take-action" class="site-section">
+    <div id="take-action" class="site-section fadeup">
       <div class="container px-0">
         <div class="title-icon fadeup">参加・支援する</div>
         <div class="title-second fadeup">Take action</div>
@@ -154,7 +154,7 @@ function playStart() {
       </div>
     </div>
 
-    <div id="magazine" class="site-section bg-lightgray">
+    <div id="magazine" class="site-section bg-lightgray fadeup">
       <div class="circle-bg gray start"></div>
       <div class="circle-bg white start"></div>
       <div class="container">
@@ -162,7 +162,7 @@ function playStart() {
         <div class="title-second fadeup">Magazine</div>
         <p class="font-weight-bold text-center mb-5 fadeup">Peace designerのインタビューやライフスタイルを<br>お届けするWebマガジン</p>
         <div class="row justify-content-center my-4 px-3">
-          <div class="col-md-6 activity-link row main px-md-2 px-lg-3 mb-3 fadeup">
+          <div class="col-md-6 activity-link first row main px-md-2 px-lg-3 mb-3 fadeup">
             <a href="<?= MAGAZINE_1; ?>" class="box team-member-small h-100" target="_blank">
               <div class="image thumbnail bg-peacedesigner">
                 <img src="<?= IMG_DIR; ?>/note.jpg">
@@ -176,45 +176,45 @@ function playStart() {
             </a>
           </div>
           <div class="col-md-6 activity-link row mx-0 px-md-3 px-lg-2">
-            <div class="col-md-6 px-2 pb-3 fadeup">
+            <div class="slide-view col-md-6 px-2 pb-3 fadeup">
               <a href="<?= MAGAZINE_2; ?>" class="box team-member" target="_blank">
                 <div class="image thumbnail overflow-hidden">
                   <img src="<?= IMG_DIR; ?>/note/6-2.jpg" class="img-fluid">
+                  <div class="article">Article<br>vol.2</div>
                 </div>
-                <div class="article">Article<br>vol.2</div>
                 <div class="item">
                   <div class="font-weight-bold my-3 small">【訪問医療・織田亮インタビュー】<br>「最後に先生に出会えてよかった」患者さんに最後まで寄り添う</div>
                 </div>
               </a>
             </div>
-            <div class="col-md-6 px-2 pb-3 fadeup">
+            <div class="slide-view col-md-6 px-2 pb-3 fadeup">
               <a href="<?= MAGAZINE_3; ?>" class="box team-member" target="_blank">
                 <div class="image thumbnail overflow-hidden">
                   <img src="<?= IMG_DIR; ?>/note/6-3.jpg" class="img-fluid">
+                  <div class="article">Article<br>vol.3</div>
                 </div>
-                <div class="article">Article<br>vol.3</div>
                 <div class="item">
                   <div class="font-weight-bold my-3 small">「誰かのため」の原点を探して</div>
                 </div>
               </a>
             </div>
-            <div class="col-md-6 px-2 pb-3 fadeup">
+            <div class="slide-view col-md-6 px-2 pb-3 fadeup">
               <a href="<?= MAGAZINE_4; ?>" class="box team-member" target="_blank">
                 <div class="image thumbnail overflow-hidden">
                   <img src="<?= IMG_DIR; ?>/note/6-4.jpg" class="img-fluid">
+                  <div class="article">Article<br>vol.4</div>
                 </div>
-                <div class="article">Article<br>vol.4</div>
                 <div class="item">
                   <div class="font-weight-bold my-3 small">誰かのためにカッコよく生きた偉人の名言</div>
                 </div>
               </a>
             </div>
-            <div class="col-md-6 px-2 pb-3 fadeup">
+            <div class="slide-view col-md-6 px-2 pb-3 fadeup">
               <a href="<?= MAGAZINE_5; ?>" class="box team-member" target="_blank">
                 <div class="image thumbnail overflow-hidden">
                   <img src="<?= IMG_DIR; ?>/note/6-5.jpg" class="img-fluid">
+                  <div class="article">Article<br>vol.5</div>
                 </div>
-                <div class="article">Article<br>vol.5</div>
                 <div class="item">
                   <div class="font-weight-bold my-3 small">アメリカで感じた本当の“フレンドリー”の意味</div>
                 </div>
@@ -228,7 +228,7 @@ function playStart() {
       <div class="circle-bg white end"></div>
     </div>
 
-    <div id="news" class="site-section">
+    <div id="news" class="site-section fadeup">
       <div class="container px-0">
         <div class="title-icon fadeup">YSPからのお知らせ</div>
         <div class="title-second fadeup">News</div>
@@ -271,7 +271,7 @@ endforeach;
       <div class="text-center fadeup"><a href="<?= NEWS_URL; ?>"><button class="btn btn-normal cyan">詳しく見る</button></a></div>
     </div>
 
-    <div id="movie" class="site-section position-relative">
+    <div id="movie" class="site-section position-relative fadeup">
       <div class="container px-md-0">
         <div class="movie-frame">
           <div class="small font-weight-bold fadeup">紹介動画</div>

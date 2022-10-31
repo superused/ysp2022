@@ -7,7 +7,7 @@ if (strpos($slug, 'confirm') !== false) {
   $type = 'complete';
 }
 ?>
-        <div class="application mb-5">
+        <div class="application mb-5 fadeup">
           <div class="process<?= $type == 'input' ? ' active' : '' ?>">入力</div>
           <div class="process<?= $type == 'confirm' ? ' active' : '' ?>">確認</div>
           <div class="process<?= $type == 'complete' ? ' active' : '' ?>">完了</div>

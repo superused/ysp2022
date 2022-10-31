@@ -1,11 +1,11 @@
 <?php get_header(); ?>
-    <div class="container-pc mb-5">
+    <div class="container-pc mb-5 fadeup">
       <img src="<?= IMG_DIR; ?>/TOP_message.jpg" class="mx-auto w-100">
     </div>
 
-    <div class="site-section site-section-sm">
+    <div class="site-section site-section-sm fadeup">
       <div class="container md p-md-0">
-        <p class="mb-5">
+        <p class="mb-5 fadeup">
          「IAYSP-Japan（世界平和青年学生連合、略称YSP）」の青年・学生たちが推進している社会貢献活動に常日頃よりご関心を寄せ、またご協力いただき厚く御礼申し上げます。<br><br>
          YSPは2017年に韓鶴子総裁によって韓国で創設されて以降、国内外でさまざまなワークショップやプロジェクトを通して、青年・学生一人ひとりの夢や人生設計を応援しています。<br><br>
          近年では、社会が豊かになる一方で、青年から情熱を見出すことが難しくなっています。「私は将来、どのような道に進めばいいのか」「どうすれば夢に近づけるのか」と現実の暗鬱さに埋没し、将来について悩む青年が増えてきました。<br><br>
@@ -19,9 +19,9 @@
          そのような観点をもって、社会を見渡せるようになった青年は将来、社会をより良くする偉業を成し遂げてくれるでしょう。<br><br>
          私は青年期からずっと、幕末に活躍した薩摩藩の西郷隆盛にあこがれています。西郷の座右の銘に「敬天愛人」という言葉があります。西郷は最後まで質素に、自分の周りの人々を助け、国を愛し、天を尊びました。YSPでも自分に自信をもち、家族を愛し、故郷や自国を誇る青年・学生を育てていきたいと思います。<br><br>
          YSPのさまざまなプログラムに参加して、皆さんにしかできない夢を見つける機会をもっていただければ幸いです。
-         <div class="w-max-content ml-auto">
-           <p class="text-left">IAYSP-Japan&nbsp;会長</p>
-           <p class="text-left">竹内&nbsp;啓晃</p>
+         <div class="w-max-content ml-auto fadeup">
+           <p class="text-left fadeup">IAYSP-Japan&nbsp;会長</p>
+           <p class="text-left fadeup">竹内&nbsp;啓晃</p>
          </div>
         </p>
       </div>

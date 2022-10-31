@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-    <div class="report site-section site-section-sm">
+    <div class="report site-section site-section-sm fadeup">
       <div class="container">
-        <h1 class="title-icon normal mb-6">活動レポート</h1>
+        <h1 class="title-icon normal mb-6 fadeup">活動レポート</h1>
           <div class="box team-member overflow-bg-white">
             <div class="title">YSP名古屋MIRAI MAKER PROJECT クリーンウォーキング</div>
             <div class="subtitle">
@@ -39,17 +39,17 @@
       </div>
     </div>
 
-    <div class="recent-report site-section site-section-sm">
+    <div class="recent-report site-section site-section-sm fadeup">
       <div class="container">
-        <div class="title">最新の活動レポート</div>
+        <div class="title fadeup">最新の活動レポート</div>
         <div class="items">
-          <div class="item"><a href="#">ESCP清掃ボランティア in仁王仁墓</a></div>
-          <div class="item"><a href="#">昭和町子ども会公園清掃</a></div>
-          <div class="item"><a href="#">「朝市」ボランティア</a></div>
-          <div class="item"><a href="#">「朝市」ボランティア</a></div>
-          <div class="item"><a href="#">「朝市」ボランティア</a></div>
-          <div class="item"><a href="#">「朝市」ボランティア</a></div>
-          <div class="item"><a href="#">「朝市」ボランティア</a></div>
+          <div class="item fadeup"><a href="#">ESCP清掃ボランティア in仁王仁墓</a></div>
+          <div class="item fadeup"><a href="#">昭和町子ども会公園清掃</a></div>
+          <div class="item fadeup"><a href="#">「朝市」ボランティア</a></div>
+          <div class="item fadeup"><a href="#">「朝市」ボランティア</a></div>
+          <div class="item fadeup"><a href="#">「朝市」ボランティア</a></div>
+          <div class="item fadeup"><a href="#">「朝市」ボランティア</a></div>
+          <div class="item fadeup"><a href="#">「朝市」ボランティア</a></div>
         </div>
       </div>
     </div>

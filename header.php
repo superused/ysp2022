@@ -56,7 +56,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
   </head>
   <body>
     <!-- ヘッダー共通処理 start -->
-    <div class="site-wrap">
+    <div class="site-wrap fadeup">
       <div class="site-navbar<?php if(is_front_page()): ?> top<?php endif; ?>">
         <div class="container px-3 py-0">
           <div class="row align-items-center flex-nowrap">

@@ -1,12 +1,12 @@
 <?php get_header(); ?>
-    <div class="site-section bg-lightgray mt-0 text-center">
-      <div class="title-icon">&nbsp;</div>
-      <h1 class="h4 font-weight-bold mb-0">個人情報保護方針</h1>
+    <div class="site-section bg-lightgray mt-0 text-center fadeup">
+      <div class="title-icon fadeup">&nbsp;</div>
+      <h1 class="h4 font-weight-bold mb-0 fadeup">個人情報保護方針</h1>
       <div class="circle-bg gray end"></div>
       <div class="circle-bg white end"></div>
     </div>
-    <div class="privacy policy site-section site-section-sm mb-6">
-      <div class="container md py-5 px-md-0">
+    <div class="privacy policy site-section site-section-sm mb-6 fadeup">
+      <div class="container md py-5 px-md-0 fadeup">
         <div class="read">　世界平和青年学生連合(以下「当会」といいます)は、当今日の高度情報通信社会において個人情報が重要な資産であることを理解し、個人情報を正しく扱うことが当団体の重要な責務であると認識し、以下の方針（以下「本方針」といいます。）に基づき、取扱う個人情報の取得、利用、管理を適正に行います。</div>
       </div>
       <div class="container md p-md-0">

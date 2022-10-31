@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-    <div class="site-section site-section-sm mt-0 pb-0 text-center">
-      <div class="title-icon">&nbsp;</div>
-      <h1 class="h4 font-weight-bold mb-0">
+    <div class="site-section site-section-sm mt-0 pb-0 text-center fadeup">
+      <div class="title-icon fadeup">&nbsp;</div>
+      <h1 class="h4 font-weight-bold mb-0 fadeup">
 <?php
   if (isset($_GET['s']) && empty($_GET['s'])) {
     echo '検索キーワード未入力'; // 検索キーワードが未入力の場合のテキストを指定
@@ -11,14 +11,14 @@
 ?>
       </h1>
     </div>
-    <div class="site-section site-section-sm mt-0 pb-0">
+    <div class="site-section site-section-sm mt-0 pb-0 fadeup">
       <div class="container px-0">
 <?php if (get_search_query() !== ''): ?>
 <?php   if (have_posts()): ?>
-        <div class="search-result">
+        <div class="search-result fadeup">
 <?php     while(have_posts()):
             the_post(); ?>
-          <a href="<?php the_permalink(); ?>">
+          <a href="<?php the_permalink(); ?>" class="fadeup">
             <div class="box team-member overflow-bg-white mb-4">
               <div class="title"><?php the_title(); ?></div>
 <?php
@@ -33,14 +33,14 @@
 <?php     endwhile; ?>
         </div>
 <?php   else: ?>
-        <div class="text-center my-6">検索されたキーワードにマッチする記事はありませんでした</div>
+        <div class="text-center my-6 fadeup">検索されたキーワードにマッチする記事はありませんでした</div>
 <?php   endif; ?>
 <?php else: ?>
-        <div class="text-center my-6">検索キーワードを入力してください</div>
+        <div class="text-center my-6 fadeup">検索キーワードを入力してください</div>
 <?php endif; ?>
       </div>
     </div>
-    <div class="pager">
+    <div class="pager fadeup">
 <?php
   $args = array(
       'mid_size' => 1,

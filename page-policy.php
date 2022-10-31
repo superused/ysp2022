@@ -1,11 +1,11 @@
 <?php get_header(); ?>
-    <div class="site-section bg-lightgray mt-0 text-center">
-      <div class="title-icon">&nbsp;</div>
-      <h1 class="h4 font-weight-bold mb-0">サイトポリシー</h1>
+    <div class="site-section bg-lightgray mt-0 text-center fadeup">
+      <div class="title-icon fadeup">&nbsp;</div>
+      <h1 class="h4 font-weight-bold mb-0 fadeup">サイトポリシー</h1>
       <div class="circle-bg gray end"></div>
       <div class="circle-bg white end"></div>
     </div>
-    <div class="privacy policy site-section site-section-sm mb-6">
+    <div class="privacy policy site-section site-section-sm mb-6 fadeup">
       <div class="container md p-md-0">
         <div class="outline mt-6">
           <div class="row">

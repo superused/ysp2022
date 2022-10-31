@@ -1,15 +1,15 @@
 <?php get_header(); ?>
-    <div class="site-section bg-lightgray mt-0 text-center">
-      <div class="title-icon">&nbsp;</div>
-      <h1 class="h4 font-weight-bold mb-0">特定商取引法に基づく表示（会費）</h1>
+    <div class="site-section bg-lightgray mt-0 text-center fadeup">
+      <div class="title-icon fadeup">&nbsp;</div>
+      <h1 class="h4 font-weight-bold mb-0 fadeup">特定商取引法に基づく表示（会費）</h1>
       <div class="circle-bg gray end"></div>
       <div class="circle-bg white end"></div>
     </div>
-    <div class="policy site-section site-section-sm mb-6">
-      <div class="container md py-5 px-md-0">
+    <div class="policy site-section site-section-sm mb-6 fadeup">
+      <div class="container md py-5 px-md-0 fadeup">
         <div class="read">世界平和青年学生連合（以下「当会」といいます）は、当会の業務に関連し、その活動を行うために多くの個人情報を保有するものであるところ、個人情報の保護が重大な責務と考え、情報主体をはじめ広く社会からの信頼を得るために、以下の通り個人情報保護方針を定め、個人情報の保護に努めます。</div>
       </div>
-      <div class="container sm p-md-0">
+      <div class="container sm p-md-0 fadeup">
         <div class="outline">
           <div class="row">
             <div class="text title">運営団体</div>

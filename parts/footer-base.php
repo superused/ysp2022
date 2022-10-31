@@ -1,4 +1,4 @@
-    <footer class="site-footer<?= !empty($noMargin) ? ' mt-0' : ''; ?>">
+    <footer class="site-footer<?= !empty($noMargin) ? ' mt-0' : ''; ?> fadeup">
       <div class="bg-cyan py-4 fadeup">
         <div class="container">
         <a href="<?= HOME_URL; ?>" class="font-weight-bold text-white">TOP</a>
@@ -36,7 +36,7 @@
                 </a>
               </li>
               <li class="footer-link-circle right movie fadeup">
-                <a href="<?= INTRODUCE_MOVIE; ?>">
+                <a href="<?= INTRODUCE_MOVIE; ?>" target="_blank">
                   <span>Movie YSP紹介動画</span>
                 </a>
               </li>
@@ -50,14 +50,14 @@
           </div>
           <div class="donate container p-0">
             <div class="row">
-              <ul class="col-md-8 mb-3 mb-md-5">
+              <ul class="col-md-8 mb-3 mb-md-5 fadeup">
                 <li class="footer-link-circle bg-white rounded d-lg-table">
                   <div class="d-lg-table-cell fadeup"><a href="<?= SUPPORT_URL; ?>">ご寄付・ご支援TOP</a></div>
                   <div class="d-lg-table-cell fadeup"><a href="<?= DEBIT_URL; ?>" class="pankuzu-next">社会を彩る「毎月の支援」</a></div>
                   <div class="d-lg-table-cell fadeup"><a href="<?= TRANSFER_URL; ?>" class="pankuzu-next">今すぐ応援「今回の支援」</a></div>
                 </li>
               </ul>
-              <ul class="menu-right col-md-4 mb-5">
+              <ul class="menu-right col-md-4 mb-5 fadeup">
                 <li class="footer-link-normal fadeup">
                   <a href="<?= POLICY_URL; ?>">サイトポリシー</a>
                 </li>
@@ -78,10 +78,10 @@
              </div>
              <div class="footer-sns text-md-left col-md-6 fadeup">
                <ul class="h-100 m-0 p-0">
-<?php /*
+
                  <li class="d-inline h-100 mx-3 mx-md-2"><a href="<?= SNS_FACEBOOK_URL; ?>" class="d-inline-flex align-items-center h-100"><i class="fa-brands fa-facebook fa-2x"></i><span class="small font-weight-bold d-none d-md-block mx-2">Facebook</span></a></li>
                  <li class="d-inline h-100 mx-3 mx-md-2"><a href="<?= SNS_INSTAGRAM_URL; ?>" class="d-inline-flex align-items-center h-100"><i class="fa-brands fa-square-instagram fa-2x"></i><span class="small font-weight-bold d-none d-md-block mx-2">Instagram</span></a></li>
- */ ?>
+
                  <li class="d-inline h-100 mx-3 mx-md-2"><a href="<?= SNS_LINE_URL; ?>" class="d-inline-flex align-items-center h-100"><i class="fa-brands fa-line fa-2x"></i><span class="small font-weight-bold d-none d-md-block mx-2">LINE</span></a></li>
                </ul>
              </div>
