@@ -124,7 +124,7 @@ define('INTRODUCE_MOVIE', 'https://youtu.be/Be6eiPIHcjI');
 // define('MOVIE_URL', '#movie');
 define('FAVICON_URL', esc_url(home_url('favicon.ico')));
 
-define('SITE_TITLE', 'PEACE DESIGNER FES｜2021.08.07~09 オンライン');
+define('SITE_TITLE', 'YSP-Japan');
 
 // ニュースサムネイル デフォルト画像
 define('NO_IMAGE_URL', get_template_directory_uri() . '/images/noimage.png');
