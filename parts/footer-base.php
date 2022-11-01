@@ -78,10 +78,10 @@
              </div>
              <div class="footer-sns text-md-left col-md-6 fadeup">
                <ul class="h-100 m-0 p-0">
-
+<?php /*
                  <li class="d-inline h-100 mx-3 mx-md-2"><a href="<?= SNS_FACEBOOK_URL; ?>" class="d-inline-flex align-items-center h-100"><i class="fa-brands fa-facebook fa-2x"></i><span class="small font-weight-bold d-none d-md-block mx-2">Facebook</span></a></li>
                  <li class="d-inline h-100 mx-3 mx-md-2"><a href="<?= SNS_INSTAGRAM_URL; ?>" class="d-inline-flex align-items-center h-100"><i class="fa-brands fa-square-instagram fa-2x"></i><span class="small font-weight-bold d-none d-md-block mx-2">Instagram</span></a></li>
-
+*/ ?>
                  <li class="d-inline h-100 mx-3 mx-md-2"><a href="<?= SNS_LINE_URL; ?>" class="d-inline-flex align-items-center h-100"><i class="fa-brands fa-line fa-2x"></i><span class="small font-weight-bold d-none d-md-block mx-2">LINE</span></a></li>
                </ul>
              </div>

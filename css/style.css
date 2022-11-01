@@ -4586,8 +4586,8 @@ h1.rem1-5 {
   object-fit: cover;
 }
 @media (max-width: 767.98px) {
-  .slider video,
-  .slider img {
+  .slider.top video,
+  .slidetop r.top img {
     height: 100vh;
   }
 }
@@ -7726,7 +7726,7 @@ img.circle-img-icon.md {
   box-shadow: 0px 2px 5px 1px #cdcdcd;
   margin: 0 1rem 1.5rem;
 }
-#seminar-events .box a {
+#seminar-events .box a div {
   color: #000;
 }
 #seminar-events .box .image {
@@ -8004,12 +8004,11 @@ ul.search-result li a:hover {
 .fadeup {
   opacity: 0;
   transform: translateY(2rem);
-  transition: opacity 1s, transform 1s;
+  transition: opacity 2s, transform 1s;
 }
 .fadeup.inview {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: .1s;
 }
 .site-wrap.fadeup,
 .site-wrap.fadeup.inview {
@@ -8019,5 +8018,12 @@ ul.search-result li a:hover {
 .site-mobile-menu .fadeup {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: .1s;
+}
+@keyframes fadein {
+    0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+body:not(#toppage) {
+  animation-name: fadein;
+  animation-duration: 4s;
 }

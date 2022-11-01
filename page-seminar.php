@@ -5,26 +5,26 @@
         <li><img src="<?= IMG_DIR; ?>/seminar/top_3.jpg"></li>
         <li><img src="<?= IMG_DIR; ?>/seminar/top_4.jpg"></li>
       </ul>
-      <div class="text fadeup">
-        <div>社会問題を見つめ、アクションを一緒に考える</div>
-        <h1><span>Peace designer</span>セミナー</h1>
+      <div class="text">
+        <div class="fadeup">社会問題を見つめ、アクションを一緒に考える</div>
+        <h1 class="fadeup"><span>Peace designer</span>セミナー</h1>
       </div>
-      <div class="button fadeup">
-        <a class="btn btn-normal btn-slider">チェック</a>
+      <div class="button">
+        <a class="btn btn-normal btn-slider fadeup">チェック</a>
       </div>
     </div>
     <div class="site-section site-section-sm pt-4 pt-md-5 fadeup">
       <div class="container px-0 px-md-3">
         <ul class="small-slider">
-          <li class="fadeup"><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-1.jpg"></a></li>
-          <li class="fadeup"><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-2.jpg"></a></li>
-          <li class="fadeup"><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-3.jpg"></a></li>
-          <li class="fadeup"><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-4.jpg"></a></li>
-          <li class="fadeup"><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-5.jpg"></a></li>
-          <li class="fadeup"><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-6.jpg"></a></li>
-          <li class="fadeup"><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-7.jpg"></a></li>
-          <li class="fadeup"><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-8.jpg"></a></li>
-          <li class="fadeup"><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-9.jpg"></a></li>
+          <li><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-1.jpg"></a></li>
+          <li><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-2.jpg"></a></li>
+          <li><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-3.jpg"></a></li>
+          <li><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-4.jpg"></a></li>
+          <li><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-5.jpg"></a></li>
+          <li><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-6.jpg"></a></li>
+          <li><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-7.jpg"></a></li>
+          <li><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-8.jpg"></a></li>
+          <li><a href="#"><img src="<?= IMG_DIR; ?>/seminar/2-9.jpg"></a></li>
         </ul>
       </div>
     </div>

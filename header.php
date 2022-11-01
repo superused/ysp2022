@@ -54,10 +54,10 @@ $image = wp_get_attachment_image_src($image_id, 'full');
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css2/app.css">
     <?php wp_head();?>
   </head>
-  <body>
+  <body<?php if (is_front_page()): ?> id="toppage"<?php endif; ?>>
     <!-- ヘッダー共通処理 start -->
-    <div class="site-wrap fadeup">
-      <div class="site-navbar<?php if(is_front_page()): ?> top<?php endif; ?>">
+    <div class="site-wrap">
+      <div class="site-navbar<?php if (is_front_page()): ?> top<?php endif; ?>">
         <div class="container px-3 py-0">
           <div class="row align-items-center flex-nowrap">
             <div class="col-md-1 col-lg-2 px-0">
@@ -136,7 +136,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
             </div>
           </div>
         </div>
-<?php if(is_front_page()): ?>
+<?php if (is_front_page()): ?>
         <div class="circle-bg header"></div>
         <div class="circle-bg header-bottom"></div>
 <?php endif; ?>
@@ -163,7 +163,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
       <div class="site-mobile-menu-body bg-lightgray">
       </div>
     </div> <!-- .site-mobile-menu -->
-<?php if(is_front_page()): ?>
+<?php if (is_front_page()): ?>
     <div id="loading">
       <div class="site-section vh-center">
         <div class="container">
@@ -173,7 +173,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
       </div>
     </div>
 <?php endif; ?>
-    <div class="navbar-space<?php if(is_front_page()): ?> top<?php endif; ?>"></div>
+    <div class="navbar-space<?php if (is_front_page()): ?> top<?php endif; ?>"></div>
 
     <!-- ヘッダー共通処理 end -->
 <?php if ($util->is_IE()): ?>

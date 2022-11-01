@@ -27,7 +27,7 @@ function playStart() {
   document.querySelector('.movie-logo').remove();
 }
 </script>
-<ul class="slider fadeup">
+<ul class="slider top fadeup">
   <li><a href="<?= ABOUT_URL; ?>"><div><p class="font-weight-500">やりがい<br><span class="batsu"></span><br>地域活性化</p><button class="btn btn-normal btn-slider">1ページで分かるYSP</button><video src="<?= IMG_DIR; ?>/top.mp4" autoplay loop muted></video></div></a></li>
   <li><a href="<?= PROJECT_URL; ?>"><div><button class="btn btn-normal btn-slider cyan">プロジェクトを見る</button><img src="<?= IMG_DIR; ?>/first_view2_sp.png" class="d-md-none"><img src="<?= IMG_DIR; ?>/first_view2.png" class="d-none d-md-block"></div></a></li>
   <li><a href="<?= SUPPORT_URL; ?>"><div><button class="btn btn-normal btn-slider cyan">寄付する</button><img src="<?= IMG_DIR; ?>/YSP_support_sp.jpg" class="d-md-none"><img src="<?= IMG_DIR; ?>/YSP_support.jpg" class="d-none d-md-block"></div></a></li>
