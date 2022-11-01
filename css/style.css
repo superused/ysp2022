@@ -5072,12 +5072,12 @@ h1.rem1-5 {
   top: 0;
   left: 0;
   border-radius: 0;
-  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at 66.67% calc(50% - 0.6rem) , transparent 100%, black 100%);
-  mask-image: radial-gradient(1.5rem 1.6rem at 66.67% calc(50% - 0.6rem) , transparent 100%, black 100%);
+  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at 66.67% calc(50% - 0.6rem) , transparent 99.99%, black 100%);
+  mask-image: radial-gradient(1.5rem 1.6rem at 66.67% calc(50% - 0.6rem) , transparent 99.99%, black 100%);
 }
 .circle-bg.overlap.left.down {
-  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at 66.67% calc(50% + 1.2rem) , transparent 100%, black 100%);
-  mask-image: radial-gradient(1.5rem 1.6rem at 66.67% calc(50% + 1.2rem) , transparent 100%, black 100%);
+  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at 66.67% calc(50% + 1.2rem) , transparent 99.99%, black 100%);
+  mask-image: radial-gradient(1.5rem 1.6rem at 66.67% calc(50% + 1.2rem) , transparent 99.99%, black 100%);
 }
 .circle-bg.overlap.right {
   background-color: #f3f3f3;
@@ -5086,16 +5086,16 @@ h1.rem1-5 {
   top: 0;
   right: 0;
   border-radius: 0;
-  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at 33.33% 50% , transparent 100%, black 100%);
-  mask-image: radial-gradient(1.5rem 1.6rem at 33.33% 50% , transparent 100%, black 100%);
+  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at 33.33% 50% , transparent 99.99%, black 100%);
+  mask-image: radial-gradient(1.5rem 1.6rem at 33.33% 50% , transparent 99.99%, black 100%);
 }
 .circle-bg.overlap.right.up {
-  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at 33.33% calc(50% - 1.2rem) , transparent 100%, black 100%);
-  mask-image: radial-gradient(1.5rem 1.6rem at 33.33% calc(50% - 1.2rem) , transparent 100%, black 100%);
+  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at 33.33% calc(50% - 1.2rem) , transparent 99.99%, black 100%);
+  mask-image: radial-gradient(1.5rem 1.6rem at 33.33% calc(50% - 1.2rem) , transparent 99.99%, black 100%);
 }
 .circle-bg.overlap.right.down {
-  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at 33.33% calc(50% + 1.2rem) , transparent 100%, black 100%);
-  mask-image: radial-gradient(1.5rem 1.6rem at 33.33% calc(50% + 1.2rem) , transparent 100%, black 100%);
+  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at 33.33% calc(50% + 1.2rem) , transparent 99.99%, black 100%);
+  mask-image: radial-gradient(1.5rem 1.6rem at 33.33% calc(50% + 1.2rem) , transparent 99.99%, black 100%);
 }
 .circle-bg.overlap.top {
   background-color: #f3f3f3;
@@ -5103,12 +5103,12 @@ h1.rem1-5 {
   height: 2.4rem;
   top: 0;
   border-radius: 0;
-  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at calc(50% - 1.2rem) 66.67% , transparent 100%, black 100%);
-  mask-image: radial-gradient(1.5rem 1.6rem at calc(50% - 1.2rem) 66.67% , transparent 100%, black 100%);
+  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at calc(50% - 1.2rem) 66.67% , transparent 99.99%, black 100%);
+  mask-image: radial-gradient(1.5rem 1.6rem at calc(50% - 1.2rem) 66.67% , transparent 99.99%, black 100%);
 }
 .circle-bg.overlap.top.down {
-  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at calc(50% + 1.2rem) 66.67% , transparent 100%, black 100%);
-  mask-image: radial-gradient(1.5rem 1.6rem at calc(50% + 1.2rem) 66.67% , transparent 100%, black 100%);
+  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at calc(50% + 1.2rem) 66.67% , transparent 99.99%, black 100%);
+  mask-image: radial-gradient(1.5rem 1.6rem at calc(50% + 1.2rem) 66.67% , transparent 99.99%, black 100%);
 }
 .circle-bg.overlap.bottom {
   background-color: #f3f3f3;
@@ -5116,12 +5116,12 @@ h1.rem1-5 {
   height: 2.4rem;
   bottom: 0;
   border-radius: 0;
-  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at calc(50% - 1.2rem) 33.33% , transparent 100%, black 100%);
-  mask-image: radial-gradient(1.5rem 1.6rem at calc(50% - 1.2rem) 33.33% , transparent 100%, black 100%);
+  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at calc(50% - 1.2rem) 33.33% , transparent 99.99%, black 100%);
+  mask-image: radial-gradient(1.5rem 1.6rem at calc(50% - 1.2rem) 33.33% , transparent 99.99%, black 100%);
 }
 .circle-bg.overlap.bottom.down {
-  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at calc(50% + 1.2rem) 33.33% , transparent 100%, black 100%);
-  mask-image: radial-gradient(1.5rem 1.6rem at calc(50% + 1.2rem) 33.33% , transparent 100%, black 100%);
+  -webkit-mask-image: radial-gradient(1.5rem 1.6rem at calc(50% + 1.2rem) 33.33% , transparent 99.99%, black 100%);
+  mask-image: radial-gradient(1.5rem 1.6rem at calc(50% + 1.2rem) 33.33% , transparent 99.99%, black 100%);
 }
 @media (max-width: 767.98px) {
   .circle-bg.hole {
@@ -5130,8 +5130,8 @@ h1.rem1-5 {
     bottom: 0;
     width: 100%;
     border-radius: 0;
-    -webkit-mask-image: radial-gradient(1.5rem 1.6rem at 90% 33.33% , transparent 100%, black 100%);
-    mask-image: radial-gradient(1.5rem 1.6rem at 90% 33.33% , transparent 100%, black 100%);
+    -webkit-mask-image: radial-gradient(1.5rem 1.6rem at 90% 33.33% , transparent 99.99%, black 100%);
+    mask-image: radial-gradient(1.5rem 1.6rem at 90% 33.33% , transparent 99.99%, black 100%);
   }
   .circle-bg.hole-head {
     bottom: 1.6rem;
@@ -6328,8 +6328,8 @@ h1.rem1-5 {
   top: 0;
   left: -0.85rem;
   border-radius: 0;
-  -webkit-mask-image: radial-gradient(0.55rem 0.58rem at calc(50% - 0.13rem) , transparent 100%, black 100%);
-  mask-image: radial-gradient(0.55rem 0.58rem at calc(50% - 0.13rem) , transparent 100%, black 100%);
+  -webkit-mask-image: radial-gradient(0.55rem 0.58rem at calc(50% - 0.13rem) , transparent 99.99%, black 100%);
+  mask-image: radial-gradient(0.55rem 0.58rem at calc(50% - 0.13rem) , transparent 99.99%, black 100%);
 }
 .about-voice .piece.up .circle-bg.overlap.right {
   background-color: #ffffff;
@@ -6338,8 +6338,8 @@ h1.rem1-5 {
   top: 0;
   right: -0.85rem;
   border-radius: 0;
-  -webkit-mask-image: radial-gradient(0.55rem 0.58rem at calc(50% + 0.13rem) , transparent 100%, black 100%);
-  mask-image: radial-gradient(0.55rem 0.58rem at calc(50% + 0.13rem) , transparent 100%, black 100%);
+  -webkit-mask-image: radial-gradient(0.55rem 0.58rem at calc(50% + 0.13rem) , transparent 99.99%, black 100%);
+  mask-image: radial-gradient(0.55rem 0.58rem at calc(50% + 0.13rem) , transparent 99.99%, black 100%);
 }
 .about-voice .piece .circle-bg.overlap.bottom {
   background-color: #ffffff;
@@ -6348,8 +6348,8 @@ h1.rem1-5 {
   left: -0.85rem;
   bottom: -0.85rem;
   border-radius: 0;
-  -webkit-mask-image: radial-gradient(0.55rem 0.58rem at calc(50% - 0.2rem) 0.7rem , transparent 100%, black 100%);
-  mask-image: radial-gradient(0.55rem 0.58rem at calc(50% - 0.2rem) 0.7rem , transparent 100%, black 100%);
+  -webkit-mask-image: radial-gradient(0.55rem 0.58rem at calc(50% - 0.2rem) 0.7rem , transparent 99.99%, black 100%);
+  mask-image: radial-gradient(0.55rem 0.58rem at calc(50% - 0.2rem) 0.7rem , transparent 99.99%, black 100%);
 }
 .about-voice .piece.up .circle-bg.overlap.bottom {
   background-color: #ffffff;
@@ -6358,8 +6358,8 @@ h1.rem1-5 {
   left: 0;
   bottom: -0.85rem;
   border-radius: 0;
-  -webkit-mask-image: radial-gradient(0.55rem 0.58rem at calc(50% - 0.2rem) 0.7rem , transparent 100%, black 100%);
-  mask-image: radial-gradient(0.55rem 0.58rem at calc(50% - 0.2rem) 0.7rem , transparent 100%, black 100%);
+  -webkit-mask-image: radial-gradient(0.55rem 0.58rem at calc(50% - 0.2rem) 0.7rem , transparent 99.99%, black 100%);
+  mask-image: radial-gradient(0.55rem 0.58rem at calc(50% - 0.2rem) 0.7rem , transparent 99.99%, black 100%);
 }
 img.circle-img-icon {
   border-radius: 50%;
@@ -7711,8 +7711,8 @@ img.circle-img-icon.md {
   height: 1.6rem;
 }
 #seminar-events .circle-bg.overlap.bottom {
-  -webkit-mask-image: radial-gradient(1rem 1.067rem at calc(100% - 4rem) 33.33% , transparent 100%, black 100%);
-  mask-image: radial-gradient(1rem 1.067rem at calc(100% - 4rem) 33.33% , transparent 100%, black 100%);
+  -webkit-mask-image: radial-gradient(1rem 1.067rem at calc(100% - 4rem) 33.33% , transparent 99.99%, black 100%);
+  mask-image: radial-gradient(1rem 1.067rem at calc(100% - 4rem) 33.33% , transparent 99.99%, black 100%);
 }
 #seminar-events .circle-bg.inner.bottom {
   top: auto;
@@ -7808,8 +7808,8 @@ img.circle-img-icon.md {
     height: 1.27rem;
   }
   #seminar-events .circle-bg.overlap.bottom {
-    -webkit-mask-image: radial-gradient(0.8rem 0.85rem at calc(100% - 2.5rem) 33.33% , transparent 100%, black 100%);
-    mask-image: radial-gradient(0.8rem 0.85rem at calc(100% - 2.5rem) 33.33% , transparent 100%, black 100%);
+    -webkit-mask-image: radial-gradient(0.8rem 0.85rem at calc(100% - 2.5rem) 33.33% , transparent 99.99%, black 100%);
+    mask-image: radial-gradient(0.8rem 0.85rem at calc(100% - 2.5rem) 33.33% , transparent 99.99%, black 100%);
   }
   #seminar-events .circle-bg.inner.bottom {
     right: 3.8rem;
