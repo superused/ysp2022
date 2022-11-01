@@ -4587,8 +4587,8 @@ h1.rem1-5 {
 }
 @media (max-width: 767.98px) {
   .slider.top video,
-  .slidetop r.top img {
-    height: 100vh;
+  .slider.top img {
+    aspect-ratio: 9 / 16;
   }
 }
 .slick-initialized {
@@ -8003,27 +8003,11 @@ ul.search-result li a:hover {
 }
 .fadeup {
   opacity: 0;
-  transform: translateY(2rem);
-  transition: opacity 2s, transform 1s;
+  transition: opacity 2s;
 }
 .fadeup.inview {
   opacity: 1;
-  transform: translateY(0);
-}
-.site-wrap.fadeup,
-.site-wrap.fadeup.inview {
-  transform: inherit;
-  transition: inherit;
 }
 .site-mobile-menu .fadeup {
   opacity: 1;
-  transform: translateY(0);
-}
-@keyframes fadein {
-    0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-body:not(#toppage) {
-  animation-name: fadein;
-  animation-duration: 4s;
 }

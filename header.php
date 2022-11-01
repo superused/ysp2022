@@ -61,7 +61,7 @@ $image = wp_get_attachment_image_src($image_id, 'full');
         <div class="container px-3 py-0">
           <div class="row align-items-center flex-nowrap">
             <div class="col-md-1 col-lg-2 px-0">
-              <div class="logo-header">
+              <div class="logo-header fadeup">
                 <a href="<?= home_url();?>">
                   <img src="<?= IMG_DIR; ?>/logo.jpg" alt="YSP-Japan" class="mx-auto d-none d-md-block">
                   <img src="<?= IMG_DIR; ?>/logo_sp.jpg" alt="YSP-Japan" class="mx-auto d-md-none">
@@ -75,13 +75,13 @@ $image = wp_get_attachment_image_src($image_id, 'full');
                   <li><a class="sns-link" href="<?= SNS_INSTAGRAM_URL; ?>"><i class="colored fa-brands fa-square-instagram fa-2x"></i></a></li>
                   <li><a class="sns-link" href="<?= SNS_FACEBOOK_URL; ?>"><i class="colored fa-brands fa-facebook fa-2x"></i></a></li>
  */ ?>
-                  <li><a class="sns-link" href="<?= SNS_LINE_URL; ?>"><i class="colored fa-brands fa-line fa-2x"></i></a></li>
+                  <li class="fadeup"><a class="sns-link" href="<?= SNS_LINE_URL; ?>"><i class="colored fa-brands fa-line fa-2x"></i></a></li>
                   <li><?php get_search_form(); ?></li>
                   <li>
-                    <a href="<?= SHOP_URL; ?>"><button class="shop-button"><div class="d-flex align-items-center px-4"><i class="fa-solid fa-cart-shopping fa-lg mx-1"></i><span class="mx-1">Shop</span></div></button></a>
+                    <a href="<?= SHOP_URL; ?>" class="fadeup"><button class="shop-button"><div class="d-flex align-items-center px-4"><i class="fa-solid fa-cart-shopping fa-lg mx-1"></i><span class="mx-1">Shop</span></div></button></a>
                   </li>
                 </ul>
-                <ul class="top-lower-menu">
+                <ul class="top-lower-menu fadeup">
                   <li class="site-menu pb-3">
                     <a href="<?= ABOUT_URL; ?>">
                       <p class="title">YSPとは</p>

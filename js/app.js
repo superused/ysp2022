@@ -10,6 +10,9 @@ $(function() {
   })()
 
   const siteBase = function() {
+    const siteWrap = $('.site-wrap');
+    siteWrap.addClass('inview');
+
     const slider = $('.slider');
     if (slider[0]) {
       slider.slick({
